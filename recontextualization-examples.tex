@@ -1,0 +1,142 @@
+\documentclass{stex}
+\usepackage{tabularx}
+\usepackage{xurl}
+\libinput[smglom/meta-inf]{preamble}
+
+\hypersetup{
+  colorlinks=true
+}
+
+\NewDocumentCommand\morphismdata{m m m m}{%
+  \begin{tabularx}\textwidth{|l|X|}
+    \hline
+    \textbf{Morphism Name} & \expandafter\path{#1} \\\hline
+    \textbf{Domain URI}    & \expandafter\url{#2} \\\hline
+    \textbf{Codomain URI}  & \expandafter\url{#3} \\\hline
+    \textbf{Module URI}    & \expandafter\url{#4} \\\hline
+  \end{tabularx}
+}
+
+\NewDocumentCommand\structopdata{m m}{%
+  \begin{tabularx}\textwidth{|l|X|}
+    \hline
+    \textbf{Symbol URI}      & \expandafter\url{#1} \\\hline
+    \textbf{Return Type URI} & \expandafter\url{#2} \\\hline
+  \end{tabularx}
+}
+
+\title{Recontextualization Examples}
+\author{Marcel Schütz\\[.5em]
+  Computer Science, FAU Erlangen-Nürnberg\\
+  \url{https://kwarc.info}
+}
+\date{2026}
+
+\begin{document}
+  \maketitle
+
+  \begin{abstract}
+    \noindent
+    This is a collection of views and structure-returning operations
+    together with recontextualiations along them.
+  \end{abstract}
+
+  \tableofcontents
+
+  
+  \section{Views}
+
+  \subsection*{Finite State Automaton induces Automaton}
+  \morphismdata
+    {autoToFSA}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto/automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=fsa/finite state automaton}
+    {http://mathhub.info?a=smglom/automata&p=view&m=auto-to-fsa}
+  \inputref[smglom/automata]{view/auto-to-fsa.en}
+
+  \subsection*{Pushdown Automaton induces Automaton}
+  \morphismdata
+    {autoToPDA}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto/automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=pda/pushdown automaton}
+    {http://mathhub.info?a=smglom/automata&p=view&m=auto-to-pda}
+  \inputref[smglom/automata]{view/auto-to-pda.en}
+
+  \subsection*{Turing Machine (1) induces Automaton}
+  \morphismdata
+    {autoToTM}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto/automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=tm_1/Turing machine}
+    {http://mathhub.info?a=smglom/automata&p=view&m=auto-to-tm_1}
+  \inputref[smglom/automata]{view/auto-to-tm_1.en}
+
+  \subsection*{Turing Machine (2) induces Automaton}
+  \morphismdata
+    {autoToTM}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto/automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=tm_2/Turing machine}
+    {http://mathhub.info?a=smglom/automata&p=view&m=auto-to-tm_2}
+  \inputref[smglom/automata]{view/auto-to-tm_2.en}
+
+  \subsection*{Finite State Automaton induces Pushdown Automaton}
+  \morphismdata
+    {PDAToFSA}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=pda/pushdown automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=fsa/finite state automaton}
+    {http://mathhub.info?a=smglom/automata&p=view&m=pda-to-fsa}
+  \inputref[smglom/automata]{view/pda-to-fsa.en}
+
+  \subsection*{Finite State Automaton induces Transition System}
+  \morphismdata
+    {TranssysToFSA}
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-system/transition system}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=fsa/finite state automaton}
+    {http://mathhub.info?a=smglom/automata&p=view&m=transition-system-to-fsa}
+  \inputref[smglom/automata]{view/transition-system-to-fsa.en}
+
+  \subsection*{Pushdown Automaton induces Transition System}
+  \morphismdata
+    {TranssysToPDA}
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-system/transition system}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=pda/pushdown automaton}
+    {http://mathhub.info?a=smglom/automata&p=view&m=transition-system-to-pda}
+  \inputref[smglom/automata]{view/transition-system-to-pda.en}
+
+  \subsection*{Turing Machine (1) induces Transition System}
+  \morphismdata
+    {TranssysToTM}
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-system/transition system}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=tm_1/Turing machine}
+    {http://mathhub.info?a=smglom/automata&p=view&m=transition-system-to-tm_1}
+  \inputref[smglom/automata]{view/transition-system-to-tm_1.en}
+
+  \subsection*{Turing Machine (2) induces Transition System}
+  \morphismdata
+    {TranssysToTM}
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-system/transition system}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=tm_2/Turing machine}
+    {http://mathhub.info?a=smglom/automata&p=view&m=transition-system-to-tm_2}
+  \inputref[smglom/automata]{view/transition-system-to-tm_2.en}
+
+
+  \section{Structure-Returning Operations}
+
+  \subsection*{Free Monoid: Alphabet induces Monoid}  
+  \structopdata
+    {http://mathhub.info?a=smglom/algebra&p=mod&m=free-monoid&s=freemonoid}
+    {http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid}
+  \inputref[smglom/algebra]{mod/free-monoid.en}
+
+  \subsection*{Relation Monoid: Set induces Monoid}  
+  \structopdata
+    {http://mathhub.info?a=smglom/algebra&p=mod&m=relation-monoid&s=relationmonoid}
+    {http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid}
+  \inputref[smglom/algebra]{mod/relation-monoid.en}
+  
+  \subsection*{Transition Monoid: Transition System induces Monoid}
+  \structopdata
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-monoid&s=transmonoid}
+    {http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid}
+  \inputref[smglom/theocs]{mod/transition-monoid.en}
+
+\end{document}
