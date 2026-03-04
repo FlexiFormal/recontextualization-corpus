@@ -120,6 +120,28 @@
 
 
   \section{Structure-Returning Operations}
+  %
+  \usemodule[smglom/sets]{mod?functions}
+  \usemodule[smglom/logic]{mod?type-system}
+  \usemodule[smglom/mv]{mod?defeq}
+  %
+  \vardef{sigmavar}[args=a]{\maincomp\sigma\dobrackets{#1}}
+  \vardef{nvar}{n}
+  \varseq{Aseq}{1,\ellipses,\nvar}{\maincomp A_{#1}}
+  \vardef{Svar}{S}
+  \varseq{aseq}{1,\ellipses,\nvar}{\maincomp a_{#1}}
+  \vardef{ivar}{i}
+  \vardef{phivar}[args=1]{\maincomp\varphi\dobrackets{#1}}
+  \vardef{svar}{s}
+  %
+  We call an operation $\fun{\sigmavar!}{\Aseq!}\Svar$, where $\Svar$ is a
+  structure, \emph{structure-returning.}
+  Note that such an operation can be regarded as a view that is ``parametric''
+  in\linebreak $\Aseq!$:
+  If $\oftype{\aseq1}{\Aseq1},\ellipses,\oftype{\aseq\nvar}{\Aseq\nvar}$ then
+  $\sigmavar{\aseq!}$ induces a view $\phivar!$ from $\Svar$ to the module in which
+  $\sigmavar!$ is declared via
+  $\defeq{\phivar\svar}{\sigmavar{\aseq!}.\svar}$.
 
   \subsection*{Free Monoid: Alphabet induces Monoid}  
   \structopdata
