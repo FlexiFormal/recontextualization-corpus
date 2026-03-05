@@ -25,6 +25,21 @@
   \end{tabularx}
 }
 
+\NewDocumentCommand\statementdata{m}{%
+  \begin{tabularx}\textwidth{|l|X|}
+    \hline
+    \textbf{Module URI} & \expandafter\url{#1} \\\hline
+  \end{tabularx}
+}
+
+\NewDocumentCommand\extstructdata{m m}{%
+  \begin{tabularx}\textwidth{|l|X|}
+    \hline
+    \textbf{Base Structure URI}      & \expandafter\url{#1} \\\hline
+    \textbf{Extension Structure URI} & \expandafter\url{#2} \\\hline
+  \end{tabularx}
+}
+
 \title{Recontextualization Examples}
 \author{Marcel Schütz\\[.5em]
   Computer Science, FAU Erlangen-Nürnberg\\
@@ -160,5 +175,42 @@
     {http://mathhub.info?a=smglom/theocs&p=mod&m=transition-monoid&s=transmonoid}
     {http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid}
   \inputref[smglom/theocs]{mod/transition-monoid.en}
+
+
+  \section{Non-Conservative Extensions}
+
+  \subsection*{Deterministic Automaton}
+  \extstructdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto/automaton}
+    {http://mathhub.info?a=smglom/automata&p=mod&m=dauto/deterministic automaton}
+  \inputref[smglom/automata]{mod/dauto.en}
+
+
+  \section{Statements}
+
+  \subsection*{Reachability in an Automaton}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+  \inputref[smglom/automata]{mod/auto-reachable.en}
+
+  \subsection*{Automaton Accepting a Word}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+  \inputref[smglom/automata]{mod/auto-accepted.en}
+
+  \subsection*{Computation of a Word by an Automaton}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+  \inputref[smglom/automata]{mod/auto-computation.en}
+
+  \subsection*{Automaton Recognizing a Formal Language}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+  \inputref[smglom/automata]{mod/auto-recognize.en}
+
+  \subsection*{Language of an Automaton}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=language-of-auto}
+  \inputref[smglom/automata]{mod/language-of-auto.en}
 
 \end{document}
