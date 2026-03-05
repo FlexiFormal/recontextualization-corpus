@@ -40,6 +40,16 @@
   \end{tabularx}
 }
 
+\NewDocumentCommand\relocdata{m m m}{%
+  \begin{tabularx}\textwidth{|l|X|}
+    \hline
+    \textbf{Input Module URI}  & \expandafter\url{#1} \\\hline
+    \textbf{Morphism Name}     & \expandafter{\path{#2}} \\\hline
+    \textbf{Output Module URI} & \expandafter\url{#3} \\\hline
+  \end{tabularx}
+}
+
+
 \title{Recontextualization Examples}
 \author{Marcel Schütz\\[.5em]
   Computer Science, FAU Erlangen-Nürnberg\\
@@ -219,4 +229,291 @@
     {http://mathhub.info?a=smglom/automata&p=mod&m=language-of-auto}
   \inputref[smglom/automata]{mod/language-of-auto.en}
 
+  \subsection*{Equivalent Definitions of a Finite State Automaton Accepting a Word}
+  \statementdata
+    {http://mathhub.info?a=smglom/automata&p=thm&m=fsa-accepted-words}
+  \inputref[smglom/automata]{thm/fsa-accepted-words.en}
+
+  \subsection*{Extended Transiton Model in a Transiton System}
+  \statementdata
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=extended-transition-model}
+  \inputref[smglom/theocs]{mod/extended-transition-model.en}
+
+
+  \section{Recontextualizations}
+
+  \subsection*{Deterministic Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dauto-accepted}
+  \inputref[smglom/automata]{pushout/mod/dauto-accepted.en}
+
+  \subsection*{Computation of a Word by a Deterministic Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dauto-computation}
+  \inputref[smglom/automata]{pushout/mod/dauto-computation.en}
+
+  \subsection*{Reachability in a Deterministic Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dauto-reachable}
+  \inputref[smglom/automata]{pushout/mod/dauto-reachable.en}
+
+  \subsection*{Deterministic Automaton Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dauto-recognize}
+  \inputref[smglom/automata]{pushout/mod/dauto-recognize.en}
+
+  \subsection*{Deterministic Finite State Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dfsa-accepted}
+  \inputref[smglom/automata]{pushout/mod/dfsa-accepted.en}
+
+  \subsection*{Computation of a Word by a Deterministic Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dfsa-computation}
+  \inputref[smglom/automata]{pushout/mod/dfsa-computation.en}
+
+  \subsection*{Reachability in a Deterministic Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dfsa-reachable}
+  \inputref[smglom/automata]{pushout/mod/dfsa-reachable.en}
+
+  \subsection*{Deterministic Finite State Automaton Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dfsa-recognize}
+   \inputref[smglom/automata]{pushout/mod/dfsa-recognize.en}
+
+  \subsection*{Deterministic Pushdown Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToPDA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dpda-accepted}
+  \inputref[smglom/automata]{pushout/mod/dpda-accepted.en}
+
+  \subsection*{Computation of a Word by a Deterministic Pushdown Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToPDA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dpda-computation}
+  \inputref[smglom/automata]{pushout/mod/dpda-computation.en}
+
+  \subsection*{Reachability in a Deterministic Pushdown Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToPDA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dpda-reachable}
+  \inputref[smglom/automata]{pushout/mod/dpda-reachable.en}
+
+  \subsection*{Deterministic Pushdown Automaton Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToPDA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dpda-recognize}
+   \inputref[smglom/automata]{pushout/mod/dpda-recognize.en}
+
+  \subsection*{Deterministic Turing Machine (1) Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_1-accepted}
+  \inputref[smglom/automata]{pushout/mod/dtm_1-accepted.en}
+
+  \subsection*{Computation of a Word by a Deterministic Turing Machine (1)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_1-computation}
+  \inputref[smglom/automata]{pushout/mod/dtm_1-computation.en}
+
+  \subsection*{Reachability in a Deterministic Turing Machine (1)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_1-reachable}
+  \inputref[smglom/automata]{pushout/mod/dtm_1-reachable.en}
+
+  \subsection*{Deterministic Turing Machine (1) Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_1-recognize}
+   \inputref[smglom/automata]{pushout/mod/dtm_1-recognize.en}
+
+  \subsection*{Deterministic Turing Machine (2) Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_2-accepted}
+  \inputref[smglom/automata]{pushout/mod/dtm_2-accepted.en}
+
+  \subsection*{Computation of a Word by a Deterministic Turing Machine (2)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_2-computation}
+  \inputref[smglom/automata]{pushout/mod/dtm_2-computation.en}
+
+  \subsection*{Reachability in a Deterministic Turing Machine (2)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_2-reachable}
+  \inputref[smglom/automata]{pushout/mod/dtm_2-reachable.en}
+
+  \subsection*{Deterministic Turing Machine (2) Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToTM * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dtm_2-recognize}
+   \inputref[smglom/automata]{pushout/mod/dtm_2-recognize.en}
+
+  \subsection*{Finite State Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToFSA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=fsa-accepted}
+  \inputref[smglom/automata]{pushout/mod/fsa-accepted.en}
+
+  \subsection*{Computation of a Word by a Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToFSA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=fsa-computation}
+  \inputref[smglom/automata]{pushout/mod/fsa-computation.en}
+
+  \subsection*{Reachability in a Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToFSA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=fsa-reachable}
+  \inputref[smglom/automata]{pushout/mod/fsa-reachable.en}
+
+  \subsection*{Finite State Automaton Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToFSA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=fsa-recognize}
+   \inputref[smglom/automata]{pushout/mod/fsa-recognize.en}
+
+  \subsection*{Pushdown Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToPDA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=pda-accepted}
+  \inputref[smglom/automata]{pushout/mod/pda-accepted.en}
+
+  \subsection*{Computation of a Word by a Pushdown Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToPDA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=pda-computation}
+  \inputref[smglom/automata]{pushout/mod/pda-computation.en}
+
+  \subsection*{Reachability in a Pushdown Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToPDA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=pda-reachable}
+  \inputref[smglom/automata]{pushout/mod/pda-reachable.en}
+
+  \subsection*{Pushdown Automaton Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToPDA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=pda-recognize}
+   \inputref[smglom/automata]{pushout/mod/pda-recognize.en}
+
+  \subsection*{Turing Machine (1) Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_1-accepted}
+  \inputref[smglom/automata]{pushout/mod/tm_1-accepted.en}
+
+  \subsection*{Computation of a Word by a Turing Machine (1)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_1-computation}
+  \inputref[smglom/automata]{pushout/mod/tm_1-computation.en}
+
+  \subsection*{Reachability in a Turing Machine (1)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_1-reachable}
+  \inputref[smglom/automata]{pushout/mod/tm_1-reachable.en}
+
+  \subsection*{Turing Machine (1) Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_1-recognize}
+   \inputref[smglom/automata]{pushout/mod/tm_1-recognize.en}
+
+  \subsection*{Turing Machine (2) Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-accepted}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_2-accepted}
+  \inputref[smglom/automata]{pushout/mod/tm_2-accepted.en}
+
+  \subsection*{Computation of a Word by a Turing Machine (2)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-computation}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_2-computation}
+  \inputref[smglom/automata]{pushout/mod/tm_2-computation.en}
+
+  \subsection*{Reachability in a Turing Machine (2)}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_2-reachable}
+  \inputref[smglom/automata]{pushout/mod/tm_2-reachable.en}
+
+  \subsection*{Turing Machine (2) Recognizing a Formal Language}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=mod&m=auto-recognize}
+    {AutoToTM}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=tm_2-recognize}
+   \inputref[smglom/automata]{pushout/mod/tm_2-recognize.en}
+
+  \subsection*{Equivalent Definitions of a Deterministic Finite State Automaton Accepting a Word}
+  \relocdata
+    {http://mathhub.info?a=smglom/automata&p=thm&m=fsa-accepted-words}
+    {AutoToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/thm&m=dfsa-accepted-words}
+   \inputref[smglom/automata]{pushout/thm/dfsa-accepted-words.en}
+
+  \subsection*{Extended Transiton Model in a Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=extended-transition-model}
+    {TranssysToFSA}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=fsa-extended-transition-function}
+  \inputref[smglom/automata]{pushout/mod/fsa-extended-transition-function.en}
+
+  \subsection*{Extended Transiton Model in a Deterministic Finite State Automaton}
+  \relocdata
+    {http://mathhub.info?a=smglom/theocs&p=mod&m=extended-transition-model}
+    {TranssysToFSA * automaton -> deterministic automaton}
+    {http://mathhub.info?a=smglom/automata&p=pushout/mod&m=dfsa-extended-transition-function}
+  \inputref[smglom/automata]{pushout/mod/dfsa-extended-transition-function.en}
+
 \end{document}
+  
