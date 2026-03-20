@@ -1,16 +1,16 @@
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 
 Axiom:
-  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
+  for all v0, (if v0 is a map then (v0 is a function iff the domain of v0 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a class then (if for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set)
+  for all v0, (for all v1, (if v0 is a set and v1 is a class then (if for all v2, (if v2 is an element of v1 then v2 is an element of v0) then v1 is a set)))
 Proof:
-  C is a class and (if A is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B)
+  C is a class and (if A is a set then C is a set) and for all v0, (v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B))
   C is a set and C is equal to B
 Qed.
 
 Signature:
-  for all v0, if v0 is a being then v0 is an object
+  for all v0, (if v0 is a being then v0 is an object)
 

@@ -1,143 +1,143 @@
 Definition (defempty):
-  for all v0, (v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, v1 is an element of v0)
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition (defsub):
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Theorem (extensionality):
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)))
 Proof:
 Qed.
 
 Definition (subset):
-  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)))
 
 Axiom (separation):
-  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subclass of v0 then v1 is a set))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Definition:
-  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+  for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
 
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))))))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \times v1 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, (for all v3, (if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))))))
 Proof:
 Qed.
 
 Axiom:
-  for all v0, if v0 is a map then (if the domain of v0 is a set and for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object then v0 is a function)
+  for all v0, (if v0 is a map then (if the domain of v0 is a set and for all v1, (if v1 is an element of the domain of v0 then the value of v0 under v1 is an object) then v0 is a function))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+  for all v0, (if v0 is a map then for all v1, (if v1 is a subclass of the domain of v0 then for all v2, ((v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of v1 and v3 is equal to the value of v0 under v4)))))))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1)))))
 
 Axiom (replacement):
-  for all v0, if v0 is a map then for all v1, if v1 is a subset of the domain of v0 then v0 [ v1 ] is a set
+  for all v0, (if v0 is a map then for all v1, (if v1 is a subset of the domain of v0 then v0 [ v1 ] is a set))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, (v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, (if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4) and for all v4, (if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4)))))))
 
 Signature:
-  for all v0, if v0 is a cardinal then v0 is a set
+  for all v0, (if v0 is a cardinal then v0 is a set)
 
 Signature:
-  for all v0, for all v1, if v0 is a cardinal and v1 is a cardinal then (if v0 < v1 then truth holds)
+  for all v0, (for all v1, (if v0 is a cardinal and v1 is a cardinal then (if v0 < v1 then truth holds)))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a cardinal and v1 is a cardinal and v2 is a cardinal then (if v0 < v1 and v1 < v2 then v0 < v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a cardinal and v1 is a cardinal and v2 is a cardinal then (if v0 < v1 and v1 < v2 then v0 < v2))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a cardinal and v1 is a cardinal then (v0 < v1 or v1 < v0 or v1 is equal to v0)
+  for all v0, (for all v1, (if v0 is a cardinal and v1 is a cardinal then (v0 < v1 or v1 < v0 or v1 is equal to v0)))
 
 Signature:
-  for all v0, if v0 is a set then for all v1, if v1 is equal to the cardinality of v0 then v1 is a cardinal
+  for all v0, (if v0 is a set then for all v1, (if v1 is equal to the cardinality of v0 then v1 is a cardinal))
 
 Axiom:
-  for all v0, if v0 is a function then for all v1, if v1 is a subset of the domain of v0 then (the cardinality of v0 [ v1 ] is equal to the cardinality of v1 or the cardinality of v0 [ v1 ] < the cardinality of v1)
+  for all v0, (if v0 is a function then for all v1, (if v1 is a subset of the domain of v0 then (the cardinality of v0 [ v1 ] is equal to the cardinality of v1 or the cardinality of v0 [ v1 ] < the cardinality of v1)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then (if the cardinality of v1 < the cardinality of v0 then for some v2, v2 is an element of the set difference of v0 and v1)
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then (if the cardinality of v1 < the cardinality of v0 then for some v2, (v2 is an element of the set difference of v0 and v1))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then (if the cardinality of v0 is equal to the cardinality of v1 or the cardinality of v0 < the cardinality of v1 then (if for some v2, v2 is an element of v0 then for some v2, v2 is a function and v1 is equal to the domain of v2 and v0 is equal to v2 [ the domain of v2 ]))
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then (if the cardinality of v0 is equal to the cardinality of v1 or the cardinality of v0 < the cardinality of v1 then (if for some v2, (v2 is an element of v0) then for some v2, (v2 is a function and v1 is equal to the domain of v2 and v0 is equal to v2 [ the domain of v2 ])))))
 
 Axiom:
-  for all v0, if v0 is a cardinal then the cardinality of v0 is equal to v0
+  for all v0, (if v0 is a cardinal then the cardinality of v0 is equal to v0)
 
 Definition:
-  for all v0, if v0 is a set then for all v1, (v1 is a sequence of cardinals on v0) iff (v1 is a function and the domain of v1 is equal to v0 and for all v2, if v2 is an element of v0 then the value of v1 under v2 is a cardinal)
+  for all v0, (if v0 is a set then for all v1, ((v1 is a sequence of cardinals on v0) iff (v1 is a function and the domain of v1 is equal to v0 and for all v2, (if v2 is an element of v0 then the value of v1 under v2 is a cardinal))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then for all v2, (v2 is equal to SumSet( v1 , v0 )) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of the value of v1 under v4 and v3 is equal to the ordered pair of v5 and v4))
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then for all v2, ((v2 is equal to SumSet( v1 , v0 )) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of the value of v1 under v4 and v3 is equal to the ordered pair of v5 and v4))))))))
 
 Axiom:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then SumSet( v1 , v0 ) is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then SumSet( v1 , v0 ) is a set))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then for all v2, (v2 is equal to Sum( v1 , v0 )) iff v2 is equal to the cardinality of SumSet( v1 , v0 )
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then for all v2, ((v2 is equal to Sum( v1 , v0 )) iff v2 is equal to the cardinality of SumSet( v1 , v0 ))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then for all v2, (v2 is equal to ProdSet( v1 , v0 )) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is a function and the domain of v3 is equal to v0 and for all v4, if v4 is an element of v0 then the value of v3 under v4 is an element of the value of v1 under v4))
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then for all v2, ((v2 is equal to ProdSet( v1 , v0 )) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is a function and the domain of v3 is equal to v0 and for all v4, (if v4 is an element of v0 then the value of v3 under v4 is an element of the value of v1 under v4)))))))
 
 Axiom:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then ProdSet( v1 , v0 ) is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then ProdSet( v1 , v0 ) is a set))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then for all v2, (v2 is equal to Prod( v1 , v0 )) iff v2 is equal to the cardinality of ProdSet( v1 , v0 )
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then for all v2, ((v2 is equal to Prod( v1 , v0 )) iff v2 is equal to the cardinality of ProdSet( v1 , v0 ))))
 
 Theorem (choice):
-  for all v0, if v0 is a set then for all v1, if v1 is a sequence of cardinals on v0 then (if for all v2, if v2 is an element of v0 then for some v3, v3 is an element of the value of v1 under v2 then for some v2, v2 is an element of ProdSet( v1 , v0 ))
+  for all v0, (if v0 is a set then for all v1, (if v1 is a sequence of cardinals on v0 then (if for all v2, (if v2 is an element of v0 then for some v3, (v3 is an element of the value of v1 under v2)) then for some v2, (v2 is an element of ProdSet( v1 , v0 )))))
 Proof:
-  f is a map and (the domain of f is equal to D) and for all v0, if v0 is an object then (if v0 is an element of the domain of f then for some v1, v1 is an element of the value of lambda under v0 and (the value of f under v0 is equal to v1))
+  f is a map and (the domain of f is equal to D) and for all v0, (if v0 is an object then (if v0 is an element of the domain of f then for some v1, (v1 is an element of the value of lambda under v0 and (the value of f under v0 is equal to v1))))
   f is an element of ProdSet( lambda , D )
 Qed.
 
 Theorem (koenig):
-  for all v0, if v0 is a set then for all v1, for all v2, if v1 is a sequence of cardinals on v0 and v2 is a sequence of cardinals on v0 then (if for all v3, if v3 is an element of v0 then the value of v1 under v3 < the value of v2 under v3 then Sum( v1 , v0 ) < Prod( v2 , v0 ))
+  for all v0, (if v0 is a set then for all v1, (for all v2, (if v1 is a sequence of cardinals on v0 and v2 is a sequence of cardinals on v0 then (if for all v3, (if v3 is an element of v0 then the value of v1 under v3 < the value of v2 under v3) then Sum( v1 , v0 ) < Prod( v2 , v0 )))))
 Proof:
   it is wrong that the thesis holds
   Prod( lambda , D ) is equal to Sum( kappa , D ) or Prod( lambda , D ) < Sum( kappa , D )
   G is a function and SumSet( kappa , D ) is equal to the domain of G and ProdSet( lambda , D ) is equal to G [ the domain of G ]
   Proof:
-    for some v0, v0 is an element of ProdSet( lambda , D )
+    for some v0, (v0 is an element of ProdSet( lambda , D ))
   Qed.
-  Diag is a map and (the domain of Diag is equal to D) and for all v0, if v0 is an object then (if v0 is an element of the domain of Diag then for some v1, (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of the value of kappa under v0 and v2 is equal to the value of the value of G under the ordered pair of v3 and v0 under v0)) and (the value of Diag under v0 is equal to v1))
-  for all v0, if v0 is an element of ProdSet( lambda , D ) then for all v1, if v1 is an element of D then the value of v0 under v1 is an element of the value of lambda under v1
-  for all v0, if v0 is an element of D then the value of lambda under v0 is a set
-  for all v0, if v0 is an element of D then for all v1, if v1 is an element of the value of Diag under v0 then v1 is an element of the value of lambda under v0
-  for all v0, if v0 is an element of D then the value of Diag under v0 is a set
-  for all v0, if v0 is an element of D then the cardinality of the value of Diag under v0 < the value of lambda under v0
+  Diag is a map and (the domain of Diag is equal to D) and for all v0, (if v0 is an object then (if v0 is an element of the domain of Diag then for some v1, ((v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and for some v3, (v3 is an element of the value of kappa under v0 and v2 is equal to the value of the value of G under the ordered pair of v3 and v0 under v0)))) and (the value of Diag under v0 is equal to v1))))
+  for all v0, (if v0 is an element of ProdSet( lambda , D ) then for all v1, (if v1 is an element of D then the value of v0 under v1 is an element of the value of lambda under v1))
+  for all v0, (if v0 is an element of D then the value of lambda under v0 is a set)
+  for all v0, (if v0 is an element of D then for all v1, (if v1 is an element of the value of Diag under v0 then v1 is an element of the value of lambda under v0))
+  for all v0, (if v0 is an element of D then the value of Diag under v0 is a set)
+  for all v0, (if v0 is an element of D then the cardinality of the value of Diag under v0 < the value of lambda under v0)
   Proof:
     i is an element of D
-    F is a map and (the domain of F is equal to the value of kappa under i) and for all v0, if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to the value of the value of G under the ordered pair of v0 and i under i))
+    F is a map and (the domain of F is equal to the value of kappa under i) and for all v0, (if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to the value of the value of G under the ordered pair of v0 and i under i)))
     F [ the value of kappa under i ] is equal to the value of Diag under i
   Qed.
-  f is a map and (the domain of f is equal to D) and for all v0, if v0 is an object then (if v0 is an element of the domain of f then for some v1, v1 is an element of the set difference of the value of lambda under v0 and the value of Diag under v0 and (the value of f under v0 is equal to v1))
+  f is a map and (the domain of f is equal to D) and for all v0, (if v0 is an object then (if v0 is an element of the domain of f then for some v1, (v1 is an element of the set difference of the value of lambda under v0 and the value of Diag under v0 and (the value of f under v0 is equal to v1))))
   f is an element of ProdSet( lambda , D )
   j is an element of D and m is an element of the value of kappa under j and the value of G under the ordered pair of m and j is equal to f
   the value of the value of G under the ordered pair of m and j under j is an element of the value of Diag under j and it is wrong that the value of f under j is an element of the value of Diag under j

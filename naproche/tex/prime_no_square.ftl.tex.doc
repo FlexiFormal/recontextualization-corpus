@@ -1,44 +1,44 @@
 Signature:
-  for all v0, if v0 is a positive rational number then v0 is an object
+  for all v0, (if v0 is a positive rational number then v0 is an object)
 
 Signature:
-  for all v0, for all v1, if v0 is a positive rational number and v1 is a positive rational number then for all v2, if v2 is equal to v1 \cdot v0 then v2 is a positive rational number
+  for all v0, (for all v1, (if v0 is a positive rational number and v1 is a positive rational number then for all v2, (if v2 is equal to v1 \cdot v0 then v2 is a positive rational number)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a positive rational number and v1 is a positive rational number then v1 \cdot v0 is equal to v0 \cdot v1
+  for all v0, (for all v1, (if v0 is a positive rational number and v1 is a positive rational number then v1 \cdot v0 is equal to v0 \cdot v1))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a positive rational number and v1 is a positive rational number and v2 is a positive rational number then v1 \cdot v0 \cdot v2 is equal to v1 \cdot v0 \cdot v2
+  for all v0, (for all v1, (for all v2, (if v0 is a positive rational number and v1 is a positive rational number and v2 is a positive rational number then v1 \cdot v0 \cdot v2 is equal to v1 \cdot v0 \cdot v2)))
 
 Definition:
-  for all v0, if v0 is a positive rational number then ((v0 is left cancellative) iff for all v1, for all v2, if v1 is a positive rational number and v2 is a positive rational number then (if v0 \cdot v2 is equal to v0 \cdot v1 then v2 is equal to v1))
+  for all v0, (if v0 is a positive rational number then ((v0 is left cancellative) iff for all v1, (for all v2, (if v1 is a positive rational number and v2 is a positive rational number then (if v0 \cdot v2 is equal to v0 \cdot v1 then v2 is equal to v1)))))
 
 Axiom:
-  for all v0, if v0 is a positive rational number then v0 is left cancellative
+  for all v0, (if v0 is a positive rational number then v0 is left cancellative)
 
 Signature:
-  for all v0, if v0 is a natural number then v0 is a positive rational number
+  for all v0, (if v0 is a natural number then v0 is a positive rational number)
 
 Signature:
-  for all v0, if v0 is equal to 1 then v0 is a natural number
+  for all v0, (if v0 is equal to 1 then v0 is a natural number)
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then v1 \cdot v0 is a natural number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then v1 \cdot v0 is a natural number))
 
 Definition:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v1 \mid v0) iff for some v2, v2 is a natural number and v2 \cdot v1 is equal to v0)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then ((v1 \mid v0) iff for some v2, (v2 is a natural number and v2 \cdot v1 is equal to v0))))
 
 Definition:
-  for all v0, if v0 is a natural number then ((v0 is prime) iff (it is wrong that v0 is equal to 1 and for all v1, for all v2, if v1 is a natural number and v2 is a natural number then (if v0 \mid v2 \cdot v1 then (v0 \mid v2 or v0 \mid v1))))
+  for all v0, (if v0 is a natural number then ((v0 is prime) iff (it is wrong that v0 is equal to 1 and for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 \mid v2 \cdot v1 then (v0 \mid v2 or v0 \mid v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that for some v2, v2 is a natural number and v2 \mid v1 and v2 \mid v0 and v2 is prime)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that for some v2, (v2 is a natural number and v2 \mid v1 and v2 \mid v0 and v2 is prime))))
 
 Axiom:
-  for all v0, if v0 is a positive rational number then for some v1, for some v2, v1 is a natural number and v2 is a natural number and (v1 and v2 are coprime and v1 \cdot v0 is equal to v2)
+  for all v0, (if v0 is a positive rational number then for some v1, (for some v2, (v1 is a natural number and v2 is a natural number and (v1 and v2 are coprime and v1 \cdot v0 is equal to v2))))
 
 Theorem:
-  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a positive rational number then it is wrong that v1 \cdot v1 is equal to v0
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a positive rational number then it is wrong that v1 \cdot v1 is equal to v0))
 Proof:
   it is wrong that the thesis holds
   q is a positive rational number and p is equal to q \cdot q

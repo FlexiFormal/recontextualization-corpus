@@ -1,182 +1,182 @@
 Signature:
-  for all v0, if v0 is a type then v0 is a set
+  for all v0, (if v0 is a type then v0 is a set)
 
 Signature:
-  for all v0, if v0 is a type with multiplication then v0 is a type
+  for all v0, (if v0 is a type with multiplication then v0 is a type)
 
 Signature:
-  for all v0, for all v1, for all v2, if v0 is a type with multiplication and v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is equal to v1 *^{ v0 } v2 then v3 is an element of v0
+  for all v0, (for all v1, (for all v2, (if v0 is a type with multiplication and v1 is an element of v0 and v2 is an element of v0 then for all v3, (if v3 is equal to v1 *^{ v0 } v2 then v3 is an element of v0))))
 
 Definition:
-  for all v0, (v0 is a semigroup) iff (v0 is a type with multiplication and for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v1 *^{ v0 } v2 *^{ v0 } v3)
+  for all v0, ((v0 is a semigroup) iff (v0 is a type with multiplication and for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v1 *^{ v0 } v2 *^{ v0 } v3)))))
 
 Definition:
-  for all v0, (v0 is a commutative semigroup) iff (v0 is a semigroup and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 is equal to v2 *^{ v0 } v1)
+  for all v0, ((v0 is a commutative semigroup) iff (v0 is a semigroup and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 is equal to v2 *^{ v0 } v1))))
 
 Definition:
-  for all v0, (v0 is a semigroup with left cancellation) iff (v0 is a semigroup and for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (if v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 then v2 is equal to v3))
+  for all v0, ((v0 is a semigroup with left cancellation) iff (v0 is a semigroup and for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (if v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 then v2 is equal to v3))))))
 
 Definition:
-  for all v0, (v0 is a semigroup with right cancellation) iff (v0 is a semigroup and for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (if v1 *^{ v0 } v2 is equal to v3 *^{ v0 } v2 then v1 is equal to v3))
+  for all v0, ((v0 is a semigroup with right cancellation) iff (v0 is a semigroup and for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (if v1 *^{ v0 } v2 is equal to v3 *^{ v0 } v2 then v1 is equal to v3))))))
 
 Signature:
-  for all v0, if v0 is a type with one then v0 is a type
+  for all v0, (if v0 is a type with one then v0 is a type)
 
 Signature:
-  for all v0, if v0 is a type with one then for all v1, if v1 is equal to 1^{ v0 } then v1 is an element of v0
+  for all v0, (if v0 is a type with one then for all v1, (if v1 is equal to 1^{ v0 } then v1 is an element of v0))
 
 Definition:
-  for all v0, (v0 is a monoid) iff (v0 is a semigroup and v0 is a type with one and for all v1, if v1 is an element of v0 then 1^{ v0 } *^{ v0 } v1 is equal to v1 and for all v1, if v1 is an element of v0 then v1 *^{ v0 } 1^{ v0 } is equal to v1)
+  for all v0, ((v0 is a monoid) iff (v0 is a semigroup and v0 is a type with one and for all v1, (if v1 is an element of v0 then 1^{ v0 } *^{ v0 } v1 is equal to v1) and for all v1, (if v1 is an element of v0 then v1 *^{ v0 } 1^{ v0 } is equal to v1)))
 
 Definition:
-  for all v0, (v0 is a commutative monoid) iff (v0 is a monoid and v0 is a commutative semigroup)
+  for all v0, ((v0 is a commutative monoid) iff (v0 is a monoid and v0 is a commutative semigroup))
 
 Signature:
-  for all v0, if v0 is a type with inverses then v0 is a type
+  for all v0, (if v0 is a type with inverses then v0 is a type)
 
 Signature:
-  for all v0, for all v1, if v0 is a type with inverses and v1 is an element of v0 then for all v2, if v2 is equal to v1 ^{-1, v0 } then v2 is an element of v0
+  for all v0, (for all v1, (if v0 is a type with inverses and v1 is an element of v0 then for all v2, (if v2 is equal to v1 ^{-1, v0 } then v2 is an element of v0)))
 
 Definition:
-  for all v0, (v0 is a group) iff (v0 is a monoid and v0 is a type with inverses and for all v1, if v1 is an element of v0 then v1 ^{-1, v0 } *^{ v0 } v1 is equal to 1^{ v0 })
+  for all v0, ((v0 is a group) iff (v0 is a monoid and v0 is a type with inverses and for all v1, (if v1 is an element of v0 then v1 ^{-1, v0 } *^{ v0 } v1 is equal to 1^{ v0 })))
 
 Definition:
-  for all v0, (v0 is a commutative group) iff (v0 is a group and v0 is a commutative monoid)
+  for all v0, ((v0 is a commutative group) iff (v0 is a group and v0 is a commutative monoid))
 
 Theorem (mulleftcomm):
-  for all v0, if v0 is a commutative semigroup then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v2 *^{ v0 } v1 *^{ v0 } v3
+  for all v0, (if v0 is a commutative semigroup then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v2 *^{ v0 } v1 *^{ v0 } v3))))
 Proof:
 Qed.
 
 Theorem (mulrightcomm):
-  for all v0, if v0 is a commutative semigroup then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v1 *^{ v0 } v3 *^{ v0 } v2
+  for all v0, (if v0 is a commutative semigroup then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v3 is equal to v1 *^{ v0 } v3 *^{ v0 } v2))))
 Proof:
 Qed.
 
 Theorem (mulleftcanceliff):
-  for all v0, if v0 is a semigroup with left cancellation then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 iff v2 is equal to v3)
+  for all v0, (if v0 is a semigroup with left cancellation then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 iff v2 is equal to v3)))))
 Proof:
 Qed.
 
 Theorem (mulrightcanceliff):
-  for all v0, if v0 is a semigroup with right cancellation then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (v2 *^{ v0 } v1 is equal to v3 *^{ v0 } v1 iff v2 is equal to v3)
+  for all v0, (if v0 is a semigroup with right cancellation then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then (v2 *^{ v0 } v1 is equal to v3 *^{ v0 } v1 iff v2 is equal to v3)))))
 Proof:
 Qed.
 
 Theorem (invmulcancelleft):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 ^{-1, v0 } *^{ v0 } v1 *^{ v0 } v2 is equal to v2
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 ^{-1, v0 } *^{ v0 } v1 *^{ v0 } v2 is equal to v2)))
 Proof:
 Qed.
 
 Theorem (invmulcancelright):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } *^{ v0 } v2 is equal to v1
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } *^{ v0 } v2 is equal to v1)))
 Proof:
 Qed.
 
 Theorem (inveqofmuleqone):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and v1 *^{ v0 } v2 is equal to 1^{ v0 } then v1 ^{-1, v0 } is equal to v2
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and v1 *^{ v0 } v2 is equal to 1^{ v0 } then v1 ^{-1, v0 } is equal to v2)))
 Proof:
 Qed.
 
 Theorem (oneinv):
-  for all v0, if v0 is a group then 1^{ v0 } ^{-1, v0 } is equal to 1^{ v0 }
+  for all v0, (if v0 is a group then 1^{ v0 } ^{-1, v0 } is equal to 1^{ v0 })
 Proof:
 Qed.
 
 Theorem (invinv):
-  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then v1 ^{-1, v0 } ^{-1, v0 } is equal to v1
+  for all v0, (if v0 is a group then for all v1, (if v1 is an element of v0 then v1 ^{-1, v0 } ^{-1, v0 } is equal to v1))
 Proof:
 Qed.
 
 Theorem (mulrightinv):
-  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then v1 *^{ v0 } v1 ^{-1, v0 } is equal to 1^{ v0 }
+  for all v0, (if v0 is a group then for all v1, (if v1 is an element of v0 then v1 *^{ v0 } v1 ^{-1, v0 } is equal to 1^{ v0 }))
 Proof:
 Qed.
 
 Theorem (invinj):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and v1 ^{-1, v0 } is equal to v2 ^{-1, v0 } then v1 is equal to v2
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and v1 ^{-1, v0 } is equal to v2 ^{-1, v0 } then v1 is equal to v2)))
 Proof:
 Qed.
 
 Theorem (groupmulleftcancel):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 then v2 is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v2 is equal to v1 *^{ v0 } v3 then v2 is equal to v3))))
 Proof:
 Qed.
 
 Theorem (groupmulrightcancel):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v2 is equal to v3 *^{ v0 } v2 then v1 is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v2 is equal to v3 *^{ v0 } v2 then v1 is equal to v3))))
 Proof:
   a is equal to a *^{ \alpha } b *^{ \alpha } b ^{-1, \alpha } and a *^{ \alpha } b *^{ \alpha } b ^{-1, \alpha } is equal to c *^{ \alpha } b *^{ \alpha } b ^{-1, \alpha } and c *^{ \alpha } b *^{ \alpha } b ^{-1, \alpha } is equal to c
 Qed.
 
 Theorem (mulinvcancelleft):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v1 ^{-1, v0 } *^{ v0 } v2 is equal to v2
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v1 ^{-1, v0 } *^{ v0 } v2 is equal to v2)))
 Proof:
 Qed.
 
 Theorem (mulinvcancelright):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v2 ^{-1, v0 } is equal to v1
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 *^{ v0 } v2 ^{-1, v0 } is equal to v1)))
 Proof:
 Qed.
 
 Theorem (mulinvrev):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v2 ^{-1, v0 } *^{ v0 } v1 ^{-1, v0 }
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v2 ^{-1, v0 } *^{ v0 } v1 ^{-1, v0 })))
 Proof:
   a *^{ \alpha } b *^{ \alpha } b ^{-1, \alpha } *^{ \alpha } a ^{-1, \alpha } is equal to 1^{ \alpha }
 Qed.
 
 Theorem (eqinvofeqinv):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and v1 is equal to v2 ^{-1, v0 } then v2 is equal to v1 ^{-1, v0 }
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and v1 is equal to v2 ^{-1, v0 } then v2 is equal to v1 ^{-1, v0 })))
 Proof:
 Qed.
 
 Theorem (eqinvofmuleqone):
-  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and v1 *^{ v0 } v2 is equal to 1^{ v0 } then v1 is equal to v2 ^{-1, v0 }
+  for all v0, (if v0 is a group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and v1 *^{ v0 } v2 is equal to 1^{ v0 } then v1 is equal to v2 ^{-1, v0 })))
 Proof:
 Qed.
 
 Theorem (eqmulinvofmuleq):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v3 is equal to v2 then v1 is equal to v2 *^{ v0 } v3 ^{-1, v0 }
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v3 is equal to v2 then v1 is equal to v2 *^{ v0 } v3 ^{-1, v0 }))))
 Proof:
 Qed.
 
 Theorem (eqinvmulofmuleq):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 *^{ v0 } v1 is equal to v3 then v1 is equal to v2 ^{-1, v0 } *^{ v0 } v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 *^{ v0 } v1 is equal to v3 then v1 is equal to v2 ^{-1, v0 } *^{ v0 } v3))))
 Proof:
 Qed.
 
 Theorem (invmuleqofeqmul):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 is equal to v1 *^{ v0 } v3 then v1 ^{-1, v0 } *^{ v0 } v2 is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 is equal to v1 *^{ v0 } v3 then v1 ^{-1, v0 } *^{ v0 } v2 is equal to v3))))
 Proof:
 Qed.
 
 Theorem (mulinveqofeqmul):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 is equal to v3 *^{ v0 } v2 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 is equal to v3 *^{ v0 } v2 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v3))))
 Proof:
 Qed.
 
 Theorem (eqmulofmulinveq):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v3 ^{-1, v0 } is equal to v2 then v1 is equal to v2 *^{ v0 } v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 *^{ v0 } v3 ^{-1, v0 } is equal to v2 then v1 is equal to v2 *^{ v0 } v3))))
 Proof:
 Qed.
 
 Theorem (eqmulofinvmuleq):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 ^{-1, v0 } *^{ v0 } v1 is equal to v3 then v1 is equal to v2 *^{ v0 } v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 ^{-1, v0 } *^{ v0 } v1 is equal to v3 then v1 is equal to v2 *^{ v0 } v3))))
 Proof:
 Qed.
 
 Theorem (muleqofeqinvmul):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 is equal to v1 ^{-1, v0 } *^{ v0 } v3 then v1 *^{ v0 } v2 is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v2 is equal to v1 ^{-1, v0 } *^{ v0 } v3 then v1 *^{ v0 } v2 is equal to v3))))
 Proof:
 Qed.
 
 Theorem (muleqofeqmulinv):
-  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 is equal to v3 *^{ v0 } v2 ^{-1, v0 } then v1 *^{ v0 } v2 is equal to v3
+  for all v0, (if v0 is a group then for all v1, (for all v2, (for all v3, (if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 and v1 is equal to v3 *^{ v0 } v2 ^{-1, v0 } then v1 *^{ v0 } v2 is equal to v3))))
 Proof:
 Qed.
 
 Theorem (mulinv):
-  for all v0, if v0 is a commutative group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v1 ^{-1, v0 } *^{ v0 } v2 ^{-1, v0 }
+  for all v0, (if v0 is a commutative group then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 *^{ v0 } v2 ^{-1, v0 } is equal to v1 ^{-1, v0 } *^{ v0 } v2 ^{-1, v0 })))
 Proof:
 Qed.
 

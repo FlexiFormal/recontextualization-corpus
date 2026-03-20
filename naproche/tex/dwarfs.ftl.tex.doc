@@ -1,35 +1,35 @@
 Signature:
-  for all v0, if v0 is a dwarf then truth holds
+  for all v0, (if v0 is a dwarf then truth holds)
 
 Signature:
-  for all v0, if v0 is equal to Sigbert then v0 is a dwarf
+  for all v0, (if v0 is equal to Sigbert then v0 is a dwarf)
 
 Signature:
-  for all v0, if v0 is equal to Tormund then v0 is a dwarf
+  for all v0, (if v0 is equal to Tormund then v0 is a dwarf)
 
 Signature:
-  for all v0, if v0 is a hat then truth holds
+  for all v0, (if v0 is a hat then truth holds)
 
 Signature:
-  for all v0, if v0 is a color then truth holds
+  for all v0, (if v0 is a color then truth holds)
 
 Signature:
-  for all v0, if v0 is equal to White then v0 is a color
+  for all v0, (if v0 is equal to White then v0 is a color)
 
 Signature:
-  for all v0, if v0 is equal to Black then v0 is a color
+  for all v0, (if v0 is equal to Black then v0 is a color)
 
 Signature:
-  for all v0, if v0 is a dwarf then for all v1, if v1 is equal to the hat of v0 then v1 is a hat
+  for all v0, (if v0 is a dwarf then for all v1, (if v1 is equal to the hat of v0 then v1 is a hat))
 
 Signature:
-  for all v0, if v0 is a hat then for all v1, if v1 is equal to the color of v0 then v1 is a color
+  for all v0, (if v0 is a hat then for all v1, (if v1 is equal to the color of v0 then v1 is a color))
 
 Signature:
-  for all v0, if v0 is a color then for all v1, if v1 is equal to the opposite color of v0 then v1 is a color
+  for all v0, (if v0 is a color then for all v1, (if v1 is equal to the opposite color of v0 then v1 is a color))
 
 Axiom:
-  for all v0, if v0 is a dwarf then for all v1, if v1 is equal to the color of the hat of v0 then (v1 is equal to White or v1 is equal to Black)
+  for all v0, (if v0 is a dwarf then for all v1, (if v1 is equal to the color of the hat of v0 then (v1 is equal to White or v1 is equal to Black)))
 
 Axiom:
   the opposite color of White is equal to Black
@@ -38,13 +38,13 @@ Axiom:
   the opposite color of Black is equal to White
 
 Signature:
-  for all v0, for all v1, if v1 is a dwarf and v0 is a color then (if v1 names v0 then truth holds)
+  for all v0, (for all v1, (if v1 is a dwarf and v0 is a color then (if v1 names v0 then truth holds)))
 
 Signature:
-  for all v0, if v0 is a dwarf then (if v0 gets released then truth holds)
+  for all v0, (if v0 is a dwarf then (if v0 gets released then truth holds))
 
 Axiom:
-  if for some v0, v0 is a dwarf and v0 names the color of the hat of v0 then for all v0, if v0 is a dwarf then v0 gets released
+  if for some v0, (v0 is a dwarf and v0 names the color of the hat of v0) then for all v0, (if v0 is a dwarf then v0 gets released)
 
 Axiom:
   Sigbert names the opposite color of the color of the hat of Tormund
@@ -53,7 +53,7 @@ Axiom:
   Tormund names the color of the hat of Sigbert
 
 Theorem:
-  for all v0, if v0 is a dwarf then v0 gets released
+  for all v0, (if v0 is a dwarf then v0 gets released)
 Proof:
 Qed.
 

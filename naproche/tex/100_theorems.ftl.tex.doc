@@ -1,115 +1,115 @@
 Theorem:
-  for all v0, if v0 is a class then for all v1, if v1 is an element of v0 then v1 is an object
+  for all v0, (if v0 is a class then for all v1, (if v1 is an element of v0 then v1 is an object))
 Proof:
 Qed.
 
 Theorem (extensionalityaxiom):
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if (for all v2, if v2 is an element of v0 then v2 is an element of v1) and for all v2, if v2 is an element of v1 then v2 is an element of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if (for all v2, (if v2 is an element of v0 then v2 is an element of v1)) and for all v2, (if v2 is an element of v1 then v2 is an element of v0) then v0 is equal to v1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a map then the domain of v0 is a class
+  for all v0, (if v0 is a map then the domain of v0 is a class)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a map and v1 is an element of the domain of v0 then the value of v0 under v1 is an object
+  for all v0, (for all v1, (if v0 is a map and v1 is an element of the domain of v0 then the value of v0 under v1 is an object))
 Proof:
 Qed.
 
 Theorem (mapextensionality):
-  for all v0, for all v1, if v0 is a map and v1 is a map then (if the domain of v0 is equal to the domain of v1 and for all v2, if v2 is an element of the domain of v0 then the value of v0 under v2 is equal to the value of v1 under v2 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a map and v1 is a map then (if the domain of v0 is equal to the domain of v1 and for all v2, (if v2 is an element of the domain of v0 then the value of v0 under v2 is equal to the value of v1 under v2) then v0 is equal to v1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then (v0 is a class and v0 is an object)
+  for all v0, (if v0 is a set then (v0 is a class and v0 is an object))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class and v0 is an object then v0 is a set
+  for all v0, (if v0 is a class and v0 is an object then v0 is a set)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a function then (v0 is a map and v0 is an object)
+  for all v0, (if v0 is a function then (v0 is a map and v0 is an object))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a map and v0 is an object then v0 is a function
+  for all v0, (if v0 is a map and v0 is an object then v0 is a function)
 Proof:
 Qed.
 
 Definition:
-  for all v0, (v0 is equal to \emptyset) iff (v0 is a class and it is wrong that for some v1, v1 is an element of v0)
+  for all v0, ((v0 is equal to \emptyset) iff (v0 is a class and it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, (v0 is equal to {\calV}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and v1 is an object))
+  for all v0, ((v0 is equal to {\calV}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and v1 is an object))))
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is nonempty) iff for some v1, v1 is an element of v0)
+  for all v0, (if v0 is a class then ((v0 is nonempty) iff for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then the union of v0 and the intersection of v1 and v2 is equal to the intersection of the union of v0 and v1 and the union of v0 and v2
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then the union of v0 and the intersection of v1 and v2 is equal to the intersection of the union of v0 and v1 and the union of v0 and v2)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Definition:
-  for all v0, (v0 is a family of sets) iff (v0 is a class and for all v1, if v1 is an element of v0 then v1 is a set)
+  for all v0, ((v0 is a family of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, if v0 is a family of sets then for all v1, (v1 is equal to the union of v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of v0 and v2 is an element of v3))
+  for all v0, (if v0 is a family of sets then for all v1, ((v1 is equal to the union of v0) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and for some v3, (v3 is an element of v0 and v2 is an element of v3))))))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a set and v1 is a set and v2 is a set and (v2 is a subclass of v0 and v2 is a subclass of v1) then (if the set difference of v0 and v2 is equal to the set difference of v1 and v2 then v0 is equal to v1)
+  for all v0, (for all v1, (for all v2, (if v0 is a set and v1 is a set and v2 is a set and (v2 is a subclass of v0 and v2 is a subclass of v1) then (if the set difference of v0 and v2 is equal to the set difference of v1 and v2 then v0 is equal to v1))))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is a value of v0) iff (v1 is an object and for some v2, v2 is an element of the domain of v0 and the value of v0 under v2 is equal to v1)
+  for all v0, (if v0 is a map then for all v1, ((v1 is a value of v0) iff (v1 is an object and for some v2, (v2 is an element of the domain of v0 and the value of v0 under v2 is equal to v1))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+  for all v0, (if v0 is a map then for all v1, (if v1 is a subclass of the domain of v0 then for all v2, ((v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of v1 and v3 is equal to the value of v0 under v4)))))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is equal to \range( v0 )) iff v1 is equal to v0 [ the domain of v0 ]
+  for all v0, (if v0 is a map then for all v1, ((v1 is equal to \range( v0 )) iff v1 is equal to v0 [ the domain of v0 ]))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a map from v0 to v1) iff (v2 is a map and the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a map from v0 to v1) iff (v2 is a map and the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))))
 
 Signature:
-  for all v0, for all v1, if v0 is a map and v1 is a map and \range( v1 ) is a subclass of the domain of v0 then for all v2, if v2 is equal to v0 \circ v1 then (v2 is a map and the domain of v2 is equal to the domain of v1 and for all v3, if v3 is an element of the domain of v2 then the value of v2 under v3 is equal to the value of v0 under the value of v1 under v3)
+  for all v0, (for all v1, (if v0 is a map and v1 is a map and \range( v1 ) is a subclass of the domain of v0 then for all v2, (if v2 is equal to v0 \circ v1 then (v2 is a map and the domain of v2 is equal to the domain of v1 and for all v3, (if v3 is an element of the domain of v2 then the value of v2 under v3 is equal to the value of v0 under the value of v1 under v3)))))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a map and v1 is a map and v2 is a map and (\range( v2 ) is a subclass of the domain of v1 and \range( v1 ) is a subclass of the domain of v0) then v0 \circ v1 \circ v2 is equal to v0 \circ v1 \circ v2
+  for all v0, (for all v1, (for all v2, (if v0 is a map and v1 is a map and v2 is a map and (\range( v2 ) is a subclass of the domain of v1 and \range( v1 ) is a subclass of the domain of v0) then v0 \circ v1 \circ v2 is equal to v0 \circ v1 \circ v2)))
 Proof:
   the domain of F \circ G \circ H is equal to the domain of H
   the domain of G \circ H is equal to the domain of H
   U is equal to G \circ H
   the domain of F \circ G \circ H is equal to the domain of F \circ U and the domain of F \circ U is equal to the domain of U and the domain of U is equal to the domain of G \circ H and the domain of G \circ H is equal to the domain of H
-  for all v0, if v0 is an element of the domain of H then (the value of F \circ G \circ H under v0 is equal to the value of F under the value of G under the value of H under v0 and the value of F under the value of G under the value of H under v0 is equal to the value of F \circ G \circ H under v0)
+  for all v0, (if v0 is an element of the domain of H then (the value of F \circ G \circ H under v0 is equal to the value of F under the value of G under the value of H under v0 and the value of F under the value of G under the value of H under v0 is equal to the value of F \circ G \circ H under v0))
 Qed.
 
 Signature:
-  for all v0, if v0 is equal to Id then (v0 is a map and the domain of v0 is equal to {\calV} and for all v1, if v1 is an element of {\calV} then the value of v0 under v1 is equal to v1)
+  for all v0, (if v0 is equal to Id then (v0 is a map and the domain of v0 is equal to {\calV} and for all v1, (if v1 is an element of {\calV} then the value of v0 under v1 is equal to v1)))
 
 Theorem:
   Id is a map from {\calV} to {\calV}
@@ -117,29 +117,29 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a map then Id \circ v0 is equal to v0
+  for all v0, (if v0 is a map then Id \circ v0 is equal to v0)
 Proof:
   G is equal to Id \circ F
   the domain of Id \circ F is equal to the domain of F
-  for all v0, if v0 is an element of the domain of F then the value of Id \circ F under v0 is equal to the value of F under v0
+  for all v0, (if v0 is an element of the domain of F then the value of Id \circ F under v0 is equal to the value of F under v0)
 Qed.
 
 Signature:
-  for all v0, for all v1, if v1 is a map and v0 is a class then for all v2, if v2 is equal to v1 \upharpoonright v0 then (v2 is a map and the domain of v2 is equal to the intersection of the domain of v1 and v0 and for all v3, if v3 is an element of the domain of v2 then the value of v2 under v3 is equal to the value of v1 under v3)
+  for all v0, (for all v1, (if v1 is a map and v0 is a class then for all v2, (if v2 is equal to v1 \upharpoonright v0 then (v2 is a map and the domain of v2 is equal to the intersection of the domain of v1 and v0 and for all v3, (if v3 is an element of the domain of v2 then the value of v2 under v3 is equal to the value of v1 under v3)))))
 
 Theorem:
-  for all v0, if v0 is a map then v0 \circ Id \upharpoonright the domain of v0 is equal to v0
+  for all v0, (if v0 is a map then v0 \circ Id \upharpoonright the domain of v0 is equal to v0)
 Proof:
   I is equal to Id \upharpoonright the domain of F
   the domain of F \circ Id \upharpoonright the domain of F is equal to the domain of F \circ I and the domain of F \circ I is equal to the domain of I and the domain of I is equal to the domain of F
-  for all v0, if v0 is an element of the domain of F then the value of F \circ Id \upharpoonright the domain of F under v0 is equal to the value of F under v0
+  for all v0, (if v0 is an element of the domain of F then the value of F \circ Id \upharpoonright the domain of F under v0 is equal to the value of F under v0)
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a surjection from v0 onto v1) iff (v2 is a map from v0 to v1 and v2 [ v0 ] is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a surjection from v0 onto v1) iff (v2 is a map from v0 to v1 and v2 [ v0 ] is equal to v1))))
 
 Definition:
-  for all v0, if v0 is a map then ((v0 is injective) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 and it is wrong that v1 is equal to v2 then it is wrong that the value of v0 under v1 is equal to the value of v0 under v2)
+  for all v0, (if v0 is a map then ((v0 is injective) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 and it is wrong that v1 is equal to v2 then it is wrong that the value of v0 under v1 is equal to the value of v0 under v2))))
 
 Theorem:
   Id is a surjection from {\calV} onto {\calV} and Id is injective
@@ -147,37 +147,37 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a map and v1 is a map and (v0 is injective and v1 is injective and \range( v0 ) is a subclass of the domain of v1) then v1 \circ v0 is injective
+  for all v0, (for all v1, (if v0 is a map and v1 is a map and (v0 is injective and v1 is injective and \range( v0 ) is a subclass of the domain of v1) then v1 \circ v0 is injective))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then for all v3, for all v4, if v3 is a surjection from v0 onto v1 and v4 is a surjection from v1 onto v2 then v4 \circ v3 is a surjection from v0 onto v2
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then for all v3, (for all v4, (if v3 is a surjection from v0 onto v1 and v4 is a surjection from v1 onto v2 then v4 \circ v3 is a surjection from v0 onto v2)))))
 Proof:
   G \circ F [ S ] is equal to G [ F [ S ] ] and G [ F [ S ] ] is equal to G [ T ] and G [ T ] is equal to U
 Qed.
 
 Signature:
-  for all v0, if v0 is a map and v0 is injective then for all v1, if v1 is equal to \inv{ v0 } then (v1 is a map and the domain of v1 is equal to \range( v0 ) and for all v2, if v2 is an element of the domain of v1 then (the value of v1 under v2 is an element of the domain of v0 and the value of v0 under the value of v1 under v2 is equal to v2))
+  for all v0, (if v0 is a map and v0 is injective then for all v1, (if v1 is equal to \inv{ v0 } then (v1 is a map and the domain of v1 is equal to \range( v0 ) and for all v2, (if v2 is an element of the domain of v1 then (the value of v1 under v2 is an element of the domain of v0 and the value of v0 under the value of v1 under v2 is equal to v2)))))
 
 Theorem:
-  for all v0, if v0 is a map and v0 is injective then \inv{ v0 } is a map from \range( v0 ) to the domain of v0
+  for all v0, (if v0 is a map and v0 is injective then \inv{ v0 } is a map from \range( v0 ) to the domain of v0)
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a bijection between v0 and v1) iff (v2 is a surjection from v0 onto v1 and v2 is injective)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a bijection between v0 and v1) iff (v2 is a surjection from v0 onto v1 and v2 is injective))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, if v2 is a bijection between v0 and v1 then \inv{ v2 } is a bijection between v1 and v0
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, (if v2 is a bijection between v0 and v1 then \inv{ v2 } is a bijection between v1 and v0)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 and v1 are equinumerous) iff for some v2, v2 is a bijection between v0 and v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are equinumerous) iff for some v2, (v2 is a bijection between v0 and v1))))
 
 Theorem:
-  for all v0, if v0 is a class then v0 and v0 are equinumerous
+  for all v0, (if v0 is a class then v0 and v0 are equinumerous)
 Proof:
   Id \upharpoonright S is a map from S to S
   Id \upharpoonright S is injective
@@ -185,29 +185,29 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 and v1 are equinumerous then v1 and v0 are equinumerous)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 and v1 are equinumerous then v1 and v0 are equinumerous)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then (if v0 and v1 are equinumerous and v1 and v2 are equinumerous then v0 and v2 are equinumerous)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then (if v0 and v1 are equinumerous and v1 and v2 are equinumerous then v0 and v2 are equinumerous))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (v0 is disjoint from v1 and v2 is disjoint from v3) then (if v0 and v2 are equinumerous and v1 and v3 are equinumerous then the union of v0 and v1 and the union of v2 and v3 are equinumerous)
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (v0 is disjoint from v1 and v2 is disjoint from v3) then (if v0 and v2 are equinumerous and v1 and v3 are equinumerous then the union of v0 and v1 and the union of v2 and v3 are equinumerous)))))
 Proof:
   F is a bijection between A and C
   G is a bijection between B and D
-  H is a map and (the domain of H is equal to the union of A and B) and for all v0, if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of A then (the value of H under v0 is equal to the value of F under v0)) and (if v0 is an element of B then (the value of H under v0 is equal to the value of G under v0))))
+  H is a map and (the domain of H is equal to the union of A and B) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of A then (the value of H under v0 is equal to the value of F under v0)) and (if v0 is an element of B then (the value of H under v0 is equal to the value of G under v0)))))
   SetInt timelimit 10  H is a map from the union of A and B to the union of C and D
   SetInt timelimit 3  H is a bijection between the union of A and B and the union of C and D
 Qed.
 
 Theorem (russell):
-  for some v0, v0 is a class and it is wrong that v0 is a set
+  for some v0, (v0 is a class and it is wrong that v0 is a set)
 Proof:
-  R is a class and for all v0, v0 is an element of R iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of v0)
+  R is a class and for all v0, (v0 is an element of R iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of v0))
   it is wrong that R is a set
   Proof:
     if R is a set then (R is an element of R iff it is wrong that R is an element of R)
@@ -215,7 +215,7 @@ Proof:
 Qed.
 
 Theorem (extensionalityaxiom):
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if (for all v2, if v2 is an element of v0 then v2 is an element of v1) and for all v2, if v2 is an element of v1 then v2 is an element of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if (for all v2, (if v2 is an element of v0 then v2 is an element of v1)) and for all v2, (if v2 is an element of v1 then v2 is an element of v0) then v0 is equal to v1)))
 Proof:
 Qed.
 
@@ -223,72 +223,72 @@ Axiom (setexistenceaxiom):
   \emptyset is a set
 
 Axiom (pairingaxiom):
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, if v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)) then v2 is a set
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, (if v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1))) then v2 is a set)))
 
 Axiom (unionaxiom):
-  for all v0, if v0 is a set and v0 is a family of sets then the union of v0 is a set
+  for all v0, (if v0 is a set and v0 is a family of sets then the union of v0 is a set)
 
 Axiom (separationaxiom):
-  for all v0, for all v1, if v1 is a set and v0 is a subclass of v1 then v0 is a set
+  for all v0, (for all v1, (if v1 is a set and v0 is a subclass of v1 then v0 is a set))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, (v1 is equal to the powerset of v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is a subset of v0 and v2 is an object))
+  for all v0, (if v0 is a set then for all v1, ((v1 is equal to the powerset of v0) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is a subset of v0 and v2 is an object)))))
 
 Axiom (powersetaxiom):
-  for all v0, if v0 is a set then the powerset of v0 is a set
+  for all v0, (if v0 is a set then the powerset of v0 is a set)
 
 Axiom (replacementaxiom):
-  for all v0, if v0 is a function then for all v1, if v1 is a subset of the domain of v0 then v0 [ v1 ] is a set
+  for all v0, (if v0 is a function then for all v1, (if v1 is a subset of the domain of v0 then v0 [ v1 ] is a set))
 
 Axiom:
-  for all v0, if v0 is a map and the domain of v0 is a set then v0 is a function
+  for all v0, (if v0 is a map and the domain of v0 is a set then v0 is a function)
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then the ordered pair of v0 and v1 is an object
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then the ordered pair of v0 and v1 is an object))
 Proof:
 Qed.
 
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))))))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \times v1 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, (for all v3, (if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))))))
 Proof:
 Qed.
 
 Theorem (cantor):
-  for all v0, if v0 is a set then it is wrong that for some v1, v1 is a surjection from v0 onto the powerset of v0
+  for all v0, (if v0 is a set then it is wrong that for some v1, (v1 is a surjection from v0 onto the powerset of v0))
 Proof:
   it is wrong that the thesis holds
   f is a surjection from M onto the powerset of M
-  N is a class and (if M is a set then N is a set) and for all v0, v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that v0 is an element of the value of f under v0)
+  N is a class and (if M is a set then N is a set) and for all v0, (v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that v0 is an element of the value of f under v0))
   z is an element of M and the value of f under z is equal to N
   z is an element of N iff (it is wrong that z is an element of the value of f under z and the value of f under z is equal to N)
   falsity holds
 Qed.
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)
+  for all v0, (if v0 is a map then for all v1, ((v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)))
 
 Definition:
-  for all v0, (v0 is a map between families of sets) iff for some v1, v1 is a family of sets and for some v2, v2 is a family of sets and v0 is a map from v1 to v2
+  for all v0, ((v0 is a map between families of sets) iff for some v1, (v1 is a family of sets and for some v2, (v2 is a family of sets and v0 is a map from v1 to v2)))
 
 Definition:
-  for all v0, if v0 is a map between families of sets then ((v0 preserves subsets) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if v1 is a subclass of v2 then the value of v0 under v1 is a subclass of the value of v0 under v2))
+  for all v0, (if v0 is a map between families of sets then ((v0 preserves subsets) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if v1 is a subclass of v2 then the value of v0 under v1 is a subclass of the value of v0 under v2)))))
 
 Theorem (kt):
-  for all v0, if v0 is a set then for all v1, if v1 is a map from the powerset of v0 to the powerset of v0 and v1 preserves subsets then for some v2, v2 is a fixed point of v1
+  for all v0, (if v0 is a set then for all v1, (if v1 is a map from the powerset of v0 to the powerset of v0 and v1 preserves subsets then for some v2, (v2 is a fixed point of v1)))
 Proof:
-  A is a class and for all v0, v0 is an element of A iff (v0 is an object and v0 is a subclass of x and v0 is a subclass of the value of h under v0)
+  A is a class and for all v0, (v0 is an element of A iff (v0 is an object and v0 is a subclass of x and v0 is a subclass of the value of h under v0))
   SetInt timelimit 10  A is a subset of the powerset of x and the union of A is an element of the powerset of x
   SetInt timelimit 3  the union of A is a subclass of the value of h under the union of A
   Proof:
@@ -307,7 +307,7 @@ Proof:
 Qed.
 
 Theorem (csb):
-  for all v0, for all v1, if v0 is a set and v1 is a set then (v0 and v1 are equinumerous iff ((for some v2, v2 is a map from v0 to v1 and v2 is injective) and for some v2, v2 is a map from v1 to v0 and v2 is injective))
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then (v0 and v1 are equinumerous iff ((for some v2, (v2 is a map from v0 to v1 and v2 is injective)) and for some v2, (v2 is a map from v1 to v0 and v2 is injective)))))
 Proof:
   if x and y are equinumerous then the thesis holds
   Proof:
@@ -315,15 +315,15 @@ Proof:
     \inv{ f } is a bijection between y and x
     f is a map from x to y and f is injective and (\inv{ f } is a map from y to x and \inv{ f } is injective)
   Qed.
-  if (for some v0, v0 is a map from x to y and v0 is injective) and for some v0, v0 is a map from y to x and v0 is injective then the thesis holds
+  if (for some v0, (v0 is a map from x to y and v0 is injective)) and for some v0, (v0 is a map from y to x and v0 is injective) then the thesis holds
   Proof:
     f is a map from x to y and f is injective
     g is a map from y to x and g is injective
-    for all v0, if v0 is an element of the powerset of x then the set difference of y and f [ v0 ] is a subclass of y
-    h is a map and (the domain of h is equal to the powerset of x) and for all v0, if v0 is an object then (if v0 is an element of the domain of h then (the value of h under v0 is equal to the set difference of x and g [ the set difference of y and f [ v0 ] ]))
+    for all v0, (if v0 is an element of the powerset of x then the set difference of y and f [ v0 ] is a subclass of y)
+    h is a map and (the domain of h is equal to the powerset of x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then (the value of h under v0 is equal to the set difference of x and g [ the set difference of y and f [ v0 ] ])))
     h is a map from the powerset of x to the powerset of x
     Proof:
-      for all v0, if v0 is a subset of x then the value of h under v0 is a subset of x
+      for all v0, (if v0 is a subset of x then the value of h under v0 is a subset of x)
     Qed.
     h preserves subsets
     Proof:
@@ -340,20 +340,20 @@ Proof:
       the value of h under u is a subclass of the value of h under v
     Qed.
     c is a fixed point of h
-    F is a map and (the domain of F is equal to c) and for all v0, if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to the value of f under v0))
+    F is a map and (the domain of F is equal to c) and for all v0, (if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to the value of f under v0)))
     c is equal to the value of h under c iff the set difference of x and c is equal to g [ the set difference of y and f [ c ] ]
     \inv{ g } is a bijection between \range( g ) and y
     the set difference of x and c is equal to g [ the set difference of y and f [ c ] ] and g [ the set difference of y and f [ c ] ] is a subclass of \range( g )
     the set difference of x and c is a subset of the domain of \inv{ g }
-    G is a map and (the domain of G is equal to the set difference of x and c) and for all v0, if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to the value of \inv{ g } under v0))
+    G is a map and (the domain of G is equal to the set difference of x and c) and for all v0, (if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to the value of \inv{ g } under v0)))
     F is a bijection between c and \range( F )
     G is a bijection between the set difference of x and c and \range( G )
-    H is a map and (the domain of H is equal to x) and for all v0, if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that v0 is an element of c then (the value of H under v0 is equal to the value of G under v0))))
+    H is a map and (the domain of H is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that v0 is an element of c then (the value of H under v0 is equal to the value of G under v0)))))
     H is a map from x to y
     Proof:
       the domain of H is a set
       H is a map
-      for all v0, if v0 is a value of H then v0 is an element of y
+      for all v0, (if v0 is a value of H then v0 is an element of y)
       Proof:
         v is a value of H
         u is an element of x and the value of H under u is equal to v
@@ -363,7 +363,7 @@ Proof:
     Qed.
     H is a surjection from x onto y
     Proof:
-      for all v0, if v0 is an element of y then v0 is a value of H
+      for all v0, (if v0 is an element of y then v0 is a value of H)
       Proof:
         v is an element of y
         if v is an element of f [ c ] then the thesis holds
@@ -384,7 +384,7 @@ Proof:
     Qed.
     H is injective
     Proof:
-      for all v0, for all v1, if v0 is an element of x and v1 is an element of x then (if it is wrong that v0 is equal to v1 then it is wrong that the value of H under v0 is equal to the value of H under v1)
+      for all v0, (for all v1, (if v0 is an element of x and v1 is an element of x then (if it is wrong that v0 is equal to v1 then it is wrong that the value of H under v0 is equal to the value of H under v1)))
       Proof:
         u is an element of x and v is an element of x
         it is wrong that u is equal to v
@@ -422,170 +422,170 @@ Proof:
 Qed.
 
 Signature:
-  for all v0, if v0 is a real number then v0 is an object
+  for all v0, (if v0 is a real number then v0 is an object)
 
 Definition:
-  for all v0, (v0 is equal to \mathbb{R}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a real number and v1 is an object))
+  for all v0, ((v0 is equal to \mathbb{R}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a real number and v1 is an object))))
 
 Axiom:
   \mathbb{R} is a set
 
 Signature:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then for all v2, if v2 is equal to v0 + v1 then v2 is a real number
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then for all v2, (if v2 is equal to v0 + v1 then v2 is a real number)))
 
 Signature:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then for all v2, if v2 is equal to v0 \cdot v1 then v2 is a real number
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then for all v2, (if v2 is equal to v0 \cdot v1 then v2 is a real number)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then v0 + v1 is equal to v1 + v0
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then v0 + v1 is equal to v1 + v0))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then v0 + v1 + v2 is equal to v0 + v1 + v2
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 + v1 + v2 is equal to v0 + v1 + v2)))
 
 Signature:
-  for all v0, if v0 is equal to 0 then (v0 is a real number and for all v1, if v1 is a real number then v1 + v0 is equal to v1)
+  for all v0, (if v0 is equal to 0 then (v0 is a real number and for all v1, (if v1 is a real number then v1 + v0 is equal to v1)))
 
 Signature:
-  for all v0, if v0 is a real number then for all v1, if v1 is equal to - v0 then (v1 is a real number and v0 + v1 is equal to 0)
+  for all v0, (if v0 is a real number then for all v1, (if v1 is equal to - v0 then (v1 is a real number and v0 + v1 is equal to 0)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then v0 \cdot v1 is equal to v1 \cdot v0
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then v0 \cdot v1 is equal to v1 \cdot v0))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2)))
 
 Signature:
-  for all v0, if v0 is equal to 1 then (v0 is a real number and it is wrong that v0 is equal to 0 and for all v1, if v1 is a real number then v0 \cdot v1 is equal to v1)
+  for all v0, (if v0 is equal to 1 then (v0 is a real number and it is wrong that v0 is equal to 0 and for all v1, (if v1 is a real number then v0 \cdot v1 is equal to v1)))
 
 Signature:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2)))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then v1 \cdot v0 + v2 \cdot v0 is equal to v1 + v2 \cdot v0
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v1 \cdot v0 + v2 \cdot v0 is equal to v1 + v2 \cdot v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 + v1 is equal to v0 + v2 then v1 is equal to v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 + v1 is equal to v0 + v2 then v1 is equal to v2))))
 Proof:
   y is equal to - x + x + y and - x + x + y is equal to - x + x + z and - x + x + z is equal to z
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if v0 + v1 is equal to v0 then v1 is equal to 0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 + v1 is equal to v0 then v1 is equal to 0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if v0 + v1 is equal to 0 then v1 is equal to - v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 + v1 is equal to 0 then v1 is equal to - v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then - - v0 is equal to v0
+  for all v0, (if v0 is a real number then - - v0 is equal to v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
 Proof:
   y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to z
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 then v1 is equal to 1)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 0 then 1/ 1/ v0 is equal to v0)
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then 1/ 1/ v0 is equal to v0))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then 0 \cdot v0 is equal to 0
+  for all v0, (if v0 is a real number then 0 \cdot v0 is equal to 0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then - v0 \cdot v1 is equal to - v0 \cdot v1
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then - v0 \cdot v1 is equal to - v0 \cdot v1))
 Proof:
   x \cdot y + - x \cdot y is equal to x + - x \cdot y and x + - x \cdot y is equal to 0 \cdot y and 0 \cdot y is equal to 0
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then - v0 is equal to - 1 \cdot v0
+  for all v0, (if v0 is a real number then - v0 is equal to - 1 \cdot v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then - v0 \cdot - v1 is equal to v0 \cdot v1
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then - v0 \cdot - v1 is equal to v0 \cdot v1))
 Proof:
   - x \cdot - y is equal to - x \cdot - y and - x \cdot - y is equal to - - y \cdot x and - - y \cdot x is equal to - - y \cdot x and - - y \cdot x is equal to y \cdot x and y \cdot x is equal to x \cdot y
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then 1 + - v0 \cdot v1 is equal to v1 + - v0 \cdot v1
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then 1 + - v0 \cdot v1 is equal to v1 + - v0 \cdot v1))
 Proof:
   1 + - x \cdot y is equal to y + - x \cdot y and y + - x \cdot y is equal to y + - x \cdot y
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, for all v2, for all v3, if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0)
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (for all v3, (if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0)))))
 Proof:
   x + - y + y + - z is equal to x + - y + y + - z and x + - y + y + - z is equal to x + - z
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then - v0 + v1 is equal to - v0 + - v1
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then - v0 + v1 is equal to - v0 + - v1))
 Proof:
   x + y + - x + - y is equal to x + - x + y + - y and x + - x + y + - y is equal to 0
 Qed.
 
 Definition:
-  for all v0, (v0 is equal to 2) iff v0 is equal to 1 + 1
+  for all v0, ((v0 is equal to 2) iff v0 is equal to 1 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 3) iff v0 is equal to 2 + 1
+  for all v0, ((v0 is equal to 3) iff v0 is equal to 2 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 4) iff v0 is equal to 3 + 1
+  for all v0, ((v0 is equal to 4) iff v0 is equal to 3 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 5) iff v0 is equal to 4 + 1
+  for all v0, ((v0 is equal to 5) iff v0 is equal to 4 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 6) iff v0 is equal to 5 + 1
+  for all v0, ((v0 is equal to 6) iff v0 is equal to 5 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 7) iff v0 is equal to 6 + 1
+  for all v0, ((v0 is equal to 7) iff v0 is equal to 6 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 8) iff v0 is equal to 7 + 1
+  for all v0, ((v0 is equal to 8) iff v0 is equal to 7 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 9) iff v0 is equal to 8 + 1
+  for all v0, ((v0 is equal to 9) iff v0 is equal to 8 + 1)
 
 Definition:
-  for all v0, (v0 is equal to 10) iff v0 is equal to 9 + 1
+  for all v0, ((v0 is equal to 10) iff v0 is equal to 9 + 1)
 
 Theorem:
   0 is a real number and 1 is a real number and 2 is a real number and 3 is a real number and 4 is a real number and 5 is a real number and 6 is a real number and 7 is a real number and 8 is a real number and 9 is a real number and 10 is a real number
@@ -614,47 +614,47 @@ Proof:
 Qed.
 
 Signature:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if v0 \leq v1 then truth holds)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq v1 then truth holds)))
 
 Axiom:
-  for all v0, if v0 is a real number then v0 \leq v0
+  for all v0, (if v0 is a real number then v0 \leq v0)
 
 Axiom:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if v0 \leq v1 and v1 \leq v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq v1 and v1 \leq v0 then v0 is equal to v1)))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq v1 and v1 \leq v2 then v0 \leq v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq v1 and v1 \leq v2 then v0 \leq v2))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (v0 \leq v1 or v1 \leq v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 or v1 \leq v0)))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if v1 \leq v2 then (v0 + v1 \leq v0 + v2 and v1 + v0 \leq v2 + v0))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v1 \leq v2 then (v0 + v1 \leq v0 + v2 and v1 + v0 \leq v2 + v0)))))
 
 Axiom (117ii):
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if 0 \leq v0 and v1 \leq v2 then v0 \cdot v1 \leq v0 \cdot v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if 0 \leq v0 and v1 \leq v2 then v0 \cdot v1 \leq v0 \cdot v2))))
 
 Definition:
-  for all v0, if v0 is a real number then ((v0 is positive) iff (0 \leq v0 and it is wrong that 0 is equal to v0))
+  for all v0, (if v0 is a real number then ((v0 is positive) iff (0 \leq v0 and it is wrong that 0 is equal to v0)))
 
 Definition:
-  for all v0, if v0 is a real number then ((v0 is negative) iff (v0 \leq 0 and it is wrong that v0 is equal to 0))
+  for all v0, (if v0 is a real number then ((v0 is negative) iff (v0 \leq 0 and it is wrong that v0 is equal to 0)))
 
 Definition:
-  for all v0, if v0 is a real number then ((v0 is nonnegative) iff 0 \leq v0)
+  for all v0, (if v0 is a real number then ((v0 is nonnegative) iff 0 \leq v0))
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that (v1 \leq v0 and it is wrong that v1 is equal to v0))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that (v1 \leq v0 and it is wrong that v1 is equal to v0))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then ((0 \leq v0 and it is wrong that 0 is equal to v0) iff (- v0 \leq 0 and it is wrong that - v0 is equal to 0))
+  for all v0, (if v0 is a real number then ((0 \leq v0 and it is wrong that 0 is equal to v0) iff (- v0 \leq 0 and it is wrong that - v0 is equal to 0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 0 then (0 \leq v0 \cdot v0 and it is wrong that 0 is equal to v0 \cdot v0))
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then (0 \leq v0 \cdot v0 and it is wrong that 0 is equal to v0 \cdot v0)))
 Proof:
   it is wrong that x is equal to 0
   if 0 \leq x then the thesis holds
@@ -667,14 +667,14 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (v0 \leq v1 iff - v1 \leq - v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff - v1 \leq - v0)))
 Proof:
   x \leq y iff x + - y \leq 0
   x + - y \leq 0 iff (- y is equal to - x + x + - y and - x + x + - y \leq - x)
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that v0 is equal to 0 and (v1 \leq v2 and it is wrong that v1 is equal to v2) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that v0 \cdot v2 is equal to v0 \cdot v1))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that v0 is equal to 0 and (v1 \leq v2 and it is wrong that v1 is equal to v2) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that v0 \cdot v2 is equal to v0 \cdot v1)))))
 Proof:
   x \leq 0 and it is wrong that x is equal to 0 and (y \leq z and it is wrong that y is equal to z)
   0 \leq - x and it is wrong that 0 is equal to - x
@@ -688,19 +688,19 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that v0 + - 1 is equal to v0)
+  for all v0, (if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that v0 + - 1 is equal to v0))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that v0 is equal to v1 and (v1 \leq v0 + 1 and it is wrong that v1 is equal to v0 + 1)) iff (0 \leq v1 + - v0 and it is wrong that 0 is equal to v1 + - v0 and (v1 + - v0 \leq 1 and it is wrong that v1 + - v0 is equal to 1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that v0 is equal to v1 and (v1 \leq v0 + 1 and it is wrong that v1 is equal to v0 + 1)) iff (0 \leq v1 + - v0 and it is wrong that 0 is equal to v1 + - v0 and (v1 + - v0 \leq 1 and it is wrong that v1 + - v0 is equal to 1)))))
 Proof:
   (x \leq y and it is wrong that x is equal to y) iff (0 is equal to x + - x and x + - x \leq y + - x and it is wrong that x + - x is equal to y + - x)
   (y \leq x + 1 and it is wrong that y is equal to x + 1) iff (y + - x \leq x + 1 + - x and it is wrong that y + - x is equal to x + 1 + - x and x + 1 + - x is equal to 1)
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 then (0 \leq 1/ v0 and it is wrong that 0 is equal to 1/ v0))
+  for all v0, (if v0 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 then (0 \leq 1/ v0 and it is wrong that 0 is equal to 1/ v0)))
 Proof:
 Qed.
 
@@ -710,12 +710,12 @@ Proof:
 Qed.
 
 Theorem (syz):
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if it is wrong that v0 \leq v1 then v1 \leq v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 \leq v1 then v1 \leq v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 and v0 \leq v1 then 1/ v1 \leq 1/ v0)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 and v0 \leq v1 then 1/ v1 \leq 1/ v0)))
 Proof:
   it is wrong that the thesis holds
   it is wrong that 1/ y \leq 1/ x
@@ -728,41 +728,41 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then for all v1, (v1 is an upper bound of v0) iff (v1 is a real number and for all v2, if v2 is an element of v0 then v2 \leq v1)
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is an upper bound of v0) iff (v1 is a real number and for all v2, (if v2 is an element of v0 then v2 \leq v1))))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then ((v0 is bounded above) iff for some v1, v1 is an upper bound of v0)
+  for all v0, (if v0 is a subset of \mathbb{R} then ((v0 is bounded above) iff for some v1, (v1 is an upper bound of v0)))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then for all v1, (v1 is a lower bound of v0) iff (v1 is a real number and for all v2, if v2 is an element of v0 then v1 \leq v2)
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a lower bound of v0) iff (v1 is a real number and for all v2, (if v2 is an element of v0 then v1 \leq v2))))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then ((v0 is bounded below) iff for some v1, v1 is a lower bound of v0)
+  for all v0, (if v0 is a subset of \mathbb{R} then ((v0 is bounded below) iff for some v1, (v1 is a lower bound of v0)))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then for all v1, (v1 is a supremum of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, if v2 is a real number then (if v2 \leq v1 and it is wrong that v2 is equal to v1 then it is wrong that v2 is an upper bound of v0))
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a supremum of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, (if v2 is a real number then (if v2 \leq v1 and it is wrong that v2 is equal to v1 then it is wrong that v2 is an upper bound of v0)))))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, (v1 is an infimum of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, if v2 is a real number then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then it is wrong that v2 is a lower bound of v0)))
+  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, ((v1 is an infimum of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, (if v2 is a real number then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then it is wrong that v2 is a lower bound of v0))))))
 
 Axiom (existencesupremum):
-  for all v0, if v0 is a subset of \mathbb{R} then (if v0 is nonempty and v0 is bounded above then for some v1, v1 is a supremum of v0)
+  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is nonempty and v0 is bounded above then for some v1, (v1 is a supremum of v0)))
 
 Definition:
-  for all v0, if v0 is a subset of \mathbb{R} then for all v1, (v1 is equal to v0 ^-) iff (v1 is a class and (if \mathbb{R} is a set then v1 is a set) and for all v2, v2 is an element of v1 iff (v2 is an element of \mathbb{R} and v2 is an object and for some v3, v3 is an element of v0 and v2 is equal to - v3))
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is equal to v0 ^-) iff (v1 is a class and (if \mathbb{R} is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of \mathbb{R} and v2 is an object and for some v3, (v3 is an element of v0 and v2 is equal to - v3))))))
 
 Theorem:
-  for all v0, if v0 is a subset of \mathbb{R} then v0 ^- is a subset of \mathbb{R}
+  for all v0, (if v0 is a subset of \mathbb{R} then v0 ^- is a subset of \mathbb{R})
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a subset of \mathbb{R} and v1 is a real number then (v1 is an upper bound of v0 iff - v1 is a lower bound of v0 ^-)
+  for all v0, (for all v1, (if v0 is a subset of \mathbb{R} and v1 is a real number then (v1 is an upper bound of v0 iff - v1 is a lower bound of v0 ^-)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a subset of \mathbb{R} and v0 is nonempty and v0 is bounded below then for some v1, v1 is an infimum of v0
+  for all v0, (if v0 is a subset of \mathbb{R} and v0 is nonempty and v0 is bounded below then for some v1, (v1 is an infimum of v0))
 Proof:
   a is a lower bound of E
   - a is an upper bound of E ^-
@@ -777,10 +777,10 @@ Proof:
 Qed.
 
 Signature:
-  for all v0, if v0 is a rational number then v0 is a real number
+  for all v0, (if v0 is a rational number then v0 is a real number)
 
 Definition:
-  for all v0, (v0 is equal to \mathbb{Q}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a rational number and v1 is an object))
+  for all v0, ((v0 is equal to \mathbb{Q}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a rational number and v1 is an object))))
 
 Theorem:
   \mathbb{Q} is a subset of \mathbb{R}
@@ -791,27 +791,27 @@ Axiom:
   0 is a rational number and 1 is a rational number
 
 Axiom:
-  for all v0, for all v1, if v0 is a rational number and v1 is a rational number then (v0 + v1 is a rational number and v0 \cdot v1 is a rational number)
+  for all v0, (for all v1, (if v0 is a rational number and v1 is a rational number then (v0 + v1 is a rational number and v0 \cdot v1 is a rational number)))
 
 Axiom:
-  for all v0, if v0 is a rational number then - v0 is a rational number
+  for all v0, (if v0 is a rational number then - v0 is a rational number)
 
 Axiom:
-  for all v0, if v0 is a rational number then (if it is wrong that v0 is equal to 0 then 1/ v0 is a rational number)
+  for all v0, (if v0 is a rational number then (if it is wrong that v0 is equal to 0 then 1/ v0 is a rational number))
 
 Axiom:
-  for all v0, if v0 is a real number then for some v1, v1 is a subset of \mathbb{Q} and v1 is bounded above and v0 is a supremum of v1
+  for all v0, (if v0 is a real number then for some v1, (v1 is a subset of \mathbb{Q} and v1 is bounded above and v0 is a supremum of v1))
 
 Theorem:
-  \mathbb{R} is a class and for all v0, v0 is an element of \mathbb{R} iff (v0 is an element of \mathbb{R} and v0 is an object and for some v1, v1 is a subclass of \mathbb{Q} and v1 is bounded above and v0 is a supremum of v1)
+  \mathbb{R} is a class and for all v0, (v0 is an element of \mathbb{R} iff (v0 is an element of \mathbb{R} and v0 is an object and for some v1, (v1 is a subclass of \mathbb{Q} and v1 is bounded above and v0 is a supremum of v1)))
 Proof:
 Qed.
 
 Signature:
-  for all v0, if v0 is an integer then v0 is a rational number
+  for all v0, (if v0 is an integer then v0 is a rational number)
 
 Definition:
-  for all v0, (v0 is equal to \mathbb{Z}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an integer and v1 is an object))
+  for all v0, ((v0 is equal to \mathbb{Z}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an integer and v1 is an object))))
 
 Theorem:
   \mathbb{Z} is a subclass of \mathbb{Q} and \mathbb{Q} is a subclass of \mathbb{R}
@@ -827,21 +827,21 @@ Axiom:
   0 is an integer and 1 is an integer
 
 Axiom:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then (v0 + v1 is an integer and v0 \cdot v1 is an integer)
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (v0 + v1 is an integer and v0 \cdot v1 is an integer)))
 
 Axiom:
-  for all v0, if v0 is an integer then - v0 is an integer
+  for all v0, (if v0 is an integer then - v0 is an integer)
 
 Axiom:
-  it is wrong that for some v0, v0 is an integer and 0 \leq v0 and it is wrong that 0 is equal to v0 and (v0 \leq 1 and it is wrong that v0 is equal to 1)
+  it is wrong that for some v0, (v0 is an integer and 0 \leq v0 and it is wrong that 0 is equal to v0 and (v0 \leq 1 and it is wrong that v0 is equal to 1))
 
 Axiom:
-  for all v0, if v0 is a rational number then for some v1, for some v2, v1 is an integer and v2 is an integer and (it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2)
+  for all v0, (if v0 is a rational number then for some v1, (for some v2, (v1 is an integer and v2 is an integer and (it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2))))
 
 Theorem:
-  \mathbb{Q} is a class and for all v0, v0 is an element of \mathbb{Q} iff (v0 is an object and for some v1, for some v2, v1 is an element of \mathbb{Z} and v2 is an element of \mathbb{Z} and it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2)
+  \mathbb{Q} is a class and for all v0, (v0 is an element of \mathbb{Q} iff (v0 is an object and for some v1, (for some v2, (v1 is an element of \mathbb{Z} and v2 is an element of \mathbb{Z} and it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2))))
 Proof:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v1 is an element of \mathbb{Q}
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v1 is an element of \mathbb{Q}))
 Qed.
 
 Theorem (archimedes1):
@@ -878,7 +878,7 @@ Proof:
 Qed.
 
 Theorem (archimedes2):
-  for all v0, if v0 is a real number then for some v1, v1 is an integer and v0 \leq v1 and it is wrong that v0 is equal to v1
+  for all v0, (if v0 is a real number then for some v1, (v1 is an integer and v0 \leq v1 and it is wrong that v0 is equal to v1))
 Proof:
   it is wrong that the thesis holds
   x is an upper bound of \mathbb{Z}
@@ -889,10 +889,10 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (v0 is a natural number) iff (v0 is an integer and v0 is nonnegative)
+  for all v0, ((v0 is a natural number) iff (v0 is an integer and v0 is nonnegative))
 
 Definition:
-  for all v0, (v0 is equal to \mathbb{N}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a natural number and v1 is an object))
+  for all v0, ((v0 is equal to \mathbb{N}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a natural number and v1 is an object))))
 
 Theorem:
   \mathbb{N} is a subclass of \mathbb{Z} and \mathbb{Z} is a subclass of \mathbb{Q} and \mathbb{Q} is a subclass of \mathbb{R}
@@ -922,7 +922,7 @@ Proof:
 Qed.
 
 Theorem:
-  the intersection of \mathbb{N} ^- and \mathbb{N} is a class and for all v0, v0 is an element of the intersection of \mathbb{N} ^- and \mathbb{N} iff (v0 is an object and v0 is equal to 0)
+  the intersection of \mathbb{N} ^- and \mathbb{N} is a class and for all v0, (v0 is an element of the intersection of \mathbb{N} ^- and \mathbb{N} iff (v0 is an object and v0 is equal to 0))
 Proof:
 Qed.
 
@@ -937,27 +937,27 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then v0 + v1 is a natural number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then v0 + v1 is a natural number))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then v0 \cdot v1 is a natural number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then v0 \cdot v1 is a natural number))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 + v1 is equal to v0 + v2 or v1 + v0 is equal to v2 + v0 then v1 is equal to v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 + v1 is equal to v0 + v2 or v1 + v0 is equal to v2 + v0 then v1 is equal to v2))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, for all v2, if v1 is a natural number and v2 is a natural number then (if v0 \cdot v1 is equal to v0 \cdot v2 or v1 \cdot v0 is equal to v2 \cdot v0 then v1 is equal to v2))
+  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 \cdot v1 is equal to v0 \cdot v2 or v1 \cdot v0 is equal to v2 \cdot v0 then v1 is equal to v2)))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then (v0 is equal to 0 or for some v1, v1 is a natural number and v0 is equal to v1 + 1)
+  for all v0, (if v0 is a natural number then (v0 is equal to 0 or for some v1, (v1 is a natural number and v0 is equal to v1 + 1)))
 Proof:
   if n is equal to 0 then the thesis holds
   if it is wrong that n is equal to 0 then the thesis holds
@@ -968,47 +968,47 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then (v0 is equal to 0 or 1 \leq v0)
+  for all v0, (if v0 is a natural number then (v0 is equal to 0 or 1 \leq v0))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 + v1 is equal to 0 then (v0 is equal to 0 and v1 is equal to 0))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 + v1 is equal to 0 then (v0 is equal to 0 and v1 is equal to 0))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 then v0 + - v1 is a natural number)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 then v0 + - v1 is a natural number)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 then for some v2, v2 is a natural number and v0 + v2 is equal to v1)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 then for some v2, (v2 is a natural number and v0 + v2 is equal to v1))))
 Proof:
   n + - m is a natural number
   m + n + - m is equal to n + - m + m and n + - m + m is equal to n
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if for some v2, v2 is a natural number and v0 + v2 is equal to v1 then v0 \leq v1)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if for some v2, (v2 is a natural number and v0 + v2 is equal to v1) then v0 \leq v1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, if v1 is a natural number then v1 \leq v1 \cdot v0)
+  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then v1 \leq v1 \cdot v0)))
 Proof:
   1 \leq m
   n is equal to n \cdot 1 and n \cdot 1 \leq n \cdot m
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v2 is a real number and v0 is a real number and v3 is a real number and v1 is a real number and (v2 \leq v0 and v3 \leq v1) then v2 + v3 \leq v0 + v1
+  for all v0, (for all v1, (for all v2, (for all v3, (if v2 is a real number and v0 is a real number and v3 is a real number and v1 is a real number and (v2 \leq v0 and v3 \leq v1) then v2 + v3 \leq v0 + v1))))
 Proof:
   a \leq \alpha and a + b \leq \alpha + b and \alpha + b \leq \alpha + \beta
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and (v0 \leq v1 and it is wrong that v0 is equal to v1) then v0 + 1 \leq v1
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v0 \leq v1 and it is wrong that v0 is equal to v1) then v0 + 1 \leq v1))
 Proof:
   it is wrong that the thesis holds
   c is equal to a + 1
@@ -1020,7 +1020,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and (v1 \leq v0 and it is wrong that v1 is equal to v0) then v1 \leq v0 + - 1
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v1 \leq v0 and it is wrong that v1 is equal to v0) then v1 \leq v0 + - 1))
 Proof:
   b \leq a and it is wrong that b is equal to a
   - a \leq - b and it is wrong that - a is equal to - b
@@ -1030,13 +1030,13 @@ Proof:
 Qed.
 
 Theorem (inductiontheorem):
-  for all v0, if v0 is a subclass of \mathbb{N} and 0 is an element of v0 and for all v1, if v1 is an element of v0 then v1 + 1 is an element of v0 then v0 is equal to \mathbb{N}
+  for all v0, (if v0 is a subclass of \mathbb{N} and 0 is an element of v0 and for all v1, (if v1 is an element of v0 then v1 + 1 is an element of v0) then v0 is equal to \mathbb{N})
 Proof:
-  for all v0, if v0 is an element of \mathbb{N} then v0 is an element of A
+  for all v0, (if v0 is an element of \mathbb{N} then v0 is an element of A)
   Proof:
     n is an element of \mathbb{N}
     it is wrong that the thesis holds
-    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that v0 is an element of A)
+    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, (v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that v0 is an element of A))
     F is nonempty and F is bounded below
     F is a subset of \mathbb{R}
     a is an infimum of F
@@ -1072,13 +1072,13 @@ Proof:
 Qed.
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then v1 is inductively less than v0)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then v1 is inductively less than v0)))
 
 Signature:
-  for all v0, if v0 is a natural number then (if P( v0 ) then truth holds)
+  for all v0, (if v0 is a natural number then (if P( v0 ) then truth holds))
 
 Theorem:
-  if P( 0 ) and for all v0, if v0 is a natural number then (if P( v0 ) then P( v0 + 1 )) then for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then P( v1 )) then P( v0 ))
+  if P( 0 ) and for all v0, (if v0 is a natural number then (if P( v0 ) then P( v0 + 1 ))) then for all v0, (if v0 is a natural number then (if for all v1, (if v1 is a natural number then (if v1 is inductively less than v0 then P( v1 ))) then P( v0 )))
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
@@ -1091,11 +1091,11 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a subset of \mathbb{N} and v0 is nonempty then for some v1, v1 is an element of v0 and v1 is an infimum of v0
+  for all v0, (if v0 is a subset of \mathbb{N} and v0 is nonempty then for some v1, (v1 is an element of v0 and v1 is an infimum of v0))
 Proof:
   it is wrong that the thesis holds
-  for all v0, if v0 is an element of X then for some v1, v1 is an element of X and it is wrong that v0 \leq v1
-  for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then it is wrong that v1 is an element of X) then it is wrong that v0 is an element of X)
+  for all v0, (if v0 is an element of X then for some v1, (v1 is an element of X and it is wrong that v0 \leq v1))
+  for all v0, (if v0 is a natural number then (if for all v1, (if v1 is a natural number then (if v1 is inductively less than v0 then it is wrong that v1 is an element of X)) then it is wrong that v0 is an element of X))
   Proof:
     n is a natural number
     n is an element of X
@@ -1110,21 +1110,21 @@ Proof:
 Qed.
 
 Signature:
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a natural number then for all v3, if v3 is equal to \sumarith{ v0 }{ v1 }{ v2 } then v3 is a real number
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a natural number then for all v3, (if v3 is equal to \sumarith{ v0 }{ v1 }{ v2 } then v3 is a real number))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then \sumarith{ v0 }{ v1 }{ 1 } is equal to v0 + v1
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then \sumarith{ v0 }{ v1 }{ 1 } is equal to v0 + v1))
 
 Axiom (1):
-  for all v0, for all v1, for all v2, if v0 is a real number and v1 is a real number and v2 is a natural number then \sumarith{ v0 }{ v1 }{ v2 + 1 } is equal to \sumarith{ v0 }{ v1 }{ v2 } + v0 + v1 \cdot v2 + 1
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a natural number then \sumarith{ v0 }{ v1 }{ v2 + 1 } is equal to \sumarith{ v0 }{ v1 }{ v2 } + v0 + v1 \cdot v2 + 1)))
 
 Theorem:
-  for all v0, if v0 is a real number and it is wrong that v0 is equal to 0 then for all v1, for all v2, if v1 is a real number and v2 is a real number then v1 \cdot 1/ v0 \cdot v2 is equal to v1 \cdot v2 \cdot 1/ v0
+  for all v0, (if v0 is a real number and it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then v1 \cdot 1/ v0 \cdot v2 is equal to v1 \cdot v2 \cdot 1/ v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then for all v2, if v2 is a natural number and it is wrong that v2 is equal to 0 then (if for all v3, if v3 is a natural number and it is wrong that v3 is equal to 0 then (if v3 is inductively less than v2 then \sumarith{ v0 }{ v1 }{ v3 } is equal to v3 \cdot v0 + v3 + 1 \cdot v1 \cdot 1/ 2) then \sumarith{ v0 }{ v1 }{ v2 } is equal to v2 \cdot v0 + v2 + 1 \cdot v1 \cdot 1/ 2)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then for all v2, (if v2 is a natural number and it is wrong that v2 is equal to 0 then (if for all v3, (if v3 is a natural number and it is wrong that v3 is equal to 0 then (if v3 is inductively less than v2 then \sumarith{ v0 }{ v1 }{ v3 } is equal to v3 \cdot v0 + v3 + 1 \cdot v1 \cdot 1/ 2)) then \sumarith{ v0 }{ v1 }{ v2 } is equal to v2 \cdot v0 + v2 + 1 \cdot v1 \cdot 1/ 2))))
 Proof:
   n is a natural number and it is wrong that n is equal to 0
   if n is equal to 1 then the thesis holds
@@ -1139,31 +1139,31 @@ Proof:
   SetInt timelimit 3Qed.
 
 Signature:
-  for all v0, for all v1, if v0 is a natural number and v1 is a real number then for all v2, if v2 is equal to v1 ^{ v0 } then v2 is a real number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a real number then for all v2, (if v2 is equal to v1 ^{ v0 } then v2 is a real number)))
 
 Axiom:
-  for all v0, if v0 is a real number then v0 ^{ 0 } is equal to 1
+  for all v0, (if v0 is a real number then v0 ^{ 0 } is equal to 1)
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a real number then v1 ^{ v0 + 1 } is equal to v1 ^{ v0 } \cdot v1
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a real number then v1 ^{ v0 + 1 } is equal to v1 ^{ v0 } \cdot v1))
 
 Theorem:
-  for all v0, if v0 is a real number then v0 ^{ 1 } is equal to v0
+  for all v0, (if v0 is a real number then v0 ^{ 1 } is equal to v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a real number then v0 ^{ 2 } is equal to v0 \cdot v0
+  for all v0, (if v0 is a real number then v0 ^{ 2 } is equal to v0 \cdot v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a real number then v1 \cdot v1 ^{ v0 } is equal to v1 ^{ v0 + 1 }
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a real number then v1 \cdot v1 ^{ v0 } is equal to v1 ^{ v0 + 1 }))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then for all v1, if v1 is a natural number then (if for all v2, if v2 is a natural number then (if v2 is inductively less than v1 then v0 ^{ v2 } is a natural number) then v0 ^{ v1 } is a natural number)
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then v0 ^{ v2 } is a natural number)) then v0 ^{ v1 } is a natural number)))
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
@@ -1181,7 +1181,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, if v1 is a natural number then (if for all v2, if v2 is a natural number then (if v2 is inductively less than v1 then 1 \leq v0 ^{ v2 }) then 1 \leq v0 ^{ v1 })
+  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then 1 \leq v0 ^{ v2 })) then 1 \leq v0 ^{ v1 })))
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
@@ -1199,28 +1199,28 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then v0 + v1 ^{ 2 } is equal to v0 ^{ 2 } + 2 \cdot v0 \cdot v1 + v1 ^{ 2 }
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then v0 + v1 ^{ 2 } is equal to v0 ^{ 2 } + 2 \cdot v0 \cdot v1 + v1 ^{ 2 }))
 Proof:
   x + y \cdot x + y is equal to x ^{ 2 } + x \cdot y + y \cdot x + y ^{ 2 } and x ^{ 2 } + x \cdot y + y \cdot x + y ^{ 2 } is equal to x ^{ 2 } + x \cdot y + y \cdot x + y ^{ 2 } and x ^{ 2 } + x \cdot y + y \cdot x + y ^{ 2 } is equal to x ^{ 2 } + 2 \cdot x \cdot y + y ^{ 2 }
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number then v0 + - v1 ^{ 2 } is equal to v0 ^{ 2 } + - 2 \cdot v0 \cdot v1 + v1 ^{ 2 }
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then v0 + - v1 ^{ 2 } is equal to v0 ^{ 2 } + - 2 \cdot v0 \cdot v1 + v1 ^{ 2 }))
 Proof:
   x + - y ^{ 2 } is equal to x ^{ 2 } + 2 \cdot x \cdot - y + - y ^{ 2 } and x ^{ 2 } + 2 \cdot x \cdot - y + - y ^{ 2 } is equal to x ^{ 2 } + 2 \cdot x \cdot - y + y ^{ 2 } and x ^{ 2 } + 2 \cdot x \cdot - y + y ^{ 2 } is equal to x ^{ 2 } + 2 \cdot - x \cdot y + - y ^{ 2 } and x ^{ 2 } + 2 \cdot - x \cdot y + - y ^{ 2 } is equal to x ^{ 2 } + - 2 \cdot x \cdot y + y ^{ 2 }
 Qed.
 
 Signature:
-  for all v0, for all v1, if v0 is a natural number and v1 is a real number then for all v2, if v2 is equal to \sumgeom{ v1 }{ v0 } then v2 is a real number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a real number then for all v2, (if v2 is equal to \sumgeom{ v1 }{ v0 } then v2 is a real number)))
 
 Axiom:
-  for all v0, if v0 is a real number then \sumgeom{ v0 }{ 0 } is equal to 0
+  for all v0, (if v0 is a real number then \sumgeom{ v0 }{ 0 } is equal to 0)
 
 Axiom:
-  for all v0, for all v1, if v1 is a real number and v0 is a natural number then \sumgeom{ v1 }{ v0 + 1 } is equal to \sumgeom{ v1 }{ v0 } + v1 ^{ v0 }
+  for all v0, (for all v1, (if v1 is a real number and v0 is a natural number then \sumgeom{ v1 }{ v0 + 1 } is equal to \sumgeom{ v1 }{ v0 } + v1 ^{ v0 }))
 
 Theorem:
-  for all v0, if v0 is a real number then (if it is wrong that v0 is equal to 1 then for all v1, if v1 is a natural number then (if for all v2, if v2 is a natural number then (if v2 is inductively less than v1 then \sumgeom{ v0 }{ v2 } is equal to 1 + - v0 ^{ v2 } \cdot 1/ 1 + - v0) then \sumgeom{ v0 }{ v1 } is equal to 1 + - v0 ^{ v1 } \cdot 1/ 1 + - v0))
+  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 1 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then \sumgeom{ v0 }{ v2 } is equal to 1 + - v0 ^{ v2 } \cdot 1/ 1 + - v0)) then \sumgeom{ v0 }{ v1 } is equal to 1 + - v0 ^{ v1 } \cdot 1/ 1 + - v0))))
 Proof:
   it is wrong that 1 + - x is equal to 0
   n is a natural number
@@ -1235,17 +1235,17 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then ((v1 divides v0) iff for some v2, v2 is an integer and v0 is equal to v1 \cdot v2)
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then ((v1 divides v0) iff for some v2, (v2 is an integer and v0 is equal to v1 \cdot v2))))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and v2 is an integer then (if v0 divides v1 and v1 divides v2 then v0 divides v2)
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then (if v0 divides v1 and v1 divides v2 then v0 divides v2))))
 Proof:
   u is an integer and v is an integer and (m is equal to l \cdot u and n is equal to m \cdot v)
   n is equal to l \cdot u \cdot v
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and v2 is an integer then (if v0 divides v1 and v0 divides v1 + v2 then v0 divides v2)
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then (if v0 divides v1 and v0 divides v1 + v2 then v0 divides v2))))
 Proof:
   it is wrong that l is equal to 0
   p is an integer and q is an integer and (m is equal to l \cdot p and m + n is equal to l \cdot q)
@@ -1255,12 +1255,12 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v1 is a natural number and v0 is a natural number and (it is wrong that v1 is equal to 0 and v1 divides v0) then v0 \cdot 1/ v1 is a natural number
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and (it is wrong that v1 is equal to 0 and v1 divides v0) then v0 \cdot 1/ v1 is a natural number))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and v1 divides v0 then for some v2, v2 is a natural number and v1 \cdot v2 is equal to v0
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and v1 divides v0 then for some v2, (v2 is a natural number and v1 \cdot v2 is equal to v0)))
 Proof:
   if n is equal to 0 then the thesis holds
   Proof:
@@ -1277,7 +1277,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v1 divides v0 and v0 divides v1 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 divides v0 and v0 divides v1 then v0 is equal to v1)))
 Proof:
   n divides m and m divides n
   if n is equal to 0 then m is equal to 0
@@ -1289,42 +1289,42 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, if v1 is an integer and v1 divides v0 then v1 \leq v0
+  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is an integer and v1 divides v0 then v1 \leq v0))
 Proof:
   it is wrong that the thesis holds
-  for some v0, v0 is a natural number and 0 \leq v0 and it is wrong that 0 is equal to v0 and m is equal to v0 \cdot k
+  for some v0, (v0 is a natural number and 0 \leq v0 and it is wrong that 0 is equal to v0 and m is equal to v0 \cdot k)
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1 and (0 \leq v0 and it is wrong that 0 is equal to v0)) then it is wrong that (v1 is an integer and v1 divides v0)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1 and (0 \leq v0 and it is wrong that 0 is equal to v0)) then it is wrong that (v1 is an integer and v1 divides v0)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is an integer then ((v0 is prime) iff (v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 and for all v1, if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))
+  for all v0, (if v0 is an integer then ((v0 is prime) iff (v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 and for all v1, (if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))))
 
 Theorem:
-  for all v0, if v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 then (if for all v1, if v1 is a natural number and it is wrong that v1 is equal to 0 and it is wrong that v1 is equal to 1 then (if v1 is inductively less than v0 then for some v2, v2 is an integer and v2 divides v1 and v2 is prime) then for some v1, v1 is an integer and v1 divides v0 and v1 is prime)
+  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 then (if for all v1, (if v1 is a natural number and it is wrong that v1 is equal to 0 and it is wrong that v1 is equal to 1 then (if v1 is inductively less than v0 then for some v2, (v2 is an integer and v2 divides v1 and v2 is prime))) then for some v1, (v1 is an integer and v1 divides v0 and v1 is prime)))
 Proof:
   m is a natural number and it is wrong that m is equal to 0 and it is wrong that m is equal to 1
   if m is a natural number and m is prime then the thesis holds
   n is a natural number and n divides m and it is wrong that n is equal to 1 and it is wrong that n is equal to m
   n is a natural number and it is wrong that n is equal to 0 and it is wrong that n is equal to 1 and (n \leq m and it is wrong that n is equal to m)
   n is inductively less than m
-  for some v0, v0 is an integer and v0 divides n and v0 is prime
+  for some v0, (v0 is an integer and v0 divides n and v0 is prime)
 Qed.
 
 Signature:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then for all v2, if v2 is equal to the greatest common divisor of v0 and v1 then v2 is a natural number
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then for all v2, (if v2 is equal to the greatest common divisor of v0 and v1 then v2 is a natural number)))
 
 Axiom:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then (the greatest common divisor of v0 and v1 is an integer and the greatest common divisor of v0 and v1 divides v0 and (the greatest common divisor of v0 and v1 is an integer and the greatest common divisor of v0 and v1 divides v1))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (the greatest common divisor of v0 and v1 is an integer and the greatest common divisor of v0 and v1 divides v0 and (the greatest common divisor of v0 and v1 is an integer and the greatest common divisor of v0 and v1 divides v1))))
 
 Axiom:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then for all v2, if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1) then (v2 is an integer and v2 divides the greatest common divisor of v0 and v1)
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then for all v2, (if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1) then (v2 is an integer and v2 divides the greatest common divisor of v0 and v1))))
 
 Theorem:
-  for all v0, if v0 is an integer then (v0 is equal to the greatest common divisor of v0 and 0 or - v0 is equal to the greatest common divisor of v0 and 0)
+  for all v0, (if v0 is an integer then (v0 is equal to the greatest common divisor of v0 and 0 or - v0 is equal to the greatest common divisor of v0 and 0))
 Proof:
   d is equal to the greatest common divisor of z and 0
   if z is a natural number then the thesis holds
@@ -1344,7 +1344,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v1 is an integer and v0 is an integer then the greatest common divisor of v1 and v0 is equal to the greatest common divisor of v0 and v1
+  for all v0, (for all v1, (if v1 is an integer and v0 is an integer then the greatest common divisor of v1 and v0 is equal to the greatest common divisor of v0 and v1))
 Proof:
   d is equal to the greatest common divisor of n and m
   \delta is equal to the greatest common divisor of m and n
@@ -1356,7 +1356,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then v0 is equal to the greatest common divisor of v0 and v0
+  for all v0, (if v0 is a natural number then v0 is equal to the greatest common divisor of v0 and v0)
 Proof:
   n is an integer and n divides n and (n is an integer and n divides n)
   d is equal to the greatest common divisor of n and n
@@ -1366,7 +1366,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0 + - v1)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, (if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0 + - v1))))
 Proof:
   u is a natural number and v is a natural number and (m is equal to d \cdot u and n is equal to d \cdot v)
   v \cdot d \leq u \cdot d and it is wrong that v \cdot d is equal to u \cdot d
@@ -1376,7 +1376,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, if v2 is an integer and v2 divides v0 + - v1 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, (if v2 is an integer and v2 divides v0 + - v1 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0))))
 Proof:
   k is equal to m + - n
   k is a natural number
@@ -1385,7 +1385,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v0 + - v1 and v1
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v0 + - v1 and v1))
 Proof:
   if n is equal to 0 then the thesis holds
   if 0 \leq n and it is wrong that 0 is equal to n then the thesis holds
@@ -1401,30 +1401,30 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v1 + - v0 and v0
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v1 + - v0 and v0))
 Proof:
 Qed.
 
 Signature:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, if v2 is equal to \gcd( v0 , v1 ) then v2 is a natural number
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then for all v2, (if v2 is equal to \gcd( v0 , v1 ) then v2 is a natural number)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then \gcd( v0 , v1 ) is equal to \gcd( v1 , v0 )
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then \gcd( v0 , v1 ) is equal to \gcd( v1 , v0 )))
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 is equal to 0 and v1 is a natural number then \gcd( v0 , v1 ) is equal to v1)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 is equal to 0 and v1 is a natural number then \gcd( v0 , v1 ) is equal to v1)))
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 , v1 + - v0 ))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 , v1 + - v0 ))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if for all v2, for all v3, if v2 is a natural number and v3 is a natural number then (if v2 + v3 is inductively less than v0 + v1 then the greatest common divisor of v2 and v3 is equal to \gcd( v2 , v3 )) then the greatest common divisor of v0 and v1 is equal to \gcd( v0 , v1 ))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if for all v2, (for all v3, (if v2 is a natural number and v3 is a natural number then (if v2 + v3 is inductively less than v0 + v1 then the greatest common divisor of v2 and v3 is equal to \gcd( v2 , v3 )))) then the greatest common divisor of v0 and v1 is equal to \gcd( v0 , v1 ))))
 Proof:
   m is a natural number and n is a natural number
   m + n is a natural number
@@ -1439,7 +1439,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a real number and v1 is a real number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then for some v2, v2 is a real number and v0 \leq v2 and it is wrong that v0 is equal to v2 and (v2 \leq v1 and it is wrong that v2 is equal to v1)
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then for some v2, (v2 is a real number and v0 \leq v2 and it is wrong that v0 is equal to v2 and (v2 \leq v1 and it is wrong that v2 is equal to v1))))
 Proof:
   s + t \cdot 1/ 2 is a real number
   SetInt timelimit 30  s + s \leq s + t and it is wrong that s + s is equal to s + t
@@ -1451,7 +1451,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, if v1 is a natural number then (if for all v2, if v2 is a natural number then (if v2 is inductively less than v1 then for some v3, v3 is a natural number and 0 \leq v2 + - v3 \cdot v0 and v2 + - v3 \cdot v0 \leq v0 and it is wrong that v2 + - v3 \cdot v0 is equal to v0) then for some v2, v2 is a natural number and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0)
+  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then for some v3, (v3 is a natural number and 0 \leq v2 + - v3 \cdot v0 and v2 + - v3 \cdot v0 \leq v0 and it is wrong that v2 + - v3 \cdot v0 is equal to v0))) then for some v2, (v2 is a natural number and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0))))
 Proof:
   m is a natural number
   if m is equal to 0 then the thesis holds
@@ -1488,7 +1488,7 @@ Proof:
       Proof:
         k is a natural number and - k + - 1 \leq 0 and it is wrong that - k + - 1 is equal to 0 and - k + - 1 is equal to - k + - 1
       Qed.
-      for some v0, v0 is a natural number and 0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that m + - - - k + - 1 \cdot a is equal to a
+      for some v0, (v0 is a natural number and 0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that m + - - - k + - 1 \cdot a is equal to a)
     Qed.
     if m + - k \cdot a \leq a and it is wrong that m + - k \cdot a is equal to a then the thesis holds
     Proof:
@@ -1501,11 +1501,11 @@ Proof:
 Qed.
 
 Theorem (lemmabezout):
-  for all v0, for all v1, if v0 is a natural number and it is wrong that v0 is equal to 0 and v1 is an integer then for some v2, v2 is an integer and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0
+  for all v0, (for all v1, (if v0 is a natural number and it is wrong that v0 is equal to 0 and v1 is an integer then for some v2, (v2 is an integer and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0)))
 Proof:
   if m is a natural number then the thesis holds
   Proof:
-    for some v0, v0 is a natural number and 0 \leq m + - v0 \cdot a and m + - v0 \cdot a \leq a and it is wrong that m + - v0 \cdot a is equal to a
+    for some v0, (v0 is a natural number and 0 \leq m + - v0 \cdot a and m + - v0 \cdot a \leq a and it is wrong that m + - v0 \cdot a is equal to a)
   Qed.
   if it is wrong that m is a natural number then the thesis holds
   Proof:
@@ -1518,7 +1518,7 @@ Proof:
 Qed.
 
 Theorem (bezout):
-  for all v0, for all v1, for all v2, if v1 is an integer and v2 is an integer and v0 is equal to the greatest common divisor of v1 and v2 then for some v3, v3 is an integer and for some v4, v4 is an integer and v0 is equal to v1 \cdot v3 + v2 \cdot v4
+  for all v0, (for all v1, (for all v2, (if v1 is an integer and v2 is an integer and v0 is equal to the greatest common divisor of v1 and v2 then for some v3, (v3 is an integer and for some v4, (v4 is an integer and v0 is equal to v1 \cdot v3 + v2 \cdot v4)))))
 Proof:
   if a is equal to 0 then the thesis holds
   Proof:
@@ -1539,7 +1539,7 @@ Proof:
   Proof:
     it is wrong that 0 divides a
     it is wrong that \delta is equal to 0
-    S is a class and for all v0, v0 is an element of S iff (v0 is an object and for some v1, for some v2, v1 is an integer and v2 is an integer and (0 \leq a \cdot v1 + b \cdot v2 and it is wrong that 0 is equal to a \cdot v1 + b \cdot v2) and v0 is equal to a \cdot v1 + b \cdot v2)
+    S is a class and for all v0, (v0 is an element of S iff (v0 is an object and for some v1, (for some v2, (v1 is an integer and v2 is an integer and (0 \leq a \cdot v1 + b \cdot v2 and it is wrong that 0 is equal to a \cdot v1 + b \cdot v2) and v0 is equal to a \cdot v1 + b \cdot v2))))
     (0 \leq a and it is wrong that 0 is equal to a) or (0 \leq - a and it is wrong that 0 is equal to - a)
     (0 \leq a \cdot 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot 1 + b \cdot 0) or (0 \leq a \cdot - 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot - 1 + b \cdot 0)
     if 0 \leq a \cdot 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot 1 + b \cdot 0 then a \cdot 1 + b \cdot 0 is an element of S
@@ -1547,7 +1547,7 @@ Proof:
     S is nonempty
     S is a subclass of \mathbb{N}
     Proof:
-      for all v0, if v0 is an element of S then v0 is an element of \mathbb{N}
+      for all v0, (if v0 is an element of S then v0 is an element of \mathbb{N})
       Proof:
         s is an element of S
         e is an integer and f is an integer and s is equal to a \cdot e + b \cdot f
@@ -1556,7 +1556,7 @@ Proof:
         0 \leq s and it is wrong that 0 is equal to s
       Qed.
     Qed.
-    for some v0, v0 is an infimum of S
+    for some v0, (v0 is an infimum of S)
     d is an element of S and d is an infimum of S
     e is an integer and f is an integer and d is equal to a \cdot e + b \cdot f
     d divides a
@@ -1605,12 +1605,12 @@ Proof:
       c is an integer and c divides d and (d is an integer and d divides c)
       d is equal to c
     Qed.
-    d is equal to \delta and for some v0, for some v1, v0 is an integer and v1 is an integer and \delta is equal to a \cdot v0 + b \cdot v1
+    d is equal to \delta and for some v0, (for some v1, (v0 is an integer and v1 is an integer and \delta is equal to a \cdot v0 + b \cdot v1))
   Qed.
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (the greatest common divisor of v1 and v0 is equal to 0 iff (v1 is equal to 0 and v0 is equal to 0))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (the greatest common divisor of v1 and v0 is equal to 0 iff (v1 is equal to 0 and v0 is equal to 0))))
 Proof:
   the greatest common divisor of 0 and 0 is equal to 0
   Proof:
@@ -1627,13 +1627,13 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that for some v2, v2 is an integer and v2 divides v1 and v2 divides v0 and v2 is prime)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that for some v2, (v2 is an integer and v2 divides v1 and v2 divides v0 and v2 is prime))))
 
 Theorem:
-  for all v0, if v0 is a rational number then (if v0 is positive then for some v1, for some v2, v1 is a natural number and v2 is a natural number and (v1 and v2 are coprime and v1 \cdot v0 is equal to v2))
+  for all v0, (if v0 is a rational number then (if v0 is positive then for some v1, (for some v2, (v1 is a natural number and v2 is a natural number and (v1 and v2 are coprime and v1 \cdot v0 is equal to v2)))))
 Proof:
   q is positive
-  for some v0, v0 is a natural number and for some v1, v1 is a natural number and it is wrong that v1 is equal to 0 and q is equal to v0 \cdot 1/ v1
+  for some v0, (v0 is a natural number and for some v1, (v1 is a natural number and it is wrong that v1 is equal to 0 and q is equal to v0 \cdot 1/ v1))
   Proof:
     a is an integer and b is an integer and it is wrong that b is equal to 0 and q is equal to a \cdot 1/ b
     if a is equal to 0 or (a is a natural number and b is a natural number) then the thesis holds
@@ -1670,7 +1670,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number and v1 is prime then (if v1 divides v0 ^{ 2 } then v1 divides v0)
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and v1 is prime then (if v1 divides v0 ^{ 2 } then v1 divides v0)))
 Proof:
   p divides n ^{ 2 } and it is wrong that p divides n
   the greatest common divisor of p and n is equal to 1
@@ -1684,7 +1684,7 @@ Proof:
 Qed.
 
 Theorem (pythagoras):
-  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a rational number and v1 is positive then it is wrong that v1 ^{ 2 } is equal to v0
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a rational number and v1 is positive then it is wrong that v1 ^{ 2 } is equal to v0))
 Proof:
   it is wrong that the thesis holds
   q is a rational number and q is positive and p is equal to q ^{ 2 }
@@ -1701,16 +1701,16 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, (v2 is equal to \Seq{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a natural number and v0 \leq v3 and v3 \leq v1 and v3 is an object))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then for all v2, ((v2 is equal to \Seq{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is a natural number and v0 \leq v3 and v3 \leq v1 and v3 is an object))))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then \Seq{ v0 }{ v1 } is a set
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then \Seq{ v0 }{ v1 } is a set))
 Proof:
   \Seq{ m }{ n } is a subclass of \mathbb{N}
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v1 \leq v2 and v2 \leq v0 then the union of \Seq{ v1 }{ v2 } and \Seq{ v2 + 1 }{ v0 } is equal to \Seq{ v1 }{ v0 })
+  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v1 \leq v2 and v2 \leq v0 then the union of \Seq{ v1 }{ v2 } and \Seq{ v2 + 1 }{ v0 } is equal to \Seq{ v1 }{ v0 }))))
 Proof:
   \Seq{ m }{ k } is a subclass of the union of \Seq{ m }{ n } and \Seq{ n + 1 }{ k }
   Proof:
@@ -1727,12 +1727,12 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v1 \leq v2 and v2 \leq v0 then \Seq{ v1 }{ v2 } is disjoint from \Seq{ v2 + 1 }{ v0 })
+  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v1 \leq v2 and v2 \leq v0 then \Seq{ v1 }{ v2 } is disjoint from \Seq{ v2 + 1 }{ v0 }))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then for all v1, if v1 is an element of the set difference of \Seq{ 1 }{ v0 + 1 } and \Seq{ 1 }{ v0 } then v1 is equal to v0 + 1
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is an element of the set difference of \Seq{ 1 }{ v0 + 1 } and \Seq{ 1 }{ v0 } then v1 is equal to v0 + 1))
 Proof:
   x is an integer
   x \leq n + 1
@@ -1743,10 +1743,10 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is finite) iff for some v1, v1 is a natural number and v0 and \Seq{ 1 }{ v1 } are equinumerous)
+  for all v0, (if v0 is a class then ((v0 is finite) iff for some v1, (v1 is a natural number and v0 and \Seq{ 1 }{ v1 } are equinumerous)))
 
 Theorem:
-  for all v0, if v0 is a class then (if v0 is finite then v0 is a set)
+  for all v0, (if v0 is a class then (if v0 is finite then v0 is a set))
 Proof:
   n is a natural number and S and \Seq{ 1 }{ n } are equinumerous
   f is a bijection between \Seq{ 1 }{ n } and S
@@ -1754,12 +1754,12 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a map and v0 is injective then for all v1, if v1 is a set then (v0 \upharpoonright v1 is a map and v0 \upharpoonright v1 is injective)
+  for all v0, (if v0 is a map and v0 is injective then for all v1, (if v1 is a set then (v0 \upharpoonright v1 is a map and v0 \upharpoonright v1 is injective)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then for all v1, if v1 is a natural number then for all v2, if v2 is a map from \Seq{ 1 }{ v1 } to \Seq{ 1 }{ v0 } and v2 is injective then (if for all v3, if v3 is a natural number then for all v4, if v4 is a natural number then for all v5, if v5 is a map from \Seq{ 1 }{ v4 } to \Seq{ 1 }{ v3 } and v5 is injective then (if v3 is inductively less than v0 then v4 \leq v3) then v1 \leq v0)
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a natural number then for all v2, (if v2 is a map from \Seq{ 1 }{ v1 } to \Seq{ 1 }{ v0 } and v2 is injective then (if for all v3, (if v3 is a natural number then for all v4, (if v4 is a natural number then for all v5, (if v5 is a map from \Seq{ 1 }{ v4 } to \Seq{ 1 }{ v3 } and v5 is injective then (if v3 is inductively less than v0 then v4 \leq v3)))) then v1 \leq v0))))
 Proof:
   n is a natural number
   m is a natural number
@@ -1798,7 +1798,7 @@ Proof:
         w is an element of the set difference of \Seq{ 1 }{ n' + 1 } and \Seq{ 1 }{ n' }
         w is equal to n
         i is an element of \Seq{ 1 }{ m' } and the value of f under i is equal to w
-        h is a map and (the domain of h is equal to \Seq{ 1 }{ m' }) and for all v0, if v0 is an object then (if v0 is an element of the domain of h then ((if it is wrong that v0 is equal to i then (the value of h under v0 is equal to the value of f under v0)) and (if v0 is equal to i then (the value of h under v0 is equal to the value of f under m))))
+        h is a map and (the domain of h is equal to \Seq{ 1 }{ m' }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then ((if it is wrong that v0 is equal to i then (the value of h under v0 is equal to the value of f under v0)) and (if v0 is equal to i then (the value of h under v0 is equal to the value of f under m)))))
         h is a map
         the domain of h is equal to \Seq{ 1 }{ m' }
         h is injective
@@ -1851,31 +1851,31 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v1 is a natural number and v0 is a natural number and \Seq{ 1 }{ v0 } and \Seq{ 1 }{ v1 } are equinumerous then v0 is equal to v1
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and \Seq{ 1 }{ v0 } and \Seq{ 1 }{ v1 } are equinumerous then v0 is equal to v1))
 Proof:
-  (for some v0, v0 is a map from \Seq{ 1 }{ m } to \Seq{ 1 }{ n } and v0 is injective) and for some v0, v0 is a map from \Seq{ 1 }{ n } to \Seq{ 1 }{ m } and v0 is injective
+  (for some v0, (v0 is a map from \Seq{ 1 }{ m } to \Seq{ 1 }{ n } and v0 is injective)) and for some v0, (v0 is a map from \Seq{ 1 }{ n } to \Seq{ 1 }{ m } and v0 is injective)
   m \leq n and n \leq m
 Qed.
 
 Signature:
-  for all v0, if v0 is a set and v0 is finite then for all v1, if v1 is equal to | v0 | then (v1 is a natural number and v0 and \Seq{ 1 }{ v1 } are equinumerous)
+  for all v0, (if v0 is a set and v0 is finite then for all v1, (if v1 is equal to | v0 | then (v1 is a natural number and v0 and \Seq{ 1 }{ v1 } are equinumerous)))
 
 Theorem:
-  for all v0, if v0 is a set and v0 is finite then for all v1, if v1 is a natural number then (if v0 and \Seq{ 1 }{ v1 } are equinumerous then | v0 | is equal to v1)
+  for all v0, (if v0 is a set and v0 is finite then for all v1, (if v1 is a natural number then (if v0 and \Seq{ 1 }{ v1 } are equinumerous then | v0 | is equal to v1)))
 Proof:
   x and \Seq{ 1 }{ | x | } are equinumerous and x and \Seq{ 1 }{ n } are equinumerous
   \Seq{ 1 }{ | x | } and \Seq{ 1 }{ n } are equinumerous
 Qed.
 
 Theorem:
-  for all v0, if v0 is a natural number then | \Seq{ 1 }{ v0 } | is equal to v0
+  for all v0, (if v0 is a natural number then | \Seq{ 1 }{ v0 } | is equal to v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v2 is a natural number and v1 is a natural number and v0 is a natural number then \Seq{ v1 }{ v2 } and \Seq{ v1 + v0 }{ v2 + v0 } are equinumerous
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then \Seq{ v1 }{ v2 } and \Seq{ v1 + v0 }{ v2 + v0 } are equinumerous)))
 Proof:
-  H is a map and (the domain of H is equal to \Seq{ m }{ n }) and for all v0, if v0 is an object then (if v0 is an element of the domain of H then (the value of H under v0 is equal to v0 + i))
+  H is a map and (the domain of H is equal to \Seq{ m }{ n }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then (the value of H under v0 is equal to v0 + i)))
   SetInt timelimit 30  H is a map from \Seq{ m }{ n } to \Seq{ m + i }{ n + i }
   H is injective
   H is a surjection from \Seq{ m }{ n } onto \Seq{ m + i }{ n + i }
@@ -1889,7 +1889,7 @@ Proof:
   SetInt timelimit 3Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set and (v0 is finite and v1 is finite and v0 is disjoint from v1) then (the union of v0 and v1 is a set and the union of v0 and v1 is finite and | the union of v0 and v1 | is equal to | v0 | + | v1 |)
+  for all v0, (for all v1, (if v0 is a set and v1 is a set and (v0 is finite and v1 is finite and v0 is disjoint from v1) then (the union of v0 and v1 is a set and the union of v0 and v1 is finite and | the union of v0 and v1 | is equal to | v0 | + | v1 |)))
 Proof:
   m is equal to | x | and n is equal to | y |
   x and \Seq{ 1 }{ m } are equinumerous
@@ -1902,17 +1902,17 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite)
+  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite))
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is denumerable) iff v0 and \mathbb{N} are equinumerous)
+  for all v0, (if v0 is a class then ((v0 is denumerable) iff v0 and \mathbb{N} are equinumerous))
 
 Theorem:
-  for all v0, if v0 is a set and v0 is finite then (| v0 | is equal to 0 iff v0 is equal to \emptyset)
+  for all v0, (if v0 is a set and v0 is finite then (| v0 | is equal to 0 iff v0 is equal to \emptyset))
 Proof:
   if | X | is equal to 0 then X is equal to \emptyset
   Proof:
-    | X | is equal to 0 and for some v0, v0 is an element of X
+    | X | is equal to 0 and for some v0, (v0 is an element of X)
     x is an element of X and g is a bijection between X and \Seq{ 1 }{ 0 }
     the value of g under x is an element of \Seq{ 1 }{ 0 } and \Seq{ 1 }{ 0 } is equal to \emptyset
     falsity holds
@@ -1921,10 +1921,10 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a set and v0 is nonempty and v1 is an element of v0 then for all v2, (v2 is equal to \sset{ v1 }{ v0 }) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is equal to v1))
+  for all v0, (for all v1, (if v0 is a set and v0 is nonempty and v1 is an element of v0 then for all v2, ((v2 is equal to \sset{ v1 }{ v0 }) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is equal to v1))))))
 
 Theorem:
-  for all v0, if v0 is a set and v0 is finite then for all v1, if v1 is a natural number then (if | v0 | is equal to v1 then (if for all v2, if v2 is a set and v2 is finite then for all v3, if v3 is a natural number then (if | v2 | is equal to v3 then (if v3 is inductively less than v1 then (the powerset of v2 is finite and | the powerset of v2 | is equal to 2 ^{ v3 }))) then (the powerset of v0 is finite and | the powerset of v0 | is equal to 2 ^{ v1 })))
+  for all v0, (if v0 is a set and v0 is finite then for all v1, (if v1 is a natural number then (if | v0 | is equal to v1 then (if for all v2, (if v2 is a set and v2 is finite then for all v3, (if v3 is a natural number then (if | v2 | is equal to v3 then (if v3 is inductively less than v1 then (the powerset of v2 is finite and | the powerset of v2 | is equal to 2 ^{ v3 }))))) then (the powerset of v0 is finite and | the powerset of v0 | is equal to 2 ^{ v1 })))))
 Proof:
   X is a set and X is finite and n is a natural number
   | X | is equal to n
@@ -1932,8 +1932,8 @@ Proof:
   Proof:
     \Seq{ 1 }{ 0 } is equal to \emptyset
     X is equal to \emptyset
-    for all v0, if v0 is an element of the powerset of \emptyset then v0 is equal to \emptyset
-    h is a map and (the domain of h is equal to the powerset of \emptyset) and for all v0, if v0 is an object then (if v0 is an element of the domain of h then (the value of h under v0 is equal to 1))
+    for all v0, (if v0 is an element of the powerset of \emptyset then v0 is equal to \emptyset)
+    h is a map and (the domain of h is equal to the powerset of \emptyset) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then (the value of h under v0 is equal to 1)))
     h is a bijection between the powerset of \emptyset and \Seq{ 1 }{ 1 }
     | the powerset of X | is equal to 1 and 2 ^{ 0 } is equal to 1
   Qed.
@@ -1941,12 +1941,12 @@ Proof:
   Proof:
     m is a natural number and m is equal to n + - 1
     m is inductively less than n
-    (for some v0, v0 is a bijection between X and \Seq{ 1 }{ n }) and 1 is an element of \Seq{ 1 }{ n }
+    (for some v0, (v0 is a bijection between X and \Seq{ 1 }{ n })) and 1 is an element of \Seq{ 1 }{ n }
     X is nonempty
     g is a bijection between X and \Seq{ 1 }{ n }
     \xi is an element of X and the value of g under \xi is equal to n
-    M is a class and for all v0, v0 is an element of M iff (v0 is an object and v0 is an element of the powerset of X and \xi is an element of v0)
-    N is a class and for all v0, v0 is an element of N iff (v0 is an object and v0 is an element of the powerset of X and it is wrong that \xi is an element of v0)
+    M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is an element of the powerset of X and \xi is an element of v0))
+    N is a class and for all v0, (v0 is an element of N iff (v0 is an object and v0 is an element of the powerset of X and it is wrong that \xi is an element of v0))
     the union of M and N is equal to the powerset of X
     M is disjoint from N
     Y is equal to the set difference of X and \sset{ \xi }{ X }
@@ -1958,12 +1958,12 @@ Proof:
       f is injective
       f [ Y ] is a subclass of \Seq{ 1 }{ m }
       Proof:
-        f [ Y ] is a subclass of \Seq{ 1 }{ n } and for all v0, if v0 is an element of Y then it is wrong that the value of f under v0 is equal to n
+        f [ Y ] is a subclass of \Seq{ 1 }{ n } and for all v0, (if v0 is an element of Y then it is wrong that the value of f under v0 is equal to n)
         f [ Y ] is a subclass of \Seq{ 1 }{ m }
       Qed.
       f is a surjection from Y onto \Seq{ 1 }{ m }
       Proof:
-        for all v0, if v0 is an element of \Seq{ 1 }{ m } then v0 is a value of f
+        for all v0, (if v0 is an element of \Seq{ 1 }{ m } then v0 is a value of f)
         Proof:
           y is an element of \Seq{ 1 }{ m }
           \Seq{ 1 }{ m } is a subclass of \Seq{ 1 }{ n }
@@ -1976,9 +1976,9 @@ Proof:
     Qed.
     M is finite and N is finite and (| the powerset of Y | is equal to | M | and | M | is equal to | N |)
     Proof:
-      for some v0, v0 is a bijection between M and N
+      for some v0, (v0 is a bijection between M and N)
       Proof:
-        f is a map and (the domain of f is equal to M) and for all v0, if v0 is an object then (if v0 is an element of the domain of f then (the value of f under v0 is equal to the set difference of v0 and \sset{ \xi }{ X }))
+        f is a map and (the domain of f is equal to M) and for all v0, (if v0 is an object then (if v0 is an element of the domain of f then (the value of f under v0 is equal to the set difference of v0 and \sset{ \xi }{ X })))
         f is injective
         Proof:
           x is an element of M and y is an element of M
@@ -1996,7 +1996,7 @@ Proof:
         Qed.
         f is a surjection from M onto N
         Proof:
-          for all v0, if v0 is an element of N then v0 is a value of f
+          for all v0, (if v0 is an element of N then v0 is a value of f)
           Proof:
             y is an element of N and x is equal to the union of y and \sset{ \xi }{ X }
             x is a subclass of X and \xi is an element of x
@@ -2033,19 +2033,19 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a natural number then for all v1, (v1 is a sequence of length v0) iff (v1 is a function and the domain of v1 is equal to \Seq{ 1 }{ v0 })
+  for all v0, (if v0 is a natural number then for all v1, ((v1 is a sequence of length v0) iff (v1 is a function and the domain of v1 is equal to \Seq{ 1 }{ v0 })))
 
 Definition:
-  for all v0, if v0 is a natural number then for all v1, if v1 is a sequence of length v0 then for all v2, (v2 is equal to \FinSet{ v1 }{1}{ v0 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of the domain of v1 and v3 is equal to the value of v1 under v4))
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 then for all v2, ((v2 is equal to \FinSet{ v1 }{1}{ v0 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of the domain of v1 and v3 is equal to the value of v1 under v4)))))))
 
 Signature:
-  for all v0, if v0 is a natural number then for all v1, if v1 is a sequence of length v0 and \FinSet{ v1 }{1}{ v0 } is a subclass of \mathbb{N} then for all v2, if v2 is equal to \Prod{ v1 }{1}{ v0 } then v2 is a natural number
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 and \FinSet{ v1 }{1}{ v0 } is a subclass of \mathbb{N} then for all v2, (if v2 is equal to \Prod{ v1 }{1}{ v0 } then v2 is a natural number)))
 
 Axiom (factorproperty):
-  for all v0, if v0 is a natural number then for all v1, if v1 is a sequence of length v0 and for all v2, if v2 is an element of the domain of v1 then (the value of v1 under v2 is a natural number and it is wrong that the value of v1 under v2 is equal to 0) then (it is wrong that \Prod{ v1 }{1}{ v0 } is equal to 0 and for all v2, if v2 is an element of the domain of v1 then the value of v1 under v2 divides \Prod{ v1 }{1}{ v0 })
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 and for all v2, (if v2 is an element of the domain of v1 then (the value of v1 under v2 is a natural number and it is wrong that the value of v1 under v2 is equal to 0)) then (it is wrong that \Prod{ v1 }{1}{ v0 } is equal to 0 and for all v2, (if v2 is an element of the domain of v1 then the value of v1 under v2 divides \Prod{ v1 }{1}{ v0 }))))
 
 Signature:
-  for all v0, if v0 is equal to \Primes then (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a natural number and v1 is prime and v1 is an object))
+  for all v0, (if v0 is equal to \Primes then (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a natural number and v1 is prime and v1 is an object))))
 
 Theorem (euclid):
   \Primes is infinite
@@ -2054,7 +2054,7 @@ Proof:
   r is a natural number and \Seq{ 1 }{ r } and \Primes are equinumerous
   p is a bijection between \Seq{ 1 }{ r } and \Primes
   p is a sequence of length r and \Primes is equal to \FinSet{ p }{1}{ r }
-  for all v0, if v0 is an element of the domain of p then (the value of p under v0 is a natural number and it is wrong that the value of p under v0 is equal to 0)
+  for all v0, (if v0 is an element of the domain of p then (the value of p under v0 is a natural number and it is wrong that the value of p under v0 is equal to 0))
   n is equal to \Prod{ p }{1}{ r } + 1
   SetInt timelimit 10  it is wrong that \Prod{ p }{1}{ r } is equal to 0 and it is wrong that n is equal to 0 and it is wrong that n is equal to 1
   SetInt timelimit 3  q is an integer and q divides n and q is prime

@@ -1,62 +1,62 @@
 Signature:
-  for all v0, if v0 is a person then truth holds
+  for all v0, (if v0 is a person then truth holds)
 
 Signature:
-  for all v0, for all v1, if v0 is a person and v1 is a person then (if v0 killed v1 then truth holds)
+  for all v0, (for all v1, (if v0 is a person and v1 is a person then (if v0 killed v1 then truth holds)))
 
 Definition:
-  for all v0, if v0 is a person then for all v1, (v1 is a victim of v0) iff (v1 is a person and v0 killed v1)
+  for all v0, (if v0 is a person then for all v1, ((v1 is a victim of v0) iff (v1 is a person and v0 killed v1)))
 
 Definition:
-  for all v0, (v0 is a killer) iff (v0 is a person and for some v1, v1 is a person and v0 killed v1)
+  for all v0, ((v0 is a killer) iff (v0 is a person and for some v1, (v1 is a person and v0 killed v1)))
 
 Signature:
-  for all v0, for all v1, if v0 is a person and v1 is a person then (if v0 hates v1 then truth holds)
+  for all v0, (for all v1, (if v0 is a person and v1 is a person then (if v0 hates v1 then truth holds)))
 
 Signature:
-  for all v0, if v0 is a place then truth holds
+  for all v0, (if v0 is a place then truth holds)
 
 Signature:
-  for all v0, for all v1, if v1 is a person and v0 is a place then (if v1 lives in v0 then truth holds)
+  for all v0, (for all v1, (if v1 is a person and v0 is a place then (if v1 lives in v0 then truth holds)))
 
 Signature:
-  for all v0, for all v1, if v0 is a person and v1 is a person then (if v0 is richer than v1 then truth holds)
+  for all v0, (for all v1, (if v0 is a person and v1 is a person then (if v0 is richer than v1 then truth holds)))
 
 Signature:
-  for all v0, if v0 is equal to AuntAgatha then v0 is a person
+  for all v0, (if v0 is equal to AuntAgatha then v0 is a person)
 
 Signature:
-  for all v0, if v0 is equal to the butler then v0 is a person
+  for all v0, (if v0 is equal to the butler then v0 is a person)
 
 Signature:
-  for all v0, if v0 is equal to Charles then v0 is a person
+  for all v0, (if v0 is equal to Charles then v0 is a person)
 
 Signature:
-  for all v0, if v0 is equal to DreadsburyMansion then v0 is a place
+  for all v0, (if v0 is equal to DreadsburyMansion then v0 is a place)
 
 Axiom:
-  for some v0, v0 is a person and v0 lives in DreadsburyMansion and v0 killed AuntAgatha
+  for some v0, (v0 is a person and v0 lives in DreadsburyMansion and v0 killed AuntAgatha)
 
 Axiom:
-  AuntAgatha lives in DreadsburyMansion and the butler lives in DreadsburyMansion and Charles lives in DreadsburyMansion and for all v0, if v0 is a person and v0 lives in DreadsburyMansion then (v0 is equal to AuntAgatha or v0 is equal to the butler or v0 is equal to Charles)
+  AuntAgatha lives in DreadsburyMansion and the butler lives in DreadsburyMansion and Charles lives in DreadsburyMansion and for all v0, (if v0 is a person and v0 lives in DreadsburyMansion then (v0 is equal to AuntAgatha or v0 is equal to the butler or v0 is equal to Charles))
 
 Axiom:
-  for all v0, if v0 is a killer then ((for all v1, if v1 is a victim of v0 then v0 hates v1) and for all v1, if v1 is a victim of v0 then it is wrong that v0 is richer than v1)
+  for all v0, (if v0 is a killer then ((for all v1, (if v1 is a victim of v0 then v0 hates v1)) and for all v1, (if v1 is a victim of v0 then it is wrong that v0 is richer than v1)))
 
 Axiom:
-  for all v0, if v0 is a person and AuntAgatha hates v0 then it is wrong that Charles hates v0
+  for all v0, (if v0 is a person and AuntAgatha hates v0 then it is wrong that Charles hates v0)
 
 Axiom:
-  for all v0, if v0 is a person and it is wrong that v0 is equal to the butler then AuntAgatha hates v0
+  for all v0, (if v0 is a person and it is wrong that v0 is equal to the butler then AuntAgatha hates v0)
 
 Axiom:
-  for all v0, if v0 is a person and it is wrong that v0 is richer than AuntAgatha then the butler hates v0
+  for all v0, (if v0 is a person and it is wrong that v0 is richer than AuntAgatha then the butler hates v0)
 
 Axiom:
-  for all v0, if v0 is a person and AuntAgatha hates v0 then the butler hates v0
+  for all v0, (if v0 is a person and AuntAgatha hates v0 then the butler hates v0)
 
 Axiom:
-  for all v0, if v0 is a person then it is wrong that for all v1, if v1 is a person then v0 hates v1
+  for all v0, (if v0 is a person then it is wrong that for all v1, (if v1 is a person then v0 hates v1))
 
 Axiom:
   it is wrong that AuntAgatha is equal to the butler

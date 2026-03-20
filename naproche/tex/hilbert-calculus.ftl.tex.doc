@@ -1,30 +1,30 @@
 Signature:
-  for all v0, if v0 is a formula then v0 is an object
+  for all v0, (if v0 is a formula then v0 is an object)
 
 Signature:
-  for all v0, for all v1, if v0 is a formula and v1 is a formula then for all v2, if v2 is equal to v0 \imp v1 then v2 is a formula
+  for all v0, (for all v1, (if v0 is a formula and v1 is a formula then for all v2, (if v2 is equal to v0 \imp v1 then v2 is a formula)))
 
 Signature:
-  for all v0, if v0 is a formula then (if \deducible v0 then truth holds)
+  for all v0, (if v0 is a formula then (if \deducible v0 then truth holds))
 
 Axiom (detachment):
-  for all v0, for all v1, if v0 is a formula and v1 is a formula then (if \deducible v0 and \deducible v0 \imp v1 then \deducible v1)
+  for all v0, (for all v1, (if v0 is a formula and v1 is a formula then (if \deducible v0 and \deducible v0 \imp v1 then \deducible v1)))
 
 Axiom (implosion):
-  for all v0, for all v1, if v0 is a formula and v1 is a formula then \deducible v0 \imp v1 \imp v0
+  for all v0, (for all v1, (if v0 is a formula and v1 is a formula then \deducible v0 \imp v1 \imp v0))
 
 Axiom (chain):
-  for all v0, for all v1, for all v2, if v0 is a formula and v1 is a formula and v2 is a formula then \deducible v0 \imp v1 \imp v2 \imp v0 \imp v1 \imp v0 \imp v2
+  for all v0, (for all v1, (for all v2, (if v0 is a formula and v1 is a formula and v2 is a formula then \deducible v0 \imp v1 \imp v2 \imp v0 \imp v1 \imp v0 \imp v2)))
 
 Theorem (weakening):
-  for all v0, if v0 is a formula then (if \deducible v0 then for all v1, if v1 is a formula then \deducible v1 \imp v0)
+  for all v0, (if v0 is a formula then (if \deducible v0 then for all v1, (if v1 is a formula then \deducible v1 \imp v0)))
 Proof:
   \deducible Q \imp P \imp Q
   \deducible P \imp Q
 Qed.
 
 Theorem (weakeningofimplication):
-  for all v0, for all v1, if v0 is a formula and v1 is a formula then (if \deducible v0 \imp v1 then for all v2, if v2 is a formula then \deducible v2 \imp v0 \imp v2 \imp v1)
+  for all v0, (for all v1, (if v0 is a formula and v1 is a formula then (if \deducible v0 \imp v1 then for all v2, (if v2 is a formula then \deducible v2 \imp v0 \imp v2 \imp v1))))
 Proof:
   \deducible P \imp Q \imp R
   \deducible P \imp Q \imp R \imp P \imp Q \imp P \imp R
@@ -32,14 +32,14 @@ Proof:
 Qed.
 
 Theorem (transitivity):
-  for all v0, for all v1, for all v2, if v0 is a formula and v1 is a formula and v2 is a formula then (if \deducible v0 \imp v1 and \deducible v1 \imp v2 then \deducible v0 \imp v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a formula and v1 is a formula and v2 is a formula then (if \deducible v0 \imp v1 and \deducible v1 \imp v2 then \deducible v0 \imp v2))))
 Proof:
   \deducible P \imp Q \imp P \imp R
   \deducible P \imp R
 Qed.
 
 Theorem (identity):
-  for all v0, if v0 is a formula then \deducible v0 \imp v0
+  for all v0, (if v0 is a formula then \deducible v0 \imp v0)
 Proof:
   \deducible P \imp P \imp P \imp P \imp P \imp P \imp P \imp P \imp P
   \deducible P \imp P \imp P \imp P
@@ -49,7 +49,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a formula and v1 is a formula then (if \deducible v0 \imp v0 \imp v1 then \deducible v0 \imp v1)
+  for all v0, (for all v1, (if v0 is a formula and v1 is a formula then (if \deducible v0 \imp v0 \imp v1 then \deducible v0 \imp v1)))
 Proof:
   \deducible P \imp P \imp Q \imp P \imp P \imp P \imp Q
   \deducible P \imp P \imp P \imp Q
@@ -58,13 +58,13 @@ Proof:
 Qed.
 
 Signature (falsum):
-  for all v0, if v0 is equal to \falsum then v0 is a formula
+  for all v0, (if v0 is equal to \falsum then v0 is a formula)
 
 Axiom (doublenegation):
-  for all v0, if v0 is a formula then \deducible v0 \imp \falsum \imp \falsum \imp v0
+  for all v0, (if v0 is a formula then \deducible v0 \imp \falsum \imp \falsum \imp v0)
 
 Theorem (explosion):
-  for all v0, if v0 is a formula then \deducible \falsum \imp v0
+  for all v0, (if v0 is a formula then \deducible \falsum \imp v0)
 Proof:
 Qed.
 

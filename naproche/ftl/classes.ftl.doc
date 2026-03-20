@@ -1,77 +1,77 @@
 Theorem:
-  for all v0, if v0 is a set then v0 is a class
+  for all v0, (if v0 is a set then v0 is a class)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then v0 is an object
+  for all v0, (if v0 is a set then v0 is an object)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a function then v0 is a map
+  for all v0, (if v0 is a function then v0 is a map)
 Proof:
 Qed.
 
 Definition (subclass):
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Axiom:
-  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subclass of v0 then v1 is a set))
 
 Theorem:
-  for all v0, if v0 is a function then for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object
+  for all v0, (if v0 is a function then for all v1, (if v1 is an element of the domain of v0 then the value of v0 under v1 is an object))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Definition:
-  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+  for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
 
 Axiom (pairdefiningproperty):
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v2 and v3 is equal to the ordered pair of v0 and v1 then (v2 is equal to v0 and v3 is equal to v1))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v2 and v3 is equal to the ordered pair of v0 and v1 then (v2 is equal to v0 and v3 is equal to v1))))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, for all v2, if v1 is a class and v2 is a class then ((v0 : v1 -> v2) iff (the domain of v0 is equal to v1 and for all v3, if v3 is an element of v1 then the value of v0 under v3 is an element of v2))
+  for all v0, (if v0 is a map then for all v1, (for all v2, (if v1 is a class and v2 is a class then ((v0 : v1 -> v2) iff (the domain of v0 is equal to v1 and for all v3, (if v3 is an element of v1 then the value of v0 under v3 is an element of v2))))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, for all v2, if v1 is a class and v2 is a class then ((v0 : v1 <-> v2) iff (v0 : v1 -> v2 and for some v3, v3 is a map and v3 : v2 -> v1 and for all v4, if v4 is an element of the domain of v0 then the value of v3 under the value of v0 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v0 under the value of v3 under v4 is equal to v4))
+  for all v0, (if v0 is a map then for all v1, (for all v2, (if v1 is a class and v2 is a class then ((v0 : v1 <-> v2) iff (v0 : v1 -> v2 and for some v3, (v3 is a map and v3 : v2 -> v1 and for all v4, (if v4 is an element of the domain of v0 then the value of v3 under the value of v0 under v4 is equal to v4) and for all v4, (if v4 is an element of the domain of v3 then the value of v0 under the value of v3 under v4 is equal to v4)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a set and v1 is a set then ((v0 is equinumerous with v1) iff for some v2, v2 is a map and v2 : v0 <-> v1)
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then ((v0 is equinumerous with v1) iff for some v2, (v2 is a map and v2 : v0 <-> v1))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then (if v0 is equinumerous with v1 then v1 is equinumerous with v0)
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then (if v0 is equinumerous with v1 then v1 is equinumerous with v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a set and v1 is a set and v2 is a set then (if v0 is equinumerous with v1 then (if v1 is equinumerous with v2 then v0 is equinumerous with v2))
+  for all v0, (for all v1, (for all v2, (if v0 is a set and v1 is a set and v2 is a set then (if v0 is equinumerous with v1 then (if v1 is equinumerous with v2 then v0 is equinumerous with v2)))))
 Proof:
   F is a map and F : A <-> B
-  G is a map and G : B -> A and for all v0, if v0 is an element of A then the value of G under the value of F under v0 is equal to v0 and for all v0, if v0 is an element of B then the value of F under the value of G under v0 is equal to v0
+  G is a map and G : B -> A and for all v0, (if v0 is an element of A then the value of G under the value of F under v0 is equal to v0) and for all v0, (if v0 is an element of B then the value of F under the value of G under v0 is equal to v0)
   H is a map and H : B <-> C
-  I is a map and I : C -> B and for all v0, if v0 is an element of B then the value of I under the value of H under v0 is equal to v0 and for all v0, if v0 is an element of C then the value of H under the value of I under v0 is equal to v0
-  for all v0, if v0 is an element of A then the value of H under the value of F under v0 is an object
-  J is a map and (the domain of J is equal to A) and for all v0, if v0 is an object then (if v0 is an element of the domain of J then (the value of J under v0 is equal to the value of H under the value of F under v0))
-  for all v0, if v0 is an element of C then the value of G under the value of I under v0 is an object
-  K is a map and (the domain of K is equal to C) and for all v0, if v0 is an object then (if v0 is an element of the domain of K then (the value of K under v0 is equal to the value of G under the value of I under v0))
+  I is a map and I : C -> B and for all v0, (if v0 is an element of B then the value of I under the value of H under v0 is equal to v0) and for all v0, (if v0 is an element of C then the value of H under the value of I under v0 is equal to v0)
+  for all v0, (if v0 is an element of A then the value of H under the value of F under v0 is an object)
+  J is a map and (the domain of J is equal to A) and for all v0, (if v0 is an object then (if v0 is an element of the domain of J then (the value of J under v0 is equal to the value of H under the value of F under v0)))
+  for all v0, (if v0 is an element of C then the value of G under the value of I under v0 is an object)
+  K is a map and (the domain of K is equal to C) and for all v0, (if v0 is an object then (if v0 is an element of the domain of K then (the value of K under v0 is equal to the value of G under the value of I under v0)))
   K : C -> A
-  (for all v0, if v0 is an element of the domain of J then the value of K under the value of J under v0 is equal to v0) and for all v0, if v0 is an element of the domain of K then the value of J under the value of K under v0 is equal to v0
+  (for all v0, (if v0 is an element of the domain of J then the value of K under the value of J under v0 is equal to v0)) and for all v0, (if v0 is an element of the domain of K then the value of J under the value of K under v0 is equal to v0)
   J : A <-> C
 Qed.
 
 Definition:
-  for all v0, if v0 is a set then ((v0 is dedekind finite) iff for all v1, if v1 is a set and v1 is a subclass of v0 and it is wrong that v1 is equal to v0 then it is wrong that v1 is equinumerous with v0)
+  for all v0, (if v0 is a set then ((v0 is dedekind finite) iff for all v1, (if v1 is a set and v1 is a subclass of v0 and it is wrong that v1 is equal to v0 then it is wrong that v1 is equinumerous with v0)))
 

@@ -1,38 +1,38 @@
 Signature:
-  for all v0, if v0 is a dwarf then truth holds
+  for all v0, (if v0 is a dwarf then truth holds)
 
 Signature:
-  for all v0, if v0 is equal to Sigbert then v0 is a dwarf
+  for all v0, (if v0 is equal to Sigbert then v0 is a dwarf)
 
 Signature:
-  for all v0, if v0 is equal to Tormund then v0 is a dwarf
+  for all v0, (if v0 is equal to Tormund then v0 is a dwarf)
 
 Signature:
-  for all v0, if v0 is a hat then truth holds
+  for all v0, (if v0 is a hat then truth holds)
 
 Signature:
-  for all v0, if v0 is a dwarf then for all v1, if v1 is equal to the hat of v0 then v1 is a hat
+  for all v0, (if v0 is a dwarf then for all v1, (if v1 is equal to the hat of v0 then v1 is a hat))
 
 Signature:
-  for all v0, if v0 is a color then truth holds
+  for all v0, (if v0 is a color then truth holds)
 
 Signature:
-  for all v0, if v0 is equal to white then v0 is a color
+  for all v0, (if v0 is equal to white then v0 is a color)
 
 Signature:
-  for all v0, if v0 is equal to black then v0 is a color
+  for all v0, (if v0 is equal to black then v0 is a color)
 
 Signature:
-  for all v0, if v0 is a hat then for all v1, if v1 is equal to the color of v0 then v1 is a color
+  for all v0, (if v0 is a hat then for all v1, (if v1 is equal to the color of v0 then v1 is a color))
 
 Axiom:
-  for all v0, if v0 is a dwarf then (the color of the hat of v0 is equal to white or the color of the hat of v0 is equal to black)
+  for all v0, (if v0 is a dwarf then (the color of the hat of v0 is equal to white or the color of the hat of v0 is equal to black))
 
 Signature:
-  for all v0, for all v1, if v0 is a color and v1 is a dwarf then (if v1 names v0 then truth holds)
+  for all v0, (for all v1, (if v0 is a color and v1 is a dwarf then (if v1 names v0 then truth holds)))
 
 Signature:
-  for all v0, if v0 is a color then for all v1, if v1 is equal to the opposite color of v0 then v1 is a color
+  for all v0, (if v0 is a color then for all v1, (if v1 is equal to the opposite color of v0 then v1 is a color))
 
 Axiom:
   the opposite color of white is equal to black
@@ -41,7 +41,7 @@ Axiom:
   the opposite color of black is equal to white
 
 Definition:
-  (Bothdwarfsgetreleased) iff for some v0, v0 is a dwarf and v0 names the color of the hat of v0
+  (Bothdwarfsgetreleased) iff for some v0, (v0 is a dwarf and v0 names the color of the hat of v0)
 
 Axiom:
   Sigbert names the opposite color of the color of the hat of Tormund

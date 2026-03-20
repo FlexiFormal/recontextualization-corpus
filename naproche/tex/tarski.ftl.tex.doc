@@ -1,124 +1,124 @@
 Definition:
-  for all v0, (v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, v1 is an element of v0)
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Theorem (classextensionality):
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)))
 
 Axiom (separationaxiom):
-  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subclass of v0 then v1 is a set))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Definition:
-  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+  for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
 
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))))))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \times v1 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, (for all v3, (if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))))))
 Proof:
 Qed.
 
 Axiom:
-  for all v0, if v0 is a map then (if the domain of v0 is a set and for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object then v0 is a function)
+  for all v0, (if v0 is a map then (if the domain of v0 is a set and for all v1, (if v1 is an element of the domain of v0 then the value of v0 under v1 is an object) then v0 is a function))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+  for all v0, (if v0 is a map then for all v1, (if v1 is a subclass of the domain of v0 then for all v2, ((v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of v1 and v3 is equal to the value of v0 under v4)))))))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1)))))
 
 Axiom (replacementaxiom):
-  for all v0, if v0 is a set then for all v1, if v1 is a map then (if v0 is a subset of the domain of v1 then v1 [ v0 ] is a set)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a map then (if v0 is a subset of the domain of v1 then v1 [ v0 ] is a set)))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, (v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, (if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4) and for all v4, (if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4)))))))
 
 Signature:
-  for all v0, for all v1, if v0 is an object and v1 is an object then (if v0 \leq v1 then truth holds)
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then (if v0 \leq v1 then truth holds)))
 
 Axiom:
-  for all v0, if v0 is an object then v0 \leq v0
+  for all v0, (if v0 is an object then v0 \leq v0)
 
 Axiom:
-  for all v0, for all v1, if v0 is an object and v1 is an object then (if v0 \leq v1 and v1 \leq v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then (if v0 \leq v1 and v1 \leq v0 then v0 is equal to v1)))
 
 Axiom:
-  for all v0, for all v1, for all v2, if v0 is an object and v1 is an object and v2 is an object then (if v0 \leq v1 and v1 \leq v2 then v0 \leq v2)
+  for all v0, (for all v1, (for all v2, (if v0 is an object and v1 is an object and v2 is an object then (if v0 \leq v1 and v1 \leq v2 then v0 \leq v2))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, (v2 is a lower bound of v1 in v0) iff (v2 is an element of v0 and for all v3, if v3 is an element of v1 then v2 \leq v3)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, ((v2 is a lower bound of v1 in v0) iff (v2 is an element of v0 and for all v3, (if v3 is an element of v1 then v2 \leq v3)))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, (v2 is an upper bound of v1 in v0) iff (v2 is an element of v0 and for all v3, if v3 is an element of v1 then v3 \leq v2)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, ((v2 is an upper bound of v1 in v0) iff (v2 is an element of v0 and for all v3, (if v3 is an element of v1 then v3 \leq v2)))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, (v2 is an infimum of v1 in v0) iff (v2 is an element of v0 and v2 is a lower bound of v1 in v0 and for all v3, if v3 is a lower bound of v1 in v0 then v3 \leq v2)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, ((v2 is an infimum of v1 in v0) iff (v2 is an element of v0 and v2 is a lower bound of v1 in v0 and for all v3, (if v3 is a lower bound of v1 in v0 then v3 \leq v2)))))
 
 Definition:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, (v2 is a supremum of v1 in v0) iff (v2 is an element of v0 and v2 is an upper bound of v1 in v0 and for all v3, if v3 is an upper bound of v1 in v0 then v2 \leq v3)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, ((v2 is a supremum of v1 in v0) iff (v2 is an element of v0 and v2 is an upper bound of v1 in v0 and for all v3, (if v3 is an upper bound of v1 in v0 then v2 \leq v3)))))
 
 Theorem:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, for all v3, if v2 is a supremum of v1 in v0 and v3 is a supremum of v1 in v0 then v2 is equal to v3
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, (for all v3, (if v2 is a supremum of v1 in v0 and v3 is a supremum of v1 in v0 then v2 is equal to v3))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then for all v2, for all v3, if v2 is an infimum of v1 in v0 and v3 is an infimum of v1 in v0 then v2 is equal to v3
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subset of v0 then for all v2, (for all v3, (if v2 is an infimum of v1 in v0 and v3 is an infimum of v1 in v0 then v2 is equal to v3))))
 Proof:
 Qed.
 
 Definition:
-  for all v0, (v0 is a complete lattice) iff (v0 is a set and for all v1, if v1 is a subset of v0 then for some v2, v2 is an infimum of v1 in v0 and for some v3, v3 is a supremum of v1 in v0)
+  for all v0, ((v0 is a complete lattice) iff (v0 is a set and for all v1, (if v1 is a subset of v0 then for some v2, (v2 is an infimum of v1 in v0 and for some v3, (v3 is a supremum of v1 in v0)))))
 
 Definition:
-  for all v0, if v0 is a function then for all v1, (v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)
+  for all v0, (if v0 is a function then for all v1, ((v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)))
 
 Definition:
-  for all v0, if v0 is a function then ((v0 is monotone) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if v1 \leq v2 then the value of v0 under v1 \leq the value of v0 under v2))
+  for all v0, (if v0 is a function then ((v0 is monotone) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if v1 \leq v2 then the value of v0 under v1 \leq the value of v0 under v2)))))
 
 Theorem (knastertarski):
-  for all v0, if v0 is a complete lattice then for all v1, if v1 is a function then (if v1 maps elements of v0 to elements of v0 and v1 is monotone then for all v2, if v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a fixed point of v1 and v3 is an object) then v2 is a complete lattice)
+  for all v0, (if v0 is a complete lattice then for all v1, (if v1 is a function then (if v1 maps elements of v0 to elements of v0 and v1 is monotone then for all v2, (if v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is a fixed point of v1 and v3 is an object)) then v2 is a complete lattice))))
 Proof:
   T is a subset of S
-  for some v0, v0 is a supremum of T in S
+  for some v0, (v0 is a supremum of T in S)
   Proof:
-    P is a class and (if U is a set then P is a set) and for all v0, v0 is an element of P iff (v0 is an element of U and v0 is an object and (the value of f under v0 \leq v0 and v0 is an upper bound of T in U))
+    P is a class and (if U is a set then P is a set) and for all v0, (v0 is an element of P iff (v0 is an element of U and v0 is an object and (the value of f under v0 \leq v0 and v0 is an upper bound of T in U)))
     p is an infimum of P in U
     the value of f under p is a lower bound of P in U and the value of f under p is an upper bound of T in U
     p is a fixed point of f and p is a supremum of T in S
   Qed.
-  for some v0, v0 is an infimum of T in S
+  for some v0, (v0 is an infimum of T in S)
   Proof:
-    Q is a class and (if U is a set then Q is a set) and for all v0, v0 is an element of Q iff (v0 is an element of U and v0 is an object and (v0 \leq the value of f under v0 and v0 is a lower bound of T in U))
+    Q is a class and (if U is a set then Q is a set) and for all v0, (v0 is an element of Q iff (v0 is an element of U and v0 is an object and (v0 \leq the value of f under v0 and v0 is a lower bound of T in U)))
     q is a supremum of Q in U
     the value of f under q is an upper bound of Q in U and the value of f under q is a lower bound of T in U
     q is a fixed point of f

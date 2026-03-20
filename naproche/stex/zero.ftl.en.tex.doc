@@ -1,58 +1,58 @@
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 
 Axiom:
-  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
+  for all v0, (if v0 is a map then (v0 is a function iff the domain of v0 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a class then (if for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set)
+  for all v0, (for all v1, (if v0 is a set and v1 is a class then (if for all v2, (if v2 is an element of v1 then v2 is an element of v0) then v1 is a set)))
 Proof:
-  C is a class and (if A is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B)
+  C is a class and (if A is a set then C is a set) and for all v0, (v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B))
   C is a set and C is equal to B
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Theorem:
-  for all v0, if v0 is a class then v0 is a subclass of v0
+  for all v0, (if v0 is a class then v0 is a subclass of v0)
 Proof:
-  for all v0, if v0 is an element of A then v0 is an element of A
+  for all v0, (if v0 is an element of A then v0 is an element of A)
   A is a subclass of A
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v2 then v0 is a subclass of v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v2 then v0 is a subclass of v2))))
 Proof:
   A is a subclass of B and B is a subclass of C
-  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of C
-  for all v0, if v0 is an element of A then v0 is an element of C
+  (for all v0, (if v0 is an element of A then v0 is an element of B)) and for all v0, (if v0 is an element of B then v0 is an element of C)
+  for all v0, (if v0 is an element of A then v0 is an element of C)
   A is a subclass of C
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)))
 Proof:
   A is a subclass of B and B is a subclass of A
-  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of A
+  (for all v0, (if v0 is an element of A then v0 is an element of B)) and for all v0, (if v0 is an element of B then v0 is an element of A)
   A is equal to B
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, v1 is an element of v0)
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, (v0 is equal to \SETempty) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
 
 Theorem:
-  for all v0, if v0 is a class then (v0 is empty iff v0 is equal to \SETempty)
+  for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, if v0 is an element of \SETempty then it is wrong that v0 is equal to v0
+    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, v0 is an element of A and it is wrong that for some v0, v0 is an element of \SETempty)
+  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -63,26 +63,26 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class then \SETempty is a subclass of v0
+  for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, v0 is an element of \SETempty
-  for all v0, if v0 is an element of \SETempty then v0 is an element of A
+  it is wrong that for some v0, (v0 is an element of \SETempty)
+  for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, (v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, (v0 is an unordered pair) iff (v0 is a class and for some v1, for some v2, v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 })
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
-  for all v0, if v0 is an object then for all v1, (v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and v2 is equal to v0))
+  for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
 
 Definition:
-  for all v0, (v0 is a singleton class) iff (v0 is a class and for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+  for all v0, ((v0 is a singleton class) iff (v0 is a class and for some v1, (v1 is an object and v0 is equal to \SETsingleton{ v1 })))
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ v0 }{ v2 } is equal to \SETpair{ v1 }{ v3 } then ((v0 is equal to v1 and v2 is equal to v3) or (v0 is equal to v3 and v2 is equal to v1)))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ v0 }{ v2 } is equal to \SETpair{ v1 }{ v3 } then ((v0 is equal to v1 and v2 is equal to v3) or (v0 is equal to v3 and v2 is equal to v1)))))))
 Proof:
   a is equal to a' or a is equal to b'
   if a is equal to a' then b is equal to b'
@@ -91,113 +91,113 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then (if \SETsingleton{ v0 } is equal to \SETsingleton{ v1 } then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then (if \SETsingleton{ v0 } is equal to \SETsingleton{ v1 } then v0 is equal to v1)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is an unique element of v0) iff (v1 is an element of v0 and for all v2, if v2 is an element of v0 then v2 is equal to v1)
+  for all v0, (if v0 is a class then for all v1, ((v1 is an unique element of v0) iff (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then v2 is equal to v1))))
 
 Theorem:
-  for all v0, if v0 is a class then ((for some v1, v1 is an unique element of v0) iff for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+  for all v0, (if v0 is a class then ((for some v1, (v1 is an unique element of v0)) iff for some v1, (v1 is an object and v0 is equal to \SETsingleton{ v1 })))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETunion v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETunion v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
 Proof:
 Qed.
 
 Axiom (Set_Existence_Axiom):
-  for some v0, v0 is a set
+  for some v0, (v0 is a set)
 
 Axiom (Separation_Axiom):
-  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subclass of v0 then v1 is a set))
 
 Axiom (Pairing_Axiom):
-  for all v0, for all v1, if v0 is an object and v1 is an object then \SETpair{ v0 }{ v1 } is a set
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then \SETpair{ v0 }{ v1 } is a set))
 
 Theorem:
-  for all v0, if v0 is an object then \SETsingleton{ v0 } is a set
+  for all v0, (if v0 is an object then \SETsingleton{ v0 } is a set)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class and for some v1, v1 is an unique element of v0 then v0 is a set
-Proof:
-Qed.
-
-Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a subclass of v0 and v1 is a set)
-
-Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is equal to \SETpow( v0 )) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and v2 is a subset of v0))
-
-Definition:
-  for all v0, (v0 is a system of sets) iff (v0 is a class and for all v1, if v1 is an element of v0 then v1 is a set)
-
-Definition:
-  for all v0, (v0 is a system of nonempty sets) iff (v0 is a class and for all v1, if v1 is an element of v0 then (v1 is a set and it is wrong that v1 is empty))
-
-Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a system of subsets of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is a subset of v0)
-
-Theorem:
-  for all v0, if v0 is a class then \SETempty is a system of subsets of v0
-Proof:
-Qed.
-
-Theorem:
-  for all v0, if v0 is a class then \SETpow( v0 ) is a system of subsets of v0
-Proof:
-Qed.
-
-Theorem:
-  for all v0, for all v1, if v0 is a system of sets and v1 is a system of sets then v0 \SETunion v1 is a system of sets
-Proof:
-Qed.
-
-Theorem:
-  for all v0, for all v1, if v0 is a system of sets and v1 is a system of sets then v0 \SETintersect v1 is a system of sets
-Proof:
-Qed.
-
-Theorem:
-  for all v0, for all v1, if v0 is a system of sets and v1 is a system of sets then v0 \SETdiff v1 is a system of sets
+  for all v0, (if v0 is a class and for some v1, (v1 is an unique element of v0) then v0 is a set)
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a system of sets then for all v1, (v1 is equal to \SETunionover v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of v0 and v2 is an element of v3))
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subset of v0) iff (v1 is a subclass of v0 and v1 is a set)))
+
+Definition:
+  for all v0, (if v0 is a class then for all v1, ((v1 is equal to \SETpow( v0 )) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is a subset of v0)))))
+
+Definition:
+  for all v0, ((v0 is a system of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
+
+Definition:
+  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that v1 is empty))))
+
+Definition:
+  for all v0, (if v0 is a class then for all v1, ((v1 is a system of subsets of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is a subset of v0))))
+
+Theorem:
+  for all v0, (if v0 is a class then \SETempty is a system of subsets of v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, (if v0 is a class then \SETpow( v0 ) is a system of subsets of v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, (for all v1, (if v0 is a system of sets and v1 is a system of sets then v0 \SETunion v1 is a system of sets))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, (for all v1, (if v0 is a system of sets and v1 is a system of sets then v0 \SETintersect v1 is a system of sets))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, (for all v1, (if v0 is a system of sets and v1 is a system of sets then v0 \SETdiff v1 is a system of sets))
+Proof:
+Qed.
+
+Definition:
+  for all v0, (if v0 is a system of sets then for all v1, ((v1 is equal to \SETunionover v0) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and for some v3, (v3 is an element of v0 and v2 is an element of v3))))))
 
 Theorem:
   \SETunionover \SETempty is equal to \SETempty
 Proof:
-  \SETunionover \SETempty is a class and for all v0, v0 is an element of \SETunionover \SETempty iff (v0 is an object and for some v1, v1 is an element of \SETempty and v0 is an element of v1)
-  it is wrong that for some v0, v0 is an element of \SETempty
-  it is wrong that for some v0, v0 is an object and for some v1, v1 is an element of \SETempty and v0 is an element of v1
+  \SETunionover \SETempty is a class and for all v0, (v0 is an element of \SETunionover \SETempty iff (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
+  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1))
   \SETunionover \SETempty is equal to \SETempty
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then \SETunionover \SETpair{ v0 }{ v1 } is equal to v0 \SETunion v1
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then \SETunionover \SETpair{ v0 }{ v1 } is equal to v0 \SETunion v1))
 Proof:
   \SETunionover \SETpair{ x }{ y } is a subclass of x \SETunion y
   Proof:
     a is an element of \SETunionover \SETpair{ x }{ y }
-    for some v0, v0 is an element of \SETpair{ x }{ y } and a is an element of v0
+    for some v0, (v0 is an element of \SETpair{ x }{ y } and a is an element of v0)
     a is an element of x or a is an element of y
     a is an element of x \SETunion y
   Qed.
@@ -205,46 +205,46 @@ Proof:
   Proof:
     a is an element of x \SETunion y
     a is an element of x or a is an element of y
-    for some v0, v0 is an element of \SETpair{ x }{ y } and a is an element of v0
+    for some v0, (v0 is an element of \SETpair{ x }{ y } and a is an element of v0)
     a is an element of \SETunionover \SETpair{ x }{ y }
   Qed.
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then \SETunionover \SETsingleton{ v0 } is equal to v0
+  for all v0, (if v0 is a set then \SETunionover \SETsingleton{ v0 } is equal to v0)
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a system of sets then for all v1, (v1 is equal to \SETintersectover v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for all v3, if v3 is an element of v0 then v2 is an element of v3))
+  for all v0, (if v0 is a system of sets then for all v1, ((v1 is equal to \SETintersectover v0) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and for all v3, (if v3 is an element of v0 then v2 is an element of v3))))))
 
 Theorem:
-  \SETintersectover \SETempty is a class and for all v0, v0 is an element of \SETintersectover \SETempty iff (v0 is an object and v0 is an object)
+  \SETintersectover \SETempty is a class and for all v0, (v0 is an element of \SETintersectover \SETempty iff (v0 is an object and v0 is an object))
 Proof:
-  V is a class and for all v0, v0 is an element of V iff (v0 is an object and v0 is an object)
+  V is a class and for all v0, (v0 is an element of V iff (v0 is an object and v0 is an object))
   \SETintersectover \SETempty is a subclass of V
   Proof:
-    for all v0, if v0 is an element of \SETintersectover \SETempty then v0 is an object
+    for all v0, (if v0 is an element of \SETintersectover \SETempty then v0 is an object)
   Qed.
   V is a subclass of \SETintersectover \SETempty
   Proof:
     a is an element of V
     a is an object
-    for all v0, if v0 is an element of \SETempty then a is an element of v0
+    for all v0, (if v0 is an element of \SETempty then a is an element of v0)
     Proof:
-      it is wrong that for some v0, v0 is an element of \SETempty
+      it is wrong that for some v0, (v0 is an element of \SETempty)
     Qed.
     a is an element of \SETintersectover \SETempty
   Qed.
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then \SETintersectover \SETpair{ v0 }{ v1 } is equal to v0 \SETintersect v1
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then \SETintersectover \SETpair{ v0 }{ v1 } is equal to v0 \SETintersect v1))
 Proof:
   \SETintersectover \SETpair{ x }{ y } is a subclass of x \SETintersect y
   Proof:
     a is an element of \SETintersectover \SETpair{ x }{ y }
-    for all v0, if v0 is an element of \SETpair{ x }{ y } then a is an element of v0
+    for all v0, (if v0 is an element of \SETpair{ x }{ y } then a is an element of v0)
     a is an element of x and a is an element of y
     a is an element of x \SETintersect y
   Qed.
@@ -252,30 +252,30 @@ Proof:
   Proof:
     a is an element of x \SETintersect y
     a is an element of x and a is an element of y
-    for all v0, if v0 is an element of \SETpair{ x }{ y } then a is an element of v0
+    for all v0, (if v0 is an element of \SETpair{ x }{ y } then a is an element of v0)
     a is an element of \SETintersectover \SETpair{ x }{ y }
   Qed.
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then \SETintersectover \SETsingleton{ v0 } is equal to v0
+  for all v0, (if v0 is a set then \SETintersectover \SETsingleton{ v0 } is equal to v0)
 Proof:
 Qed.
 
 Axiom (Union_Axiom):
-  for all v0, if v0 is a system of sets then (if v0 is a set then \SETunionover v0 is a set)
+  for all v0, (if v0 is a system of sets then (if v0 is a set then \SETunionover v0 is a set))
 
 Axiom (Powerset_Axiom):
-  for all v0, if v0 is a set then \SETpow( v0 ) is a set
+  for all v0, (if v0 is a set then \SETpow( v0 ) is a set)
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is a value of v0) iff (v1 is an object and for some v2, v2 is an element of the domain of v0 and v1 is equal to the value of v0 under v2)
+  for all v0, (if v0 is a map then for all v1, ((v1 is a value of v0) iff (v1 is an object and for some v2, (v2 is an element of the domain of v0 and v1 is equal to the value of v0 under v2))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is equal to \FUNrange( v0 )) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of the domain of v0 and v2 is equal to the value of v0 under v3))
+  for all v0, (if v0 is a map then for all v1, ((v1 is equal to \FUNrange( v0 )) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and for some v3, (v3 is an element of the domain of v0 and v2 is equal to the value of v0 under v3))))))
 
 Theorem:
-  for all v0, for all v1, if v1 is a map and v0 is an object then (v0 is a value of v1 iff v0 is an element of \FUNrange( v1 ))
+  for all v0, (for all v1, (if v1 is a map and v0 is an object then (v0 is a value of v1 iff v0 is an element of \FUNrange( v1 ))))
 Proof:
   if b is a value of f then the thesis holds
   Proof:
@@ -285,84 +285,84 @@ Proof:
   Qed.
   if b is an element of \FUNrange( f ) then the thesis holds
   Proof:
-    b is an object and for some v0, v0 is an element of the domain of f and b is equal to the value of f under v0
+    b is an object and for some v0, (v0 is an element of the domain of f and b is equal to the value of f under v0)
     b is a value of f
   Qed.
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is equal to \FUNid{ v0 }) iff (v1 is a map and the domain of v1 is equal to v0 and for all v2, if v2 is an element of v0 then the value of v1 under v2 is equal to v2)
+  for all v0, (if v0 is a class then for all v1, ((v1 is equal to \FUNid{ v0 }) iff (v1 is a map and the domain of v1 is equal to v0 and for all v2, (if v2 is an element of v0 then the value of v1 under v2 is equal to v2))))
 
 Definition:
-  for all v0, for all v1, if v0 is a map and v1 is a map then (if \FUNrange( v0 ) is a subclass of the domain of v1 then for all v2, (v2 is equal to v1 \FUNcomp v0) iff (v2 is a map and the domain of v2 is equal to the domain of v0 and for all v3, if v3 is an element of the domain of v0 then the value of v2 under v3 is equal to the value of v1 under the value of v0 under v3))
+  for all v0, (for all v1, (if v0 is a map and v1 is a map then (if \FUNrange( v0 ) is a subclass of the domain of v1 then for all v2, ((v2 is equal to v1 \FUNcomp v0) iff (v2 is a map and the domain of v2 is equal to the domain of v0 and for all v3, (if v3 is an element of the domain of v0 then the value of v2 under v3 is equal to the value of v1 under the value of v0 under v3))))))
 
 Definition:
-  for all v0, for all v1, if v1 is a map and v0 is a subclass of the domain of v1 then for all v2, (v2 is equal to v1 \FUNrest v0) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, if v3 is an element of v0 then the value of v2 under v3 is equal to the value of v1 under v3)
+  for all v0, (for all v1, (if v1 is a map and v0 is a subclass of the domain of v1 then for all v2, ((v2 is equal to v1 \FUNrest v0) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, (if v3 is an element of v0 then the value of v2 under v3 is equal to the value of v1 under v3)))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }
+  for all v0, (for all v1, (if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v1 is a map and v0 is a class then for all v2, (v2 is equal to \FUNim{ v1 }{ v0 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of the domain of v1 \SETintersect v0 and v3 is equal to the value of v1 under v4))
+  for all v0, (for all v1, (if v1 is a map and v0 is a class then for all v2, ((v2 is equal to \FUNim{ v1 }{ v0 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of the domain of v1 \SETintersect v0 and v3 is equal to the value of v1 under v4)))))))
 
 Definition:
-  for all v0, for all v1, if v1 is a map and v0 is a class then for all v2, (v2 is equal to \FUNpreim{ v1 }{ v0 }) iff (v2 is a class and (if the domain of v1 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of the domain of v1 and v3 is an object and the value of v1 under v3 is an element of v0))
+  for all v0, (for all v1, (if v1 is a map and v0 is a class then for all v2, ((v2 is equal to \FUNpreim{ v1 }{ v0 }) iff (v2 is a class and (if the domain of v1 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of the domain of v1 and v3 is an object and the value of v1 under v3 is an element of v0))))))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a map of v0) iff (v1 is a map and the domain of v1 is equal to v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a map of v0) iff (v1 is a map and the domain of v1 is equal to v0)))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a map to v0) iff (v1 is a map and for all v2, if v2 is an element of the domain of v1 then the value of v1 under v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a map to v0) iff (v1 is a map and for all v2, (if v2 is an element of the domain of v1 then the value of v1 under v2 is an element of v0))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a map from v0 to v1) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, if v3 is an element of v0 then the value of v2 under v3 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a map from v0 to v1) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, (if v3 is an element of v0 then the value of v2 under v3 is an element of v1)))))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a map on v0) iff v1 is a map from v0 to v0
+  for all v0, (if v0 is a class then for all v1, ((v1 is a map on v0) iff v1 is a map from v0 to v0))
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v3 is a map from v0 to v1) then (if for all v4, if v4 is an element of v0 then the value of v2 under v4 is equal to the value of v3 under v4 then v2 is equal to v3)
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v3 is a map from v0 to v1) then (if for all v4, (if v4 is an element of v0 then the value of v2 under v4 is equal to the value of v3 under v4) then v2 is equal to v3)))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class then \FUNid{ v0 } is a map on v0
+  for all v0, (if v0 is a class then \FUNid{ v0 } is a map on v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a map from v0 to v1 and v4 is a map from v1 to v2 then v4 \FUNcomp v3 is a map from v0 to v2
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a class and v1 is a class and v2 is a class and v3 is a map from v0 to v1 and v4 is a map from v1 to v2 then v4 \FUNcomp v3 is a map from v0 to v2)))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a map from v0 to v1 and v2 is a subclass of v0 then v3 \FUNrest v2 is a map from v2 to v1
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a map from v0 to v1 and v2 is a subclass of v0 then v3 \FUNrest v2 is a map from v2 to v1))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map from v0 to v1 then (v2 \FUNcomp \FUNid{ v0 } is equal to v2 and v2 is equal to \FUNid{ v1 } \FUNcomp v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map from v0 to v1 then (v2 \FUNcomp \FUNid{ v0 } is equal to v2 and v2 is equal to \FUNid{ v1 } \FUNcomp v2))))
 Proof:
   A is equal to the domain of f \FUNcomp \FUNid{ A } and A is equal to the domain of f and A is equal to the domain of \FUNid{ B } \FUNcomp f
-  for all v0, if v0 is an element of A then (the value of f \FUNcomp \FUNid{ A } under v0 is equal to the value of f under the value of \FUNid{ A } under v0 and the value of f under the value of \FUNid{ A } under v0 is equal to the value of f under v0 and the value of f under v0 is equal to the value of \FUNid{ B } under the value of f under v0 and the value of \FUNid{ B } under the value of f under v0 is equal to the value of \FUNid{ B } \FUNcomp f under v0)
+  for all v0, (if v0 is an element of A then (the value of f \FUNcomp \FUNid{ A } under v0 is equal to the value of f under the value of \FUNid{ A } under v0 and the value of f under the value of \FUNid{ A } under v0 is equal to the value of f under v0 and the value of f under v0 is equal to the value of \FUNid{ B } under the value of f under v0 and the value of \FUNid{ B } under the value of f under v0 is equal to the value of \FUNid{ B } \FUNcomp f under v0))
   f \FUNcomp \FUNid{ A } is equal to f and f is equal to \FUNid{ B } \FUNcomp f
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }
+  for all v0, (for all v1, (if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }))
 Proof:
   the domain of \FUNid{ A } \FUNrest X is equal to X and X is equal to the domain of \FUNid{ X }
-  for all v0, if v0 is an element of X then (the value of \FUNid{ A } \FUNrest X under v0 is equal to the value of \FUNid{ A } under v0 and the value of \FUNid{ A } under v0 is equal to v0 and v0 is equal to the value of \FUNid{ X } under v0)
+  for all v0, (if v0 is an element of X then (the value of \FUNid{ A } \FUNrest X under v0 is equal to the value of \FUNid{ A } under v0 and the value of \FUNid{ A } under v0 is equal to v0 and v0 is equal to the value of \FUNid{ X } under v0))
   \FUNid{ A } \FUNrest X is equal to \FUNid{ X }
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, for all v4, for all v5, for all v6, if v0 is a class and v1 is a class and v2 is a class and v3 is a class and v4 is a map from v0 to v1 and v5 is a map from v1 to v2 and v6 is a map from v2 to v3 then v6 \FUNcomp v5 \FUNcomp v4 is equal to v6 \FUNcomp v5 \FUNcomp v4
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and v4 is a map from v0 to v1 and v5 is a map from v1 to v2 and v6 is a map from v2 to v3 then v6 \FUNcomp v5 \FUNcomp v4 is equal to v6 \FUNcomp v5 \FUNcomp v4)))))))
 Proof:
   h \FUNcomp g \FUNcomp f is a map from A to D and h \FUNcomp g \FUNcomp f is a map from A to D
-  for all v0, if v0 is an element of A then the value of h \FUNcomp g \FUNcomp f under v0 is equal to the value of h \FUNcomp g \FUNcomp f under v0
+  for all v0, (if v0 is an element of A then the value of h \FUNcomp g \FUNcomp f under v0 is equal to the value of h \FUNcomp g \FUNcomp f under v0)
   Proof:
     a is an element of A
     the value of h \FUNcomp g \FUNcomp f under a is equal to the value of h under the value of g \FUNcomp f under a and the value of h under the value of g \FUNcomp f under a is equal to the value of h under the value of g under the value of f under a and the value of h under the value of g under the value of f under a is equal to the value of h \FUNcomp g under the value of f under a and the value of h \FUNcomp g under the value of f under a is equal to the value of h \FUNcomp g \FUNcomp f under a
@@ -371,54 +371,54 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to \FUNfunspace{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a map from v0 to v1 and v3 is a function and v3 is an object))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to \FUNfunspace{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is a map from v0 to v1 and v3 is a function and v3 is an object))))))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)
+  for all v0, (if v0 is a map then for all v1, ((v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is an object and (v2 is a map and v0 is a subclass of the domain of v2) then ((v0 is inductive regarding v1 and v2) iff (v1 is an element of v0 and for all v3, if v3 is an element of v0 then the value of v2 under v3 is an element of v0))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is an object and (v2 is a map and v0 is a subclass of the domain of v2) then ((v0 is inductive regarding v1 and v2) iff (v1 is an element of v0 and for all v3, (if v3 is an element of v0 then the value of v2 under v3 is an element of v0))))))
 
 Axiom (Axiom_of_Infinity):
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is an element of v0 and v2 is a map from v0 to v0 then for some v3, v3 is a subset of v0 and v3 is inductive regarding v1 and v2
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is an element of v0 and v2 is a map from v0 to v0 then for some v3, (v3 is a subset of v0 and v3 is inductive regarding v1 and v2))))
 
 Axiom (Replacement_Axiom):
-  for all v0, for all v1, if v0 is a map and v1 is a set then \FUNim{ v0 }{ v1 } is a set
+  for all v0, (for all v1, (if v0 is a map and v1 is a set then \FUNim{ v0 }{ v1 } is a set))
 
 Axiom (Foundation_Axiom):
-  for all v0, if v0 is a system of sets and it is wrong that v0 is empty then for some v1, v1 is an element of v0 and v0 and v1 are disjoint
+  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
 
 Theorem (wellfoundedness_of_membership_relation):
-  for all v0, if v0 is a system of sets and it is wrong that v0 is empty then for some v1, v1 is an element of v0 and for all v2, if v2 is an element of v0 then it is wrong that v2 is an element of v1
+  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that v2 is an element of v1)))
 Proof:
 Qed.
 
 Theorem (epsilon_induction):
-  for all v0, if v0 is a class then (if for all v1, if v1 is a set then (if for all v2, if v2 is an element of v1 and v2 is a set then v2 is an element of v0 then v1 is an element of v0) then for all v1, if v1 is a set then v1 is an element of v0)
+  for all v0, (if v0 is a class then (if for all v1, (if v1 is a set then (if for all v2, (if v2 is an element of v1 and v2 is a set then v2 is an element of v0) then v1 is an element of v0)) then for all v1, (if v1 is a set then v1 is an element of v0)))
 Proof:
   it is wrong that the thesis holds
-  M is a class and for all v0, v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of \Phi)
+  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of \Phi))
   it is wrong that M is empty
-  x is an element of M and for all v0, if v0 is an element of M then it is wrong that v0 is an element of x
-  x is a set and for all v0, if v0 is an element of x and v0 is a set then v0 is an element of \Phi
+  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that v0 is an element of x)
+  x is a set and for all v0, (if v0 is an element of x and v0 is a set then v0 is an element of \Phi)
   x is an element of \Phi
   falsity holds
 Qed.
 
 Definition:
-  for all v0, if v0 is a system of nonempty sets then for all v1, (v1 is a choice map for v0) iff (v1 is a map and the domain of v1 is equal to v0 and for all v2, if v2 is an element of v0 then the value of v1 under v2 is an element of v2)
+  for all v0, (if v0 is a system of nonempty sets then for all v1, ((v1 is a choice map for v0) iff (v1 is a map and the domain of v1 is equal to v0 and for all v2, (if v2 is an element of v0 then the value of v1 under v2 is an element of v2))))
 
 Axiom (Axiom_of_Choice):
-  for all v0, if v0 is a system of nonempty sets then for some v1, v1 is a choice map for v0
+  for all v0, (if v0 is a system of nonempty sets then for some v1, (v1 is a choice map for v0))
 
 Definition:
-  for all v0, (v0 is a pair) iff (v0 is an object and for some v1, for some v2, v1 is an object and v2 is an object and v0 is equal to the ordered pair of v1 and v2)
+  for all v0, ((v0 is a pair) iff (v0 is an object and for some v1, (for some v2, (v1 is an object and v2 is an object and v0 is equal to the ordered pair of v1 and v2))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETprod v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETprod v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))))))))
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v2 is an object and v3 is an object) then (the ordered pair of v2 and v3 is an element of v0 \SETprod v1 iff (v2 is an element of v0 and v3 is an element of v1))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and (v2 is an object and v3 is an object) then (the ordered pair of v2 and v3 is an element of v0 \SETprod v1 iff (v2 is an element of v0 and v3 is an element of v1))))))
 Proof:
   if the ordered pair of a and b is an element of A \SETprod B then the thesis holds
   Proof:
@@ -435,7 +435,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (v0 \SETprod v1 is empty iff (v0 is empty or v1 is empty))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 \SETprod v1 is empty iff (v0 is empty or v1 is empty))))
 Proof:
   if A \SETprod B is empty then the thesis holds
   Proof:
@@ -448,14 +448,14 @@ Proof:
   Proof:
     it is wrong that A \SETprod B is empty
     c is an element of A \SETprod B
-    for some v0, v0 is an element of A and for some v1, v1 is an element of B and c is equal to the ordered pair of v0 and v1
+    for some v0, (v0 is an element of A and for some v1, (v1 is an element of B and c is equal to the ordered pair of v0 and v1))
     it is wrong that A is empty and it is wrong that B is empty
     falsity holds
   Qed.
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then \SETsingleton{ v0 } \SETprod \SETsingleton{ v1 } is equal to \SETsingleton{ the ordered pair of v0 and v1 }
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then \SETsingleton{ v0 } \SETprod \SETsingleton{ v1 } is equal to \SETsingleton{ the ordered pair of v0 and v1 }))
 Proof:
   \SETsingleton{ a } \SETprod \SETsingleton{ b } is a subclass of \SETsingleton{ the ordered pair of a and b }
   Proof:
@@ -475,7 +475,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that v0 is empty and it is wrong that v1 is empty and it is wrong that v2 is empty and it is wrong that v3 is empty) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that v0 is empty and it is wrong that v1 is empty and it is wrong that v2 is empty and it is wrong that v3 is empty) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 Proof:
   A \SETprod B is equal to A' \SETprod B'
   A is a subclass of A' and B is a subclass of B'
@@ -495,13 +495,13 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v1 is a map and v0 is a class then ((v1 is surjective onto v0) iff \FUNrange( v1 ) is equal to v0)
+  for all v0, (for all v1, (if v1 is a map and v0 is a class then ((v1 is surjective onto v0) iff \FUNrange( v1 ) is equal to v0)))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a surjective map from v0 to v1) iff (v2 is a map of v0 and v2 is surjective onto v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a surjective map from v0 to v1) iff (v2 is a map of v0 and v2 is surjective onto v1))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a map to v0 then (v1 is surjective onto v0 iff for all v2, if v2 is an element of v0 then v2 is a value of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a map to v0 then (v1 is surjective onto v0 iff for all v2, (if v2 is an element of v0 then v2 is a value of v1))))
 Proof:
   if f is surjective onto B then the thesis holds
   Proof:
@@ -510,7 +510,7 @@ Proof:
     b is an element of \FUNrange( f )
     b is a value of f
   Qed.
-  if for all v0, if v0 is an element of B then v0 is a value of f then the thesis holds
+  if for all v0, (if v0 is an element of B then v0 is a value of f) then the thesis holds
   Proof:
     B is a subclass of \FUNrange( f )
     Proof:
@@ -528,23 +528,23 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a map then ((v0 is injective) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if the value of v0 under v1 is equal to the value of v0 under v2 then v1 is equal to v2))
+  for all v0, (if v0 is a map then ((v0 is injective) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if the value of v0 under v1 is equal to the value of v0 under v2 then v1 is equal to v2)))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a bijection between v0 and v1) iff (v2 is a map from v0 to v1 and v2 is injective and v2 is surjective onto v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a bijection between v0 and v1) iff (v2 is a map from v0 to v1 and v2 is injective and v2 is surjective onto v1))))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNrange( v2 )
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNrange( v2 ))))
 Proof:
   f is injective and f is surjective onto \FUNrange( f )
   f is a bijection between A and \FUNrange( f )
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a permutation of v0) iff v1 is a bijection between v0 and v0
+  for all v0, (if v0 is a class then for all v1, ((v1 is a permutation of v0) iff v1 is a bijection between v0 and v0))
 
 Theorem:
-  for all v0, if v0 is a class then \FUNid{ v0 } is a permutation of v0
+  for all v0, (if v0 is a class then \FUNid{ v0 } is a permutation of v0)
 Proof:
   \FUNid{ A } is a map on A
   \FUNid{ A } is surjective onto A
@@ -562,7 +562,7 @@ Proof:
 Qed.
 
 Theorem (surjectivity_of_composition_of_surjections):
-  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then v4 \FUNcomp v3 is a surjective map from v0 to v2
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then v4 \FUNcomp v3 is a surjective map from v0 to v2)))))
 Proof:
   g \FUNcomp f is a map of A
   g \FUNcomp f is surjective onto C
@@ -575,7 +575,7 @@ Proof:
 Qed.
 
 Theorem (injectivity_of_composition_of_injections):
-  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and (v3 is a map from v0 to v1 and v3 is injective) and (v4 is a map from v1 to v2 and v4 is injective) then (v4 \FUNcomp v3 is a map from v0 to v2 and v4 \FUNcomp v3 is injective)
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a class and v1 is a class and v2 is a class and (v3 is a map from v0 to v1 and v3 is injective) and (v4 is a map from v1 to v2 and v4 is injective) then (v4 \FUNcomp v3 is a map from v0 to v2 and v4 \FUNcomp v3 is injective))))))
 Proof:
   g \FUNcomp f is a map of A
   g \FUNcomp f is injective
@@ -592,14 +592,14 @@ Proof:
 Qed.
 
 Theorem (bijectivity_of_composition_of_bijections):
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then for all v3, for all v4, if v3 is a bijection between v0 and v1 and v4 is a bijection between v1 and v2 then v4 \FUNcomp v3 is a bijection between v0 and v2
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then for all v3, (for all v4, (if v3 is a bijection between v0 and v1 and v4 is a bijection between v1 and v2 then v4 \FUNcomp v3 is a bijection between v0 and v2)))))
 Proof:
   g \FUNcomp f is a map from A to C and g \FUNcomp f is injective
   g \FUNcomp f is a surjective map from A to C
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is injective
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is injective))))
 Proof:
   a is an element of X and a' is an element of X
   the value of f \FUNrest X under a is equal to the value of f \FUNrest X under a'
@@ -608,26 +608,26 @@ Proof:
 Qed.
 
 Theorem (bijectivity_of_restriction_of_injection):
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is a bijection between v2 and \FUNim{ v3 }{ v2 }
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is a bijection between v2 and \FUNim{ v3 }{ v2 }))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNim{ v2 }{ v0 }
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNim{ v2 }{ v0 })))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a map then for all v1, (v1 is an inverse of v0) iff (v1 is a map from \FUNrange( v0 ) to the domain of v0 and for all v2, if v2 is an element of the domain of v0 then for all v3, if v3 is an element of the domain of v1 then (the value of v0 under v2 is equal to v3 iff the value of v1 under v3 is equal to v2))
+  for all v0, (if v0 is a map then for all v1, ((v1 is an inverse of v0) iff (v1 is a map from \FUNrange( v0 ) to the domain of v0 and for all v2, (if v2 is an element of the domain of v0 then for all v3, (if v3 is an element of the domain of v1 then (the value of v0 under v2 is equal to v3 iff the value of v1 under v3 is equal to v2))))))
 
 Definition:
-  for all v0, if v0 is a map then ((v0 is invertible) iff for some v1, v1 is an inverse of v0)
+  for all v0, (if v0 is a map then ((v0 is invertible) iff for some v1, (v1 is an inverse of v0)))
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a map and v1 is an inverse of v0 and v2 is an inverse of v0 then v1 is equal to v2
+  for all v0, (for all v1, (for all v2, (if v0 is a map and v1 is an inverse of v0 and v2 is an inverse of v0 then v1 is equal to v2)))
 Proof:
   the domain of g is equal to \FUNrange( f ) and \FUNrange( f ) is equal to the domain of g'
-  for all v0, if v0 is an element of \FUNrange( f ) then the value of g under v0 is equal to the value of g' under v0
+  for all v0, (if v0 is an element of \FUNrange( f ) then the value of g under v0 is equal to the value of g' under v0)
   Proof:
     b is an element of \FUNrange( f )
     a is equal to the value of g' under b
@@ -638,18 +638,18 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a map and v0 is invertible then for all v1, (v1 is equal to \FUNinv{ v0 }) iff v1 is an inverse of v0
+  for all v0, (if v0 is a map and v0 is invertible then for all v1, ((v1 is equal to \FUNinv{ v0 }) iff v1 is an inverse of v0))
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 and v3 is a surjective map from v1 to v0 then (v3 is an inverse of v2 iff (v3 \FUNcomp v2 is equal to \FUNid{ v0 } and v2 \FUNcomp v3 is equal to \FUNid{ v1 }))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 and v3 is a surjective map from v1 to v0 then (v3 is an inverse of v2 iff (v3 \FUNcomp v2 is equal to \FUNid{ v0 } and v2 \FUNcomp v3 is equal to \FUNid{ v1 }))))))
 Proof:
   if g is an inverse of f then the thesis holds
   Proof:
     the domain of g \FUNcomp f is equal to the domain of f and the domain of f is equal to A and A is equal to the domain of \FUNid{ A }
-    for all v0, if v0 is an element of A then (the value of g \FUNcomp f under v0 is equal to the value of g under the value of f under v0 and the value of g under the value of f under v0 is equal to v0)
+    for all v0, (if v0 is an element of A then (the value of g \FUNcomp f under v0 is equal to the value of g under the value of f under v0 and the value of g under the value of f under v0 is equal to v0))
     g \FUNcomp f is equal to \FUNid{ A }
     the domain of f \FUNcomp g is equal to the domain of g and the domain of g is equal to B and B is equal to the domain of \FUNid{ B }
-    for all v0, if v0 is an element of B then (the value of f \FUNcomp g under v0 is equal to the value of f under the value of g under v0 and the value of f under the value of g under v0 is equal to v0)
+    for all v0, (if v0 is an element of B then (the value of f \FUNcomp g under v0 is equal to the value of f under the value of g under v0 and the value of f under the value of g under v0 is equal to v0))
     f \FUNcomp g is equal to \FUNid{ B }
   Qed.
   if g \FUNcomp f is equal to \FUNid{ A } and f \FUNcomp g is equal to \FUNid{ B } then the thesis holds
@@ -663,7 +663,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (\FUNinv{ v2 } is a surjective map from v1 to v0 and \FUNinv{ v2 } is invertible and \FUNinv{ \FUNinv{ v2 } } is equal to v2))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (\FUNinv{ v2 } is a surjective map from v1 to v0 and \FUNinv{ v2 } is invertible and \FUNinv{ \FUNinv{ v2 } } is equal to v2)))))
 Proof:
   \FUNinv{ f } is a map from B to A
   Proof:
@@ -671,7 +671,7 @@ Proof:
   Qed.
   \FUNinv{ f } is surjective onto A
   Proof:
-    for all v0, if v0 is an element of A then the value of \FUNinv{ f } under the value of f under v0 is equal to v0
+    for all v0, (if v0 is an element of A then the value of \FUNinv{ f } under the value of f under v0 is equal to v0)
   Qed.
   \FUNinv{ f } is an inverse of f
   f \FUNcomp \FUNinv{ f } is equal to \FUNid{ B } and \FUNinv{ f } \FUNcomp f is equal to \FUNid{ A }
@@ -679,26 +679,26 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (v2 \FUNcomp \FUNinv{ v2 } is equal to \FUNid{ v1 } and \FUNinv{ v2 } \FUNcomp v2 is equal to \FUNid{ v0 }))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (v2 \FUNcomp \FUNinv{ v2 } is equal to \FUNid{ v1 } and \FUNinv{ v2 } \FUNcomp v2 is equal to \FUNid{ v0 })))))
 Proof:
   \FUNinv{ f } is a surjective map from B to A
   \FUNinv{ f } is an inverse of f
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v0 then (if v3 is invertible then the value of \FUNinv{ v3 } under the value of v3 under v2 is equal to v2)
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v0 then (if v3 is invertible then the value of \FUNinv{ v3 } under the value of v3 under v2 is equal to v2)))))
 Proof:
   the value of \FUNinv{ f } under the value of f under a is equal to the value of \FUNinv{ f } \FUNcomp f under a and the value of \FUNinv{ f } \FUNcomp f under a is equal to the value of \FUNid{ A } under a and the value of \FUNid{ A } under a is equal to a
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then the value of v3 under the value of \FUNinv{ v3 } under v2 is equal to v2)
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then the value of v3 under the value of \FUNinv{ v3 } under v2 is equal to v2)))))
 Proof:
   the value of f under the value of \FUNinv{ f } under b is equal to the value of f \FUNcomp \FUNinv{ f } under b and the value of f \FUNcomp \FUNinv{ f } under b is equal to the value of \FUNid{ B } under b and the value of \FUNid{ B } under b is equal to b
 Qed.
 
 Theorem (invertibility_of_composition_of_invertible_maps):
-  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then (if v3 is invertible and v4 is invertible then (v4 \FUNcomp v3 is invertible and \FUNinv{ v4 \FUNcomp v3 } is equal to \FUNinv{ v3 } \FUNcomp \FUNinv{ v4 }))
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then (if v3 is invertible and v4 is invertible then (v4 \FUNcomp v3 is invertible and \FUNinv{ v4 \FUNcomp v3 } is equal to \FUNinv{ v3 } \FUNcomp \FUNinv{ v4 })))))))
 Proof:
   \FUNinv{ f } is a surjective map from B to A
   \FUNinv{ g } is a surjective map from C to B
@@ -727,7 +727,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v0 then (if v3 is invertible then (v3 \FUNrest v2 is invertible and \FUNinv{ v3 \FUNrest v2 } is equal to \FUNinv{ v3 } \FUNrest \FUNim{ v3 }{ v2 }))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v0 then (if v3 is invertible then (v3 \FUNrest v2 is invertible and \FUNinv{ v3 \FUNrest v2 } is equal to \FUNinv{ v3 } \FUNrest \FUNim{ v3 }{ v2 }))))))
 Proof:
   f \FUNrest X is a surjective map from X to \FUNim{ f }{ X }
   g is equal to \FUNinv{ f } \FUNrest \FUNim{ f }{ X }
@@ -749,12 +749,12 @@ Proof:
   Qed.
   \FUNrange( g ) is equal to X
   g is a map and g is surjective onto X
-  for all v0, if v0 is an element of X then the value of g under the value of f \FUNrest X under v0 is equal to v0
+  for all v0, (if v0 is an element of X then the value of g under the value of f \FUNrest X under v0 is equal to v0)
   Proof:
     a is an element of X
     the value of g under the value of f \FUNrest X under a is equal to the value of g under the value of f under a and the value of g under the value of f under a is equal to the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a and the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to a
   Qed.
-  for all v0, if v0 is an element of \FUNim{ f }{ X } then the value of f \FUNrest X under the value of g under v0 is equal to v0
+  for all v0, (if v0 is an element of \FUNim{ f }{ X } then the value of f \FUNrest X under the value of g under v0 is equal to v0)
   Proof:
     b is an element of \FUNim{ f }{ X }
     a is an element of X and b is equal to the value of f under a
@@ -766,9 +766,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ v2 } is equal to \FUNim{ \FUNinv{ v3 } }{ v2 })
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ v2 } is equal to \FUNim{ \FUNinv{ v3 } }{ v2 })))))
 Proof:
-  \FUNim{ \FUNinv{ f } }{ Y } is a class and for all v0, v0 is an element of \FUNim{ \FUNinv{ f } }{ Y } iff (v0 is an object and for some v1, v1 is an element of Y and v0 is equal to the value of \FUNinv{ f } under v1) and (\FUNpreim{ f }{ Y } is a class and for all v0, v0 is an element of \FUNpreim{ f }{ Y } iff (v0 is an element of A and v0 is an object and the value of f under v0 is an element of Y))
+  \FUNim{ \FUNinv{ f } }{ Y } is a class and for all v0, (v0 is an element of \FUNim{ \FUNinv{ f } }{ Y } iff (v0 is an object and for some v1, (v1 is an element of Y and v0 is equal to the value of \FUNinv{ f } under v1))) and (\FUNpreim{ f }{ Y } is a class and for all v0, (v0 is an element of \FUNpreim{ f }{ Y } iff (v0 is an element of A and v0 is an object and the value of f under v0 is an element of Y)))
   \FUNpreim{ f }{ Y } is a subclass of \FUNim{ \FUNinv{ f } }{ Y }
   Proof:
     a is an element of \FUNpreim{ f }{ Y }
@@ -786,15 +786,15 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ \SETsingleton{ v2 } } is equal to \SETsingleton{ the value of \FUNinv{ v3 } under v2 })
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ \SETsingleton{ v2 } } is equal to \SETsingleton{ the value of \FUNinv{ v3 } under v2 })))))
 Proof:
   \FUNpreim{ f }{ \SETsingleton{ b } } is equal to \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } }
-  \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } is a class and for all v0, v0 is an element of \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } iff (v0 is an object and for some v1, v1 is an element of \SETsingleton{ b } and v0 is equal to the value of \FUNinv{ f } under v1)
+  \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } is a class and for all v0, (v0 is an element of \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } iff (v0 is an object and for some v1, (v1 is an element of \SETsingleton{ b } and v0 is equal to the value of \FUNinv{ f } under v1)))
   \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } is equal to \SETsingleton{ the value of \FUNinv{ f } under b }
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (v2 is invertible iff v2 is injective)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (v2 is invertible iff v2 is injective))))
 Proof:
   if f is invertible then the thesis holds
   Proof:
@@ -804,18 +804,18 @@ Proof:
   Qed.
   if f is injective then the thesis holds
   Proof:
-    g is a map and (the domain of g is equal to B) and for all v0, if v0 is an object then (if v0 is an element of the domain of g then for some v1, v1 is an element of A and the value of f under v1 is equal to v0 and (the value of g under v0 is equal to v1))
+    g is a map and (the domain of g is equal to B) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then for some v1, (v1 is an element of A and the value of f under v1 is equal to v0 and (the value of g under v0 is equal to v1))))
     g is a map from B to A
-    for all v0, if v0 is an element of A then v0 is equal to the value of g under the value of f under v0
+    for all v0, (if v0 is an element of A then v0 is equal to the value of g under the value of f under v0)
     g is a surjective map from B to A
-    for all v0, if v0 is an element of A then the value of g under the value of f under v0 is equal to v0
-    for all v0, if v0 is an element of B then the value of f under the value of g under v0 is equal to v0
+    for all v0, (if v0 is an element of A then the value of g under the value of f under v0 is equal to v0)
+    for all v0, (if v0 is an element of B then the value of f under the value of g under v0 is equal to v0)
     g is an inverse of f
   Qed.
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then \FUNinv{ v2 } is a bijection between v1 and v0)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then \FUNinv{ v2 } is a bijection between v1 and v0))))
 Proof:
   \FUNinv{ f } is a surjective map from B to A
   \FUNinv{ f } is invertible
@@ -824,17 +824,17 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is an involution on v0) iff (v1 is a map on v0 and v1 is an inverse of v1)
+  for all v0, (if v0 is a class then for all v1, ((v1 is an involution on v0) iff (v1 is a map on v0 and v1 is an inverse of v1)))
 
 Theorem:
-  for all v0, if v0 is a class then \FUNid{ v0 } is an involution on v0
+  for all v0, (if v0 is a class then \FUNid{ v0 } is an involution on v0)
 Proof:
   \FUNid{ A } \FUNcomp \FUNid{ A } is equal to \FUNid{ A }
   \FUNid{ A } is an inverse of \FUNid{ A }
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is an involution on v0 and v2 is an involution on v0 then (v2 \FUNcomp v1 is an involution on v0 iff v2 \FUNcomp v1 is equal to v1 \FUNcomp v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is an involution on v0 and v2 is an involution on v0 then (v2 \FUNcomp v1 is an involution on v0 iff v2 \FUNcomp v1 is equal to v1 \FUNcomp v2))))
 Proof:
   if g \FUNcomp f is an involution on A then the thesis holds
   Proof:
@@ -852,12 +852,12 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is an involution on v0 then v1 \FUNcomp v1 is an involution on v0
+  for all v0, (for all v1, (if v0 is a class and v1 is an involution on v0 then v1 \FUNcomp v1 is an involution on v0))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is an involution on v0 then v1 is a permutation of v0
+  for all v0, (for all v1, (if v0 is a class and v1 is an involution on v0 then v1 is a permutation of v0))
 Proof:
   f is a map of A and f is invertible and f is surjective onto A
   f is a bijection between A and A
@@ -868,14 +868,14 @@ Theorem:
   \SETempty is a set
 Proof:
   x is a set
-  A is a class and (if x is a set then A is a set) and for all v0, v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that v0 is equal to v0)
+  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that v0 is equal to v0))
   A is a set
   A is equal to \SETempty
   \SETempty is a set
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \SETunion v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \SETunion v1 is a set))
 Proof:
   X is equal to \SETpair{ x }{ y }
   X is a set
@@ -888,24 +888,24 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \SETintersect v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \SETintersect v1 is a set))
 Proof:
   x \SETintersect y is a subclass of x
   x \SETintersect y is a set
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \SETdiff v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \SETdiff v1 is a set))
 Proof:
   x \SETdiff y is a subclass of x
   x \SETdiff y is a set
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \SETprod v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \SETprod v1 is a set))
 Proof:
-  for all v0, if v0 is an element of x then for all v1, if v1 is an element of y then (\SETsingleton{ v0 } is a set and \SETpair{ v0 }{ v1 } is a set)
-  P is a class and for all v0, v0 is an element of P iff (v0 is an object and for some v1, for some v2, v1 is an element of x and v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } })
+  for all v0, (if v0 is an element of x then for all v1, (if v1 is an element of y then (\SETsingleton{ v0 } is a set and \SETpair{ v0 }{ v1 } is a set)))
+  P is a class and for all v0, (v0 is an element of P iff (v0 is an object and for some v1, (for some v2, (v1 is an element of x and v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } }))))
   P is a set
   Proof:
     P is a subclass of \SETpow( \SETpow( x \SETunion y ) )
@@ -920,10 +920,10 @@ Proof:
     \SETpow( \SETpow( x \SETunion y ) ) is a set
     P is a set
   Qed.
-  l is a map and (the domain of l is equal to P) and for all v0, if v0 is an object then (if v0 is an element of the domain of l then for some v1, v1 is an element of x and for some v2, v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } } and (the value of l under v0 is equal to v1))
-  r is a map and (the domain of r is equal to P) and for all v0, if v0 is an object then (if v0 is an element of the domain of r then for some v1, v1 is an element of x and for some v2, v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } } and (the value of r under v0 is equal to v2))
-  f is a map and (the domain of f is equal to P) and for all v0, if v0 is an object then (if v0 is an element of the domain of f then (the value of f under v0 is equal to the ordered pair of the value of l under v0 and the value of r under v0))
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v2 } } is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v3 } } then (v0 is equal to v1 and v2 is equal to v3))
+  l is a map and (the domain of l is equal to P) and for all v0, (if v0 is an object then (if v0 is an element of the domain of l then for some v1, (v1 is an element of x and for some v2, (v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } } and (the value of l under v0 is equal to v1)))))
+  r is a map and (the domain of r is equal to P) and for all v0, (if v0 is an object then (if v0 is an element of the domain of r then for some v1, (v1 is an element of x and for some v2, (v2 is an element of y and v0 is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v2 } } and (the value of r under v0 is equal to v2)))))
+  f is a map and (the domain of f is equal to P) and for all v0, (if v0 is an object then (if v0 is an element of the domain of f then (the value of f under v0 is equal to the ordered pair of the value of l under v0 and the value of r under v0)))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v2 } } is equal to \SETpair{ \SETsingleton{ v1 } }{ \SETpair{ v1 }{ v3 } } then (v0 is equal to v1 and v2 is equal to v3))))))
   Proof:
     u is an object and u' is an object and v is an object and v' is an object
     \SETpair{ \SETsingleton{ u } }{ \SETpair{ u }{ v } } is equal to \SETpair{ \SETsingleton{ u' } }{ \SETpair{ u' }{ v' } }
@@ -963,12 +963,12 @@ Proof:
       Qed.
     Qed.
   Qed.
-  for all v0, if v0 is an element of x then for all v1, if v1 is an element of y then \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v1 } } is an element of the domain of f
+  for all v0, (if v0 is an element of x then for all v1, (if v1 is an element of y then \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v1 } } is an element of the domain of f))
   Proof:
     a is an element of x and b is an element of y
     \SETpair{ \SETsingleton{ a } }{ \SETpair{ a }{ b } } is an element of P
   Qed.
-  for all v0, if v0 is an element of x then for all v1, if v1 is an element of y then the value of f under \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v1 } } is equal to the ordered pair of v0 and v1
+  for all v0, (if v0 is an element of x then for all v1, (if v1 is an element of y then the value of f under \SETpair{ \SETsingleton{ v0 } }{ \SETpair{ v0 }{ v1 } } is equal to the ordered pair of v0 and v1))
   Proof:
     a is an element of x and b is an element of y
     p is equal to \SETpair{ \SETsingleton{ a } }{ \SETpair{ a }{ b } }
@@ -983,25 +983,25 @@ Proof:
   Qed.
   x \SETprod y is equal to \FUNim{ f }{ P }
   Proof:
-    for all v0, if v0 is an element of P then (the value of l under v0 is an element of x and the value of r under v0 is an element of y)
-    for all v0, if v0 is an element of P then the value of f under v0 is an element of x \SETprod y
+    for all v0, (if v0 is an element of P then (the value of l under v0 is an element of x and the value of r under v0 is an element of y))
+    for all v0, (if v0 is an element of P then the value of f under v0 is an element of x \SETprod y)
     \FUNim{ f }{ P } is a subclass of x \SETprod y
     x \SETprod y is a subclass of \FUNim{ f }{ P }
     Proof:
       z is an element of x \SETprod y
       a is an element of x and b is an element of y and z is equal to the ordered pair of a and b
       the ordered pair of a and b is equal to the value of f under \SETpair{ \SETsingleton{ a } }{ \SETpair{ a }{ b } }
-      for some v0, v0 is an element of P and the ordered pair of a and b is equal to the value of f under v0
+      for some v0, (v0 is an element of P and the ordered pair of a and b is equal to the value of f under v0)
       the ordered pair of a and b is an element of \FUNim{ f }{ P }
     Qed.
     x \SETprod y is equal to \FUNim{ f }{ P }
   Qed.
-  for some v0, v0 is a set and for some v1, v1 is a map and x \SETprod y is equal to \FUNim{ v1 }{ v0 }
+  for some v0, (v0 is a set and for some v1, (v1 is a map and x \SETprod y is equal to \FUNim{ v1 }{ v0 }))
   x \SETprod y is a set
 Qed.
 
 Theorem:
-  for all v0, if v0 is a system of sets and it is wrong that v0 is empty then \SETintersectover v0 is a set
+  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then \SETintersectover v0 is a set)
 Proof:
   x is an element of X
   \SETintersectover X is a subclass of x
@@ -1009,14 +1009,14 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a map and the domain of v0 is a set then \FUNrange( v0 ) is a set
+  for all v0, (if v0 is a map and the domain of v0 is a set then \FUNrange( v0 ) is a set)
 Proof:
   \FUNrange( f ) is equal to \FUNim{ f }{ the domain of f } and \FUNim{ f }{ the domain of f } is a set
   \FUNrange( f ) is a set
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a set then (if for some v2, v2 is a map from v0 to v1 and v2 is injective then v0 is a set)
+  for all v0, (for all v1, (if v0 is a class and v1 is a set then (if for some v2, (v2 is a map from v0 to v1 and v2 is injective) then v0 is a set)))
 Proof:
   f is a map from A to x and f is injective
   \FUNinv{ f } is a bijection between \FUNrange( f ) and A
@@ -1028,7 +1028,7 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that for some v0, for some v1, v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0)
+  it is wrong that for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0)))
 Proof:
   it is wrong that the thesis holds
   x is a set and y is a set and (x is an element of y and y is an element of x)
@@ -1052,36 +1052,36 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a set then it is wrong that v0 is an element of v0
+  for all v0, (if v0 is a set then it is wrong that v0 is an element of v0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a function and v1 is a function then (if the domain of v0 is equal to the domain of v1 and for all v2, if v2 is an element of the domain of v0 then the value of v0 under v2 is equal to the value of v1 under v2 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a function and v1 is a function then (if the domain of v0 is equal to the domain of v1 and for all v2, (if v2 is an element of the domain of v0 then the value of v0 under v2 is equal to the value of v1 under v2) then v0 is equal to v1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a set then \FUNfunspace{ v0 }{ v1 } is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then \FUNfunspace{ v0 }{ v1 } is a set))
 Proof:
-  R is a class and (if \SETpow( x \SETprod y ) is a set then R is a set) and for all v0, v0 is an element of R iff (v0 is an element of \SETpow( x \SETprod y ) and v0 is an object and ((for all v1, if v1 is an element of x then for some v2, v2 is an element of y and the ordered pair of v1 and v2 is an element of v0) and for all v1, if v1 is an element of x then for all v2, for all v3, if v2 is an element of y and v3 is an element of y and (the ordered pair of v1 and v2 is an element of v0 and the ordered pair of v1 and v3 is an element of v0) then v2 is equal to v3))
-  SetBytes prover "vampire"  for all v0, if v0 is an element of R then v0 is a set
-  h is a map and (the domain of h is equal to R) and for all v0, if v0 is an object then (if v0 is an element of the domain of h then for some v1, (v1 is a map and (the domain of v1 is equal to x) and for all v2, if v2 is an object then (if v2 is an element of the domain of v1 then for some v3, v3 is an element of y and the ordered pair of v2 and v3 is an element of v0 and (the value of v1 under v2 is equal to v3))) and (the value of h under v0 is equal to v1))
+  R is a class and (if \SETpow( x \SETprod y ) is a set then R is a set) and for all v0, (v0 is an element of R iff (v0 is an element of \SETpow( x \SETprod y ) and v0 is an object and ((for all v1, (if v1 is an element of x then for some v2, (v2 is an element of y and the ordered pair of v1 and v2 is an element of v0))) and for all v1, (if v1 is an element of x then for all v2, (for all v3, (if v2 is an element of y and v3 is an element of y and (the ordered pair of v1 and v2 is an element of v0 and the ordered pair of v1 and v3 is an element of v0) then v2 is equal to v3))))))
+  SetBytes prover "vampire"  for all v0, (if v0 is an element of R then v0 is a set)
+  h is a map and (the domain of h is equal to R) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then for some v1, ((v1 is a map and (the domain of v1 is equal to x) and for all v2, (if v2 is an object then (if v2 is an element of the domain of v1 then for some v3, (v3 is an element of y and the ordered pair of v2 and v3 is an element of v0 and (the value of v1 under v2 is equal to v3))))) and (the value of h under v0 is equal to v1))))
   SetBytes prover "eprover"  \FUNfunspace{ x }{ y } is a subclass of \FUNrange( h )
   Proof:
     f is an element of \FUNfunspace{ x }{ y }
-    F is a class and for all v0, v0 is an element of F iff (v0 is an object and for some v1, v1 is an element of x and v0 is equal to the ordered pair of v1 and the value of f under v1)
+    F is a class and for all v0, (v0 is an element of F iff (v0 is an object and for some v1, (v1 is an element of x and v0 is equal to the ordered pair of v1 and the value of f under v1)))
     F is an element of R
     Proof:
-      g is a map and (the domain of g is equal to x) and for all v0, if v0 is an object then (if v0 is an element of the domain of g then (the value of g under v0 is equal to the ordered pair of v0 and the value of f under v0))
+      g is a map and (the domain of g is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then (the value of g under v0 is equal to the ordered pair of v0 and the value of f under v0)))
       F is equal to \FUNrange( g )
       F is a set
       F is an element of \SETpow( x \SETprod y )
       Proof:
         F is a subclass of x \SETprod y
       Qed.
-      for all v0, if v0 is an element of x then for some v1, v1 is an element of y and the ordered pair of v0 and v1 is an element of F
-      for all v0, if v0 is an element of x then for all v1, for all v2, if v1 is an element of y and v2 is an element of y and (the ordered pair of v0 and v1 is an element of F and the ordered pair of v0 and v2 is an element of F) then v1 is equal to v2
+      for all v0, (if v0 is an element of x then for some v1, (v1 is an element of y and the ordered pair of v0 and v1 is an element of F))
+      for all v0, (if v0 is an element of x then for all v1, (for all v2, (if v1 is an element of y and v2 is an element of y and (the ordered pair of v0 and v1 is an element of F and the ordered pair of v0 and v2 is an element of F) then v1 is equal to v2)))
       Proof:
         a is an element of x and b is an element of y and b' is an element of y
         the ordered pair of a and b is an element of F and the ordered pair of a and b' is an element of F
@@ -1092,7 +1092,7 @@ Proof:
       Qed.
       SetBytes prover "vampire"      the thesis holds
     Qed.
-    the domain of f is equal to the domain of the value of h under F and for all v0, if v0 is an element of the domain of f then the value of the value of h under F under v0 is equal to the value of f under v0
+    the domain of f is equal to the domain of the value of h under F and for all v0, (if v0 is an element of the domain of f then the value of the value of h under F under v0 is equal to the value of f under v0)
     f is equal to the value of h under F
     f is an element of \FUNrange( h )
   Qed.
@@ -1103,23 +1103,23 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is transitive) iff for all v1, if v1 is an element of v0 then v1 is a subset of v0)
+  for all v0, (if v0 is a class then ((v0 is transitive) iff for all v1, (if v1 is an element of v0 then v1 is a subset of v0)))
 
 Theorem:
-  for all v0, if v0 is a system of sets then (v0 is transitive iff for all v1, if v1 is an element of v0 then for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a system of sets then (v0 is transitive iff for all v1, (if v1 is an element of v0 then for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 Proof:
 Qed.
 
 Definition:
-  for all v0, (v0 is a system of transitive sets) iff (v0 is a system of sets and for all v1, if v1 is an element of v0 then (v1 is a set and v1 is transitive))
+  for all v0, ((v0 is a system of transitive sets) iff (v0 is a system of sets and for all v1, (if v1 is an element of v0 then (v1 is a set and v1 is transitive))))
 
 Theorem:
-  for all v0, if v0 is a class and v0 is transitive then v0 is a system of sets
+  for all v0, (if v0 is a class and v0 is transitive then v0 is a system of sets)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a system of sets then (v0 is transitive iff \SETunionover v0 is a subclass of v0)
+  for all v0, (if v0 is a system of sets then (v0 is transitive iff \SETunionover v0 is a subclass of v0))
 Proof:
   if X is transitive then the thesis holds
   Proof:
@@ -1141,7 +1141,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class and v0 is transitive then \SETunionover v0 is transitive
+  for all v0, (if v0 is a class and v0 is transitive then \SETunionover v0 is transitive)
 Proof:
   x is an element of \SETunionover A
   x is a subclass of \SETunionover A
@@ -1150,13 +1150,13 @@ Proof:
     z is an element of A and x is an element of z
     z is a subclass of A
     x is an element of A
-    for some v0, v0 is an element of A and y is an element of v0
+    for some v0, (v0 is an element of A and y is an element of v0)
     y is an element of \SETunionover A
   Qed.
 Qed.
 
 Theorem:
-  for all v0, if v0 is a system of transitive sets then \SETunionover v0 is transitive
+  for all v0, (if v0 is a system of transitive sets then \SETunionover v0 is transitive)
 Proof:
   x is an element of \SETunionover X and y is an element of x
   z is an element of X and x is an element of z
@@ -1167,7 +1167,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a system of transitive sets then v0 \SETunion \SETunionover v0 is transitive
+  for all v0, (if v0 is a system of transitive sets then v0 \SETunion \SETunionover v0 is transitive)
 Proof:
   x is an element of X \SETunion \SETunionover X
   x is a subclass of X \SETunion \SETunionover X
@@ -1185,7 +1185,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a system of sets then (v0 is transitive iff v0 is a subclass of \SETpow( v0 ))
+  for all v0, (if v0 is a system of sets then (v0 is transitive iff v0 is a subclass of \SETpow( v0 )))
 Proof:
   if X is transitive then the thesis holds
   Proof:
@@ -1202,7 +1202,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class and v0 is transitive then \SETpow( v0 ) is transitive
+  for all v0, (if v0 is a class and v0 is transitive then \SETpow( v0 ) is transitive)
 Proof:
   x is an element of \SETpow( A )
   x is a subclass of A
@@ -1216,25 +1216,25 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (v0 is an ordinal number) iff (v0 is a set and v0 is transitive and for all v1, if v1 is an element of v0 then (v1 is a set and v1 is transitive))
+  for all v0, ((v0 is an ordinal number) iff (v0 is a set and v0 is transitive and for all v1, (if v1 is an element of v0 then (v1 is a set and v1 is transitive))))
 
 Definition:
-  for all v0, (v0 is equal to \Ord) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an ordinal number and v1 is an object))
+  for all v0, ((v0 is equal to \Ord) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an ordinal number and v1 is an object))))
 
 Theorem:
-  for all v0, if v0 is an ordinal number then for all v1, if v1 is an element of v0 then v1 is an ordinal number
+  for all v0, (if v0 is an ordinal number then for all v1, (if v1 is an element of v0 then v1 is an ordinal number))
 Proof:
   x is an element of \alpha
   x is transitive
-  for all v0, if v0 is an element of x then v0 is a subset of x
+  for all v0, (if v0 is an element of x then v0 is a subset of x)
   Proof:
     y is an element of x
     y is a subset of x
     z is an element of y
-    for all v0, if v0 is an element of y then v0 is an element of x
+    for all v0, (if v0 is an element of y then v0 is an element of x)
     z is an element of x
   Qed.
-  for all v0, if v0 is an element of x then v0 is transitive
+  for all v0, (if v0 is an element of x then v0 is transitive)
   x is an ordinal number
 Qed.
 

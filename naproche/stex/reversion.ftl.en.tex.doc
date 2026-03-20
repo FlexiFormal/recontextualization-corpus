@@ -1,58 +1,58 @@
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 
 Axiom:
-  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
+  for all v0, (if v0 is a map then (v0 is a function iff the domain of v0 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is a set and v1 is a class then (if for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set)
+  for all v0, (for all v1, (if v0 is a set and v1 is a class then (if for all v2, (if v2 is an element of v1 then v2 is an element of v0) then v1 is a set)))
 Proof:
-  C is a class and (if A is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B)
+  C is a class and (if A is a set then C is a set) and for all v0, (v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B))
   C is a set and C is equal to B
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Theorem:
-  for all v0, if v0 is a class then v0 is a subclass of v0
+  for all v0, (if v0 is a class then v0 is a subclass of v0)
 Proof:
-  for all v0, if v0 is an element of A then v0 is an element of A
+  for all v0, (if v0 is an element of A then v0 is an element of A)
   A is a subclass of A
 Qed.
 
 Theorem:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v2 then v0 is a subclass of v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v2 then v0 is a subclass of v2))))
 Proof:
   A is a subclass of B and B is a subclass of C
-  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of C
-  for all v0, if v0 is an element of A then v0 is an element of C
+  (for all v0, (if v0 is an element of A then v0 is an element of B)) and for all v0, (if v0 is an element of B then v0 is an element of C)
+  for all v0, (if v0 is an element of A then v0 is an element of C)
   A is a subclass of C
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)))
 Proof:
   A is a subclass of B and B is a subclass of A
-  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of A
+  (for all v0, (if v0 is an element of A then v0 is an element of B)) and for all v0, (if v0 is an element of B then v0 is an element of A)
   A is equal to B
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, v1 is an element of v0)
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, (v0 is equal to \SETempty) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
 
 Theorem:
-  for all v0, if v0 is a class then (v0 is empty iff v0 is equal to \SETempty)
+  for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, if v0 is an element of \SETempty then it is wrong that v0 is equal to v0
+    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, v0 is an element of A and it is wrong that for some v0, v0 is an element of \SETempty)
+  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -63,26 +63,26 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a class then \SETempty is a subclass of v0
+  for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, v0 is an element of \SETempty
-  for all v0, if v0 is an element of \SETempty then v0 is an element of A
+  it is wrong that for some v0, (v0 is an element of \SETempty)
+  for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, (v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, (v0 is an unordered pair) iff (v0 is a class and for some v1, for some v2, v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 })
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
-  for all v0, if v0 is an object then for all v1, (v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and v2 is equal to v0))
+  for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
 
 Definition:
-  for all v0, (v0 is a singleton class) iff (v0 is a class and for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+  for all v0, ((v0 is a singleton class) iff (v0 is a class and for some v1, (v1 is an object and v0 is equal to \SETsingleton{ v1 })))
 
 Theorem:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ v0 }{ v2 } is equal to \SETpair{ v1 }{ v3 } then ((v0 is equal to v1 and v2 is equal to v3) or (v0 is equal to v3 and v2 is equal to v1)))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ v0 }{ v2 } is equal to \SETpair{ v1 }{ v3 } then ((v0 is equal to v1 and v2 is equal to v3) or (v0 is equal to v3 and v2 is equal to v1)))))))
 Proof:
   a is equal to a' or a is equal to b'
   if a is equal to a' then b is equal to b'
@@ -91,65 +91,65 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then (if \SETsingleton{ v0 } is equal to \SETsingleton{ v1 } then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then (if \SETsingleton{ v0 } is equal to \SETsingleton{ v1 } then v0 is equal to v1)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is an unique element of v0) iff (v1 is an element of v0 and for all v2, if v2 is an element of v0 then v2 is equal to v1)
+  for all v0, (if v0 is a class then for all v1, ((v1 is an unique element of v0) iff (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then v2 is equal to v1))))
 
 Theorem:
-  for all v0, if v0 is a class then ((for some v1, v1 is an unique element of v0) iff for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+  for all v0, (if v0 is a class then ((for some v1, (v1 is an unique element of v0)) iff for some v1, (v1 is an object and v0 is equal to \SETsingleton{ v1 })))
 Proof:
 Qed.
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETunion v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETunion v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Theorem:
-  for all v0, for all v1, if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
 Proof:
 Qed.
 
 Signature:
-  for all v0, if v0 is a list then v0 is an object
+  for all v0, (if v0 is a list then v0 is an object)
 
 Signature:
-  for all v0, if v0 is equal to \LISTlist{} then v0 is a list
+  for all v0, (if v0 is equal to \LISTlist{} then v0 is a list)
 
 Signature:
-  for all v0, for all v1, if v1 is an object and v0 is a list then for all v2, if v2 is equal to v1 \LISTcons v0 then v2 is a list
+  for all v0, (for all v1, (if v1 is an object and v0 is a list then for all v2, (if v2 is equal to v1 \LISTcons v0 then v2 is a list)))
 
 Axiom:
-  for all v0, if v0 is a list then (v0 is equal to \LISTlist{} or for some v1, v1 is an object and for some v2, v2 is a list and v0 is equal to v1 \LISTcons v2)
+  for all v0, (if v0 is a list then (v0 is equal to \LISTlist{} or for some v1, (v1 is an object and for some v2, (v2 is a list and v0 is equal to v1 \LISTcons v2))))
 
 Axiom:
-  for all v0, for all v1, if v1 is an object and v0 is a list then v0 is inductively less than v1 \LISTcons v0
+  for all v0, (for all v1, (if v1 is an object and v0 is a list then v0 is inductively less than v1 \LISTcons v0))
 
 Signature:
-  for all v0, for all v1, if v0 is a list and v1 is a list then for all v2, if v2 is equal to v0 \LISTconcat v1 then v2 is a list
+  for all v0, (for all v1, (if v0 is a list and v1 is a list then for all v2, (if v2 is equal to v0 \LISTconcat v1 then v2 is a list)))
 
 Axiom:
-  for all v0, if v0 is a list then \LISTlist{} \LISTconcat v0 is equal to v0
+  for all v0, (if v0 is a list then \LISTlist{} \LISTconcat v0 is equal to v0)
 
 Axiom:
-  for all v0, for all v1, for all v2, if v2 is an object and v0 is a list and v1 is a list then v2 \LISTcons v0 \LISTconcat v1 is equal to v2 \LISTcons v0 \LISTconcat v1
+  for all v0, (for all v1, (for all v2, (if v2 is an object and v0 is a list and v1 is a list then v2 \LISTcons v0 \LISTconcat v1 is equal to v2 \LISTcons v0 \LISTconcat v1)))
 
 Theorem:
-  for all v0, if v0 is a list then (if for all v1, if v1 is a list then (if v1 is inductively less than v0 then v1 \LISTconcat \LISTlist{} is equal to v1) then v0 \LISTconcat \LISTlist{} is equal to v0)
+  for all v0, (if v0 is a list then (if for all v1, (if v1 is a list then (if v1 is inductively less than v0 then v1 \LISTconcat \LISTlist{} is equal to v1)) then v0 \LISTconcat \LISTlist{} is equal to v0))
 Proof:
   L is a list
   if L is equal to \LISTlist{} then the thesis holds
-  if for some v0, v0 is an object and for some v1, v1 is a list and L is equal to v0 \LISTcons v1 then the thesis holds
+  if for some v0, (v0 is an object and for some v1, (v1 is a list and L is equal to v0 \LISTcons v1)) then the thesis holds
   Proof:
     a is an object and L' is a list and L is equal to a \LISTcons L'
     L' is inductively less than L
@@ -159,11 +159,11 @@ Proof:
 Qed.
 
 Theorem (associativity_of_concatenation):
-  for all v0, for all v1, for all v2, if v0 is a list and v1 is a list and v2 is a list then (if for all v3, for all v4, for all v5, if v3 is a list and v4 is a list and v5 is a list then (if v3 is inductively less than v0 then v3 \LISTconcat v4 \LISTconcat v5 is equal to v3 \LISTconcat v4 \LISTconcat v5) then v0 \LISTconcat v1 \LISTconcat v2 is equal to v0 \LISTconcat v1 \LISTconcat v2)
+  for all v0, (for all v1, (for all v2, (if v0 is a list and v1 is a list and v2 is a list then (if for all v3, (for all v4, (for all v5, (if v3 is a list and v4 is a list and v5 is a list then (if v3 is inductively less than v0 then v3 \LISTconcat v4 \LISTconcat v5 is equal to v3 \LISTconcat v4 \LISTconcat v5)))) then v0 \LISTconcat v1 \LISTconcat v2 is equal to v0 \LISTconcat v1 \LISTconcat v2))))
 Proof:
   L is a list
   if L is equal to \LISTlist{} then the thesis holds
-  if for some v0, v0 is an object and for some v1, v1 is a list and L is equal to v0 \LISTcons v1 then the thesis holds
+  if for some v0, (v0 is an object and for some v1, (v1 is a list and L is equal to v0 \LISTcons v1)) then the thesis holds
   Proof:
     a is an object and L''' is a list and L is equal to a \LISTcons L'''
     L''' is inductively less than L
@@ -174,20 +174,20 @@ Proof:
 Qed.
 
 Signature:
-  for all v0, if v0 is a list then for all v1, if v1 is equal to \LISTrev( v0 ) then v1 is a list
+  for all v0, (if v0 is a list then for all v1, (if v1 is equal to \LISTrev( v0 ) then v1 is a list))
 
 Axiom:
-  for all v0, if v0 is a list then \LISTrev( \LISTlist{} ) is equal to \LISTlist{}
+  for all v0, (if v0 is a list then \LISTrev( \LISTlist{} ) is equal to \LISTlist{})
 
 Axiom:
-  for all v0, for all v1, if v1 is an object and v0 is a list then \LISTrev( v1 \LISTcons v0 ) is equal to \LISTrev( v0 ) \LISTconcat v1 \LISTcons \LISTlist{}
+  for all v0, (for all v1, (if v1 is an object and v0 is a list then \LISTrev( v1 \LISTcons v0 ) is equal to \LISTrev( v0 ) \LISTconcat v1 \LISTcons \LISTlist{}))
 
 Theorem:
-  for all v0, for all v1, if v0 is a list and v1 is a list then (if for all v2, for all v3, if v2 is a list and v3 is a list then (if v2 is inductively less than v0 then \LISTrev( v2 \LISTconcat v3 ) is equal to \LISTrev( v3 ) \LISTconcat \LISTrev( v2 )) then \LISTrev( v0 \LISTconcat v1 ) is equal to \LISTrev( v1 ) \LISTconcat \LISTrev( v0 ))
+  for all v0, (for all v1, (if v0 is a list and v1 is a list then (if for all v2, (for all v3, (if v2 is a list and v3 is a list then (if v2 is inductively less than v0 then \LISTrev( v2 \LISTconcat v3 ) is equal to \LISTrev( v3 ) \LISTconcat \LISTrev( v2 )))) then \LISTrev( v0 \LISTconcat v1 ) is equal to \LISTrev( v1 ) \LISTconcat \LISTrev( v0 ))))
 Proof:
   L is a list and L' is a list
   if L is equal to \LISTlist{} then the thesis holds
-  if for some v0, v0 is an object and for some v1, v1 is a list and L is equal to v0 \LISTcons v1 then the thesis holds
+  if for some v0, (v0 is an object and for some v1, (v1 is a list and L is equal to v0 \LISTcons v1)) then the thesis holds
   Proof:
     a is an object and L'' is a list and L is equal to a \LISTcons L''
     L'' is inductively less than L
@@ -200,11 +200,11 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, if v0 is a list then (if for all v1, if v1 is a list then (if v1 is inductively less than v0 then \LISTrev( \LISTrev( v1 ) ) is equal to v1) then \LISTrev( \LISTrev( v0 ) ) is equal to v0)
+  for all v0, (if v0 is a list then (if for all v1, (if v1 is a list then (if v1 is inductively less than v0 then \LISTrev( \LISTrev( v1 ) ) is equal to v1)) then \LISTrev( \LISTrev( v0 ) ) is equal to v0))
 Proof:
   L is a list
   if L is equal to \LISTlist{} then the thesis holds
-  if for some v0, v0 is an object and for some v1, v1 is a list and L is equal to v0 \LISTcons v1 then the thesis holds
+  if for some v0, (v0 is an object and for some v1, (v1 is a list and L is equal to v0 \LISTcons v1)) then the thesis holds
   Proof:
     a is an object and L' is a list and L is equal to a \LISTcons L'
     L' is inductively less than L

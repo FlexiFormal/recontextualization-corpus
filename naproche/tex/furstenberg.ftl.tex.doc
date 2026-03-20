@@ -1,117 +1,117 @@
 Definition:
-  for all v0, (v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, v1 is an element of v0)
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
 
 Theorem (classextensionality):
-  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)))
 Proof:
 Qed.
 
 Definition:
-  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+  for all v0, (if v0 is a class then for all v1, ((v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)))
 
 Axiom (separationaxiom):
-  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+  for all v0, (if v0 is a set then for all v1, (if v1 is a subclass of v0 then v1 is a set))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
 
 Definition:
-  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+  for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
 
 Axiom:
-  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
 
 Definition:
-  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (for some v5, (v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))))))))
 
 Axiom:
-  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+  for all v0, (for all v1, (if v0 is a set and v1 is a set then v0 \times v1 is a set))
 
 Theorem:
-  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+  for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, (for all v3, (if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))))))
 Proof:
 Qed.
 
 Axiom:
-  for all v0, if v0 is a map then (if the domain of v0 is a set and for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object then v0 is a function)
+  for all v0, (if v0 is a map then (if the domain of v0 is a set and for all v1, (if v1 is an element of the domain of v0 then the value of v0 under v1 is an object) then v0 is a function))
 
 Definition:
-  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+  for all v0, (if v0 is a map then for all v1, (if v1 is a subclass of the domain of v0 then for all v2, ((v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and for some v4, (v4 is an element of v1 and v3 is equal to the value of v0 under v4)))))))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1)))))
 
 Axiom (replacementaxiom):
-  for all v0, if v0 is a set then for all v1, if v1 is a map then (if v0 is a subset of the domain of v1 then v1 [ v0 ] is a set)
+  for all v0, (if v0 is a set then for all v1, (if v1 is a map then (if v0 is a subset of the domain of v1 then v1 [ v0 ] is a set)))
 
 Definition:
-  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4))
+  for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, (v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, (if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4) and for all v4, (if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4)))))))
 
 Signature (integers):
-  for all v0, if v0 is an integer then v0 is an object
+  for all v0, (if v0 is an integer then v0 is an object)
 
 Signature (intzero):
-  for all v0, if v0 is equal to 0 then v0 is an integer
+  for all v0, (if v0 is equal to 0 then v0 is an integer)
 
 Signature (intone):
-  for all v0, if v0 is equal to 1 then v0 is an integer
+  for all v0, (if v0 is equal to 1 then v0 is an integer)
 
 Signature (intneg):
-  for all v0, if v0 is an integer then for all v1, if v1 is equal to - v0 then v1 is an integer
+  for all v0, (if v0 is an integer then for all v1, (if v1 is equal to - v0 then v1 is an integer))
 
 Signature (intplus):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then for all v2, if v2 is equal to v0 + v1 then v2 is an integer
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then for all v2, (if v2 is equal to v0 + v1 then v2 is an integer)))
 
 Signature (intmult):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then for all v2, if v2 is equal to v0 \cdot v1 then v2 is an integer
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then for all v2, (if v2 is equal to v0 \cdot v1 then v2 is an integer)))
 
 Axiom (addasso):
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and v2 is an integer then v0 + v1 + v2 is equal to v0 + v1 + v2
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then v0 + v1 + v2 is equal to v0 + v1 + v2)))
 
 Axiom (addcomm):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then v0 + v1 is equal to v1 + v0
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then v0 + v1 is equal to v1 + v0))
 
 Axiom (addzero):
-  for all v0, if v0 is an integer then (v0 + 0 is equal to v0 and v0 is equal to 0 + v0)
+  for all v0, (if v0 is an integer then (v0 + 0 is equal to v0 and v0 is equal to 0 + v0))
 
 Axiom (addneg):
-  for all v0, if v0 is an integer then (v0 + - v0 is equal to 0 and 0 is equal to - v0 + v0)
+  for all v0, (if v0 is an integer then (v0 + - v0 is equal to 0 and 0 is equal to - v0 + v0))
 
 Axiom (mulasso):
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and v2 is an integer then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2)))
 
 Axiom (mulcomm):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then v0 \cdot v1 is equal to v1 \cdot v0
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then v0 \cdot v1 is equal to v1 \cdot v0))
 
 Axiom (mulone):
-  for all v0, if v0 is an integer then (v0 \cdot 1 is equal to v0 and v0 is equal to 1 \cdot v0)
+  for all v0, (if v0 is an integer then (v0 \cdot 1 is equal to v0 and v0 is equal to 1 \cdot v0))
 
 Axiom (distrib):
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and v2 is an integer then (v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2 and v0 + v1 \cdot v2 is equal to v0 \cdot v2 + v1 \cdot v2)
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then (v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2 and v0 + v1 \cdot v2 is equal to v0 \cdot v2 + v1 \cdot v2))))
 
 Theorem (mulzero):
-  for all v0, if v0 is an integer then (v0 \cdot 0 is equal to 0 and 0 is equal to 0 \cdot v0)
+  for all v0, (if v0 is an integer then (v0 \cdot 0 is equal to 0 and 0 is equal to 0 \cdot v0))
 Proof:
   a \cdot 0 is equal to a \cdot 1 + - 1 and a \cdot 1 + - 1 is equal to a + - a and a + - a is equal to 0
 Qed.
 
 Theorem (mulminone):
-  for all v0, if v0 is an integer then (- 1 \cdot v0 is equal to - v0 and - v0 is equal to v0 \cdot - 1)
+  for all v0, (if v0 is an integer then (- 1 \cdot v0 is equal to - v0 and - v0 is equal to v0 \cdot - 1))
 Proof:
   - 1 \cdot a + a is equal to 0
 Qed.
@@ -120,26 +120,26 @@ Axiom (nontriv):
   it is wrong that 0 is equal to 1
 
 Axiom (zerodiv):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)))
 
 Theorem:
-  for all v0, if v0 is an integer then - - v0 is an integer
+  for all v0, (if v0 is an integer then - - v0 is an integer)
 Proof:
 Qed.
 
 Definition (divisor):
-  for all v0, if v0 is an integer then for all v1, (v1 is a divisor of v0) iff (v1 is an integer and it is wrong that v1 is equal to 0 and for some v2, v2 is an integer and v1 \cdot v2 is equal to v0)
+  for all v0, (if v0 is an integer then for all v1, ((v1 is a divisor of v0) iff (v1 is an integer and it is wrong that v1 is equal to 0 and for some v2, (v2 is an integer and v1 \cdot v2 is equal to v0))))
 
 Definition (equmod):
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then ((v0 = v1 ~(\mod v2 )) iff v2 is a divisor of v0 + - v1)
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then ((v0 = v1 ~(\mod v2 )) iff v2 is a divisor of v0 + - v1))))
 
 Theorem (equmodref):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 = v0 ~(\mod v1 )
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 = v0 ~(\mod v1 )))
 Proof:
 Qed.
 
 Theorem (equmodsym):
-  for all v0, for all v1, for all v2, if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then (if v0 = v1 ~(\mod v2 ) then v1 = v0 ~(\mod v2 ))
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then (if v0 = v1 ~(\mod v2 ) then v1 = v0 ~(\mod v2 )))))
 Proof:
   a = b ~(\mod q )
   n is an integer and q \cdot n is equal to a + - b
@@ -151,7 +151,7 @@ Proof:
 Qed.
 
 Theorem (equmodtrn):
-  for all v0, for all v1, for all v2, for all v3, if v0 is an integer and v1 is an integer and v2 is an integer and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 ~(\mod v3 ) and v1 = v2 ~(\mod v3 ) then v0 = v2 ~(\mod v3 ))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and v2 is an integer and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 ~(\mod v3 ) and v1 = v2 ~(\mod v3 ) then v0 = v2 ~(\mod v3 ))))))
 Proof:
   a = b ~(\mod q ) and b = c ~(\mod q )
   n is an integer and q \cdot n is equal to a + - b
@@ -160,7 +160,7 @@ Proof:
 Qed.
 
 Theorem (equmodmul):
-  for all v0, for all v1, for all v2, for all v3, if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 ~(\mod v2 \cdot v3 ) then (v0 = v1 ~(\mod v2 ) and v0 = v1 ~(\mod v3 )))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 ~(\mod v2 \cdot v3 ) then (v0 = v1 ~(\mod v2 ) and v0 = v1 ~(\mod v3 )))))))
 Proof:
   a = b ~(\mod p \cdot q )
   m is an integer and p \cdot q \cdot m is equal to a + - b
@@ -168,58 +168,58 @@ Proof:
 Qed.
 
 Signature (prime):
-  for all v0, if v0 is an integer then (if v0 is prime then truth holds)
+  for all v0, (if v0 is an integer then (if v0 is prime then truth holds))
 
 Axiom (primedivisor):
-  for all v0, if v0 is an integer then ((for some v1, v1 is a divisor of v0 and v1 is prime) iff (it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1))
+  for all v0, (if v0 is an integer then ((for some v1, (v1 is a divisor of v0 and v1 is prime)) iff (it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1)))
 
 Signature (finset):
-  for all v0, if v0 is a class then (if v0 is finite then truth holds)
+  for all v0, (if v0 is a class then (if v0 is finite then truth holds))
 
 Definition:
-  for all v0, (v0 is equal to \Int) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an integer and v1 is an object))
+  for all v0, ((v0 is equal to \Int) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an integer and v1 is an object))))
 
 Axiom:
   \Int is a set
 
 Definition (integersets):
-  for all v0, (v0 is a family of integer sets) iff (v0 is a class and for all v1, if v1 is an element of v0 then v1 is a subset of \Int)
+  for all v0, ((v0 is a family of integer sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a subset of \Int)))
 
 Definition (unionset):
-  for all v0, if v0 is a family of integer sets then for all v1, (v1 is equal to \bigcup v0) iff (v1 is a class and (if \Int is a set then v1 is a set) and for all v2, v2 is an element of v1 iff (v2 is an element of \Int and v2 is an object and for some v3, v3 is an element of v0 and v2 is an element of v3))
+  for all v0, (if v0 is a family of integer sets then for all v1, ((v1 is equal to \bigcup v0) iff (v1 is a class and (if \Int is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of \Int and v2 is an object and for some v3, (v3 is an element of v0 and v2 is an element of v3))))))
 
 Theorem:
-  for all v0, if v0 is a family of integer sets then \bigcup v0 is a subset of \Int
+  for all v0, (if v0 is a family of integer sets then \bigcup v0 is a subset of \Int)
 Proof:
 Qed.
 
 Definition (complement):
-  for all v0, if v0 is a subclass of \Int then for all v1, (v1 is equal to \overline{ v0 }) iff (v1 is a class and (if \Int is a set then v1 is a set) and for all v2, v2 is an element of v1 iff (v2 is an element of \Int and v2 is an object and it is wrong that v2 is an element of v0))
+  for all v0, (if v0 is a subclass of \Int then for all v1, ((v1 is equal to \overline{ v0 }) iff (v1 is a class and (if \Int is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of \Int and v2 is an object and it is wrong that v2 is an element of v0)))))
 
 Theorem:
-  for all v0, if v0 is a subclass of \Int then \overline{ v0 } is a subset of \Int
+  for all v0, (if v0 is a subclass of \Int then \overline{ v0 } is a subset of \Int)
 Proof:
 Qed.
 
 Definition (arseq):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then for all v2, (v2 is equal to v1 \Int+ v0) iff (v2 is a class and (if \Int is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of \Int and v3 is an object and v3 = v0 ~(\mod v1 )))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then for all v2, ((v2 is equal to v1 \Int+ v0) iff (v2 is a class and (if \Int is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of \Int and v3 is an object and v3 = v0 ~(\mod v1 )))))))
 
 Theorem:
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v1 \Int+ v0 is a set
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v1 \Int+ v0 is a set))
 Proof:
 Qed.
 
 Definition (open):
-  for all v0, if v0 is a subset of \Int then ((v0 is open) iff (v0 is equal to \Int or for all v1, if v1 is an element of v0 then for some v2, v2 is an integer and it is wrong that v2 is equal to 0 and v2 \Int+ v1 is a subclass of v0))
+  for all v0, (if v0 is a subset of \Int then ((v0 is open) iff (v0 is equal to \Int or for all v1, (if v1 is an element of v0 then for some v2, (v2 is an integer and it is wrong that v2 is equal to 0 and v2 \Int+ v1 is a subclass of v0)))))
 
 Definition (closed):
-  for all v0, if v0 is a subset of \Int then ((v0 is closed) iff \overline{ v0 } is open)
+  for all v0, (if v0 is a subset of \Int then ((v0 is closed) iff \overline{ v0 } is open))
 
 Definition (openintegersets):
-  for all v0, (v0 is a family of open sets) iff (v0 is a family of integer sets and for all v1, if v1 is an element of v0 then v1 is open)
+  for all v0, ((v0 is a family of open sets) iff (v0 is a family of integer sets and for all v1, (if v1 is an element of v0 then v1 is open)))
 
 Theorem (unionopen):
-  for all v0, if v0 is a family of open sets then \bigcup v0 is open
+  for all v0, (if v0 is a family of open sets then \bigcup v0 is open)
 Proof:
   x is an element of \bigcup S
   M is a set and M is an element of S and x is an element of M
@@ -228,7 +228,7 @@ Proof:
 Qed.
 
 Theorem (interopen):
-  for all v0, for all v1, if v0 is a subset of \Int and v1 is a subset of \Int and (v0 is open and v1 is open) then (the intersection of v0 and v1 is a subset of \Int and the intersection of v0 and v1 is open)
+  for all v0, (for all v1, (if v0 is a subset of \Int and v1 is a subset of \Int and (v0 is open and v1 is open) then (the intersection of v0 and v1 is a subset of \Int and the intersection of v0 and v1 is open)))
 Proof:
   the intersection of A and B is a subset of \Int
   x is an element of the intersection of A and B
@@ -250,17 +250,17 @@ Proof:
 Qed.
 
 Theorem (unionclosed):
-  for all v0, for all v1, if v0 is a subset of \Int and v1 is a subset of \Int and (v0 is closed and v1 is closed) then the union of v0 and v1 is closed
+  for all v0, (for all v1, (if v0 is a subset of \Int and v1 is a subset of \Int and (v0 is closed and v1 is closed) then the union of v0 and v1 is closed))
 Proof:
   \overline{ A } is a subclass of \Int and \overline{ B } is a subclass of \Int
   \overline{ the union of A and B } is equal to the intersection of \overline{ A } and \overline{ B }
 Qed.
 
 Axiom (unionsclosed):
-  for all v0, if v0 is a family of integer sets and v0 is finite and for all v1, if v1 is an element of v0 then (v1 is a subset of \Int and v1 is closed) then \bigcup v0 is closed
+  for all v0, (if v0 is a family of integer sets and v0 is finite and for all v1, (if v1 is an element of v0 then (v1 is a subset of \Int and v1 is closed)) then \bigcup v0 is closed)
 
 Theorem (arseqclosed):
-  for all v0, for all v1, if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then (v1 \Int+ v0 is a subset of \Int and v1 \Int+ v0 is closed)
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then (v1 \Int+ v0 is a subset of \Int and v1 \Int+ v0 is closed)))
 Proof:
   q \Int+ a is a subset of \Int
   b is an element of \overline{ q \Int+ a }
@@ -276,22 +276,22 @@ Proof:
 Qed.
 
 Theorem (fuerstenberg):
-  for all v0, if v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and for some v2, v2 is an integer and it is wrong that v2 is equal to 0 and v2 is prime and v1 is equal to v2 \Int+ 0) then it is wrong that v0 is finite
+  for all v0, (if v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and for some v2, (v2 is an integer and it is wrong that v2 is equal to 0 and v2 is prime and v1 is equal to v2 \Int+ 0))) then it is wrong that v0 is finite)
 Proof:
   S is a family of integer sets
-  \overline{ \bigcup S } is a class and for all v0, v0 is an element of \overline{ \bigcup S } iff (v0 is an object and (v0 is equal to 1 or v0 is equal to - 1))
+  \overline{ \bigcup S } is a class and for all v0, (v0 is an element of \overline{ \bigcup S } iff (v0 is an object and (v0 is equal to 1 or v0 is equal to - 1)))
   Proof:
-    for all v0, if v0 is an integer then (v0 is an element of \bigcup S iff for some v1, v1 is a divisor of v0 and v1 is prime)
+    for all v0, (if v0 is an integer then (v0 is an element of \bigcup S iff for some v1, (v1 is a divisor of v0 and v1 is prime)))
     Proof:
       n is an integer
-      if for some v0, v0 is a divisor of n and v0 is prime then n is an element of \bigcup S
+      if for some v0, (v0 is a divisor of n and v0 is prime) then n is an element of \bigcup S
       Proof:
-        for some v0, v0 is a divisor of n and v0 is prime
+        for some v0, (v0 is a divisor of n and v0 is prime)
         p is a divisor of n and p is prime
         p \Int+ 0 is an element of S
         n is an element of p \Int+ 0
       Qed.
-      if n is an element of \bigcup S then for some v0, v0 is a divisor of n and v0 is prime
+      if n is an element of \bigcup S then for some v0, (v0 is a divisor of n and v0 is prime)
       Proof:
         n is an element of \bigcup S
         r is an integer and it is wrong that r is equal to 0 and r is prime and n is an element of r \Int+ 0
@@ -302,7 +302,7 @@ Proof:
   S is finite
   \bigcup S is closed and \overline{ \bigcup S } is open
   p is an integer and it is wrong that p is equal to 0 and p \Int+ 1 is a subclass of \overline{ \bigcup S }
-  for some v0, v0 is an element of p \Int+ 1 and it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1
+  for some v0, (v0 is an element of p \Int+ 1 and it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1)
   Proof:
     1 + p is an integer and 1 + - p is an integer
     1 + p is an element of p \Int+ 1 and 1 + - p is an element of p \Int+ 1
