@@ -16,21 +16,36 @@ cd ${math_dir}
 
 for file in $(find . -name '*.ftl' -type f); do
   echo "Processing $(realpath "${file}")"
-  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.txt"
-  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.txt"
-  mv "${file}.txt" "${out_dir}/ftl/$(basename -- "${file}.txt")"
+  # Generate document:
+  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.doc"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.doc"
+  mv "${file}.doc" "${out_dir}/ftl/$(basename -- "${file}.doc")"
+  # Generate lexicon:
+  "${naproche_exe}" --mode=lexicon "${file}" > "${file}.lex"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.lex"
+  mv "${file}.lex" "${out_dir}/ftl/$(basename -- "${file}.lex")"
 done
 
 for file in $(find . -name '*.ftl.tex' -type f); do
   echo "Processing $(realpath "${file}")"
-  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.txt"
-  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.txt"
-  mv "${file}.txt" "${out_dir}/tex/$(basename -- "${file}.txt")"
+  # Generate document:
+  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.doc"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.doc"
+  mv "${file}.doc" "${out_dir}/tex/$(basename -- "${file}.doc")"
+  # Generate lexicon:
+  "${naproche_exe}" --mode=lexicon "${file}" > "${file}.lex"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.lex"
+  mv "${file}.lex" "${out_dir}/ftl/$(basename -- "${file}.lex")"
 done
 
 for file in $(find . -name '*.ftl.en.tex' -type f); do
   echo "Processing $(realpath "${file}")"
-  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.txt"
-  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.txt"
-  mv "${file}.txt" "${out_dir}/stex/$(basename -- "${file}.txt")"
+  # Generate document:
+  "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.doc"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.doc"
+  mv "${file}.doc" "${out_dir}/stex/$(basename -- "${file}.doc")"
+  # Generate lexicon:
+  "${naproche_exe}" --mode=lexicon "${file}" > "${file}.lex"
+  sed -i '/^\(parsing successful\|\[Parser\]\|\[Main\]\).*/d' "${file}.lex"
+  mv "${file}.lex" "${out_dir}/ftl/$(basename -- "${file}.lex")"
 done

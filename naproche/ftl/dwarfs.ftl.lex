@@ -1,0 +1,73 @@
+
+Adjective Expressions: [
+  [Word(equal), Word(to), Variable],
+  [Word(nonequal), Word(to), Variable],
+  [Word(inductively), Word(less), Word(than), Variable]
+]
+
+Verb Expressions: [
+  [Word(names), Variable]
+]
+
+Notion Expressions: [
+  [Word(opposite), Word(color), Name, Word(of), Variable],
+  [Word(color), Name, Word(of), Variable],
+  [Word(color), Name],
+  [Word(hat), Name, Word(of), Variable],
+  [Word(hat), Name],
+  [Word(dwarf), Name],
+  [Word(map, maps), Name],
+  [Word(function, functions), Name],
+  [Word(set, sets), Name],
+  [Word(class, classes, collection, collections), Name],
+  [Word(object, objects, element, elements), Name],
+  [Word(mathematical), Word(object, objects), Name],
+  [Word(element, elements), Name, Word(of), Variable],
+  [Word(value), Word(of), Variable, Word(under), Variable],
+  [Word(domain), Word(of), Variable],
+  [Word(ordered), Word(pair), Word(of), Variable, Word(and), Variable]
+]
+
+Symbolic Notion Expressions: [
+  [Symbol(=), Variable]
+]
+
+Circumfix Function Expressions: [
+  [Symbol(black)],
+  [Symbol(white)],
+  [Symbol(Tormund)],
+  [Symbol(Sigbert)],
+  [Symbol(Dom), Variable],
+  [Symbol((), Variable, Symbol(,), Variable, Symbol())]
+]
+
+Right Function Expressions: [
+  [Symbol((), Variable, Symbol())]
+]
+
+Left Function Expressions: [
+
+]
+
+Infix Function Expressions: [
+
+]
+
+Circumfix Predicate Expressions: [
+  [Symbol(Both), Symbol(dwarfs), Symbol(get), Symbol(released)]
+]
+
+Right Predicate Expressions: [
+
+]
+
+Left Predicate Expressions: [
+
+]
+
+Infix Predicate Expressions: [
+  [Symbol(=)],
+  [Symbol(!), Symbol(=)],
+  [Symbol(-), Symbol(<), Symbol(-)]
+]
+

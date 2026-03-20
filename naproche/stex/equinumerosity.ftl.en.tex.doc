@@ -1,0 +1,627 @@
+Axiom:
+  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))
+
+Axiom:
+  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
+
+Theorem:
+  for all v0, for all v1, if v0 is a set and v1 is a class then (if for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set)
+Proof:
+  C is a class and (if A is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B)
+  C is a set and C is equal to B
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+
+Theorem:
+  for all v0, if v0 is a class then v0 is a subclass of v0
+Proof:
+  for all v0, if v0 is an element of A then v0 is an element of A
+  A is a subclass of A
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v2 then v0 is a subclass of v2)
+Proof:
+  A is a subclass of B and B is a subclass of C
+  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of C
+  for all v0, if v0 is an element of A then v0 is an element of C
+  A is a subclass of C
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+Proof:
+  A is a subclass of B and B is a subclass of A
+  (for all v0, if v0 is an element of A then v0 is an element of B) and for all v0, if v0 is an element of B then v0 is an element of A
+  A is equal to B
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, v1 is an element of v0)
+
+Definition:
+  for all v0, (v0 is equal to \SETempty) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))
+
+Theorem:
+  for all v0, if v0 is a class then (v0 is empty iff v0 is equal to \SETempty)
+Proof:
+  \SETempty is empty
+  Proof:
+    for all v0, if v0 is an element of \SETempty then it is wrong that v0 is equal to v0
+  Qed.
+  if A is equal to \SETempty then A is empty
+  if A is empty then (it is wrong that for some v0, v0 is an element of A and it is wrong that for some v0, v0 is an element of \SETempty)
+  if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
+  if A is empty then A is equal to \SETempty
+Qed.
+
+Theorem:
+  \SETempty is empty
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a class then \SETempty is a subclass of v0
+Proof:
+  it is wrong that for some v0, v0 is an element of \SETempty
+  for all v0, if v0 is an element of \SETempty then v0 is an element of A
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, (v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))
+
+Definition:
+  for all v0, (v0 is an unordered pair) iff (v0 is a class and for some v1, for some v2, v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 })
+
+Definition:
+  for all v0, if v0 is an object then for all v1, (v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and v2 is equal to v0))
+
+Definition:
+  for all v0, (v0 is a singleton class) iff (v0 is a class and for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if \SETpair{ v0 }{ v2 } is equal to \SETpair{ v1 }{ v3 } then ((v0 is equal to v1 and v2 is equal to v3) or (v0 is equal to v3 and v2 is equal to v1)))
+Proof:
+  a is equal to a' or a is equal to b'
+  if a is equal to a' then b is equal to b'
+  if a is equal to b' then b is equal to a'
+  (a is equal to a' and b is equal to b') or (a is equal to b' and b is equal to a')
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is an object and v1 is an object then (if \SETsingleton{ v0 } is equal to \SETsingleton{ v1 } then v0 is equal to v1)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is an unique element of v0) iff (v1 is an element of v0 and for all v2, if v2 is an element of v0 then v2 is equal to v1)
+
+Theorem:
+  for all v0, if v0 is a class then ((for some v1, v1 is an unique element of v0) iff for some v1, v1 is an object and v0 is equal to \SETsingleton{ v1 })
+Proof:
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETunion v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a map then for all v1, (v1 is a value of v0) iff (v1 is an object and for some v2, v2 is an element of the domain of v0 and v1 is equal to the value of v0 under v2)
+
+Definition:
+  for all v0, if v0 is a map then for all v1, (v1 is equal to \FUNrange( v0 )) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of the domain of v0 and v2 is equal to the value of v0 under v3))
+
+Theorem:
+  for all v0, for all v1, if v1 is a map and v0 is an object then (v0 is a value of v1 iff v0 is an element of \FUNrange( v1 ))
+Proof:
+  if b is a value of f then the thesis holds
+  Proof:
+    a is an element of the domain of f and b is equal to the value of f under a
+    b is an object
+    b is an element of \FUNrange( f )
+  Qed.
+  if b is an element of \FUNrange( f ) then the thesis holds
+  Proof:
+    b is an object and for some v0, v0 is an element of the domain of f and b is equal to the value of f under v0
+    b is a value of f
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is equal to \FUNid{ v0 }) iff (v1 is a map and the domain of v1 is equal to v0 and for all v2, if v2 is an element of v0 then the value of v1 under v2 is equal to v2)
+
+Definition:
+  for all v0, for all v1, if v0 is a map and v1 is a map then (if \FUNrange( v0 ) is a subclass of the domain of v1 then for all v2, (v2 is equal to v1 \FUNcomp v0) iff (v2 is a map and the domain of v2 is equal to the domain of v0 and for all v3, if v3 is an element of the domain of v0 then the value of v2 under v3 is equal to the value of v1 under the value of v0 under v3))
+
+Definition:
+  for all v0, for all v1, if v1 is a map and v0 is a subclass of the domain of v1 then for all v2, (v2 is equal to v1 \FUNrest v0) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, if v3 is an element of v0 then the value of v2 under v3 is equal to the value of v1 under v3)
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }
+Proof:
+Qed.
+
+Definition:
+  for all v0, for all v1, if v1 is a map and v0 is a class then for all v2, (v2 is equal to \FUNim{ v1 }{ v0 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of the domain of v1 \SETintersect v0 and v3 is equal to the value of v1 under v4))
+
+Definition:
+  for all v0, for all v1, if v1 is a map and v0 is a class then for all v2, (v2 is equal to \FUNpreim{ v1 }{ v0 }) iff (v2 is a class and (if the domain of v1 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of the domain of v1 and v3 is an object and the value of v1 under v3 is an element of v0))
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a map of v0) iff (v1 is a map and the domain of v1 is equal to v0)
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a map to v0) iff (v1 is a map and for all v2, if v2 is an element of the domain of v1 then the value of v1 under v2 is an element of v0)
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a map from v0 to v1) iff (v2 is a map and the domain of v2 is equal to v0 and for all v3, if v3 is an element of v0 then the value of v2 under v3 is an element of v1)
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a map on v0) iff v1 is a map from v0 to v0
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v3 is a map from v0 to v1) then (if for all v4, if v4 is an element of v0 then the value of v2 under v4 is equal to the value of v3 under v4 then v2 is equal to v3)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a class then \FUNid{ v0 } is a map on v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a map from v0 to v1 and v4 is a map from v1 to v2 then v4 \FUNcomp v3 is a map from v0 to v2
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a map from v0 to v1 and v2 is a subclass of v0 then v3 \FUNrest v2 is a map from v2 to v1
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map from v0 to v1 then (v2 \FUNcomp \FUNid{ v0 } is equal to v2 and v2 is equal to \FUNid{ v1 } \FUNcomp v2)
+Proof:
+  A is equal to the domain of f \FUNcomp \FUNid{ A } and A is equal to the domain of f and A is equal to the domain of \FUNid{ B } \FUNcomp f
+  for all v0, if v0 is an element of A then (the value of f \FUNcomp \FUNid{ A } under v0 is equal to the value of f under the value of \FUNid{ A } under v0 and the value of f under the value of \FUNid{ A } under v0 is equal to the value of f under v0 and the value of f under v0 is equal to the value of \FUNid{ B } under the value of f under v0 and the value of \FUNid{ B } under the value of f under v0 is equal to the value of \FUNid{ B } \FUNcomp f under v0)
+  f \FUNcomp \FUNid{ A } is equal to f and f is equal to \FUNid{ B } \FUNcomp f
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a subclass of v0 then \FUNid{ v0 } \FUNrest v1 is equal to \FUNid{ v1 }
+Proof:
+  the domain of \FUNid{ A } \FUNrest X is equal to X and X is equal to the domain of \FUNid{ X }
+  for all v0, if v0 is an element of X then (the value of \FUNid{ A } \FUNrest X under v0 is equal to the value of \FUNid{ A } under v0 and the value of \FUNid{ A } under v0 is equal to v0 and v0 is equal to the value of \FUNid{ X } under v0)
+  \FUNid{ A } \FUNrest X is equal to \FUNid{ X }
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, for all v4, for all v5, for all v6, if v0 is a class and v1 is a class and v2 is a class and v3 is a class and v4 is a map from v0 to v1 and v5 is a map from v1 to v2 and v6 is a map from v2 to v3 then v6 \FUNcomp v5 \FUNcomp v4 is equal to v6 \FUNcomp v5 \FUNcomp v4
+Proof:
+  h \FUNcomp g \FUNcomp f is a map from A to D and h \FUNcomp g \FUNcomp f is a map from A to D
+  for all v0, if v0 is an element of A then the value of h \FUNcomp g \FUNcomp f under v0 is equal to the value of h \FUNcomp g \FUNcomp f under v0
+  Proof:
+    a is an element of A
+    the value of h \FUNcomp g \FUNcomp f under a is equal to the value of h under the value of g \FUNcomp f under a and the value of h under the value of g \FUNcomp f under a is equal to the value of h under the value of g under the value of f under a and the value of h under the value of g under the value of f under a is equal to the value of h \FUNcomp g under the value of f under a and the value of h \FUNcomp g under the value of f under a is equal to the value of h \FUNcomp g \FUNcomp f under a
+  Qed.
+  h \FUNcomp g \FUNcomp f is equal to h \FUNcomp g \FUNcomp f
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to \FUNfunspace{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a map from v0 to v1 and v3 is a function and v3 is an object))
+
+Definition:
+  for all v0, if v0 is a map then for all v1, (v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)
+
+Definition:
+  for all v0, for all v1, if v1 is a map and v0 is a class then ((v1 is surjective onto v0) iff \FUNrange( v1 ) is equal to v0)
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a surjective map from v0 to v1) iff (v2 is a map of v0 and v2 is surjective onto v1)
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a map to v0 then (v1 is surjective onto v0 iff for all v2, if v2 is an element of v0 then v2 is a value of v1)
+Proof:
+  if f is surjective onto B then the thesis holds
+  Proof:
+    B is equal to \FUNrange( f )
+    b is an element of B
+    b is an element of \FUNrange( f )
+    b is a value of f
+  Qed.
+  if for all v0, if v0 is an element of B then v0 is a value of f then the thesis holds
+  Proof:
+    B is a subclass of \FUNrange( f )
+    Proof:
+      b is an element of B
+      b is a value of f
+      b is an element of \FUNrange( f )
+    Qed.
+    \FUNrange( f ) is a subclass of B
+    Proof:
+      b is an element of \FUNrange( f )
+      b is a value of f
+      b is an element of B
+    Qed.
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a map then ((v0 is injective) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if the value of v0 under v1 is equal to the value of v0 under v2 then v1 is equal to v2))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is a bijection between v0 and v1) iff (v2 is a map from v0 to v1 and v2 is injective and v2 is surjective onto v1)
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNrange( v2 )
+Proof:
+  f is injective and f is surjective onto \FUNrange( f )
+  f is a bijection between A and \FUNrange( f )
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a permutation of v0) iff v1 is a bijection between v0 and v0
+
+Theorem:
+  for all v0, if v0 is a class then \FUNid{ v0 } is a permutation of v0
+Proof:
+  \FUNid{ A } is a map on A
+  \FUNid{ A } is surjective onto A
+  Proof:
+    a is an element of A
+    a is equal to the value of \FUNid{ A } under a
+    a is an element of \FUNrange( \FUNid{ A } )
+  Qed.
+  \FUNid{ A } is injective
+  Proof:
+    a is an element of A and a' is an element of A
+    the value of \FUNid{ A } under a is equal to the value of \FUNid{ A } under a'
+    a is equal to a'
+  Qed.
+Qed.
+
+Theorem (surjectivity_of_composition_of_surjections):
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then v4 \FUNcomp v3 is a surjective map from v0 to v2
+Proof:
+  g \FUNcomp f is a map of A
+  g \FUNcomp f is surjective onto C
+  Proof:
+    c is an element of C
+    b is an element of B and c is equal to the value of g under b
+    a is an element of A and b is equal to the value of f under a
+    c is equal to the value of g under the value of f under a and the value of g under the value of f under a is equal to the value of g \FUNcomp f under a
+  Qed.
+Qed.
+
+Theorem (injectivity_of_composition_of_injections):
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and (v3 is a map from v0 to v1 and v3 is injective) and (v4 is a map from v1 to v2 and v4 is injective) then (v4 \FUNcomp v3 is a map from v0 to v2 and v4 \FUNcomp v3 is injective)
+Proof:
+  g \FUNcomp f is a map of A
+  g \FUNcomp f is injective
+  Proof:
+    a is an element of A and a' is an element of A
+    the value of g \FUNcomp f under a is equal to the value of g \FUNcomp f under a'
+    the value of g under the value of f under a is equal to the value of g under the value of f under a'
+    the value of f under a is equal to the value of f under a'
+    Proof:
+      the value of f under a is an element of B and the value of f under a' is an element of B
+    Qed.
+    a is equal to a'
+  Qed.
+Qed.
+
+Theorem (bijectivity_of_composition_of_bijections):
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then for all v3, for all v4, if v3 is a bijection between v0 and v1 and v4 is a bijection between v1 and v2 then v4 \FUNcomp v3 is a bijection between v0 and v2
+Proof:
+  g \FUNcomp f is a map from A to C and g \FUNcomp f is injective
+  g \FUNcomp f is a surjective map from A to C
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is injective
+Proof:
+  a is an element of X and a' is an element of X
+  the value of f \FUNrest X under a is equal to the value of f \FUNrest X under a'
+  the value of f under a is equal to the value of f under a'
+  a is equal to a'
+Qed.
+
+Theorem (bijectivity_of_restriction_of_injection):
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and (v3 is a map from v0 to v1 and v3 is injective) and v2 is a subclass of v0 then v3 \FUNrest v2 is a bijection between v2 and \FUNim{ v3 }{ v2 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and (v2 is a map from v0 to v1 and v2 is injective) then v2 is a bijection between v0 and \FUNim{ v2 }{ v0 }
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a map then for all v1, (v1 is an inverse of v0) iff (v1 is a map from \FUNrange( v0 ) to the domain of v0 and for all v2, if v2 is an element of the domain of v0 then for all v3, if v3 is an element of the domain of v1 then (the value of v0 under v2 is equal to v3 iff the value of v1 under v3 is equal to v2))
+
+Definition:
+  for all v0, if v0 is a map then ((v0 is invertible) iff for some v1, v1 is an inverse of v0)
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a map and v1 is an inverse of v0 and v2 is an inverse of v0 then v1 is equal to v2
+Proof:
+  the domain of g is equal to \FUNrange( f ) and \FUNrange( f ) is equal to the domain of g'
+  for all v0, if v0 is an element of \FUNrange( f ) then the value of g under v0 is equal to the value of g' under v0
+  Proof:
+    b is an element of \FUNrange( f )
+    a is equal to the value of g' under b
+    the value of g under b is equal to a iff the value of f under a is equal to b
+    the value of f under a is equal to b iff the value of g' under b is equal to a
+    the value of g under b is equal to the value of g' under b
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a map and v0 is invertible then for all v1, (v1 is equal to \FUNinv{ v0 }) iff v1 is an inverse of v0
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 and v3 is a surjective map from v1 to v0 then (v3 is an inverse of v2 iff (v3 \FUNcomp v2 is equal to \FUNid{ v0 } and v2 \FUNcomp v3 is equal to \FUNid{ v1 }))
+Proof:
+  if g is an inverse of f then the thesis holds
+  Proof:
+    the domain of g \FUNcomp f is equal to the domain of f and the domain of f is equal to A and A is equal to the domain of \FUNid{ A }
+    for all v0, if v0 is an element of A then (the value of g \FUNcomp f under v0 is equal to the value of g under the value of f under v0 and the value of g under the value of f under v0 is equal to v0)
+    g \FUNcomp f is equal to \FUNid{ A }
+    the domain of f \FUNcomp g is equal to the domain of g and the domain of g is equal to B and B is equal to the domain of \FUNid{ B }
+    for all v0, if v0 is an element of B then (the value of f \FUNcomp g under v0 is equal to the value of f under the value of g under v0 and the value of f under the value of g under v0 is equal to v0)
+    f \FUNcomp g is equal to \FUNid{ B }
+  Qed.
+  if g \FUNcomp f is equal to \FUNid{ A } and f \FUNcomp g is equal to \FUNid{ B } then the thesis holds
+  Proof:
+    the domain of g is equal to B and B is equal to \FUNrange( f ) and (\FUNrange( g ) is equal to A and A is equal to the domain of f)
+    a is an element of the domain of f and b is an element of the domain of g
+    if the value of f under a is equal to b then (the value of g under b is equal to the value of g under the value of f under a and the value of g under the value of f under a is equal to the value of g \FUNcomp f under a and the value of g \FUNcomp f under a is equal to the value of \FUNid{ A } under a and the value of \FUNid{ A } under a is equal to a)
+    if the value of g under b is equal to a then (the value of f under a is equal to the value of f under the value of g under b and the value of f under the value of g under b is equal to the value of f \FUNcomp g under b and the value of f \FUNcomp g under b is equal to the value of \FUNid{ B } under b and the value of \FUNid{ B } under b is equal to b)
+    the value of f under a is equal to b iff the value of g under b is equal to a
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (\FUNinv{ v2 } is a surjective map from v1 to v0 and \FUNinv{ v2 } is invertible and \FUNinv{ \FUNinv{ v2 } } is equal to v2))
+Proof:
+  \FUNinv{ f } is a map from B to A
+  Proof:
+    \FUNrange( f ) is equal to B and the domain of f is equal to A
+  Qed.
+  \FUNinv{ f } is surjective onto A
+  Proof:
+    for all v0, if v0 is an element of A then the value of \FUNinv{ f } under the value of f under v0 is equal to v0
+  Qed.
+  \FUNinv{ f } is an inverse of f
+  f \FUNcomp \FUNinv{ f } is equal to \FUNid{ B } and \FUNinv{ f } \FUNcomp f is equal to \FUNid{ A }
+  f is an inverse of \FUNinv{ f }
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then (v2 \FUNcomp \FUNinv{ v2 } is equal to \FUNid{ v1 } and \FUNinv{ v2 } \FUNcomp v2 is equal to \FUNid{ v0 }))
+Proof:
+  \FUNinv{ f } is a surjective map from B to A
+  \FUNinv{ f } is an inverse of f
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v0 then (if v3 is invertible then the value of \FUNinv{ v3 } under the value of v3 under v2 is equal to v2)
+Proof:
+  the value of \FUNinv{ f } under the value of f under a is equal to the value of \FUNinv{ f } \FUNcomp f under a and the value of \FUNinv{ f } \FUNcomp f under a is equal to the value of \FUNid{ A } under a and the value of \FUNid{ A } under a is equal to a
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then the value of v3 under the value of \FUNinv{ v3 } under v2 is equal to v2)
+Proof:
+  the value of f under the value of \FUNinv{ f } under b is equal to the value of f \FUNcomp \FUNinv{ f } under b and the value of f \FUNcomp \FUNinv{ f } under b is equal to the value of \FUNid{ B } under b and the value of \FUNid{ B } under b is equal to b
+Qed.
+
+Theorem (invertibility_of_composition_of_invertible_maps):
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a class and v1 is a class and v2 is a class and v3 is a surjective map from v0 to v1 and v4 is a surjective map from v1 to v2 then (if v3 is invertible and v4 is invertible then (v4 \FUNcomp v3 is invertible and \FUNinv{ v4 \FUNcomp v3 } is equal to \FUNinv{ v3 } \FUNcomp \FUNinv{ v4 }))
+Proof:
+  \FUNinv{ f } is a surjective map from B to A
+  \FUNinv{ g } is a surjective map from C to B
+  h is equal to \FUNinv{ f } \FUNcomp \FUNinv{ g }
+  h is a surjective map from C to A
+  g \FUNcomp f is a map from A to C
+  g \FUNcomp f \FUNcomp h is equal to \FUNid{ C }
+  Proof:
+    f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } is equal to f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g }
+    Proof:
+      f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } is a map of C and f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } is a map of C
+    Qed.
+    f \FUNcomp h is a map from C to B
+    g \FUNcomp f \FUNcomp h is equal to g \FUNcomp f \FUNcomp h and g \FUNcomp f \FUNcomp h is equal to g \FUNcomp f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } and g \FUNcomp f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } is equal to g \FUNcomp f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } and g \FUNcomp f \FUNcomp \FUNinv{ f } \FUNcomp \FUNinv{ g } is equal to g \FUNcomp \FUNid{ B } \FUNcomp \FUNinv{ g } and g \FUNcomp \FUNid{ B } \FUNcomp \FUNinv{ g } is equal to g \FUNcomp \FUNinv{ g } and g \FUNcomp \FUNinv{ g } is equal to \FUNid{ C }
+  Qed.
+  h \FUNcomp g \FUNcomp f is equal to \FUNid{ A }
+  Proof:
+    \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g is equal to \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g
+    g \FUNcomp f is a map from A to C
+    h \FUNcomp g \FUNcomp f is equal to h \FUNcomp g \FUNcomp f and h \FUNcomp g \FUNcomp f is equal to \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g \FUNcomp f and \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g \FUNcomp f is equal to \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g \FUNcomp f and \FUNinv{ f } \FUNcomp \FUNinv{ g } \FUNcomp g \FUNcomp f is equal to \FUNinv{ f } \FUNcomp \FUNid{ B } \FUNcomp f and \FUNinv{ f } \FUNcomp \FUNid{ B } \FUNcomp f is equal to \FUNinv{ f } \FUNcomp f and \FUNinv{ f } \FUNcomp f is equal to \FUNid{ A }
+  Qed.
+  h is an inverse of g \FUNcomp f
+  Proof:
+    g \FUNcomp f is a surjective map from A to C and h is a surjective map from C to A
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v0 then (if v3 is invertible then (v3 \FUNrest v2 is invertible and \FUNinv{ v3 \FUNrest v2 } is equal to \FUNinv{ v3 } \FUNrest \FUNim{ v3 }{ v2 }))
+Proof:
+  f \FUNrest X is a surjective map from X to \FUNim{ f }{ X }
+  g is equal to \FUNinv{ f } \FUNrest \FUNim{ f }{ X }
+  g is a map of \FUNim{ f }{ X }
+  X is a subclass of \FUNrange( g )
+  Proof:
+    a is an element of X
+    the value of f under a is an element of \FUNim{ f }{ X }
+    the value of g under the value of f under a is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to a
+    a is a value of g
+  Qed.
+  \FUNrange( g ) is a subclass of X
+  Proof:
+    a is an element of \FUNrange( g )
+    b is an element of \FUNim{ f }{ X } and a is equal to the value of g under b
+    c is an element of X and b is equal to the value of f under c
+    a is equal to the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under b and the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under b is equal to the value of \FUNinv{ f } under b and the value of \FUNinv{ f } under b is equal to the value of \FUNinv{ f } under the value of f under c and the value of \FUNinv{ f } under the value of f under c is equal to c
+    a is an element of X
+  Qed.
+  \FUNrange( g ) is equal to X
+  g is a map and g is surjective onto X
+  for all v0, if v0 is an element of X then the value of g under the value of f \FUNrest X under v0 is equal to v0
+  Proof:
+    a is an element of X
+    the value of g under the value of f \FUNrest X under a is equal to the value of g under the value of f under a and the value of g under the value of f under a is equal to the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a and the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to a
+  Qed.
+  for all v0, if v0 is an element of \FUNim{ f }{ X } then the value of f \FUNrest X under the value of g under v0 is equal to v0
+  Proof:
+    b is an element of \FUNim{ f }{ X }
+    a is an element of X and b is equal to the value of f under a
+    the value of g under b is equal to the value of g under the value of f under a and the value of g under the value of f under a is equal to the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a and the value of \FUNinv{ f } \FUNrest \FUNim{ f }{ X } under the value of f under a is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to a
+    the value of f \FUNrest X under the value of g under b is equal to the value of f \FUNrest X under a and the value of f \FUNrest X under a is equal to the value of f under a and the value of f under a is equal to b
+  Qed.
+  g \FUNcomp f \FUNrest X is equal to \FUNid{ X } and f \FUNrest X \FUNcomp g is equal to \FUNid{ \FUNim{ f }{ X } }
+  g is an inverse of f \FUNrest X
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is a subclass of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ v2 } is equal to \FUNim{ \FUNinv{ v3 } }{ v2 })
+Proof:
+  \FUNim{ \FUNinv{ f } }{ Y } is a class and for all v0, v0 is an element of \FUNim{ \FUNinv{ f } }{ Y } iff (v0 is an object and for some v1, v1 is an element of Y and v0 is equal to the value of \FUNinv{ f } under v1) and (\FUNpreim{ f }{ Y } is a class and for all v0, v0 is an element of \FUNpreim{ f }{ Y } iff (v0 is an element of A and v0 is an object and the value of f under v0 is an element of Y))
+  \FUNpreim{ f }{ Y } is a subclass of \FUNim{ \FUNinv{ f } }{ Y }
+  Proof:
+    a is an element of \FUNpreim{ f }{ Y }
+    b is an element of Y and b is equal to the value of f under a
+    the value of \FUNinv{ f } under b is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to a
+    a is an element of \FUNim{ \FUNinv{ f } }{ Y }
+  Qed.
+  \FUNim{ \FUNinv{ f } }{ Y } is a subclass of \FUNpreim{ f }{ Y }
+  Proof:
+    a is an element of \FUNim{ \FUNinv{ f } }{ Y }
+    b is an element of Y and a is equal to the value of \FUNinv{ f } under b
+    the value of f under a is equal to the value of f under the value of \FUNinv{ f } under b and the value of f under the value of \FUNinv{ f } under b is equal to b
+    a is an element of \FUNpreim{ f }{ Y }
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a class and v1 is a class and v3 is a surjective map from v0 to v1 and v2 is an element of v1 then (if v3 is invertible then \FUNpreim{ v3 }{ \SETsingleton{ v2 } } is equal to \SETsingleton{ the value of \FUNinv{ v3 } under v2 })
+Proof:
+  \FUNpreim{ f }{ \SETsingleton{ b } } is equal to \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } }
+  \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } is a class and for all v0, v0 is an element of \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } iff (v0 is an object and for some v1, v1 is an element of \SETsingleton{ b } and v0 is equal to the value of \FUNinv{ f } under v1)
+  \FUNim{ \FUNinv{ f } }{ \SETsingleton{ b } } is equal to \SETsingleton{ the value of \FUNinv{ f } under b }
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (v2 is invertible iff v2 is injective)
+Proof:
+  if f is invertible then the thesis holds
+  Proof:
+    a is an element of A and b is an element of A
+    the value of f under a is equal to the value of f under b
+    a is equal to the value of \FUNinv{ f } under the value of f under a and the value of \FUNinv{ f } under the value of f under a is equal to the value of \FUNinv{ f } under the value of f under b and the value of \FUNinv{ f } under the value of f under b is equal to b
+  Qed.
+  if f is injective then the thesis holds
+  Proof:
+    g is a map and (the domain of g is equal to B) and for all v0, if v0 is an object then (if v0 is an element of the domain of g then for some v1, v1 is an element of A and the value of f under v1 is equal to v0 and (the value of g under v0 is equal to v1))
+    g is a map from B to A
+    for all v0, if v0 is an element of A then v0 is equal to the value of g under the value of f under v0
+    g is a surjective map from B to A
+    for all v0, if v0 is an element of A then the value of g under the value of f under v0 is equal to v0
+    for all v0, if v0 is an element of B then the value of f under the value of g under v0 is equal to v0
+    g is an inverse of f
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a surjective map from v0 to v1 then (if v2 is invertible then \FUNinv{ v2 } is a bijection between v1 and v0)
+Proof:
+  \FUNinv{ f } is a surjective map from B to A
+  \FUNinv{ f } is invertible
+  \FUNinv{ f } is injective
+  \FUNinv{ f } is a bijection between B and A
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is an involution on v0) iff (v1 is a map on v0 and v1 is an inverse of v1)
+
+Theorem:
+  for all v0, if v0 is a class then \FUNid{ v0 } is an involution on v0
+Proof:
+  \FUNid{ A } \FUNcomp \FUNid{ A } is equal to \FUNid{ A }
+  \FUNid{ A } is an inverse of \FUNid{ A }
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is an involution on v0 and v2 is an involution on v0 then (v2 \FUNcomp v1 is an involution on v0 iff v2 \FUNcomp v1 is equal to v1 \FUNcomp v2)
+Proof:
+  if g \FUNcomp f is an involution on A then the thesis holds
+  Proof:
+    \FUNinv{ g \FUNcomp f } is equal to \FUNinv{ f } \FUNcomp \FUNinv{ g } and \FUNinv{ f } \FUNcomp \FUNinv{ g } is equal to f \FUNcomp g
+    Proof:
+      f is invertible and g is invertible and (f is surjective onto A and g is surjective onto A)
+    Qed.
+  Qed.
+  if g \FUNcomp f is equal to f \FUNcomp g then the thesis holds
+  Proof:
+    SetBytes prover "vampire"    f \FUNcomp f is a map on A and f \FUNcomp g is a map on A and f \FUNcomp g is a map on A
+    g \FUNcomp f \FUNcomp g \FUNcomp f is equal to g \FUNcomp f \FUNcomp f \FUNcomp g and g \FUNcomp f \FUNcomp f \FUNcomp g is equal to g \FUNcomp f \FUNcomp f \FUNcomp g and g \FUNcomp f \FUNcomp f \FUNcomp g is equal to g \FUNcomp f \FUNcomp f \FUNcomp g and g \FUNcomp f \FUNcomp f \FUNcomp g is equal to g \FUNcomp \FUNid{ A } \FUNcomp g and g \FUNcomp \FUNid{ A } \FUNcomp g is equal to g \FUNcomp g and g \FUNcomp g is equal to \FUNid{ A }
+    g \FUNcomp f is an inverse of g \FUNcomp f
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is an involution on v0 then v1 \FUNcomp v1 is an involution on v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is an involution on v0 then v1 is a permutation of v0
+Proof:
+  f is a map of A and f is invertible and f is surjective onto A
+  f is a bijection between A and A
+  f is a permutation of A
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is equinumerous to v1) iff for some v2, v2 is a bijection between v0 and v1)
+
+Theorem:
+  for all v0, if v0 is a class then v0 is equinumerous to v0
+Proof:
+  \FUNid{ A } is a bijection between A and A
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is equinumerous to v1 then v1 is equinumerous to v0)
+Proof:
+  A is equinumerous to B
+  f is a bijection between A and B
+  \FUNinv{ f } is a bijection between B and A
+  B is equinumerous to A
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a class then (if v0 is equinumerous to v1 and v1 is equinumerous to v2 then v0 is equinumerous to v2)
+Proof:
+  A is equinumerous to B and B is equinumerous to C
+  f is a bijection between A and B and g is a bijection between B and C
+  g \FUNcomp f is a bijection between A and C
+  A is equinumerous to C
+Qed.
+

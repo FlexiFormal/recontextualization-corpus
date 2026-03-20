@@ -1,0 +1,335 @@
+Definition:
+  for all v0, (v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, v1 is an element of v0)
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+
+Theorem (classextensionality):
+  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+
+Axiom (separationaxiom):
+  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+
+Definition:
+  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+
+Definition:
+  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+
+Axiom:
+  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+
+Axiom:
+  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+
+Theorem:
+  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+Proof:
+Qed.
+
+Axiom:
+  for all v0, if v0 is a map then (if the domain of v0 is a set and for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object then v0 is a function)
+
+Definition:
+  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+
+Definition:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))
+
+Axiom (replacementaxiom):
+  for all v0, if v0 is a set then for all v1, if v1 is a map then (if v0 is a subset of the domain of v1 then v1 [ v0 ] is a set)
+
+Definition:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4))
+
+Definition:
+  for all v0, for all v1, if v0 is a set and v1 is a set then ((v0 is equinumerous with v1) iff for some v2, v2 is a map and v2 : v0 \leftrightarrow v1)
+
+Theorem:
+  for all v0, for all v1, if v0 is a set and v1 is a set then (if v0 is equinumerous with v1 then v1 is equinumerous with v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a set and v1 is a set and v2 is a set then (if v0 is equinumerous with v1 then (if v1 is equinumerous with v2 then v0 is equinumerous with v2))
+Proof:
+  F is a map and F : A \leftrightarrow B
+  G is a map and G maps elements of B to elements of A and for all v0, if v0 is an element of A then the value of G under the value of F under v0 is equal to v0 and for all v0, if v0 is an element of B then the value of F under the value of G under v0 is equal to v0
+  H is a map and H : B \leftrightarrow C
+  I is a map and I maps elements of C to elements of B and for all v0, if v0 is an element of B then the value of I under the value of H under v0 is equal to v0 and for all v0, if v0 is an element of C then the value of H under the value of I under v0 is equal to v0
+  for all v0, if v0 is an element of A then the value of H under the value of F under v0 is an object
+  J is a map and (the domain of J is equal to A) and for all v0, if v0 is an object then (if v0 is an element of the domain of J then (the value of J under v0 is equal to the value of H under the value of F under v0))
+  for all v0, if v0 is an element of C then the value of G under the value of I under v0 is an object
+  SetInt timelimit 30  J : A \leftrightarrow C
+  Proof:
+    K is a map and (the domain of K is equal to C) and for all v0, if v0 is an object then (if v0 is an element of the domain of K then (the value of K under v0 is equal to the value of G under the value of I under v0))
+  Qed.
+  DropInt timelimitQed.
+
+Definition:
+  for all v0, if v0 is a set then ((v0 is dedekind finite) iff for all v1, if v1 is a subset of v0 and it is wrong that v1 is equal to v0 then it is wrong that v1 is equinumerous with v0)
+
+Signature:
+  for all v0, if v0 is an integer then v0 is an object
+
+Signature:
+  for all v0, if v0 is equal to 0 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 1 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 2 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 3 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 4 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 5 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 6 then v0 is an integer
+
+Signature:
+  for all v0, if v0 is equal to 7 then v0 is an integer
+
+Definition:
+  for all v0, (v0 is a coordinate) iff (v0 is an integer and (v0 is equal to 0 or v0 is equal to 1 or v0 is equal to 2 or v0 is equal to 3 or v0 is equal to 4 or v0 is equal to 5 or v0 is equal to 6 or v0 is equal to 7))
+
+Signature:
+  for all v0, if v0 is a square then v0 is an object
+
+Axiom:
+  for all v0, for all v1, if v0 is a coordinate and v1 is a coordinate then the ordered pair of v0 and v1 is a square
+
+Axiom:
+  for all v0, if v0 is a square then for some v1, v1 is a coordinate and for some v2, v2 is a coordinate and v0 is equal to the ordered pair of v1 and v2
+
+Definition:
+  for all v0, (v0 is equal to the checkerboard) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a square and v1 is an object))
+
+Axiom:
+  the checkerboard is a set
+
+Axiom:
+  for all v0, if v0 is a subset of the checkerboard then v0 is dedekind finite
+
+Definition:
+  for all v0, (v0 is equal to \Corners) iff (v0 is a set and for all v1, v1 is an element of v0 iff (v1 is an object and (v1 is equal to the ordered pair of 0 and 0 or v1 is equal to the ordered pair of 7 and 7)))
+
+Definition:
+  for all v0, (v0 is equal to \Mutilated) iff v0 is equal to the set difference of the checkerboard and \Corners
+
+Signature:
+  for all v0, if v0 is an integer then for all v1, if v1 is a neighbour of v0 then v1 is an integer
+
+Axiom:
+  for all v0, for all v1, if v0 is a coordinate and v1 is a coordinate then (if v0 is a neighbour of v1 then v1 is a neighbour of v0)
+
+Axiom:
+  0 is a neighbour of 1 and 1 is a neighbour of 2 and 2 is a neighbour of 3 and 3 is a neighbour of 4 and 4 is a neighbour of 5 and 5 is a neighbour of 6 and 6 is a neighbour of 7
+
+Definition:
+  for all v0, for all v1, if v0 is a square and v1 is a square then ((v0 is adjacent to v1) iff for some v2, for some v3, for some v4, for some v5, v2 is an integer and v3 is an integer and v4 is an integer and v5 is an integer and (v0 is equal to the ordered pair of v2 and v3 and v1 is equal to the ordered pair of v4 and v5 and ((v2 is equal to v4 and v3 is a neighbour of v5) or (v2 is a neighbour of v4 and v3 is equal to v5))))
+
+Definition:
+  for all v0, (v0 is a domino) iff (v0 is a set and for some v1, for some v2, v1 is a square and v2 is a square and v1 is adjacent to v2 and (v0 is a class and for all v3, v3 is an element of v0 iff (v3 is an object and (v3 is equal to v1 or v3 is equal to v2))))
+
+Definition:
+  for all v0, (v0 is a domino tiling) iff (v0 is a disjoint family and for all v1, if v1 is an element of v0 then v1 is a domino)
+
+Definition:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, (v1 is a domino tiling of v0) iff (v1 is a domino tiling and for all v2, if v2 is a square then (v2 is an element of v0 iff for some v3, v3 is an element of v1 and v2 is an element of v3))
+
+Signature:
+  for all v0, if v0 is a square then (if v0 is black then truth holds)
+
+Axiom:
+  for all v0, for all v1, if v0 is a square and v1 is a square then (if v0 is adjacent to v1 then (v0 is black iff it is wrong that v1 is black))
+
+Axiom:
+  the ordered pair of 0 and 0 is black
+
+Axiom:
+  the ordered pair of 7 and 7 is black
+
+Definition:
+  for all v0, (v0 is equal to \Black) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an element of the checkerboard and v1 is black and v1 is an object))
+
+Definition:
+  for all v0, (v0 is equal to \White) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an element of the checkerboard and it is wrong that v1 is black and v1 is an object))
+
+Theorem:
+  \Black is a set
+Proof:
+Qed.
+
+Theorem:
+  \White is a set
+Proof:
+Qed.
+
+Signature:
+  for all v0, if v0 is an element of the checkerboard then for all v1, if v1 is equal to \Swap{ v0 } then v1 is an element of the checkerboard
+
+Axiom:
+  for all v0, if v0 is a coordinate then (\Swap{ the ordered pair of 0 and v0 } is equal to the ordered pair of 1 and v0 and \Swap{ the ordered pair of 1 and v0 } is equal to the ordered pair of 0 and v0)
+
+Axiom:
+  for all v0, if v0 is a coordinate then (\Swap{ the ordered pair of 2 and v0 } is equal to the ordered pair of 3 and v0 and \Swap{ the ordered pair of 3 and v0 } is equal to the ordered pair of 2 and v0)
+
+Axiom:
+  for all v0, if v0 is a coordinate then (\Swap{ the ordered pair of 4 and v0 } is equal to the ordered pair of 5 and v0 and \Swap{ the ordered pair of 5 and v0 } is equal to the ordered pair of 4 and v0)
+
+Axiom:
+  for all v0, if v0 is a coordinate then (\Swap{ the ordered pair of 6 and v0 } is equal to the ordered pair of 7 and v0 and \Swap{ the ordered pair of 7 and v0 } is equal to the ordered pair of 6 and v0)
+
+Theorem:
+  for all v0, if v0 is an element of the checkerboard then \Swap{ v0 } is adjacent to v0
+Proof:
+  i is an integer and j is an integer and x is equal to the ordered pair of i and j
+  if i is equal to 0 then the thesis holds
+  if i is equal to 1 then the thesis holds
+  if i is equal to 2 then the thesis holds
+  if i is equal to 3 then the thesis holds
+  if i is equal to 4 then the thesis holds
+  if i is equal to 5 then the thesis holds
+  if i is equal to 6 then the thesis holds
+  if i is equal to 7 then the thesis holds
+Qed.
+
+Theorem:
+  for all v0, if v0 is an element of the checkerboard then \Swap{ \Swap{ v0 } } is equal to v0
+Proof:
+  i is an integer and j is an integer and x is equal to the ordered pair of i and j
+  if i is equal to 0 then the thesis holds
+  if i is equal to 1 then the thesis holds
+  if i is equal to 2 then the thesis holds
+  if i is equal to 3 then the thesis holds
+  if i is equal to 4 then the thesis holds
+  if i is equal to 5 then the thesis holds
+  if i is equal to 6 then the thesis holds
+  if i is equal to 7 then the thesis holds
+Qed.
+
+Theorem:
+  for all v0, if v0 is an element of the checkerboard then (v0 is black iff it is wrong that \Swap{ v0 } is black)
+Proof:
+Qed.
+
+Theorem:
+  \Black is equinumerous with \White
+Proof:
+  F is a map and (the domain of F is equal to \Black) and for all v0, if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to \Swap{ v0 }))
+  G is a map and (the domain of G is equal to \White) and for all v0, if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to \Swap{ v0 }))
+  for all v0, if v0 is an element of the domain of F then it is wrong that the value of F under v0 is black
+  for all v0, if v0 is an element of the domain of G then the value of G under v0 is black
+  F maps elements of \Black to elements of \White and G maps elements of \White to elements of \Black
+  for all v0, if v0 is an element of \Black then the value of G under the value of F under v0 is equal to v0
+  for all v0, if v0 is an element of \White then the value of F under the value of G under v0 is equal to v0
+  F : \Black \leftrightarrow \White
+Qed.
+
+Signature:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then for all v2, if v2 is an element of v0 then for all v3, if v3 is equal to \Sw{ v1 }{ v0 }{ v2 } then (v3 is a square and for some v4, v4 is an element of v1 and v4 is a class and for all v5, v5 is an element of v4 iff (v5 is an object and (v5 is equal to v2 or v5 is equal to v3)))
+
+Theorem:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then for all v2, if v2 is an element of v0 then \Sw{ v1 }{ v0 }{ v2 } is an element of v0
+Proof:
+  y is equal to \Sw{ T }{ A }{ x }
+  D is an element of T and D is a class and for all v0, v0 is an element of D iff (v0 is an object and (v0 is equal to x or v0 is equal to y))
+  y is an element of A
+Qed.
+
+Theorem:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then for all v2, if v2 is an element of v0 then \Sw{ v1 }{ v0 }{ \Sw{ v1 }{ v0 }{ v2 } } is equal to v2
+Proof:
+  y is equal to \Sw{ T }{ A }{ x }
+  Y is an element of T and Y is a class and for all v0, v0 is an element of Y iff (v0 is an object and (v0 is equal to x or v0 is equal to y))
+  z is equal to \Sw{ T }{ A }{ y }
+  Z is an element of T and Z is a class and for all v0, v0 is an element of Z iff (v0 is an object and (v0 is equal to y or v0 is equal to z))
+  x is equal to z
+Qed.
+
+Theorem:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then for all v2, if v2 is an element of v0 and it is wrong that v2 is black then \Sw{ v1 }{ v0 }{ v2 } is black
+Proof:
+  y is equal to \Sw{ T }{ A }{ x }
+  Y is an element of T and Y is a class and for all v0, v0 is an element of Y iff (v0 is an object and (v0 is equal to x or v0 is equal to y))
+  SetInt timelimit 10  x is adjacent to y
+  DropInt timelimit  y is black
+Qed.
+
+Theorem:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then for all v2, if v2 is an element of v0 and v2 is black then it is wrong that \Sw{ v1 }{ v0 }{ v2 } is black
+Proof:
+  y is equal to \Sw{ T }{ A }{ x }
+  Y is an element of T and Y is a class and for all v0, v0 is an element of Y iff (v0 is an object and (v0 is equal to x or v0 is equal to y))
+  SetInt timelimit 10  x is adjacent to y
+  DropInt timelimit  it is wrong that y is black
+Qed.
+
+Theorem:
+  for all v0, if v0 is a subset of the checkerboard then for all v1, if v1 is a domino tiling of v0 then the intersection of v0 and \Black is equinumerous with the intersection of v0 and \White
+Proof:
+  F is a map and (the domain of F is equal to the intersection of A and \Black) and for all v0, if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to \Sw{ T }{ A }{ v0 }))
+  G is a map and (the domain of G is equal to the intersection of A and \White) and for all v0, if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to \Sw{ T }{ A }{ v0 }))
+  F maps elements of the intersection of A and \Black to elements of the intersection of A and \White
+  Proof:
+    F maps elements of the intersection of A and \Black to elements of \White
+  Qed.
+  G maps elements of the intersection of A and \White to elements of the intersection of A and \Black
+  Proof:
+    G maps elements of the intersection of A and \White to elements of \Black
+  Qed.
+  for all v0, if v0 is an element of the intersection of A and \Black then the value of G under the value of F under v0 is equal to v0
+  for all v0, if v0 is an element of the intersection of A and \White then the value of F under the value of G under v0 is equal to v0
+  F : the intersection of A and \Black \leftrightarrow the intersection of A and \White
+Qed.
+
+Theorem:
+  the intersection of \Mutilated and \White is equal to \White
+Proof:
+Qed.
+
+Theorem:
+  the intersection of \Mutilated and \Black is a subset of \Black and it is wrong that the intersection of \Mutilated and \Black is equal to \Black
+Proof:
+  the ordered pair of 0 and 0 is an element of \Black
+  it is wrong that the ordered pair of 0 and 0 is an element of \Mutilated
+  it is wrong that the ordered pair of 0 and 0 is an element of the intersection of \Mutilated and \Black
+Qed.
+
+Theorem:
+  it is wrong that for some v0, v0 is a domino tiling of \Mutilated
+Proof:
+  T is a domino tiling of \Mutilated
+  the intersection of \Mutilated and \Black is equinumerous with the intersection of \Mutilated and \White
+  the intersection of \Mutilated and \Black is equinumerous with \White
+  the intersection of \Mutilated and \Black is equinumerous with \Black
+  falsity holds
+Qed.
+

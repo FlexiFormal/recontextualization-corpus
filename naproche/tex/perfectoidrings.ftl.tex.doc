@@ -1,0 +1,1855 @@
+Theorem:
+  for all v0, if v0 is a set then v0 is a class
+Proof:
+Qed.
+
+Definition:
+  for all v0, (v0 is equal to \emptyset) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))
+
+Axiom (setexistence):
+  \emptyset is a set
+
+Definition:
+  for all v0, if v0 is an object then for all v1, (v1 is equal to \sing{ v0 }) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and v2 is equal to v0))
+
+Definition:
+  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, (v2 is equal to \unp{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))
+
+Axiom (pairs):
+  for all v0, for all v1, if v0 is an object and v1 is an object then \unp{ v0 }{ v1 } is a set
+
+Theorem:
+  for all v0, if v0 is an object then \sing{ v0 } is a set
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a set then (if for all v1, if v1 is an element of v0 then v1 is a set then for all v1, (v1 is equal to \bigcup v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for some v3, v3 is an element of v0 and v2 is an element of v3)))
+
+Axiom (union):
+  for all v0, if v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set then \bigcup v0 is a set
+
+Definition:
+  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+
+Axiom (powerset):
+  for all v0, if v0 is a set then for all v1, if v1 is a class and for all v2, if v2 is an element of v1 then v2 is a subset of v0 then v1 is a set
+
+Axiom (separation):
+  for all v0, if v0 is a set then for all v1, if v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set
+
+Theorem:
+  for all v0, for all v1, if v0 is a map and v1 is an element of the domain of v0 then the value of v0 under v1 is an object
+Proof:
+Qed.
+
+Axiom:
+  for all v0, if v0 is a function then the domain of v0 is a set
+
+Axiom:
+  for all v0, if v0 is a map and the domain of v0 is a set then v0 is a function
+
+Axiom (replacement):
+  for all v0, for all v1, if v0 is a map and v1 is a set and v1 is a subset of the domain of v0 then for some v2, v2 is a set and v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4)
+
+Theorem:
+  for all v0, if v0 is a set then (\emptyset is a subset of v0 and v0 is a subset of v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set then for all v1, if v1 is an element of v0 then v1 is a subset of \bigcup v0
+Proof:
+  x is an element of z
+  x is an element of \bigcup Z
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a set and v1 is a set and for all v2, if v2 is an element of v1 then v2 is a subset of v0 then \bigcup v1 is a subset of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a set and v1 is a set then for all v2, (v2 is equal to v0 \cup v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+
+Theorem:
+  for all v0, if v0 is a set then for all v1, for all v2, if v1 is a subset of v0 and v2 is a subset of v0 then v1 \cup v2 is a subset of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set then for all v1, (v1 is equal to \bigcap v0) iff (v1 is a class and for all v2, v2 is an element of v1 iff (v2 is an object and for all v3, if v3 is an element of v0 then v2 is an element of v3))
+
+Definition:
+  for all v0, for all v1, if v0 is a set and v1 is a set then for all v2, (v2 is equal to v0 \cap v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+
+Theorem:
+  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \cap v1 is a set
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a set then ((v0 is nonempty) iff it is wrong that v0 is equal to \emptyset)
+
+Theorem:
+  for all v0, if v0 is a set and v0 is nonempty and for all v1, if v1 is an element of v0 then v1 is a set then \bigcap v0 is a set
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a set and v0 is nonempty and for all v1, if v1 is an element of v0 then v1 is a set then for all v1, if for all v2, if v2 is an element of v0 then v1 is a subset of v2 then v1 is a subset of \bigcap v0
+Proof:
+  y is an element of Y
+  for all v0, if v0 is an element of Z then y is an element of v0
+  y is an element of \bigcap Z
+Qed.
+
+Signature:
+  for all v0, if v0 is a natural number then v0 is an object
+
+Definition:
+  for all v0, (v0 is equal to \mathbb{N}) iff (v0 is a class and for all v1, v1 is an element of v0 iff (v1 is a natural number and v1 is an object))
+
+Axiom (axiomofinfinity):
+  \mathbb{N} is a set
+
+Signature:
+  for all v0, if v0 is equal to 0 then v0 is a natural number
+
+Signature:
+  for all v0, if v0 is equal to 1 then (v0 is a natural number and it is wrong that v0 is equal to 0)
+
+Signature:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, if v2 is equal to v0 + v1 then v2 is a natural number
+
+Axiom:
+  for all v0, if v0 is a natural number then (if v0 is a natural number and it is wrong that v0 is equal to 0 then for some v1, v1 is a natural number and v0 is equal to v1 + 1)
+
+Signature:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, if v2 is equal to v0 * v1 then v2 is a natural number
+
+Axiom:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then v0 + v1 is equal to v1 + v0
+
+Axiom:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then v1 + v2 + v0 is equal to v1 + v2 + v0
+
+Axiom:
+  for all v0, if v0 is a natural number then (v0 + 0 is equal to v0 and v0 is equal to 0 + v0)
+
+Axiom:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then v0 * v1 is equal to v1 * v0
+
+Axiom:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then v1 * v2 * v0 is equal to v1 * v2 * v0
+
+Axiom:
+  for all v0, if v0 is a natural number then (v0 * 1 is equal to v0 and v0 is equal to 1 * v0)
+
+Axiom:
+  for all v0, if v0 is a natural number then (v0 * 0 is equal to 0 and 0 is equal to 0 * v0)
+
+Axiom:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (v1 * v2 + v0 is equal to v1 * v2 + v1 * v0 and v2 + v0 * v1 is equal to v2 * v1 + v0 * v1)
+
+Axiom:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 + v1 is equal to v0 + v2 or v1 + v0 is equal to v2 + v0 then v1 is equal to v2)
+
+Axiom:
+  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, for all v2, if v1 is a natural number and v2 is a natural number then (if v0 * v1 is equal to v0 * v2 or v1 * v0 is equal to v2 * v0 then v1 is equal to v2))
+
+Axiom:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 + v1 is equal to 0 then (v0 is equal to 0 and v1 is equal to 0))
+
+Definition:
+  for all v0, (v0 is equal to 2) iff v0 is equal to 1 + 1
+
+Definition:
+  for all v0, (v0 is equal to 3) iff v0 is equal to 2 + 1
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a natural number and v1 is a natural number and v2 is a natural number and v3 is a natural number and v4 is a natural number then v4 + v0 * v1 * v2 * v3 is equal to v4 + v1 * v0 * v2 * v3
+Proof:
+  u * v * w * x is equal to v * u * w * x
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, for all v4, if v0 is a natural number and v1 is a natural number and v2 is a natural number and v3 is a natural number and v4 is a natural number then v0 * v1 * v2 * v3 + v4 is equal to v1 * v2 * v0 * v3 + v4
+Proof:
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v0 \leq v1) iff for some v2, v2 is a natural number and v0 + v2 is equal to v1)
+
+Definition:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 then for all v2, (v2 is equal to v0 - v1) iff (v2 is a natural number and v1 + v2 is equal to v0))
+
+Theorem:
+  for all v0, if v0 is a natural number then v0 \leq v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and v1 \leq v0 then v0 is equal to v1)
+Proof:
+  m \leq n and n \leq m
+  k is a natural number and l is a natural number and (n is equal to m + k and m is equal to n + l)
+  m is equal to m + k + l and k + l is equal to 0 and k is equal to 0
+  m is equal to n
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v1 \leq v2 and v2 \leq v0 then v1 \leq v0)
+Proof:
+Qed.
+
+Axiom:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (v0 \leq v1 or (v1 \leq v0 and it is wrong that v1 is equal to v0))
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then for all v2, if v2 is a natural number then (v2 + v0 \leq v2 + v1 and it is wrong that v2 + v0 is equal to v2 + v1 and (v0 + v2 \leq v1 + v2 and it is wrong that v0 + v2 is equal to v1 + v2)))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if it is wrong that v1 is equal to 0 and v0 \leq v2 and it is wrong that v0 is equal to v2 then (v1 * v0 \leq v1 * v2 and it is wrong that v1 * v0 is equal to v1 * v2 and (v0 * v1 \leq v2 * v1 and it is wrong that v0 * v1 is equal to v2 * v1)))
+Proof:
+Qed.
+
+Axiom:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then v0 is inductively less than v1)
+
+Theorem:
+  for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then (v1 is equal to 0 or 1 \leq v1)) then (v0 is equal to 0 or 1 \leq v0))
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  n' is equal to n - 1
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 + 1 then (v0 \leq v1 or v0 is equal to v1 + 1))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, if v1 is a natural number then v1 \leq v1 * v0)
+Proof:
+  1 \leq m
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if v0 \leq 0 then v0 is equal to 0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if v0 \leq 1 then (v0 is equal to 0 or v0 is equal to 1))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if v0 \leq 2 then (v0 is equal to 0 or v0 is equal to 1 or v0 is equal to 2))
+Proof:
+Qed.
+
+Theorem:
+  0 \leq 1 and it is wrong that 0 is equal to 1 and (1 \leq 2 and it is wrong that 1 is equal to 2) and (2 \leq 3 and it is wrong that 2 is equal to 3)
+Proof:
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v1 divides v0) iff for some v2, v2 is a natural number and v0 is equal to v1 * v2)
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 divides v1 and v1 divides v2 then v0 divides v2)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 divides v1 and v0 divides v1 + v2 then v0 divides v2)
+Proof:
+  it is wrong that l is equal to 0
+  q is a natural number and m is equal to l * q
+  r is a natural number and m + n is equal to l * r
+  q \leq r
+  Proof:
+    it is wrong that the thesis holds
+    r \leq q and it is wrong that r is equal to q
+    m + n is equal to l * r and l * r \leq l * q and it is wrong that l * r is equal to l * q and l * q is equal to m
+    falsity holds
+  Qed.
+  s is equal to r - q
+  l * q + l * s is equal to l * r and l * r is equal to m + n and m + n is equal to l * q + n
+  n is equal to l * s
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 divides v1 and it is wrong that v1 is equal to 0 then v0 \leq v1)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a natural number then ((v0 is even) iff 2 divides v0)
+
+Theorem:
+  for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then (v1 is even or for some v2, v2 is a natural number and v1 is equal to 2 * v2 + 1)) then (v0 is even or for some v1, v1 is a natural number and v0 is equal to 2 * v1 + 1))
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  n' is equal to n - 1
+  if n' is even then the thesis holds
+  Proof:
+    m' is a natural number and n' is equal to 2 * m'
+    for some v0, v0 is a natural number and n is equal to 2 * v0 + 1
+  Qed.
+  m' is a natural number and n' is equal to 2 * m' + 1
+  n is equal to 2 * m' + 1 + 1 and 2 * m' + 1 + 1 is equal to 2 * m' + 1
+  n is even
+Qed.
+
+Definition:
+  for all v0, if v0 is a natural number then ((v0 is prime) iff (it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 and for all v1, if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))
+
+Theorem:
+  2 is prime
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime and v0 is even then v0 is equal to 2
+Proof:
+Qed.
+
+Theorem:
+  3 is prime
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 then (if for all v1, if v1 is a natural number and it is wrong that v1 is equal to 0 and it is wrong that v1 is equal to 1 then (if v1 is inductively less than v0 then for some v2, v2 is a natural number and v2 divides v1 and v2 is prime) then for some v1, v1 is a natural number and v1 divides v0 and v1 is prime)
+Proof:
+  n is a natural number and it is wrong that n is equal to 0 and it is wrong that n is equal to 1
+  it is wrong that n is prime
+  m is a natural number and m divides n and (it is wrong that m is equal to 1 and it is wrong that m is equal to n)
+  m is inductively less than n
+  for all v0, if v0 is a natural number and v0 divides m and v0 is prime then (v0 is a natural number and v0 divides n and v0 is prime)
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then ((v0 and v1 are coprime) iff for all v2, if v2 is a natural number and v2 divides v0 and (v2 is a natural number and v2 divides v1) then v2 is equal to 1)
+
+Theorem:
+  for all v0, if v0 is a natural number then (if v0 and v0 are coprime then v0 is equal to 1)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a natural number and v1 is a natural number and v2 is a natural number and (it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 and it is wrong that v2 is equal to 0) then (if v2 divides v0 * v1 and v2 and v0 are coprime then (if for all v3, for all v4, for all v5, if v3 is a natural number and v4 is a natural number and v5 is a natural number and (it is wrong that v3 is equal to 0 and it is wrong that v4 is equal to 0 and it is wrong that v5 is equal to 0) then (if v5 divides v3 * v4 and v5 and v3 are coprime then (if v3 * v4 is inductively less than v0 * v1 then v5 divides v4)) then v2 divides v1))
+Proof:
+  n is a natural number and a is a natural number and b is a natural number and (it is wrong that n is equal to 0 and it is wrong that a is equal to 0 and it is wrong that b is equal to 0 and (n divides a * b and n and a are coprime))
+  q is a natural number and n * q is equal to a * b
+  if n is equal to a then the thesis holds
+  Proof:
+    n is equal to 1 and n divides b
+  Qed.
+  if n \leq a and it is wrong that n is equal to a then the thesis holds
+  Proof:
+    b \leq q
+    n * q - b is equal to n * q - n * b and n * q - n * b is equal to a * b - n * b and a * b - n * b is equal to a - n * b
+    n divides a - n * b
+    n and a - n are coprime
+    a - n * b \leq a * b and it is wrong that a - n * b is equal to a * b
+    a - n * b is inductively less than a * b
+    n divides b
+  Qed.
+  a \leq n and it is wrong that a is equal to n and q \leq b
+  n - a * q is equal to n * q - a * q and n * q - a * q is equal to a * b - a * q and a * b - a * q is equal to a * b - q
+  n - a divides a * b - q
+  n - a and a are coprime
+  a * b - q \leq a * b and it is wrong that a * b - q is equal to a * b
+  a * b - q is inductively less than a * b
+  n - a divides b - q
+  r is a natural number and b - q is equal to r * n - a
+  n - a * q is equal to n * q - a * q and n * q - a * q is equal to a * b - a * q and a * b - a * q is equal to a * b - q and a * b - q is equal to a * r * n - a and a * r * n - a is equal to a * r * n - a
+  it is wrong that n - a is equal to 0 and q is equal to a * r
+  a * n * r is equal to n * a * r and n * a * r is equal to n * q and n * q is equal to a * b
+  n * r is equal to b and n divides b
+Qed.
+
+Theorem (euclidslemma):
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, if v2 is a natural number and v2 is prime and v2 divides v0 * v1 then (v2 divides v0 or v2 divides v1)
+Proof:
+Qed.
+
+Signature:
+  for all v0, if v0 is a natural number then for all v1, if v1 is equal to \fac{ v0 } then v1 is a natural number
+
+Axiom:
+  \fac{ 0 } is equal to 1
+
+Axiom:
+  for all v0, if v0 is a natural number then \fac{ v0 + 1 } is equal to v0 + 1 * \fac{ v0 }
+
+Theorem:
+  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then v0 divides \fac{ v0 })
+Proof:
+  m is equal to n - 1
+  \fac{ n } is equal to n * \fac{ m }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then (if for all v2, if v2 is a natural number then (if v2 \leq v0 and it is wrong that v2 is equal to v0 then (if v2 is inductively less than v1 then it is wrong that v0 divides \fac{ v2 })) then it is wrong that v0 divides \fac{ v1 }))
+Proof:
+  k is a natural number
+  if k is equal to 0 then the thesis holds
+  k \leq p and it is wrong that k is equal to p
+  l is equal to k - 1
+  it is wrong that p divides k
+  it is wrong that p divides \fac{ l }
+  it is wrong that p divides k * \fac{ l }
+Qed.
+
+Signature:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, if v2 is equal to \cho{ v1 }{ v0 } then v2 is a natural number
+
+Axiom:
+  for all v0, if v0 is a natural number then \cho{ v0 }{ 0 } is equal to 1
+
+Axiom:
+  for all v0, if v0 is a natural number and 1 \leq v0 then \cho{ 0 }{ v0 } is equal to 0
+
+Axiom:
+  for all v0, if v0 is a natural number then (if 1 \leq v0 then for all v1, if v1 is a natural number then \cho{ v1 + 1 }{ v0 } is equal to \cho{ v1 }{ v0 } + \cho{ v1 }{ v0 - 1 })
+
+Theorem:
+  for all v0, if v0 is a natural number then for all v1, if v1 is a natural number then (if v0 + 1 \leq v1 then (if for all v2, if v2 is a natural number then for all v3, if v3 is a natural number then (if v2 + 1 \leq v3 then (if v2 is inductively less than v0 then \cho{ v2 }{ v3 } is equal to 0)) then \cho{ v0 }{ v1 } is equal to 0))
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  n' is a natural number and n is equal to n' + 1
+  i is a natural number and n + 1 \leq i
+  \cho{ n }{ i } is equal to \cho{ n' }{ i } + \cho{ n' }{ i - 1 } and \cho{ n' }{ i } + \cho{ n' }{ i - 1 } is equal to 0 + 0 and 0 + 0 is equal to 0
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then \cho{ v1 }{ v1 } is equal to 1) then \cho{ v0 }{ v0 } is equal to 1)
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  m is a natural number and n is equal to m + 1
+  \cho{ n }{ n } is equal to \cho{ m }{ n } + \cho{ m }{ m } and \cho{ m }{ n } + \cho{ m }{ m } is equal to 0 + 1 and 0 + 1 is equal to 1
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then for all v1, if v1 is a natural number and 0 \leq v1 and v1 \leq v0 then (if for all v2, if v2 is a natural number then for all v3, if v3 is a natural number and 0 \leq v3 and v3 \leq v2 then (if v2 is inductively less than v0 then \fac{ v2 } is equal to \cho{ v2 }{ v3 } * \fac{ v3 } * \fac{ v2 - v3 }) then \fac{ v0 } is equal to \cho{ v0 }{ v1 } * \fac{ v1 } * \fac{ v0 - v1 })
+Proof:
+  n is a natural number
+  i is a natural number and 0 \leq i and i \leq n
+  if n is equal to 0 then the thesis holds
+  m is equal to n - 1
+  for all v0, if v0 is a natural number and 0 \leq v0 and v0 \leq m then \fac{ m } is equal to \cho{ m }{ v0 } * \fac{ v0 } * \fac{ m - v0 }
+  Proof:
+    m is inductively less than n
+  Qed.
+  if i is equal to 0 then the thesis holds
+  if i is equal to n then the thesis holds
+  i - 1 \leq m and m - i - 1 is equal to n - i
+  m - i is a natural number
+  n - i is equal to m - i + 1
+  \fac{ n } is equal to n * \fac{ m } and n * \fac{ m } is equal to n - i + i * \fac{ m } and n - i + i * \fac{ m } is equal to n - i * \fac{ m } + i * \fac{ m } and n - i * \fac{ m } + i * \fac{ m } is equal to n - i * \fac{ m } + i * \cho{ m }{ i - 1 } * \fac{ i - 1 } * \fac{ m - i - 1 } and n - i * \fac{ m } + i * \cho{ m }{ i - 1 } * \fac{ i - 1 } * \fac{ m - i - 1 } is equal to n - i * \fac{ m } + \cho{ m }{ i - 1 } * i * \fac{ i - 1 } * \fac{ m - i - 1 } and n - i * \fac{ m } + \cho{ m }{ i - 1 } * i * \fac{ i - 1 } * \fac{ m - i - 1 } is equal to n - i * \fac{ m } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ m - i - 1 } and n - i * \fac{ m } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ m - i - 1 } is equal to n - i * \fac{ m } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } and n - i * \fac{ m } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } is equal to n - i * \cho{ m }{ i } * \fac{ i } * \fac{ m - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } and n - i * \cho{ m }{ i } * \fac{ i } * \fac{ m - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } is equal to \cho{ m }{ i } * \fac{ i } * n - i * \fac{ m - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } and \cho{ m }{ i } * \fac{ i } * n - i * \fac{ m - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } is equal to \cho{ m }{ i } * \fac{ i } * \fac{ n - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } and \cho{ m }{ i } * \fac{ i } * \fac{ n - i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } is equal to \cho{ m }{ i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } and \cho{ m }{ i } + \cho{ m }{ i - 1 } * \fac{ i } * \fac{ n - i } is equal to \cho{ n }{ i } * \fac{ i } * \fac{ n - i }
+  Proof:
+    \cho{ n }{ i } is equal to \cho{ m }{ i } + \cho{ m }{ i - 1 }
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a natural number then (if 0 \leq v1 and it is wrong that 0 is equal to v1 and (v1 \leq v0 and it is wrong that v1 is equal to v0) then v0 divides \cho{ v0 }{ v1 })
+Proof:
+  \fac{ p } is equal to \cho{ p }{ k } * \fac{ k } * \fac{ p - k }
+  p divides \fac{ p }
+  it is wrong that p divides \fac{ k }
+  it is wrong that p divides \fac{ p - k }
+  it is wrong that p divides \fac{ k } * \fac{ p - k }
+  p divides \cho{ p }{ k }
+Qed.
+
+Definition:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then for all v2, (v2 is equal to \Seq{ v0 }{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a natural number and v0 \leq v3 and v3 \leq v1 and v3 is an object))
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then \Seq{ v0 }{ v1 } is a set
+Proof:
+Qed.
+
+Theorem:
+  \Seq{ 1 }{ 0 } is equal to \emptyset
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 then \Seq{ 1 }{ v0 } is a subset of \Seq{ 1 }{ v1 })
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then \Seq{ 1 }{ v0 } \cup \sing{ v0 + 1 } is equal to \Seq{ 1 }{ v0 + 1 }
+Proof:
+  \Seq{ 1 }{ n } \cup \sing{ n + 1 } is a subset of \Seq{ 1 }{ n + 1 }
+  Proof:
+    \Seq{ 1 }{ n } is a subset of \Seq{ 1 }{ n + 1 }
+    \sing{ n + 1 } is a subset of \Seq{ 1 }{ n + 1 }
+  Qed.
+  \Seq{ 1 }{ n + 1 } is a subset of \Seq{ 1 }{ n } \cup \sing{ n + 1 }
+  Proof:
+    m is an element of \Seq{ 1 }{ n + 1 }
+    1 \leq m and m \leq n + 1
+    m is an element of \Seq{ 1 }{ n } \cup \sing{ n + 1 }
+    Proof:
+      if m \leq n then the thesis holds
+      m is equal to n + 1
+    Qed.
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a natural number then for all v1, (v1 is a sequence of length v0) iff (v1 is a map and the domain of v1 is equal to \Seq{ 1 }{ v0 })
+
+Definition:
+  for all v0, for all v1, if v0 is a map and v1 is a natural number then (if \Seq{ 1 }{ v1 } is a subset of the domain of v0 then for all v2, (v2 is equal to \FinSet{ v0 }{1}{ v1 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of \Seq{ 1 }{ v1 } and v3 is equal to the value of v0 under v4)))
+
+Theorem:
+  for all v0, for all v1, if v0 is a map and v1 is a natural number then (if \Seq{ 1 }{ v1 } is a subset of the domain of v0 then \FinSet{ v0 }{1}{ v1 } is a set)
+Proof:
+  X is equal to \Seq{ 1 }{ n }
+  X is a set and X is a subset of the domain of a
+  SetInt timelimit 10  Y is a set and Y is a class and for all v0, v0 is an element of Y iff (v0 is an object and for some v1, v1 is an element of X and v0 is equal to the value of a under v1)
+  SetInt timelimit 3  Y is equal to \FinSet{ a }{1}{ n }
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a map and v1 is a natural number then (if \Seq{ 1 }{ v1 } is a subset of the domain of v0 then for all v2, if v2 is a natural number then (if v2 \leq v1 then (\Seq{ 1 }{ v2 } is a subset of the domain of v0 and \FinSet{ v0 }{1}{ v2 } is a subset of \FinSet{ v0 }{1}{ v1 })))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a map then \FinSet{ v0 }{1}{ 0 } is equal to \emptyset
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a map and v1 is a natural number then (if \Seq{ 1 }{ v1 + 1 } is a subset of the domain of v0 then (\FinSet{ v0 }{1}{ v1 } is a set and \sing{ the value of v0 under v1 + 1 } is a set and \FinSet{ v0 }{1}{ v1 } \cup \sing{ the value of v0 under v1 + 1 } is equal to \FinSet{ v0 }{1}{ v1 + 1 }))
+Proof:
+  n + 1 is an element of the domain of a
+  \sing{ the value of a under n + 1 } is a set and \FinSet{ a }{1}{ n } is a set
+  \FinSet{ a }{1}{ n } \cup \sing{ the value of a under n + 1 } is a subset of \FinSet{ a }{1}{ n + 1 }
+  Proof:
+    \FinSet{ a }{1}{ n } is a subset of \FinSet{ a }{1}{ n + 1 }
+    \sing{ the value of a under n + 1 } is a subset of \FinSet{ a }{1}{ n + 1 }
+  Qed.
+  \FinSet{ a }{1}{ n + 1 } is a subset of \FinSet{ a }{1}{ n } \cup \sing{ the value of a under n + 1 }
+  Proof:
+    x is an element of \FinSet{ a }{1}{ n + 1 }
+    m is an element of \Seq{ 1 }{ n + 1 } and x is equal to the value of a under m
+    x is an element of \FinSet{ a }{1}{ n } \cup \sing{ the value of a under n + 1 }
+    Proof:
+      m is an element of \Seq{ 1 }{ n } \cup \sing{ n + 1 }
+      if m is an element of \Seq{ 1 }{ n } then the thesis holds
+      m is an element of \sing{ n + 1 }
+      m is equal to n + 1
+    Qed.
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then ((v0 is finite) iff for some v1, v1 is a natural number and for some v2, v2 is a map and \Seq{ 1 }{ v1 } is a subset of the domain of v2 and v0 is equal to \FinSet{ v2 }{1}{ v1 })
+
+Theorem:
+  \emptyset is finite
+Proof:
+  a is a map and (the domain of a is equal to \Seq{ 1 }{ 0 }) and for all v0, if v0 is an object then (if v0 is an element of the domain of a then (the value of a under v0 is equal to v0))
+  \FinSet{ a }{1}{ 0 } is equal to \emptyset
+Qed.
+
+Theorem:
+  for all v0, if v0 is an object then \sing{ v0 } is finite
+Proof:
+  a is a map and (the domain of a is equal to \Seq{ 1 }{ 1 }) and for all v0, if v0 is an object then (if v0 is an element of the domain of a then (the value of a under v0 is equal to u))
+  \FinSet{ a }{1}{ 1 } is equal to \sing{ u }
+Qed.
+
+Theorem:
+  for all v0, if v0 is an object then (v0 is an element of \Seq{ 1 }{ 2 } iff (v0 is equal to 1 or v0 is equal to 2))
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is an object and v1 is an object then \unp{ v0 }{ v1 } is finite
+Proof:
+  a is a map and (the domain of a is equal to \Seq{ 1 }{ 2 }) and for all v0, if v0 is an object then (if v0 is an element of the domain of a then ((if v0 is equal to 1 then (the value of a under v0 is equal to u)) and (if v0 is equal to 2 then (the value of a under v0 is equal to v))))
+  \FinSet{ a }{1}{ 2 } is equal to \unp{ u }{ v }
+Qed.
+
+Definition:
+  for all v0, if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite)
+
+Signature:
+  for all v0, if v0 is a group then v0 is a set
+
+Signature:
+  for all v0, if v0 is a group then for all v1, if v1 is equal to 0^{ v0 } then v1 is an element of v0
+
+Signature:
+  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is equal to v1 +^{ v0 } v2 then v3 is an element of v0
+
+Signature:
+  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then for all v2, if v2 is equal to -^{ v0 } v1 then v2 is an element of v0
+
+Axiom (associativity):
+  for all v0, if v0 is a group then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 +^{ v0 } v2 +^{ v0 } v3 is equal to v1 +^{ v0 } v2 +^{ v0 } v3
+
+Axiom:
+  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then v1 +^{ v0 } 0^{ v0 } is equal to v1
+
+Axiom:
+  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then v1 +^{ v0 } -^{ v0 } v1 is equal to 0^{ v0 }
+
+Axiom:
+  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 +^{ v0 } v2 is equal to v2 +^{ v0 } v1
+
+Theorem:
+  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then -^{ v0 } -^{ v0 } v1 is equal to v1
+Proof:
+  x is an element of G
+  -^{ G } -^{ G } x is equal to -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x and -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x is equal to -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x and -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x is equal to x
+Qed.
+
+Theorem:
+  for all v0, if v0 is a group then for all v1, if v1 is an element of v0 then -^{ v0 } -^{ v0 } v1 is equal to v1
+Proof:
+  x is an element of G
+  -^{ G } -^{ G } x is equal to -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x and -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x is equal to -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x and -^{ G } -^{ G } x +^{ G } -^{ G } x +^{ G } x is equal to x
+Qed.
+
+Theorem:
+  for all v0, if v0 is a group then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then -^{ v0 } v1 +^{ v0 } v2 is equal to -^{ v0 } v1 +^{ v0 } -^{ v0 } v2
+Proof:
+  x +^{ G } y +^{ G } -^{ G } x +^{ G } -^{ G } y is equal to 0^{ G }
+Qed.
+
+Definition:
+  for all v0, if v0 is a group then for all v1, (v1 is a subgroup of v0) iff (v1 is a subset of v0 and 0^{ v0 } is an element of v1 and for all v2, for all v3, if v2 is an element of v1 and v3 is an element of v1 then (v2 +^{ v0 } v3 is an element of v1 and -^{ v0 } v2 is an element of v1))
+
+Theorem:
+  for all v0, if v0 is a group then v0 is a subgroup of v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a group then \sing{ 0^{ v0 } } is a subgroup of v0
+Proof:
+  x is an element of \sing{ 0^{ G } } and y is an element of \sing{ 0^{ G } }
+  x is equal to 0^{ G } and y is equal to 0^{ G }
+  x +^{ G } y is equal to 0^{ G } and 0^{ G } is an element of \sing{ 0^{ G } } and (-^{ G } x is equal to 0^{ G } and 0^{ G } is an element of \sing{ 0^{ G } })
+Qed.
+
+Theorem:
+  for all v0, if v0 is a group then for all v1, if v1 is a set and v1 is nonempty and for all v2, if v2 is an element of v1 then v2 is a subgroup of v0 then \bigcap v1 is a subgroup of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a group then for all v1, if v1 is a subset of v0 then for all v2, (v2 is equal to [ v1 ]^{ v0 }) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and for all v4, if v4 is a subgroup of v0 and v1 is a subset of v4 then v3 is an element of v4))
+
+Theorem:
+  for all v0, if v0 is a group then for all v1, if v1 is a subset of v0 then ([ v1 ]^{ v0 } is a subgroup of v0 and v1 is a subset of [ v1 ]^{ v0 })
+Proof:
+  [ A ]^{ G } is a subset of G
+  0^{ G } is an element of [ A ]^{ G }
+  for all v0, for all v1, if v0 is an element of [ A ]^{ G } and v1 is an element of [ A ]^{ G } then v0 +^{ G } v1 is an element of [ A ]^{ G }
+  for all v0, if v0 is an element of [ A ]^{ G } then -^{ G } v0 is an element of [ A ]^{ G }
+  [ A ]^{ G } is a subgroup of G
+  x is an element of A
+  x is an element of [ A ]^{ G }
+Qed.
+
+Definition:
+  for all v0, if v0 is a group then for all v1, for all v2, if v1 is a subset of v0 and v2 is an element of v0 then for all v3, (v3 is equal to v2 \oplus^{ v0 } v1) iff (v3 is a class and for all v4, v4 is an element of v3 iff (v4 is an object and for some v5, v5 is an element of v1 and v4 is equal to v2 +^{ v0 } v5))
+
+Signature:
+  for all v0, if v0 is a ring then v0 is a group
+
+Signature:
+  for all v0, if v0 is a ring then for all v1, if v1 is equal to 1^{ v0 } then (v1 is an element of v0 and it is wrong that v1 is equal to 0^{ v0 })
+
+Signature:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is equal to v1 \cdot^{ v0 } v2 then v3 is an element of v0
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 \cdot^{ v0 } v2 \cdot^{ v0 } v3 is equal to v1 \cdot^{ v0 } v2 \cdot^{ v0 } v3
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then v1 \cdot^{ v0 } 1^{ v0 } is equal to v1
+
+Axiom (commutativity):
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 \cdot^{ v0 } v2 is equal to v2 \cdot^{ v0 } v1
+
+Axiom (distributivity):
+  for all v0, if v0 is a ring then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 +^{ v0 } v2 \cdot^{ v0 } v3 is equal to v1 \cdot^{ v0 } v3 +^{ v0 } v2 \cdot^{ v0 } v3
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v3 \cdot^{ v0 } v1 +^{ v0 } v2 is equal to v3 \cdot^{ v0 } v1 +^{ v0 } v3 \cdot^{ v0 } v2
+Proof:
+  x is an element of R and y is an element of R and z is an element of R
+  z \cdot^{ R } x +^{ R } y is equal to x +^{ R } y \cdot^{ R } z and x +^{ R } y \cdot^{ R } z is equal to x \cdot^{ R } z +^{ R } y \cdot^{ R } z and x \cdot^{ R } z +^{ R } y \cdot^{ R } z is equal to z \cdot^{ R } x +^{ R } z \cdot^{ R } y
+  Proof:
+    v is equal to x \cdot^{ R } z
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then 0^{ v0 } \cdot^{ v0 } v1 is equal to 0^{ v0 }
+Proof:
+  x is an element of R
+  0^{ R } \cdot^{ R } x +^{ R } x is equal to 0^{ R } \cdot^{ R } x +^{ R } 1^{ R } \cdot^{ R } x and 0^{ R } \cdot^{ R } x +^{ R } 1^{ R } \cdot^{ R } x is equal to 0^{ R } +^{ R } 1^{ R } \cdot^{ R } x and 0^{ R } +^{ R } 1^{ R } \cdot^{ R } x is equal to 1^{ R } \cdot^{ R } x and 1^{ R } \cdot^{ R } x is equal to x
+  0^{ R } \cdot^{ R } x is equal to 0^{ R } \cdot^{ R } x +^{ R } -^{ R } x +^{ R } x and 0^{ R } \cdot^{ R } x +^{ R } -^{ R } x +^{ R } x is equal to 0^{ R }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then -^{ v0 } 1^{ v0 } \cdot^{ v0 } v1 is equal to -^{ v0 } v1
+Proof:
+  x is an element of R
+  -^{ R } 1^{ R } \cdot^{ R } x is equal to -^{ R } 1^{ R } \cdot^{ R } x +^{ R } x +^{ R } -^{ R } x and -^{ R } 1^{ R } \cdot^{ R } x +^{ R } x +^{ R } -^{ R } x is equal to -^{ R } 1^{ R } \cdot^{ R } x +^{ R } x +^{ R } -^{ R } x and -^{ R } 1^{ R } \cdot^{ R } x +^{ R } x +^{ R } -^{ R } x is equal to -^{ R } 1^{ R } \cdot^{ R } x +^{ R } 1^{ R } \cdot^{ R } x +^{ R } -^{ R } x
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then -^{ v0 } v1 \cdot^{ v0 } v2 is equal to -^{ v0 } v1 \cdot^{ v0 } v2
+Proof:
+  x is an element of R and y is an element of R
+  -^{ R } x \cdot^{ R } y is equal to -^{ R } 1^{ R } \cdot^{ R } x \cdot^{ R } y
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then -^{ v0 } 1^{ v0 } \cdot^{ v0 } -^{ v0 } 1^{ v0 } is equal to 1^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v1 +^{ v0 } -^{ v0 } v1 +^{ v0 } -^{ v0 } v2 is equal to v2
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, for all v3, if v1 is an element of v0 and v2 is an element of v0 and v3 is an element of v0 then v1 +^{ v0 } -^{ v0 } v2 \cdot^{ v0 } v3 is equal to v1 \cdot^{ v0 } v3 +^{ v0 } -^{ v0 } v2 \cdot^{ v0 } v3
+Proof:
+  u is equal to -^{ R } y
+  u is an element of R
+  x +^{ R } -^{ R } y \cdot^{ R } z is equal to x +^{ R } u \cdot^{ R } z
+  x +^{ R } u \cdot^{ R } z is equal to x \cdot^{ R } z +^{ R } u \cdot^{ R } z and x \cdot^{ R } z +^{ R } u \cdot^{ R } z is equal to x \cdot^{ R } z +^{ R } -^{ R } y \cdot^{ R } z
+Qed.
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then ((v1 is closed under multiplication in v0) iff for all v2, for all v3, if v2 is an element of v1 and v3 is an element of v1 then v2 \cdot^{ v0 } v3 is an element of v1)
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, (v1 is a subring of v0) iff (v1 is a subgroup of v0 and 1^{ v0 } is an element of v1 and v1 is closed under multiplication in v0)
+
+Theorem:
+  for all v0, if v0 is a ring then v0 is a subring of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subset of v0 and v2 is a subset of v0 then for all v3, (v3 is equal to v1 \star^{ v0 } v2) iff (v3 is a class and (if v0 is a set then v3 is a set) and for all v4, v4 is an element of v3 iff (v4 is an element of v0 and v4 is an object and for some v5, for some v6, v5 is an element of v1 and v6 is an element of v2 and v4 is equal to v5 \cdot^{ v0 } v6))
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subset of v0 and v2 is a subset of v0 then for all v3, (v3 is equal to v1 \ast^{ v0 } v2) iff v3 is equal to [ v1 \star^{ v0 } v2 ]^{ v0 }
+
+Signature:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then for all v2, if v2 is a subset of v0 and 1 \leq v1 then for all v3, if v3 is equal to v2 ^{ v1 , v0 ,subset} then v3 is a subset of v0
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then v1 ^{ 1 , v0 ,subset} is equal to v1
+
+Axiom:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then for all v2, if v2 is a subset of v0 and 1 \leq v1 then v2 ^{ v1 + 1 , v0 ,subset} is equal to v2 ^{ v1 , v0 ,subset} \ast^{ v0 } v2
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then for all v2, if v2 is a natural number and 1 \leq v2 and it is wrong that 1 is equal to v2 then (if for all v3, if v3 is a natural number and 1 \leq v3 and it is wrong that 1 is equal to v3 then (if v3 is inductively less than v2 then v1 ^{ v3 , v0 ,subset} is a subgroup of v0) then v1 ^{ v2 , v0 ,subset} is a subgroup of v0)
+Proof:
+  n is a natural number
+  if n \leq 1 then the thesis holds
+  m is a natural number and n is equal to m + 1
+  B ^{ n , R ,subset} is equal to B ^{ m , R ,subset} \ast^{ R } B and B ^{ n , R ,subset} is a subgroup of R
+Qed.
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then for all v2, (v2 is equal to \Powers{ v1 }{ v0 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of \mathbb{N} and 1 \leq v4 and v3 is equal to v1 ^{ v4 , v0 ,subset}))
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then \Powers{ v1 }{ v0 } is a set
+Proof:
+  \mathbb{N} is a set
+Qed.
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, (v1 is an unit in v0) iff (v1 is an element of v0 and for some v2, v2 is an element of v0 and v1 \cdot^{ v0 } v2 is equal to 1^{ v0 })
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 then for all v2, for all v3, if v2 is an element of v0 and v3 is an element of v0 then ((v2 divides v3 in v1 within v0) iff for some v4, v4 is an element of v1 and v2 \cdot^{ v0 } v4 is equal to v3)
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, for all v4, if v2 is an element of v0 and v3 is an element of v0 and v4 is an element of v0 then (if v2 divides v3 in v1 within v0 and v3 divides v4 in v1 within v0 then v2 divides v4 in v1 within v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, for all v4, if v2 is an element of v0 and v3 is an element of v0 and v4 is an element of v0 then (if v2 divides v3 in v1 within v0 and v2 divides v4 in v1 within v0 then v2 divides v3 +^{ v0 } v4 in v1 within v0)
+Proof:
+  u is an element of S and x \cdot^{ R } u is equal to y
+  v is an element of S and x \cdot^{ R } v is equal to z
+  x \cdot^{ R } u +^{ R } v is equal to y +^{ R } z and u +^{ R } v is an element of S
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, if v2 is an element of v0 and v3 is an element of v0 then (if v2 divides v3 in v1 within v0 then v2 divides -^{ v0 } v3 in v1 within v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, for all v4, if v2 is an element of v0 and v3 is an element of v0 and v4 is an element of v0 then (if v2 divides v3 in v1 within v0 and v2 divides v4 in v1 within v0 then v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0)
+Proof:
+  x divides -^{ R } z in S within R
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, if v3 is an element of v1 then v2 divides v3 +^{ v0 } -^{ v0 } v3 in v1 within v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, for all v4, if v3 is an element of v1 and v4 is an element of v1 and v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0 then v2 divides v4 +^{ v0 } -^{ v0 } v3 in v1 within v0
+Proof:
+  a divides x +^{ R } -^{ R } y in S within R
+  a divides -^{ R } x +^{ R } -^{ R } y in S within R
+  y +^{ R } -^{ R } x is equal to -^{ R } x +^{ R } -^{ R } y
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, for all v4, for all v5, if v3 is an element of v1 and v4 is an element of v1 and v5 is an element of v1 and (v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0 and v2 divides v4 +^{ v0 } -^{ v0 } v5 in v1 within v0) then v2 divides v3 +^{ v0 } -^{ v0 } v5 in v1 within v0
+Proof:
+  u is an element of S and x +^{ R } -^{ R } y is equal to a \cdot^{ R } u
+  v is an element of S and y +^{ R } -^{ R } z is equal to a \cdot^{ R } v
+  x +^{ R } -^{ R } z is equal to x +^{ R } -^{ R } y +^{ R } y +^{ R } -^{ R } z and x +^{ R } -^{ R } y +^{ R } y +^{ R } -^{ R } z is equal to x +^{ R } -^{ R } y +^{ R } y +^{ R } -^{ R } z and x +^{ R } -^{ R } y +^{ R } y +^{ R } -^{ R } z is equal to a \cdot^{ R } u +^{ R } a \cdot^{ R } v and a \cdot^{ R } u +^{ R } a \cdot^{ R } v is equal to a \cdot^{ R } u +^{ R } v
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, for all v4, for all v5, for all v6, if v3 is an element of v1 and v4 is an element of v1 and v5 is an element of v1 and v6 is an element of v1 and (v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0 and v2 divides v5 +^{ v0 } -^{ v0 } v6 in v1 within v0) then v2 divides v3 +^{ v0 } v5 +^{ v0 } -^{ v0 } v4 +^{ v0 } v6 in v1 within v0
+Proof:
+  u is an element of S and x +^{ R } -^{ R } x' is equal to a \cdot^{ R } u
+  v is an element of S and y +^{ R } -^{ R } y' is equal to a \cdot^{ R } v
+  x +^{ R } y +^{ R } -^{ R } x' +^{ R } y' is equal to x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' and x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' is equal to x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' and x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' is equal to x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' and x +^{ R } y +^{ R } -^{ R } x' +^{ R } -^{ R } y' is equal to x +^{ R } -^{ R } x' +^{ R } y +^{ R } -^{ R } y' and x +^{ R } -^{ R } x' +^{ R } y +^{ R } -^{ R } y' is equal to x +^{ R } -^{ R } x' +^{ R } y +^{ R } -^{ R } y' and x +^{ R } -^{ R } x' +^{ R } y +^{ R } -^{ R } y' is equal to a \cdot^{ R } u +^{ R } a \cdot^{ R } v
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, for all v4, if v3 is an element of v1 and v4 is an element of v1 and v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0 then v2 divides -^{ v0 } v3 +^{ v0 } -^{ v0 } -^{ v0 } v4 in v1 within v0
+Proof:
+  z is an element of S and x +^{ R } -^{ R } x' is equal to a \cdot^{ R } z
+  -^{ R } 1^{ R } \cdot^{ R } x +^{ R } -^{ R } x' is equal to -^{ R } 1^{ R } \cdot^{ R } a \cdot^{ R } z
+  -^{ R } x +^{ R } -^{ R } -^{ R } x' is equal to -^{ R } 1^{ R } \cdot^{ R } x +^{ R } -^{ R } -^{ R } 1^{ R } \cdot^{ R } x' and -^{ R } 1^{ R } \cdot^{ R } x +^{ R } -^{ R } -^{ R } 1^{ R } \cdot^{ R } x' is equal to -^{ R } 1^{ R } \cdot^{ R } a \cdot^{ R } z
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then for all v3, for all v4, for all v5, for all v6, if v3 is an element of v1 and v4 is an element of v1 and v5 is an element of v1 and v6 is an element of v1 and (v2 divides v3 +^{ v0 } -^{ v0 } v4 in v1 within v0 and v2 divides v5 +^{ v0 } -^{ v0 } v6 in v1 within v0) then v2 divides v3 \cdot^{ v0 } v5 +^{ v0 } -^{ v0 } v4 \cdot^{ v0 } v6 in v1 within v0
+Proof:
+  u is an element of S and x +^{ R } -^{ R } x' is equal to a \cdot^{ R } u
+  v is an element of S and y +^{ R } -^{ R } y' is equal to a \cdot^{ R } v
+  x \cdot^{ R } y is equal to x \cdot^{ R } y +^{ R } 0^{ R } and x \cdot^{ R } y +^{ R } 0^{ R } is equal to x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y and x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y is equal to x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y and x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y is equal to x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y
+  x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' is equal to x' \cdot^{ R } y +^{ R } -^{ R } y'
+  SetInt timelimit 10  x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' is equal to x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' and x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' is equal to x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y'
+  x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' is equal to x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' and x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' is equal to x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } y' and x +^{ R } -^{ R } x' \cdot^{ R } y +^{ R } x' \cdot^{ R } y +^{ R } -^{ R } y' is equal to a \cdot^{ R } u \cdot^{ R } y +^{ R } x' \cdot^{ R } a \cdot^{ R } v and a \cdot^{ R } u \cdot^{ R } y +^{ R } x' \cdot^{ R } a \cdot^{ R } v is equal to a \cdot^{ R } u \cdot^{ R } y +^{ R } x' \cdot^{ R } a \cdot^{ R } v and a \cdot^{ R } u \cdot^{ R } y +^{ R } x' \cdot^{ R } a \cdot^{ R } v is equal to a \cdot^{ R } u \cdot^{ R } y +^{ R } a \cdot^{ R } x' \cdot^{ R } v and a \cdot^{ R } u \cdot^{ R } y +^{ R } a \cdot^{ R } x' \cdot^{ R } v is equal to a \cdot^{ R } u \cdot^{ R } y +^{ R } a \cdot^{ R } x' \cdot^{ R } v and a \cdot^{ R } u \cdot^{ R } y +^{ R } a \cdot^{ R } x' \cdot^{ R } v is equal to a \cdot^{ R } u \cdot^{ R } y +^{ R } x' \cdot^{ R } v
+  SetInt timelimit 3  a divides x \cdot^{ R } y +^{ R } -^{ R } x' \cdot^{ R } y' in S within R
+  Proof:
+    u \cdot^{ R } y +^{ R } x' \cdot^{ R } v is an element of S
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then (if it is wrong that v2 divides 1^{ v0 } in v1 within v0 then it is wrong that v2 divides 0^{ v0 } +^{ v0 } -^{ v0 } 1^{ v0 } in v1 within v0)
+Proof:
+Qed.
+
+Signature:
+  for all v0, if v0 is a natural number then for all v1, if v1 is a ring then for all v2, if v2 is equal to v0 ^{[ v1 ]} then v2 is an element of v1
+
+Axiom:
+  for all v0, if v0 is a ring then 0 ^{[ v0 ]} is equal to 0^{ v0 }
+
+Axiom:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then v1 + 1 ^{[ v0 ]} is equal to v1 ^{[ v0 ]} +^{ v0 } 1^{ v0 }
+
+Theorem:
+  for all v0, if v0 is a ring then 1 ^{[ v0 ]} is equal to 1^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, if v2 is a natural number then (if for all v3, if v3 is a natural number then (if v3 is inductively less than v2 then v3 ^{[ v0 ]} is an element of v1) then v2 ^{[ v0 ]} is an element of v1)
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  m is equal to n - 1
+  n ^{[ R ]} is equal to m ^{[ R ]} +^{ R } 1^{ R } and m ^{[ R ]} +^{ R } 1^{ R } is an element of S
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then for all v2, if v2 is a natural number then (if for all v3, if v3 is a natural number then (if v3 is inductively less than v2 then v1 + v3 ^{[ v0 ]} is equal to v1 ^{[ v0 ]} +^{ v0 } v3 ^{[ v0 ]}) then v1 + v2 ^{[ v0 ]} is equal to v1 ^{[ v0 ]} +^{ v0 } v2 ^{[ v0 ]})
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  l is equal to n - 1
+  m + n ^{[ R ]} is equal to m + l + 1 ^{[ R ]} and m + l + 1 ^{[ R ]} is equal to m + l ^{[ R ]} +^{ R } 1^{ R } and m + l ^{[ R ]} +^{ R } 1^{ R } is equal to m ^{[ R ]} +^{ R } l ^{[ R ]} +^{ R } 1^{ R } and m ^{[ R ]} +^{ R } l ^{[ R ]} +^{ R } 1^{ R } is equal to m ^{[ R ]} +^{ R } n ^{[ R ]}
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then for all v2, if v2 is a natural number then (if for all v3, if v3 is a natural number then (if v3 is inductively less than v2 then v1 * v3 ^{[ v0 ]} is equal to v1 ^{[ v0 ]} \cdot^{ v0 } v3 ^{[ v0 ]}) then v1 * v2 ^{[ v0 ]} is equal to v1 ^{[ v0 ]} \cdot^{ v0 } v2 ^{[ v0 ]})
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  l is equal to n - 1
+  m * n ^{[ R ]} is equal to m * l + m ^{[ R ]} and m * l + m ^{[ R ]} is equal to m * l ^{[ R ]} +^{ R } m ^{[ R ]} and m * l ^{[ R ]} +^{ R } m ^{[ R ]} is equal to m ^{[ R ]} \cdot^{ R } l ^{[ R ]} +^{ R } m ^{[ R ]} and m ^{[ R ]} \cdot^{ R } l ^{[ R ]} +^{ R } m ^{[ R ]} is equal to m ^{[ R ]} \cdot^{ R } l ^{[ R ]} +^{ R } m ^{[ R ]} \cdot^{ R } 1^{ R } and m ^{[ R ]} \cdot^{ R } l ^{[ R ]} +^{ R } m ^{[ R ]} \cdot^{ R } 1^{ R } is equal to m ^{[ R ]} \cdot^{ R } l + 1 ^{[ R ]}
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, if v2 is a natural number and v3 is a natural number then (if v2 divides v3 then v2 ^{[ v0 ]} divides v3 ^{[ v0 ]} in v1 within v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is a subring of v0 and v2 is an element of v1 then 2 ^{[ v0 ]} divides v2 +^{ v0 } -^{ v0 } -^{ v0 } v2 in v1 within v0
+Proof:
+  x +^{ R } -^{ R } -^{ R } x is equal to x +^{ R } x and x +^{ R } x is equal to 1^{ R } +^{ R } 1^{ R } \cdot^{ R } x and 1^{ R } +^{ R } 1^{ R } \cdot^{ R } x is equal to 2 ^{[ R ]} \cdot^{ R } x
+Qed.
+
+Signature:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then for all v2, if v2 is a natural number then for all v3, if v3 is equal to v1 ^{ v2 , v0 } then v3 is an element of v0
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then v1 ^{ 0 , v0 } is equal to 1^{ v0 }
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then for all v2, if v2 is a natural number then v1 ^{ v2 + 1 , v0 } is equal to v1 ^{ v2 , v0 } \cdot^{ v0 } v1
+
+Theorem:
+  for all v0, if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, if v1 is a ring then 0^{ v1 } ^{ v0 , v1 } is equal to 0^{ v1 })
+Proof:
+  m is a natural number and n is equal to m + 1
+  0^{ R } ^{ m + 1 , R } is equal to 0^{ R } ^{ m , R } \cdot^{ R } 0^{ R } and 0^{ R } ^{ m , R } \cdot^{ R } 0^{ R } is equal to 0^{ R }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then for all v2, if v2 is a natural number then (if for all v3, if v3 is a natural number then (if v3 is inductively less than v2 then ((if v3 is even then -^{ v0 } v1 ^{ v3 , v0 } is equal to v1 ^{ v3 , v0 }) and (if it is wrong that v3 is even then -^{ v0 } v1 ^{ v3 , v0 } is equal to -^{ v0 } v1 ^{ v3 , v0 }))) then ((if v2 is even then -^{ v0 } v1 ^{ v2 , v0 } is equal to v1 ^{ v2 , v0 }) and (if it is wrong that v2 is even then -^{ v0 } v1 ^{ v2 , v0 } is equal to -^{ v0 } v1 ^{ v2 , v0 })))
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  m is equal to n - 1
+  if n is even then the thesis holds
+  Proof:
+    m is inductively less than n and it is wrong that m is even
+    -^{ R } x ^{ m , R } is equal to -^{ R } x ^{ m , R }
+    -^{ R } x ^{ n , R } is equal to -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x is equal to -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x is equal to x ^{ m , R } \cdot^{ R } x and x ^{ m , R } \cdot^{ R } x is equal to x ^{ n , R }
+  Qed.
+  if it is wrong that n is even then the thesis holds
+  Proof:
+    m is inductively less than n and m is even
+    -^{ R } x ^{ m , R } is equal to x ^{ m , R }
+    -^{ R } x ^{ n , R } is equal to -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x is equal to x ^{ m , R } \cdot^{ R } -^{ R } x and x ^{ m , R } \cdot^{ R } -^{ R } x is equal to -^{ R } x ^{ m , R } \cdot^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } x is equal to -^{ R } x ^{ n , R }
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a natural number then (if for all v2, if v2 is a natural number then (if v2 is inductively less than v1 then 1^{ v0 } ^{ v2 , v0 } is equal to 1^{ v0 }) then 1^{ v0 } ^{ v1 , v0 } is equal to 1^{ v0 })
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then for all v1, if v1 is a ring then (-^{ v1 } 1^{ v1 } ^{ v0 , v1 } is equal to 1^{ v1 } or -^{ v1 } 1^{ v1 } ^{ v0 , v1 } is equal to -^{ v1 } 1^{ v1 })
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v2 is an element of v0 and v1 is a natural number then for all v3, if v3 is a natural number then (if for all v4, if v4 is a natural number then (if v4 is inductively less than v3 then v2 ^{ v1 , v0 } \cdot^{ v0 } v2 ^{ v4 , v0 } is equal to v2 ^{ v1 + v4 , v0 }) then v2 ^{ v1 , v0 } \cdot^{ v0 } v2 ^{ v3 , v0 } is equal to v2 ^{ v1 + v3 , v0 })
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  k is a natural number and n is equal to k + 1
+  x ^{ m , R } \cdot^{ R } x ^{ n , R } is equal to x ^{ m , R } \cdot^{ R } x ^{ k + 1 , R } and x ^{ m , R } \cdot^{ R } x ^{ k + 1 , R } is equal to x ^{ m , R } \cdot^{ R } x ^{ k , R } \cdot^{ R } x and x ^{ m , R } \cdot^{ R } x ^{ k , R } \cdot^{ R } x is equal to x ^{ m , R } \cdot^{ R } x ^{ k , R } \cdot^{ R } x and x ^{ m , R } \cdot^{ R } x ^{ k , R } \cdot^{ R } x is equal to x ^{ m + k , R } \cdot^{ R } x and x ^{ m + k , R } \cdot^{ R } x is equal to x ^{ m + k + 1 , R } and x ^{ m + k + 1 , R } is equal to x ^{ m + n , R }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v2 is an element of v0 and v1 is a natural number then for all v3, if v3 is a natural number then (if for all v4, if v4 is a natural number then (if v4 is inductively less than v3 then v2 ^{ v1 , v0 } ^{ v4 , v0 } is equal to v2 ^{ v1 * v4 , v0 }) then v2 ^{ v1 , v0 } ^{ v3 , v0 } is equal to v2 ^{ v1 * v3 , v0 })
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  k is a natural number and n is equal to k + 1
+  x ^{ m , R } ^{ n , R } is equal to x ^{ m , R } ^{ k + 1 , R } and x ^{ m , R } ^{ k + 1 , R } is equal to x ^{ m , R } ^{ k , R } \cdot^{ R } x ^{ m , R }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is a natural number then (if for all v4, if v4 is a natural number then (if v4 is inductively less than v3 then v1 \cdot^{ v0 } v2 ^{ v4 , v0 } is equal to v1 ^{ v4 , v0 } \cdot^{ v0 } v2 ^{ v4 , v0 }) then v1 \cdot^{ v0 } v2 ^{ v3 , v0 } is equal to v1 ^{ v3 , v0 } \cdot^{ v0 } v2 ^{ v3 , v0 })
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  m is a natural number and n is equal to m + 1
+  x \cdot^{ R } y ^{ n , R } is equal to x \cdot^{ R } y ^{ m + 1 , R } and x \cdot^{ R } y ^{ m + 1 , R } is equal to x \cdot^{ R } y ^{ m , R } \cdot^{ R } x \cdot^{ R } y
+  x ^{ m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x \cdot^{ R } y is equal to x ^{ m , R } \cdot^{ R } x \cdot^{ R } y ^{ m , R } \cdot^{ R } y
+Qed.
+
+Definition:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then for all v2, (v2 is equal to \powers{ v1 }{ v0 }) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of \mathbb{N} and v3 is equal to v1 ^{ v4 , v0 }))
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then \powers{ v1 }{ v0 } is a set
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is an element of v0 then (\powers{ v1 }{ v0 } is a subset of v0 and \powers{ v1 }{ v0 } is closed under multiplication in v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subset of v0 and v1 is closed under multiplication in v0 then [ v1 ]^{ v0 } is closed under multiplication in v0
+Proof:
+  B is a class and (if R is a set then B is a set) and for all v0, v0 is an element of B iff (v0 is an element of R and v0 is an object and for all v1, if v1 is an element of A then v0 \cdot^{ R } v1 is an element of [ A ]^{ R })
+  B is a subset of R
+  0^{ R } is an element of B
+  for all v0, for all v1, if v0 is an element of B and v1 is an element of B then v0 +^{ R } v1 is an element of B
+  Proof:
+    x is an element of B and y is an element of B
+    a is an element of A
+    x \cdot^{ R } a is an element of [ A ]^{ R } and y \cdot^{ R } a is an element of [ A ]^{ R }
+    x +^{ R } y \cdot^{ R } a is equal to x \cdot^{ R } a +^{ R } y \cdot^{ R } a and x \cdot^{ R } a +^{ R } y \cdot^{ R } a is an element of [ A ]^{ R }
+  Qed.
+  for all v0, if v0 is an element of B then -^{ R } v0 is an element of B
+  Proof:
+    x is an element of B
+    a is an element of A
+    x \cdot^{ R } a is an element of [ A ]^{ R }
+    -^{ R } x \cdot^{ R } a is equal to -^{ R } x \cdot^{ R } a and -^{ R } x \cdot^{ R } a is an element of [ A ]^{ R }
+  Qed.
+  B is a subgroup of R
+  A is a subset of B
+  Proof:
+    A is closed under multiplication in R
+  Qed.
+  [ A ]^{ R } is a subset of B
+  for all v0, if v0 is an element of [ A ]^{ R } then for all v1, if v1 is an element of A then v0 \cdot^{ R } v1 is an element of [ A ]^{ R }
+  for all v0, if v0 is an element of A then for all v1, if v1 is an element of [ A ]^{ R } then v0 \cdot^{ R } v1 is an element of [ A ]^{ R }
+  C is a class and (if R is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of R and v0 is an object and for all v1, if v1 is an element of [ A ]^{ R } then v0 \cdot^{ R } v1 is an element of [ A ]^{ R })
+  C is a subset of R
+  0^{ R } is an element of C
+  for all v0, for all v1, if v0 is an element of C and v1 is an element of C then v0 +^{ R } v1 is an element of C
+  Proof:
+    x is an element of C and y is an element of C
+    a is an element of [ A ]^{ R }
+    x \cdot^{ R } a is an element of [ A ]^{ R } and y \cdot^{ R } a is an element of [ A ]^{ R }
+    x +^{ R } y \cdot^{ R } a is equal to x \cdot^{ R } a +^{ R } y \cdot^{ R } a and x \cdot^{ R } a +^{ R } y \cdot^{ R } a is an element of [ A ]^{ R }
+  Qed.
+  for all v0, if v0 is an element of C then -^{ R } v0 is an element of C
+  Proof:
+    x is an element of C
+    a is an element of [ A ]^{ R }
+    x \cdot^{ R } a is an element of [ A ]^{ R }
+    -^{ R } x \cdot^{ R } a is equal to -^{ R } x \cdot^{ R } a and -^{ R } x \cdot^{ R } a is an element of [ A ]^{ R }
+  Qed.
+  C is a subgroup of R
+  A is a subset of C
+  [ A ]^{ R } is a subset of C
+  for all v0, if v0 is an element of [ A ]^{ R } then for all v1, if v1 is an element of [ A ]^{ R } then v0 \cdot^{ R } v1 is an element of [ A ]^{ R }
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then \cho{ v1 }{ 0 } ^{[ v0 ]} is equal to 1^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a natural number and 1 \leq v1 then \cho{ 0 }{ v1 } ^{[ v0 ]} is equal to 0^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number then (if 1 \leq v0 then for all v1, for all v2, if v1 is a ring and v2 is a natural number then \cho{ v2 + 1 }{ v0 } ^{[ v1 ]} is equal to \cho{ v2 }{ v0 } ^{[ v1 ]} +^{ v1 } \cho{ v2 }{ v0 - 1 } ^{[ v1 ]})
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, for all v2, if v0 is a ring and v1 is a natural number and v2 is a natural number then (if v2 + 1 \leq v1 then \cho{ v2 }{ v1 } ^{[ v0 ]} is equal to 0^{ v0 })
+Proof:
+Qed.
+
+Theorem:
+  for all v0, for all v1, if v0 is a ring and v1 is a natural number then \cho{ v1 }{ v1 } ^{[ v0 ]} is equal to 1^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, if v2 is a natural number and v2 is prime then for all v3, if v3 is a natural number then (if 0 \leq v3 and it is wrong that 0 is equal to v3 and (v3 \leq v2 and it is wrong that v3 is equal to v2) then v2 ^{[ v0 ]} divides \cho{ v2 }{ v3 } ^{[ v0 ]} in v1 within v0)
+Proof:
+Qed.
+
+Signature:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, for all v4, if v3 is a natural number and v4 is a natural number then for all v5, if v5 is equal to \binsum{ v3 }{ v4 }{ v1 }{ v2 }{ v0 } then v5 is an element of v0
+
+Axiom:
+  for all v0, if v0 is a ring then for all v1, for all v2, for all v3, if v1 is a natural number and v2 is an element of v0 and v3 is an element of v0 then \binsum{ 0 }{ v1 }{ v2 }{ v3 }{ v0 } is equal to v2 ^{ v1 , v0 }
+
+Axiom (summation_recursion):
+  for all v0, for all v1, for all v2, if v0 is a ring and v1 is a natural number and v2 is a natural number then for all v3, for all v4, if 1 \leq v1 and v1 \leq v2 and (v3 is an element of v0 and v4 is an element of v0) then \binsum{ v1 }{ v2 }{ v3 }{ v4 }{ v0 } is equal to \binsum{ v1 - 1 }{ v2 }{ v3 }{ v4 }{ v0 } +^{ v0 } \cho{ v2 }{ v1 } ^{[ v0 ]} \cdot^{ v0 } v3 ^{ v2 - v1 , v0 } \cdot^{ v0 } v4 ^{ v1 , v0 }
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is a natural number then for all v4, if v4 is a natural number then (if v4 \leq v3 then (if for all v5, if v5 is a natural number then (if v5 \leq v3 then (if v5 is inductively less than v4 then \binsum{ v5 }{ v3 }{ v1 }{ v2 }{ v0 } \cdot^{ v0 } v1 +^{ v0 } v2 is equal to \binsum{ v5 }{ v3 + 1 }{ v1 }{ v2 }{ v0 } +^{ v0 } \cho{ v3 }{ v5 } ^{[ v0 ]} \cdot^{ v0 } v1 ^{ v3 - v5 , v0 } \cdot^{ v0 } v2 ^{ v5 + 1 , v0 })) then \binsum{ v4 }{ v3 }{ v1 }{ v2 }{ v0 } \cdot^{ v0 } v1 +^{ v0 } v2 is equal to \binsum{ v4 }{ v3 + 1 }{ v1 }{ v2 }{ v0 } +^{ v0 } \cho{ v3 }{ v4 } ^{[ v0 ]} \cdot^{ v0 } v1 ^{ v3 - v4 , v0 } \cdot^{ v0 } v2 ^{ v4 + 1 , v0 }))
+Proof:
+  m is a natural number and m \leq n
+  if m is equal to 0 then the thesis holds
+  Proof:
+    \binsum{ 0 }{ n }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y is equal to x ^{ n , R } \cdot^{ R } x +^{ R } y and x ^{ n , R } \cdot^{ R } x +^{ R } y is equal to x ^{ n , R } \cdot^{ R } x +^{ R } x ^{ n , R } \cdot^{ R } y and x ^{ n , R } \cdot^{ R } x +^{ R } x ^{ n , R } \cdot^{ R } y is equal to x ^{ n + 1 , R } +^{ R } x ^{ n , R } \cdot^{ R } y and x ^{ n + 1 , R } +^{ R } x ^{ n , R } \cdot^{ R } y is equal to \binsum{ 0 }{ n + 1 }{ x }{ y }{ R } +^{ R } 1^{ R } \cdot^{ R } x ^{ n , R } \cdot^{ R } y and \binsum{ 0 }{ n + 1 }{ x }{ y }{ R } +^{ R } 1^{ R } \cdot^{ R } x ^{ n , R } \cdot^{ R } y is equal to \binsum{ 0 }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ 0 } ^{[ R ]} \cdot^{ R } x ^{ n - 0 , R } \cdot^{ R } y and \binsum{ 0 }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ 0 } ^{[ R ]} \cdot^{ R } x ^{ n - 0 , R } \cdot^{ R } y is equal to \binsum{ 0 }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ 0 } ^{[ R ]} \cdot^{ R } x ^{ n - 0 , R } \cdot^{ R } y ^{ 0 + 1 , R }
+    Proof:
+      y is equal to 1^{ R } \cdot^{ R } y
+    Qed.
+  Qed.
+  m' is equal to m - 1
+  SetInt timelimit 30  \binsum{ m }{ n }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y is equal to \binsum{ m - 1 }{ n }{ x }{ y }{ R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y
+  SetInt timelimit 3  \binsum{ m - 1 }{ n }{ x }{ y }{ R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y is equal to \binsum{ m' }{ n }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y and \binsum{ m' }{ n }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y and \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } y is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y
+  SetInt timelimit 20  \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y
+  \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y is equal to \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y and \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y is equal to \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R }
+  \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } y is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R }
+  x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } is equal to x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } is equal to \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x is equal to \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x
+  x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x is equal to x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x and x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x is equal to x ^{ n - m , R } \cdot^{ R } x \cdot^{ R } y ^{ m , R } and x ^{ n - m , R } \cdot^{ R } x \cdot^{ R } y ^{ m , R } is equal to x ^{ n - m , R } \cdot^{ R } x \cdot^{ R } y ^{ m , R }
+  n - m + 1 is equal to n + 1 - m
+  x ^{ n - m , R } \cdot^{ R } x \cdot^{ R } y ^{ m , R } is equal to x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x is equal to \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } is equal to x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n - m' , R } \cdot^{ R } y ^{ m' + 1 , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m , R } \cdot^{ R } x +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } and \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R }
+  \cho{ n }{ m' } ^{[ R ]} +^{ R } \cho{ n }{ m } ^{[ R ]} is equal to \cho{ n + 1 }{ m } ^{[ R ]}
+  \binsum{ m }{ n + 1 }{ x }{ y }{ R } is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n + 1 }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R }
+  \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m' } ^{[ R ]} +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } is equal to \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n + 1 }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } and \binsum{ m' }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n + 1 }{ m } ^{[ R ]} \cdot^{ R } x ^{ n + 1 - m , R } \cdot^{ R } y ^{ m , R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R } is equal to \binsum{ m }{ n + 1 }{ x }{ y }{ R } +^{ R } \cho{ n }{ m } ^{[ R ]} \cdot^{ R } x ^{ n - m , R } \cdot^{ R } y ^{ m + 1 , R }
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then for all v3, if v3 is a natural number then (if for all v4, if v4 is a natural number then (if v4 is inductively less than v3 then v1 +^{ v0 } v2 ^{ v4 , v0 } is equal to \binsum{ v4 }{ v4 }{ v1 }{ v2 }{ v0 }) then v1 +^{ v0 } v2 ^{ v3 , v0 } is equal to \binsum{ v3 }{ v3 }{ v1 }{ v2 }{ v0 })
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  n' is equal to n - 1
+  x +^{ R } y ^{ n , R } is equal to x +^{ R } y ^{ n' , R } \cdot^{ R } x +^{ R } y and x +^{ R } y ^{ n' , R } \cdot^{ R } x +^{ R } y is equal to \binsum{ n' }{ n' }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y and \binsum{ n' }{ n' }{ x }{ y }{ R } \cdot^{ R } x +^{ R } y is equal to \binsum{ n' }{ n' + 1 }{ x }{ y }{ R } +^{ R } \cho{ n' }{ n' } ^{[ R ]} \cdot^{ R } x ^{ n' - n' , R } \cdot^{ R } y ^{ n' + 1 , R } and \binsum{ n' }{ n' + 1 }{ x }{ y }{ R } +^{ R } \cho{ n' }{ n' } ^{[ R ]} \cdot^{ R } x ^{ n' - n' , R } \cdot^{ R } y ^{ n' + 1 , R } is equal to \binsum{ n - 1 }{ n }{ x }{ y }{ R } +^{ R } \cho{ n }{ n } ^{[ R ]} \cdot^{ R } x ^{ n - n , R } \cdot^{ R } y ^{ n , R }
+  SetInt timelimit 8  \binsum{ n - 1 }{ n }{ x }{ y }{ R } +^{ R } \cho{ n }{ n } ^{[ R ]} \cdot^{ R } x ^{ n - n , R } \cdot^{ R } y ^{ n , R } is equal to \binsum{ n }{ n }{ x }{ y }{ R }
+  SetInt timelimit 3Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, for all v3, for all v4, if v2 is an element of v1 and v3 is an element of v1 and v4 is an element of v1 then (if v2 divides v3 in v1 within v0 then v2 divides v3 \cdot^{ v0 } v4 in v1 within v0)
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a ring then for all v1, if v1 is a subring of v0 then for all v2, if v2 is an element of v1 then for all v3, if v3 is a natural number then (if for all v4, if v4 is a natural number then (if v4 is inductively less than v3 then v2 ^{ v4 , v0 } is an element of v1) then v2 ^{ v3 , v0 } is an element of v1)
+Proof:
+  n is a natural number
+  if n is equal to 0 then the thesis holds
+  n' is equal to n - 1
+  x ^{ n' , R } is an element of S
+  x ^{ n , R } is equal to x ^{ n' , R } \cdot^{ R } x and x ^{ n' , R } \cdot^{ R } x is an element of S
+Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a ring then for all v2, for all v3, for all v4, if v2 is a subring of v1 and v3 is an element of v2 and v4 is an element of v2 then for all v5, if v5 is a natural number then (if v5 \leq v0 and it is wrong that v5 is equal to v0 then (if for all v6, if v6 is a natural number then (if v6 \leq v0 and it is wrong that v6 is equal to v0 then (if v6 is inductively less than v5 then v0 ^{[ v1 ]} divides \binsum{ v6 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1)) then v0 ^{[ v1 ]} divides \binsum{ v5 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1))
+Proof:
+  m is a natural number and m \leq p and it is wrong that m is equal to p
+  if m is equal to 0 then the thesis holds
+  m' is equal to m - 1
+  p ^{[ R ]} divides \binsum{ m' }{ p }{ x }{ y }{ R } +^{ R } -^{ R } x ^{ p , R } in S within R
+  p ^{[ R ]} divides \cho{ p }{ m } ^{[ R ]} in S within R
+  x ^{ p - m , R } is an element of S
+  p ^{[ R ]} divides \cho{ p }{ m } ^{[ R ]} \cdot^{ R } x ^{ p - m , R } \cdot^{ R } y ^{ m , R } in S within R
+  p ^{[ R ]} divides \cho{ p }{ m } ^{[ R ]} \cdot^{ R } x ^{ p - m , R } \cdot^{ R } y ^{ m , R } +^{ R } -^{ R } 0^{ R } in S within R
+  p ^{[ R ]} divides \binsum{ m - 1 }{ p }{ x }{ y }{ R } +^{ R } \cho{ p }{ m } ^{[ R ]} \cdot^{ R } x ^{ p - m , R } \cdot^{ R } y ^{ m , R } +^{ R } -^{ R } x ^{ p , R } in S within R
+  Proof:
+    a is equal to \binsum{ m - 1 }{ p }{ x }{ y }{ R }
+    b is equal to \cho{ p }{ m } ^{[ R ]} \cdot^{ R } x ^{ p - m , R } \cdot^{ R } y ^{ m , R }
+    c is equal to x ^{ p , R }
+    p ^{[ R ]} divides a +^{ R } -^{ R } c in S within R
+    p ^{[ R ]} divides b +^{ R } -^{ R } 0^{ R } in S within R
+    b is an element of S
+    p ^{[ R ]} divides a +^{ R } b +^{ R } -^{ R } c in S within R
+  Qed.
+  p ^{[ R ]} divides \binsum{ m }{ p }{ x }{ y }{ R } +^{ R } -^{ R } x ^{ p , R } in S within R
+  Proof:
+    m \leq p
+    SetInt timelimit 30    \binsum{ m }{ p }{ x }{ y }{ R } is equal to \binsum{ m - 1 }{ p }{ x }{ y }{ R } +^{ R } \cho{ p }{ m } ^{[ R ]} \cdot^{ R } x ^{ p - m , R } \cdot^{ R } y ^{ m , R }
+    SetInt timelimit 3  Qed.
+  SetInt timelimit 3Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a ring then for all v2, for all v3, for all v4, if v2 is a subring of v1 and v3 is an element of v2 and v4 is an element of v2 then v0 ^{[ v1 ]} divides v3 +^{ v1 } v4 ^{ v0 , v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } +^{ v1 } v4 ^{ v0 , v1 } in v2 within v1
+Proof:
+  1 \leq p
+  SetInt timelimit 30  x +^{ R } y ^{ p , R } is equal to \binsum{ p }{ p }{ x }{ y }{ R } and \binsum{ p }{ p }{ x }{ y }{ R } is equal to \binsum{ p - 1 }{ p }{ x }{ y }{ R } +^{ R } \cho{ p }{ p } ^{[ R ]} \cdot^{ R } x ^{ p - p , R } \cdot^{ R } y ^{ p , R } and \binsum{ p - 1 }{ p }{ x }{ y }{ R } +^{ R } \cho{ p }{ p } ^{[ R ]} \cdot^{ R } x ^{ p - p , R } \cdot^{ R } y ^{ p , R } is equal to \binsum{ p - 1 }{ p }{ x }{ y }{ R } +^{ R } y ^{ p , R }
+  Proof:
+    \cho{ p }{ p } ^{[ R ]} \cdot^{ R } x ^{ p - p , R } \cdot^{ R } y ^{ p , R } is equal to y ^{ p , R }
+  Qed.
+  p ^{[ R ]} divides \binsum{ p - 1 }{ p }{ x }{ y }{ R } +^{ R } -^{ R } x ^{ p , R } in S within R
+  p ^{[ R ]} divides \binsum{ p - 1 }{ p }{ x }{ y }{ R } +^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } y ^{ p , R } in S within R
+  Proof:
+    a is equal to \binsum{ p - 1 }{ p }{ x }{ y }{ R }
+    b is equal to x ^{ p , R }
+    p ^{[ R ]} divides a +^{ R } -^{ R } b in S within R
+    c is equal to y ^{ p , R }
+    p ^{[ R ]} divides a +^{ R } y ^{ p , R } +^{ R } -^{ R } b +^{ R } y ^{ p , R } in S within R
+  Qed.
+  SetInt timelimit 3Qed.
+
+Theorem:
+  for all v0, if v0 is a natural number and v0 is prime then for all v1, if v1 is a ring then for all v2, for all v3, for all v4, if v2 is a subring of v1 and v3 is an element of v2 and v4 is an element of v2 then v0 ^{[ v1 ]} divides v3 +^{ v1 } -^{ v1 } v4 ^{ v0 , v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } +^{ v1 } -^{ v1 } v4 ^{ v0 , v1 } in v2 within v1
+Proof:
+  if p is even then the thesis holds
+  Proof:
+    p is equal to 2
+    2 ^{[ R ]} divides x +^{ R } -^{ R } y ^{ 2 , R } +^{ R } -^{ R } x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } in S within R
+    2 ^{[ R ]} divides x +^{ R } -^{ R } y ^{ 2 , R } +^{ R } -^{ R } x ^{ 2 , R } +^{ R } y ^{ 2 , R } in S within R
+    2 ^{[ R ]} divides x ^{ 2 , R } +^{ R } y ^{ 2 , R } +^{ R } -^{ R } x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } in S within R
+    Proof:
+      2 ^{[ R ]} divides y ^{ 2 , R } +^{ R } -^{ R } -^{ R } y ^{ 2 , R } in S within R
+    Qed.
+    x +^{ R } -^{ R } y ^{ 2 , R } is an element of S and x ^{ 2 , R } +^{ R } y ^{ 2 , R } is an element of S and x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } is an element of S
+    2 ^{[ R ]} divides x +^{ R } -^{ R } y ^{ 2 , R } +^{ R } -^{ R } x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } in S within R
+  Qed.
+  it is wrong that p is even
+  p ^{[ R ]} divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in S within R
+  p ^{[ R ]} divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in S within R
+Qed.
+
+Signature:
+  for all v0, if v0 is a topological space then v0 is a set
+
+Signature:
+  for all v0, for all v1, if v0 is a topological space and v1 is a subset of v0 then (if v1 is open in v0 then truth holds)
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, (v1 is an open subset of v0) iff (v1 is a subset of v0 and v1 is open in v0)
+
+Axiom:
+  for all v0, if v0 is a topological space then v0 is open in v0
+
+Axiom:
+  for all v0, if v0 is a topological space then for all v1, for all v2, if v1 is an open subset of v0 and v2 is an open subset of v0 then v1 \cap v2 is open in v0
+
+Axiom:
+  for all v0, if v0 is a topological space then for all v1, if v1 is a set and for all v2, if v2 is an element of v1 then v2 is an open subset of v0 then \bigcup v1 is open in v0
+
+Theorem:
+  for all v0, if v0 is a topological space then \emptyset is open in v0
+Proof:
+  \emptyset is equal to \bigcup \emptyset
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then for all v2, (v2 is a neighborhood of v1 in v0) iff (v2 is a subset of v0 and for some v3, v3 is a subset of v2 and v3 is open in v0 and v1 is an element of v3)
+
+Theorem:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then for all v2, for all v3, if v2 is a neighborhood of v1 in v0 and v3 is a neighborhood of v1 in v0 then v2 \cap v3 is a neighborhood of v1 in v0
+Proof:
+  U is a subset of V and U is open in T and x is an element of U
+  U' is a subset of V' and U' is open in T and x is an element of U'
+  U \cap U' is open in T
+  x is an element of U \cap U' and U \cap U' is a subset of V \cap V'
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then for all v2, for all v3, if v2 is a subset of v0 and v3 is a subset of v0 and (v2 is a neighborhood of v1 in v0 and v2 is a subset of v3) then v3 is a neighborhood of v1 in v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological space then for all v1, if v1 is a subset of v0 then (v1 is open in v0 iff for all v2, if v2 is an element of v1 then for some v3, v3 is a neighborhood of v2 in v0 and v3 is a subset of v1)
+Proof:
+  if A is open in T then the thesis holds
+  if for all v0, if v0 is an element of A then for some v1, v1 is a neighborhood of v0 in T and v1 is a subset of A then the thesis holds
+  Proof:
+    for all v0, if v0 is an element of A then for some v1, v1 is a subset of A and v1 is open in T and v0 is an element of v1
+    Z is a class and for all v0, v0 is an element of Z iff (v0 is an object and v0 is a subset of A and v0 is open in T)
+    Z is a set
+    for all v0, if v0 is an element of Z then (v0 is a subset of T and v0 is open in T)
+    \bigcup Z is a subset of A
+    A is equal to \bigcup Z
+    Proof:
+      x is an element of A
+      U is an element of Z and x is an element of U
+      U is a subset of \bigcup Z
+    Qed.
+    A is open in T
+    Proof:
+      for all v0, if v0 is an element of Z then v0 is an open subset of T
+    Qed.
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological space then ((v0 is hausdorff) iff for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then for some v3, for some v4, v3 is a set and v4 is a set and (v3 is a neighborhood of v1 in v0 and v4 is a neighborhood of v2 in v0 and v3 \cap v4 is equal to \emptyset))
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, (v1 is a filter basis on v0) iff (v1 is a set and v1 is nonempty and (for all v2, if v2 is an element of v1 then (v2 is a subset of v0 and v2 is nonempty)) and for all v2, for all v3, if v2 is an element of v1 and v3 is an element of v1 then for some v4, v4 is an element of v1 and v4 is a subset of v2 \cap v3)
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, for all v2, if v1 is a filter basis on v0 and v2 is an element of v0 then ((v1 converges to v2 in v0) iff for all v3, if v3 is a neighborhood of v2 in v0 then for some v4, v4 is an element of v1 and v4 is a subset of v3)
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, if v1 is a filter basis on v0 then ((v1 converges in v0) iff for some v2, v2 is an element of v0 and v1 converges to v2 in v0)
+
+Definition:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then for all v2, (v2 is equal to the neighborhood filter of v1 in v0) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a neighborhood of v1 in v0 and v3 is an object))
+
+Theorem:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then the neighborhood filter of v1 in v0 is a set
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological space then for all v1, if v1 is an element of v0 then (the neighborhood filter of v1 in v0 is a filter basis on v0 and the neighborhood filter of v1 in v0 converges to v1 in v0)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a group and v0 is a topological space then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then ((v0 is additively continuous at v1 and v2) iff for all v3, if v3 is a neighborhood of v1 +^{ v0 } v2 in v0 then for some v4, for some v5, v4 is a subset of v0 and v5 is a subset of v0 and (v4 is a neighborhood of v1 in v0 and v5 is a neighborhood of v2 in v0 and for all v6, if v6 is an element of v4 then for all v7, if v7 is an element of v5 then v6 +^{ v0 } v7 is an element of v3))
+
+Definition:
+  for all v0, if v0 is a group and v0 is a topological space then ((v0 is additively continuous) iff for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v0 is additively continuous at v1 and v2)
+
+Definition:
+  for all v0, if v0 is a group and v0 is a topological space then for all v1, if v1 is an element of v0 then ((v0 is negation continuous at v1) iff for all v2, if v2 is a neighborhood of -^{ v0 } v1 in v0 then for some v3, v3 is a neighborhood of v1 in v0 and for all v4, if v4 is an element of v3 then -^{ v0 } v4 is an element of v2)
+
+Definition:
+  for all v0, if v0 is a group and v0 is a topological space then ((v0 is negation continuous) iff for all v1, if v1 is an element of v0 then v0 is negation continuous at v1)
+
+Definition (topologicalgroup):
+  for all v0, (v0 is a topological group) iff (v0 is a group and v0 is a topological space and v0 is additively continuous and v0 is negation continuous)
+
+Definition:
+  for all v0, if v0 is a topological group then for all v1, (v1 is a fundamental system of neighborhoods of v0) iff (v1 is a subset of the neighborhood filter of 0^{ v0 } in v0 and for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is an element of v1 and v3 is a subset of v2)
+
+Definition:
+  for all v0, if v0 is a topological group then for all v1, (v1 is a fundamental system of open neighborhoods of v0) iff (v1 is a fundamental system of neighborhoods of v0 and for all v2, if v2 is an element of v1 then v2 is open in v0)
+
+Theorem:
+  for all v0, if v0 is a topological group then the neighborhood filter of 0^{ v0 } in v0 is a fundamental system of neighborhoods of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological group then ((v0 is nonarchimedean) iff for all v1, if v1 is a neighborhood of 0^{ v0 } in v0 then for some v2, v2 is a subset of v1 and v2 is a subgroup of v0 and v2 is open in v0)
+
+Theorem:
+  for all v0, if v0 is a topological group then for all v1, if v1 is a subgroup of v0 and v1 is a neighborhood of 0^{ v0 } in v0 then v1 is open in v0
+Proof:
+  x is an element of B
+  G is additively continuous at x and -^{ G } x
+  B is a neighborhood of x +^{ G } -^{ G } x in G
+  SetInt timelimit 10  V is a subset of G and V' is a subset of G and (V is a neighborhood of x in G and V' is a neighborhood of -^{ G } x in G and for all v0, if v0 is an element of V then for all v1, if v1 is an element of V' then v0 +^{ G } v1 is an element of B)
+  SetInt timelimit 3  V is a subset of B
+  Proof:
+    v is an element of V
+    v +^{ G } -^{ G } x is an element of B
+    v is equal to v +^{ G } -^{ G } x +^{ G } x and v +^{ G } -^{ G } x +^{ G } x is an element of B
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological group then for all v1, if v1 is a filter basis on v0 then ((v1 is cauchy in v0) iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is an element of v1 and for all v4, for all v5, if v4 is an element of v3 and v5 is an element of v3 then v4 +^{ v0 } -^{ v0 } v5 is an element of v2)
+
+Definition:
+  for all v0, if v0 is a topological group then ((v0 is complete) iff (v0 is hausdorff and for all v1, if v1 is a filter basis on v0 and v1 is cauchy in v0 then v1 converges in v0))
+
+Definition:
+  for all v0, if v0 is a ring and v0 is a topological space then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then ((v0 is multiplicatively continuous at v1 and v2) iff for all v3, if v3 is a neighborhood of v1 \cdot^{ v0 } v2 in v0 then for some v4, for some v5, v4 is a subset of v0 and v5 is a subset of v0 and (v4 is a neighborhood of v1 in v0 and v5 is a neighborhood of v2 in v0 and for all v6, if v6 is an element of v4 then for all v7, if v7 is an element of v5 then v6 \cdot^{ v0 } v7 is an element of v3))
+
+Definition:
+  for all v0, if v0 is a ring and v0 is a topological space then ((v0 is multiplicatively continuous) iff for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then v0 is multiplicatively continuous at v1 and v2)
+
+Definition (topologicalring):
+  for all v0, (v0 is a topological ring) iff (v0 is a ring and v0 is a topological group and v0 is multiplicatively continuous)
+
+Definition (l42):
+  for all v0, if v0 is a ring and v0 is a topological space then for all v1, if v1 is a subset of v0 then ((v1 is bounded in v0) iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is a neighborhood of 0^{ v0 } in v0 and for all v4, for all v5, if v5 is an element of v3 and v4 is an element of v1 then v5 \cdot^{ v0 } v4 is an element of v2)
+
+Theorem (l48):
+  for all v0, if v0 is a ring and v0 is a topological space then for all v1, if v1 is a subset of v0 then (v1 is bounded in v0 iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is a neighborhood of 0^{ v0 } in v0 and v3 \star^{ v0 } v1 is a subset of v2)
+Proof:
+  if B is bounded in R then the thesis holds
+  Proof:
+    U is a neighborhood of 0^{ R } in R
+    V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is an element of B then v1 \cdot^{ R } v0 is an element of U
+    V \star^{ R } B is a subset of U
+  Qed.
+  if for all v0, if v0 is a neighborhood of 0^{ R } in R then for some v1, v1 is a neighborhood of 0^{ R } in R and v1 \star^{ R } B is a subset of v0 then the thesis holds
+  Proof:
+    B is bounded in R
+    Proof:
+      U is a neighborhood of 0^{ R } in R
+      V is a neighborhood of 0^{ R } in R and V \star^{ R } B is a subset of U
+      for all v0, for all v1, if v1 is an element of V and v0 is an element of B then v1 \cdot^{ R } v0 is an element of U
+    Qed.
+  Qed.
+Qed.
+
+Theorem (l91):
+  for all v0, if v0 is a topological ring then for all v1, if v0 is nonarchimedean and v1 is a subset of v0 then (v1 is bounded in v0 iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is a subgroup of v0 and v3 is open in v0 and [ v3 \star^{ v0 } v1 ]^{ v0 } is a subset of v2)
+Proof:
+  if B is bounded in R then the thesis holds
+  Proof:
+    U is a neighborhood of 0^{ R } in R
+    U' is a subset of U and U' is a subgroup of R and U' is open in R
+    U' is a neighborhood of 0^{ R } in R
+    V' is a neighborhood of 0^{ R } in R and V' \star^{ R } B is a subset of U'
+    V is a subset of V' and V is a subgroup of R and V is open in R
+    V \star^{ R } B is a subset of U'
+    [ V \star^{ R } B ]^{ R } is a subset of U'
+  Qed.
+  if for all v0, if v0 is a neighborhood of 0^{ R } in R then for some v1, v1 is a subgroup of R and v1 is open in R and [ v1 \star^{ R } B ]^{ R } is a subset of v0 then the thesis holds
+  Proof:
+    U is a neighborhood of 0^{ R } in R
+    V is a subgroup of R and V is open in R and [ V \star^{ R } B ]^{ R } is a subset of U
+    V is a neighborhood of 0^{ R } in R
+    V \star^{ R } B is a subset of R
+    V \star^{ R } B is a subset of [ V \star^{ R } B ]^{ R }
+    V \star^{ R } B is a subset of U
+  Qed.
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological ring then for all v1, (v1 is a bounded subset of v0) iff (v1 is a subset of v0 and v1 is bounded in v0)
+
+Theorem:
+  for all v0, if v0 is a topological ring then \emptyset is a bounded subset of v0
+Proof:
+Qed.
+
+Theorem (boundednessofsingletons):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 then \sing{ v1 } is bounded in v0
+Proof:
+  U is a neighborhood of 0^{ R } \cdot^{ R } r in R
+  R is multiplicatively continuous at 0^{ R } and r
+  SetInt timelimit 10  V is a subset of R and V' is a subset of R and (V is a neighborhood of 0^{ R } in R and V' is a neighborhood of r in R and for all v0, if v0 is an element of V then for all v1, if v1 is an element of V' then v0 \cdot^{ R } v1 is an element of U)
+  SetInt timelimit 3  V \star^{ R } \sing{ r } is a subset of U
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, for all v2, if v1 is a subset of v0 and v2 is a subset of v0 and (v1 is bounded in v0 and v2 is bounded in v0) then v1 \cup v2 is bounded in v0
+Proof:
+  U is a neighborhood of 0^{ R } in R
+  V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is an element of B then v1 \cdot^{ R } v0 is an element of U
+  V' is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V' and v0 is an element of B' then v1 \cdot^{ R } v0 is an element of U
+  V \cap V' is a neighborhood of 0^{ R } in R
+  for all v0, for all v1, if v1 is an element of V \cap V' and v0 is an element of B \cup B' then v1 \cdot^{ R } v0 is an element of U
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, if v1 is a natural number then for all v2, if v2 is a map and \Seq{ 1 }{ v1 } is a subset of the domain of v2 and \FinSet{ v2 }{1}{ v1 } is a subset of v0 then (if for all v3, if v3 is a natural number then for all v4, if v4 is a map and \Seq{ 1 }{ v3 } is a subset of the domain of v4 and \FinSet{ v4 }{1}{ v3 } is a subset of v0 then (if v3 is inductively less than v1 then \FinSet{ v4 }{1}{ v3 } is bounded in v0) then \FinSet{ v2 }{1}{ v1 } is bounded in v0)
+Proof:
+  n is a natural number
+  s is a map and \Seq{ 1 }{ n } is a subset of the domain of s and \FinSet{ s }{1}{ n } is a subset of R
+  if n is equal to 0 then the thesis holds
+  m is a natural number and n is equal to m + 1
+  m is inductively less than n
+  \Seq{ 1 }{ m } is a subset of the domain of s
+  \FinSet{ s }{1}{ m } is a subset of R
+  \FinSet{ s }{1}{ m } is bounded in R
+  \FinSet{ s }{1}{ m + 1 } is equal to \FinSet{ s }{1}{ m } \cup \sing{ the value of s under m + 1 }
+  \sing{ the value of s under m + 1 } is a bounded subset of R
+  \FinSet{ s }{1}{ m + 1 } is bounded in R
+Qed.
+
+Theorem (5281):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is a subset of v0 and v1 is finite then v1 is bounded in v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 then \unp{ v1 }{ v2 } is bounded in v0
+Proof:
+  \unp{ r }{ s } is a subset of R and \unp{ r }{ s } is finite
+Qed.
+
+Theorem (l136):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is a bounded subset of v0 then for all v2, if v2 is a subset of v1 then v2 is a bounded subset of v0
+Proof:
+  B is a bounded subset of R
+  A is a subset of B
+  U is a neighborhood of 0^{ R } in R
+  V is a neighborhood of 0^{ R } in R and V \star^{ R } B is a subset of U
+  V \star^{ R } A is a subset of V \star^{ R } B and V \star^{ R } B is a subset of U
+  V \star^{ R } A is a subset of U
+Qed.
+
+Definition (l179):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 then ((v1 is powerbounded in v0) iff \powers{ v1 }{ v0 } is bounded in v0)
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 then (v1 is powerbounded in v0 iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is a neighborhood of 0^{ v0 } in v0 and for all v4, for all v5, if v5 is an element of v3 and v4 is a natural number then v5 \cdot^{ v0 } v1 ^{ v4 , v0 } is an element of v2)
+Proof:
+  if r is powerbounded in R then the thesis holds
+  Proof:
+    U is a neighborhood of 0^{ R } in R
+    V is a neighborhood of 0^{ R } in R and V \star^{ R } \powers{ r }{ R } is a subset of U
+    Proof:
+      \powers{ r }{ R } is bounded in R
+    Qed.
+    w is an element of V
+    m is a natural number
+    r ^{ m , R } is an element of \powers{ r }{ R }
+    w \cdot^{ R } r ^{ m , R } is an element of V \star^{ R } \powers{ r }{ R } and V \star^{ R } \powers{ r }{ R } is a subset of U
+  Qed.
+  if for all v0, if v0 is a neighborhood of 0^{ R } in R then for some v1, v1 is a neighborhood of 0^{ R } in R and for all v2, for all v3, if v3 is an element of v1 and v2 is a natural number then v3 \cdot^{ R } r ^{ v2 , R } is an element of v0 then the thesis holds
+  Proof:
+    \powers{ r }{ R } is bounded in R
+    Proof:
+      U is a neighborhood of 0^{ R } in R
+      V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is a natural number then v1 \cdot^{ R } r ^{ v0 , R } is an element of U
+    Qed.
+  Qed.
+Qed.
+
+Theorem (l189):
+  for all v0, if v0 is a topological ring then 0^{ v0 } is powerbounded in v0
+Proof:
+Qed.
+
+Theorem (l199):
+  for all v0, if v0 is a topological ring then 1^{ v0 } is powerbounded in v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then -^{ v0 } 1^{ v0 } is powerbounded in v0
+Proof:
+  \unp{ -^{ R } 1^{ R } }{ 1^{ R } } is bounded in R
+  \powers{ -^{ R } 1^{ R } }{ R } is a subset of \unp{ -^{ R } 1^{ R } }{ 1^{ R } }
+  SetInt timelimit 20  \powers{ -^{ R } 1^{ R } }{ R } is bounded in R
+  SetInt timelimit 3Qed.
+
+Theorem (l248):
+  for all v0, if v0 is a topological ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and (v1 is powerbounded in v0 and v2 is powerbounded in v0) then v1 \cdot^{ v0 } v2 is powerbounded in v0
+Proof:
+  U is a neighborhood of 0^{ R } in R
+  SetInt timelimit 10  V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is a natural number then v1 \cdot^{ R } b ^{ v0 , R } is an element of U
+  SetInt timelimit 15  W is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of W and v0 is a natural number then v1 \cdot^{ R } a ^{ v0 , R } is an element of V
+  SetInt timelimit 3  for all v0, for all v1, if v1 is an element of W and v0 is a natural number then v1 \cdot^{ R } a \cdot^{ R } b ^{ v0 , R } is an element of U
+  Proof:
+    w is an element of W and n is a natural number
+    w \cdot^{ R } a ^{ n , R } is an element of V
+    w \cdot^{ R } a \cdot^{ R } b ^{ n , R } is equal to w \cdot^{ R } a ^{ n , R } \cdot^{ R } b ^{ n , R } and w \cdot^{ R } a ^{ n , R } \cdot^{ R } b ^{ n , R } is equal to w \cdot^{ R } a ^{ n , R } \cdot^{ R } b ^{ n , R } and w \cdot^{ R } a ^{ n , R } \cdot^{ R } b ^{ n , R } is an element of U
+  Qed.
+Qed.
+
+Theorem (l290):
+  for all v0, if v0 is a topological ring then (if v0 is nonarchimedean then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and (v1 is powerbounded in v0 and v2 is powerbounded in v0) then v1 +^{ v0 } v2 is powerbounded in v0)
+Proof:
+  U is a neighborhood of 0^{ R } in R
+  U' is a subset of U and U' is a subgroup of R and U' is open in R
+  U' is a neighborhood of 0^{ R } in R
+  SetInt timelimit 30  V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is a natural number then v1 \cdot^{ R } b ^{ v0 , R } is an element of U'
+  SetInt timelimit 30  W is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of W and v0 is a natural number then v1 \cdot^{ R } a ^{ v0 , R } is an element of V
+  SetInt timelimit 3  for all v0, for all v1, for all v2, if v2 is an element of W and v0 is a natural number and v1 is a natural number then v2 \cdot^{ R } a ^{ v0 , R } \cdot^{ R } b ^{ v1 , R } is an element of U'
+  Proof:
+    w is an element of W and m is a natural number and n is a natural number
+    w \cdot^{ R } a ^{ m , R } is an element of V and w \cdot^{ R } a ^{ m , R } \cdot^{ R } b ^{ n , R } is equal to w \cdot^{ R } a ^{ m , R } \cdot^{ R } b ^{ n , R } and w \cdot^{ R } a ^{ m , R } \cdot^{ R } b ^{ n , R } is an element of U
+  Qed.
+  G is a class and (if R is a set then G is a set) and for all v0, v0 is an element of G iff (v0 is an element of R and v0 is an object and for all v1, if v1 is an element of W then v1 \cdot^{ R } v0 is an element of U')
+  G is a subgroup of R
+  Proof:
+    0^{ R } is an element of G
+    for all v0, for all v1, if v0 is an element of G and v1 is an element of G then v0 +^{ R } v1 is an element of G
+    Proof:
+      x is an element of G and y is an element of G
+      w is an element of W
+      w \cdot^{ R } x +^{ R } y is equal to w \cdot^{ R } x +^{ R } w \cdot^{ R } y and w \cdot^{ R } x +^{ R } w \cdot^{ R } y is an element of U'
+    Qed.
+    for all v0, if v0 is an element of G then -^{ R } v0 is an element of G
+    Proof:
+      x is an element of G
+      w is an element of W
+      w \cdot^{ R } -^{ R } x is equal to w \cdot^{ R } -^{ R } 1^{ R } \cdot^{ R } x and w \cdot^{ R } -^{ R } 1^{ R } \cdot^{ R } x is equal to -^{ R } 1^{ R } \cdot^{ R } w \cdot^{ R } x and -^{ R } 1^{ R } \cdot^{ R } w \cdot^{ R } x is equal to -^{ R } w \cdot^{ R } x
+    Qed.
+  Qed.
+  Z is a class and for all v0, v0 is an element of Z iff (v0 is an object and for some v1, for some v2, v1 is an element of \mathbb{N} and v2 is an element of \mathbb{N} and v0 is equal to a ^{ v1 , R } \cdot^{ R } b ^{ v2 , R })
+  Z is a subset of G and Z is closed under multiplication in R
+  Proof:
+    u is an element of Z and v is an element of Z
+    m is an element of \mathbb{N} and n is an element of \mathbb{N} and u is equal to a ^{ m , R } \cdot^{ R } b ^{ n , R }
+    m' is an element of \mathbb{N} and n' is an element of \mathbb{N} and v is equal to a ^{ m' , R } \cdot^{ R } b ^{ n' , R }
+    u \cdot^{ R } v is equal to a ^{ m , R } \cdot^{ R } b ^{ n , R } \cdot^{ R } a ^{ m' , R } \cdot^{ R } b ^{ n' , R } and a ^{ m , R } \cdot^{ R } b ^{ n , R } \cdot^{ R } a ^{ m' , R } \cdot^{ R } b ^{ n' , R } is equal to a ^{ m , R } \cdot^{ R } a ^{ m' , R } \cdot^{ R } b ^{ n , R } \cdot^{ R } b ^{ n' , R } and a ^{ m , R } \cdot^{ R } a ^{ m' , R } \cdot^{ R } b ^{ n , R } \cdot^{ R } b ^{ n' , R } is equal to a ^{ m + m' , R } \cdot^{ R } b ^{ n + n' , R } and a ^{ m + m' , R } \cdot^{ R } b ^{ n + n' , R } is an element of Z
+    u \cdot^{ R } v is an element of Z
+  Qed.
+  1^{ R } is an element of Z and a is an element of Z and b is an element of Z
+  Proof:
+    1^{ R } is equal to a ^{ 0 , R } \cdot^{ R } b ^{ 0 , R }
+    a is equal to a ^{ 1 , R } \cdot^{ R } b ^{ 0 , R }
+    b is equal to a ^{ 0 , R } \cdot^{ R } b ^{ 1 , R }
+  Qed.
+  Z is a subset of G
+  [ Z ]^{ R } is a subset of G
+  [ Z ]^{ R } is closed under multiplication in R
+  for all v0, if v0 is a natural number then (if for all v1, if v1 is a natural number then (if v1 is inductively less than v0 then a +^{ R } b ^{ v1 , R } is an element of [ Z ]^{ R }) then a +^{ R } b ^{ v0 , R } is an element of [ Z ]^{ R })
+  Proof:
+    n is a natural number
+    if n is equal to 0 then the thesis holds
+    a +^{ R } b is an element of [ Z ]^{ R }
+    m is equal to n - 1
+    a +^{ R } b ^{ m , R } is an element of [ Z ]^{ R }
+    a +^{ R } b ^{ n , R } is equal to a +^{ R } b ^{ m + 1 , R } and a +^{ R } b ^{ m + 1 , R } is equal to a +^{ R } b ^{ m , R } \cdot^{ R } a +^{ R } b and a +^{ R } b ^{ m , R } \cdot^{ R } a +^{ R } b is an element of [ Z ]^{ R }
+  Qed.
+  for all v0, if v0 is a natural number then a +^{ R } b ^{ v0 , R } is an element of G
+  for all v0, if v0 is a natural number then for all v1, if v1 is an element of W then v1 \cdot^{ R } a +^{ R } b ^{ v0 , R } is an element of U'
+Qed.
+
+Theorem (l342):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 and v1 is powerbounded in v0 then -^{ v0 } v1 is powerbounded in v0
+Proof:
+  -^{ R } a is equal to -^{ R } 1^{ R } \cdot^{ R } a
+Qed.
+
+Definition (l310):
+  for all v0, if v0 is a topological ring then for all v1, (v1 is equal to v0 ^o) iff (v1 is a class and (if v0 is a set then v1 is a set) and for all v2, v2 is an element of v1 iff (v2 is an element of v0 and v2 is an object and v2 is powerbounded in v0))
+
+Theorem:
+  for all v0, if v0 is a topological ring then v0 ^o is a subset of v0
+Proof:
+Qed.
+
+Theorem (l320):
+  for all v0, if v0 is a topological ring then 0^{ v0 } is an element of v0 ^o
+Proof:
+Qed.
+
+Theorem (l322):
+  for all v0, if v0 is a topological ring then 1^{ v0 } is an element of v0 ^o
+Proof:
+Qed.
+
+Theorem (l324):
+  for all v0, if v0 is a topological ring then for all v1, for all v2, if v1 is an element of v0 ^o and v2 is an element of v0 ^o then v1 \cdot^{ v0 } v2 is an element of v0 ^o
+Proof:
+Qed.
+
+Theorem (l324):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 ^o then for all v2, if v2 is an element of \mathbb{N} then (if for all v3, if v3 is an element of \mathbb{N} then (if v3 is inductively less than v2 then v1 ^{ v3 , v0 } is an element of v0 ^o) then v1 ^{ v2 , v0 } is an element of v0 ^o)
+Proof:
+  n is an element of \mathbb{N}
+  if n is equal to 0 then the thesis holds
+  m is equal to n - 1
+  m is inductively less than n and a ^{ m , R } is an element of R ^o
+  a ^{ n , R } is equal to a ^{ m , R } \cdot^{ R } a and a ^{ m , R } \cdot^{ R } a is an element of R ^o
+Qed.
+
+Theorem (l337):
+  for all v0, if v0 is a topological ring then (if v0 is nonarchimedean then for all v1, for all v2, if v1 is an element of v0 ^o and v2 is an element of v0 ^o then v1 +^{ v0 } v2 is an element of v0 ^o)
+Proof:
+Qed.
+
+Theorem (l342):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 ^o then -^{ v0 } v1 is an element of v0 ^o
+Proof:
+Qed.
+
+Theorem (l365):
+  for all v0, if v0 is a topological ring then (if v0 is nonarchimedean then v0 ^o is a subgroup of v0)
+Proof:
+Qed.
+
+Theorem (l371):
+  for all v0, if v0 is a topological ring then (if v0 is nonarchimedean then v0 ^o is a subring of v0)
+Proof:
+Qed.
+
+Definition (380):
+  for all v0, if v0 is a topological ring then ((v0 is uniform) iff v0 ^o is a bounded subset of v0)
+
+Definition (l30):
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 then ((v1 is topologically nilpotent in v0) iff for all v2, if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, v3 is a natural number and for all v4, if v4 is a natural number and v3 \leq v4 and it is wrong that v3 is equal to v4 then v1 ^{ v4 , v0 } is an element of v2)
+
+Theorem:
+  for all v0, if v0 is a topological ring then 0^{ v0 } is topologically nilpotent in v0
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then (if v0 is hausdorff then it is wrong that 1^{ v0 } is topologically nilpotent in v0)
+Proof:
+  A is a set and B is a set and (A is a neighborhood of 0^{ R } in R and B is a neighborhood of 1^{ R } in R and A \cap B is equal to \emptyset)
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, if v1 is an element of v0 and v1 is topologically nilpotent in v0 then v1 is powerbounded in v0
+Proof:
+  U is a neighborhood of 0^{ R } in R
+  h is equal to 0^{ R }
+  h' is equal to 0^{ R }
+  U is a neighborhood of 0^{ R } \cdot^{ R } 0^{ R } in R
+  R is multiplicatively continuous at h and h' and U is a neighborhood of h \cdot^{ R } h' in R
+  SetBytes prover "vampire"  SetInt timelimit 30  V is a subset of R and V' is a subset of R and (V is a neighborhood of 0^{ R } in R and V' is a neighborhood of 0^{ R } in R and for all v0, if v0 is an element of V then for all v1, if v1 is an element of V' then v0 \cdot^{ R } v1 is an element of U)
+  SetInt timelimit 3  SetBytes prover "eprover"  N is a natural number and for all v0, if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then r ^{ v0 , R } is an element of V
+  X is a class and for all v0, v0 is an element of X iff (v0 is an object and for some v1, v1 is an element of \mathbb{N} and 1 \leq v1 and v1 \leq N and v0 is equal to r ^{ v1 , R })
+  X is finite
+  Proof:
+    s is a map and (the domain of s is equal to \Seq{ 1 }{ N }) and for all v0, if v0 is an object then (if v0 is an element of the domain of s then (the value of s under v0 is equal to r ^{ v0 , R }))
+    SetInt timelimit 5    X is equal to \FinSet{ s }{1}{ N }
+    SetInt timelimit 3  Qed.
+  SetInt timelimit 10  X is bounded in R
+  V'' is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v0 is an element of V'' and v1 is an element of X then v0 \cdot^{ R } v1 is an element of U
+  W is equal to U \cap V' \cap V''
+  SetInt timelimit 5  W is a neighborhood of 0^{ R } in R
+  Proof:
+    V' \cap V'' is a neighborhood of 0^{ R } in R
+  Qed.
+  SetInt timelimit 3  for all v0, for all v1, if v0 is an element of W and v1 is an element of \powers{ r }{ R } then v0 \cdot^{ R } v1 is an element of U
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and (v1 is topologically nilpotent in v0 and v2 is powerbounded in v0) then v1 \cdot^{ v0 } v2 is topologically nilpotent in v0
+Proof:
+  U is a neighborhood of 0^{ R } in R
+  SetInt timelimit 10  V is a neighborhood of 0^{ R } in R and for all v0, for all v1, if v1 is an element of V and v0 is a natural number then v1 \cdot^{ R } b ^{ v0 , R } is an element of U
+  SetInt timelimit 15  N is a natural number and for all v0, if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then a ^{ v0 , R } is an element of V
+  SetInt timelimit 3  for all v0, if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then a \cdot^{ R } b ^{ v0 , R } is an element of U
+  Proof:
+    n is a natural number and N \leq n and it is wrong that N is equal to n
+    a \cdot^{ R } b ^{ n , R } is equal to a ^{ n , R } \cdot^{ R } b ^{ n , R } and a ^{ n , R } \cdot^{ R } b ^{ n , R } is an element of U
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a topological ring then (if v0 is hausdorff then for all v1, if v1 is an element of v0 and v1 is topologically nilpotent in v0 then it is wrong that v1 divides 1^{ v0 } in v0 ^o within v0)
+Proof:
+  it is wrong that the thesis holds
+  b is an element of R ^o and a \cdot^{ R } b is equal to 1^{ R }
+  a \cdot^{ R } b is topologically nilpotent in R
+  falsity holds
+Qed.
+
+Definition:
+  for all v0, (v0 is a huber ring) iff (v0 is a topological ring and for some v1, v1 is a subset of v0 and for some v2, v2 is a subset of v1 and v2 is finite and (\Powers{ v1 }{ v0 } is a fundamental system of neighborhoods of v0 and v2 \ast^{ v0 } v1 is equal to v1 \ast^{ v0 } v1 and v1 \ast^{ v0 } v1 is a subset of v1))
+
+Theorem:
+  for all v0, if v0 is a huber ring then v0 is nonarchimedean
+Proof:
+  U is a subset of R and U \ast^{ R } U is a subset of U and \Powers{ U }{ R } is a fundamental system of neighborhoods of R
+  V is a neighborhood of 0^{ R } in R
+  B is an element of \Powers{ U }{ R } and B is a subset of V
+  B is a neighborhood of 0^{ R } in R
+  n is an element of \mathbb{N} and 1 \leq n and B is equal to U ^{ n , R ,subset}
+  if 1 \leq n and it is wrong that 1 is equal to n then the thesis holds
+  Proof:
+    B is a subgroup of R and B is open in R
+  Qed.
+  n is equal to 1
+  B is equal to U
+  U \ast^{ R } U is a subgroup of R and U \ast^{ R } U is open in R
+  U \ast^{ R } U is a subset of U and U is equal to B and B is a subset of V
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then v0 ^o is a subring of v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a topological ring then for all v1, (v1 is a pseudouniformizer of v0) iff (v1 is an unit in v0 and v1 is topologically nilpotent in v0)
+
+Theorem:
+  for all v0, if v0 is a topological ring then for all v1, if v1 is a pseudouniformizer of v0 then v1 is powerbounded in v0
+Proof:
+Qed.
+
+Definition:
+  for all v0, (v0 is a tate ring) iff (v0 is a huber ring and for some v1, v1 is a pseudouniformizer of v0)
+
+Signature:
+  for all v0, if v0 is equal to p then (v0 is a natural number and v0 is prime)
+
+Definition:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 then for all v2, (v2 is equal to \Phi^{ v0 }( v1 )) iff v2 is equal to v1 ^{ p , v0 }
+
+Theorem:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 ^o then \Phi^{ v0 }( v1 ) is an element of v0 ^o
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 ^o and v1 ^{ p , v0 } divides p ^{[ v0 ]} in v0 ^o within v0 then for all v2, for all v3, if v2 is an element of v0 ^o and v3 is an element of v0 ^o and v1 divides v2 +^{ v0 } -^{ v0 } v3 in v0 ^o within v0 then v1 ^{ p , v0 } divides \Phi^{ v0 }( v2 ) +^{ v0 } -^{ v0 } \Phi^{ v0 }( v3 ) in v0 ^o within v0
+Proof:
+  \varpi divides x +^{ R } -^{ R } y in R ^o within R
+  \varpi ^{ p , R } divides x +^{ R } -^{ R } y ^{ p , R } in R ^o within R
+  p ^{[ R ]} divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in R ^o within R
+  t is equal to x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R }
+  \varpi ^{ p , R } divides -^{ R } t in R ^o within R
+  \varpi ^{ p , R } divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } t in R ^o within R
+  \varpi ^{ p , R } divides x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in R ^o within R
+  Proof:
+    x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } t is equal to x ^{ p , R } +^{ R } -^{ R } y ^{ p , R }
+  Qed.
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then \Phi^{ v0 }( 0^{ v0 } ) is equal to 0^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then \Phi^{ v0 }( 1^{ v0 } ) is equal to 1^{ v0 }
+Proof:
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 ^o and v1 ^{ p , v0 } divides p ^{[ v0 ]} in v0 ^o within v0 then for all v2, for all v3, if v2 is an element of v0 ^o and v3 is an element of v0 ^o then v1 ^{ p , v0 } divides \Phi^{ v0 }( v2 +^{ v0 } v3 ) +^{ v0 } -^{ v0 } \Phi^{ v0 }( v2 ) +^{ v0 } \Phi^{ v0 }( v3 ) in v0 ^o within v0
+Proof:
+  p ^{[ R ]} divides x +^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } y ^{ p , R } in R ^o within R
+  \varpi ^{ p , R } divides x +^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } y ^{ p , R } in R ^o within R
+Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 ^o and v1 ^{ p , v0 } divides p ^{[ v0 ]} in v0 ^o within v0 then for all v2, if v2 is an element of v0 ^o then v1 ^{ p , v0 } divides \Phi^{ v0 }( -^{ v0 } v2 ) +^{ v0 } -^{ v0 } -^{ v0 } \Phi^{ v0 }( v2 ) in v0 ^o within v0
+Proof:
+  \varpi ^{ p , R } divides \Phi^{ R }( x +^{ R } -^{ R } x ) +^{ R } -^{ R } \Phi^{ R }( x ) +^{ R } \Phi^{ R }( -^{ R } x ) in R ^o within R
+  \varpi ^{ p , R } divides 0^{ R } +^{ R } -^{ R } \Phi^{ R }( x ) +^{ R } \Phi^{ R }( -^{ R } x ) in R ^o within R
+  SetInt timelimit 10  \varpi ^{ p , R } divides -^{ R } \Phi^{ R }( x ) +^{ R } -^{ R } \Phi^{ R }( -^{ R } x ) in R ^o within R
+  SetInt timelimit 3Qed.
+
+Theorem:
+  for all v0, if v0 is a huber ring then for all v1, if v1 is an element of v0 ^o and v1 ^{ p , v0 } divides p ^{[ v0 ]} in v0 ^o within v0 then for all v2, for all v3, if v2 is an element of v0 ^o and v3 is an element of v0 ^o then v1 ^{ p , v0 } divides \Phi^{ v0 }( v2 \cdot^{ v0 } v3 ) +^{ v0 } -^{ v0 } \Phi^{ v0 }( v2 ) \cdot^{ v0 } \Phi^{ v0 }( v3 ) in v0 ^o within v0
+Proof:
+  \Phi^{ R }( x \cdot^{ R } y ) is equal to x \cdot^{ R } y ^{ p , R } and x \cdot^{ R } y ^{ p , R } is equal to x ^{ p , R } \cdot^{ R } y ^{ p , R } and x ^{ p , R } \cdot^{ R } y ^{ p , R } is equal to \Phi^{ R }( x ) \cdot^{ R } \Phi^{ R }( y )
+Qed.
+
+Definition:
+  for all v0, if v0 is a huber ring then for all v1, for all v2, if v1 is a subset of v0 and v2 is a subset of v0 then for all v3, for all v4, if v3 is an element of v1 and v4 is an element of v2 then ((\Phi^{ v0 }: v1 / v3 \cong v2 / v4) iff ((for all v5, for all v6, if v5 is an element of v1 and v6 is an element of v1 then (if v4 divides \Phi^{ v0 }( v5 ) +^{ v0 } -^{ v0 } \Phi^{ v0 }( v6 ) in v2 within v0 then v3 divides v5 +^{ v0 } -^{ v0 } v6 in v1 within v0)) and for all v5, if v5 is an element of v2 then for some v6, v6 is an element of v1 and v4 divides v5 +^{ v0 } -^{ v0 } \Phi^{ v0 }( v6 ) in v2 within v0))
+
+Theorem:
+  for all v0, if v0 is a tate ring then for all v1, if v0 is complete and v1 is a pseudouniformizer of v0 then (it is wrong that v1 divides 1^{ v0 } in v0 ^o within v0 and it is wrong that v1 ^{ p , v0 } divides 1^{ v0 } in v0 ^o within v0)
+Proof:
+  it is wrong that \varpi divides 1^{ R } in R ^o within R
+  \varpi ^{ p , R } divides 1^{ R } in R ^o within R
+  b is an element of R ^o and \varpi ^{ p , R } \cdot^{ R } b is equal to 1^{ R }
+  q is equal to p - 1
+  p is equal to 1 + q
+  \varpi ^{ p , R } is equal to \varpi ^{ 1 , R } \cdot^{ R } \varpi ^{ q , R } and \varpi ^{ 1 , R } \cdot^{ R } \varpi ^{ q , R } is equal to \varpi \cdot^{ R } \varpi ^{ q , R }
+  \varpi \cdot^{ R } \varpi ^{ q , R } \cdot^{ R } b is equal to \varpi \cdot^{ R } \varpi ^{ q , R } \cdot^{ R } b and \varpi \cdot^{ R } \varpi ^{ q , R } \cdot^{ R } b is equal to 1^{ R }
+  SetInt timelimit 6  \varpi divides 1^{ R } in R ^o within R
+  Proof:
+    \varpi ^{ q , R } is an element of R ^o
+  Qed.
+  SetInt timelimit 3Qed.
+
+Definition:
+  for all v0, if v0 is a tate ring then ((v0 is perfectoid) iff (v0 is complete and v0 is uniform and for some v1, v1 is a pseudouniformizer of v0 and v1 ^{ p , v0 } divides p ^{[ v0 ]} in v0 ^o within v0 and \Phi^{ v0 }: v0 ^o / v1 \cong v0 ^o / v1 ^{ p , v0 }))
+
