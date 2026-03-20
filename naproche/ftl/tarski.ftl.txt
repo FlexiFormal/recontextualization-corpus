@@ -1,0 +1,98 @@
+Theorem:
+  for all v0, if v0 is a set then v0 is a class
+Proof:
+Qed.
+
+Axiom:
+  for all v0, if v0 is a class then for all v1, if v1 is an element of v0 then v1 is an object
+
+Definition (defempty):
+  for all v0, if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, v1 is an element of v0)
+
+Definition (defsub):
+  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+
+Definition (subset):
+  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+
+Axiom:
+  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+
+Axiom:
+  for all v0, if v0 is a function then the domain of v0 is a set
+
+Signature (ransort):
+  for all v0, if v0 is a function then for all v1, if v1 is equal to Ran( v0 ) then v1 is a set
+
+Definition (defdom):
+  for all v0, for all v1, if v0 is a class and v1 is a function then ((v1 is on v0) iff (the domain of v1 is equal to Ran( v1 ) and Ran( v1 ) is equal to v0))
+
+Axiom (imgsort):
+  for all v0, if v0 is a function then for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an element of Ran( v0 )
+
+Signature (lessrel):
+  for all v0, for all v1, if v0 is an object and v1 is an object then (if v0 <= v1 then truth holds)
+
+Axiom (arefl):
+  for all v0, if v0 is an object then v0 <= v0
+
+Axiom (asymm):
+  for all v0, for all v1, if v0 is an object and v1 is an object then (if v0 <= v1 and v1 <= v0 then v0 is equal to v1)
+
+Axiom (trans):
+  for all v0, for all v1, for all v2, if v0 is an object and v1 is an object and v2 is an object then (if v0 <= v1 and v1 <= v2 then v0 <= v2)
+
+Definition (deflb):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, (v2 is a lower bound of v1 in v0) iff (v2 is an element of v0 and for all v3, if v3 is an element of v1 then v2 <= v3)
+
+Definition (defub):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, (v2 is an upper bound of v1 in v0) iff (v2 is an element of v0 and for all v3, if v3 is an element of v1 then v3 <= v2)
+
+Definition (definf):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, (v2 is an infimum of v1 in v0) iff (v2 is an element of v0 and v2 is a lower bound of v1 in v0 and for all v3, if v3 is a lower bound of v1 in v0 then v3 <= v2)
+
+Definition (defsup):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, (v2 is a supremum of v1 in v0) iff (v2 is an element of v0 and v2 is an upper bound of v1 in v0 and for all v3, if v3 is an upper bound of v1 in v0 then v2 <= v3)
+
+Theorem (supun):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, for all v3, if v2 is a supremum of v1 in v0 and v3 is a supremum of v1 in v0 then v2 is equal to v3
+Proof:
+Qed.
+
+Theorem (infun):
+  for all v0, if v0 is a class then for all v1, if v1 is a subset of v0 then for all v2, for all v3, if v2 is an infimum of v1 in v0 and v3 is an infimum of v1 in v0 then v2 is equal to v3
+Proof:
+Qed.
+
+Definition (defclat):
+  for all v0, (v0 is a complete lattice) iff (v0 is a set and for all v1, if v1 is a subset of v0 then for some v2, v2 is an infimum of v1 in v0 and for some v3, v3 is a supremum of v1 in v0)
+
+Definition (deffix):
+  for all v0, if v0 is a function then for all v1, (v1 is a fixed point of v0) iff (v1 is an element of the domain of v0 and the value of v0 under v1 is equal to v1)
+
+Definition (defmonot):
+  for all v0, if v0 is a function then ((v0 is monotone) iff for all v1, for all v2, if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 then (if v1 <= v2 then the value of v0 under v1 <= the value of v0 under v2))
+
+Theorem (tarski):
+  for all v0, for all v1, if v0 is a complete lattice and v1 is a function and v1 is monotone and v1 is on v0 then for all v2, if v2 is a class and for all v3, v3 is an element of v2 iff (v3 is a fixed point of v1 and v3 is an object) then v2 is a complete lattice
+Proof:
+  U is a set and S is a subclass of U
+  S is a set
+  T is a subset of S
+  for some v0, v0 is a supremum of T in S
+  Proof:
+    P is a class and (if U is a set then P is a set) and for all v0, v0 is an element of P iff (v0 is an element of U and v0 is an object and (the value of f under v0 <= v0 and v0 is an upper bound of T in U))
+    P is a set
+    p is an infimum of P in U
+    the value of f under p is a lower bound of P in U and the value of f under p is an upper bound of T in U
+    p is a fixed point of f and p is a supremum of T in S
+  Qed.
+  for some v0, v0 is an infimum of T in S
+  Proof:
+    Q is a class and (if U is a set then Q is a set) and for all v0, v0 is an element of Q iff (v0 is an element of U and v0 is an object and (v0 <= the value of f under v0 and v0 is a lower bound of T in U))
+    q is a supremum of Q in U
+    the value of f under q is an upper bound of Q in U and the value of f under q is a lower bound of T in U
+    q is a fixed point of f and q is an infimum of T in S
+  Qed.
+Qed.
+

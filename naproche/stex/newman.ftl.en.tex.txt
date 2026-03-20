@@ -1,0 +1,83 @@
+Axiom:
+  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v2 is equal to the ordered pair of v1 and v3 then (v0 is equal to v1 and v2 is equal to v3))
+
+Axiom:
+  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
+
+Theorem:
+  for all v0, for all v1, if v0 is a set and v1 is a class then (if for all v2, if v2 is an element of v1 then v2 is an element of v0 then v1 is a set)
+Proof:
+  C is a class and (if A is a set then C is a set) and for all v0, v0 is an element of C iff (v0 is an element of A and v0 is an object and v0 is an element of B)
+  C is a set and C is equal to B
+Qed.
+
+Signature:
+  for all v0, if v0 is a term then v0 is an object
+
+Signature:
+  for all v0, if v0 is a rewriting system then truth holds
+
+Signature:
+  for all v0, for all v1, if v0 is a rewriting system and v1 is a term then for all v2, if v2 is a reduct of v1 in v0 then v2 is a term
+
+Signature:
+  for all v0, for all v1, for all v2, if v0 is a rewriting system and v1 is a term and v2 is a term then (if v1 \reducesTC{ v0 } v2 then truth holds)
+
+Axiom:
+  for all v0, for all v1, for all v2, if v0 is a rewriting system and v1 is a term and v2 is a term then (v1 \reducesTC{ v0 } v2 iff (v2 is a reduct of v1 in v0 or for some v3, v3 is a term and v3 is a reduct of v1 in v0 and v3 \reducesTC{ v0 } v2))
+
+Axiom:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a rewriting system and v1 is a term and v2 is a term and v3 is a term then (if v1 \reducesTC{ v0 } v2 and v2 \reducesTC{ v0 } v3 then v1 \reducesTC{ v0 } v3)
+
+Definition:
+  for all v0, for all v1, for all v2, if v0 is a rewriting system and v1 is a term and v2 is a term then ((v1 \reducesTCR{ v0 } v2) iff (v1 is equal to v2 or v1 \reducesTC{ v0 } v2))
+
+Theorem:
+  for all v0, for all v1, for all v2, for all v3, if v0 is a rewriting system and v1 is a term and v2 is a term and v3 is a term then (if v1 \reducesTCR{ v0 } v2 and v2 \reducesTCR{ v0 } v3 then v1 \reducesTCR{ v0 } v3)
+Proof:
+Qed.
+
+Definition:
+  for all v0, if v0 is a rewriting system then ((v0 is confluent) iff for all v1, for all v2, for all v3, if v1 is a term and v2 is a term and v3 is a term and (v1 \reducesTCR{ v0 } v2 and v1 \reducesTCR{ v0 } v3) then for some v4, v4 is a term and v2 \reducesTCR{ v0 } v4 and v3 \reducesTCR{ v0 } v4)
+
+Definition:
+  for all v0, if v0 is a rewriting system then ((v0 is locally confluent) iff for all v1, for all v2, for all v3, if v1 is a term and v2 is a term and v3 is a term and (v2 is a reduct of v1 in v0 and v3 is a reduct of v1 in v0) then for some v4, v4 is a term and v2 \reducesTCR{ v0 } v4 and v3 \reducesTCR{ v0 } v4)
+
+Definition:
+  for all v0, if v0 is a rewriting system then ((v0 is terminating) iff for all v1, for all v2, if v1 is a term and v2 is a term and v1 \reducesTC{ v0 } v2 then v2 is inductively less than v1)
+
+Definition:
+  for all v0, for all v1, if v0 is a rewriting system and v1 is a term then for all v2, (v2 is a normal form of v1 in v0) iff (v2 is a term and v1 \reducesTCR{ v0 } v2 and it is wrong that for some v3, v3 is a reduct of v2 in v0)
+
+Theorem:
+  for all v0, if v0 is a rewriting system and v0 is terminating then for all v1, if v1 is a term then (if for all v2, if v2 is a term then (if v2 is inductively less than v1 then for some v3, v3 is a normal form of v2 in v0) then for some v2, v2 is a normal form of v1 in v0)
+Proof:
+Qed.
+
+Theorem (Newman):
+  for all v0, if v0 is a rewriting system and v0 is terminating and v0 is locally confluent then v0 is confluent
+Proof:
+  R is a rewriting system
+  R is locally confluent and R is terminating
+  for all v0, for all v1, for all v2, if v0 is a term and v1 is a term and v2 is a term and (v0 \reducesTCR{ R } v1 and v0 \reducesTCR{ R } v2) then (if for all v3, for all v4, for all v5, if v3 is a term and v4 is a term and v5 is a term and (v3 \reducesTCR{ R } v4 and v3 \reducesTCR{ R } v5) then (if v3 is inductively less than v0 then for some v6, v6 is a term and v4 \reducesTCR{ R } v6 and v5 \reducesTCR{ R } v6) then for some v3, v3 is a term and v1 \reducesTCR{ R } v3 and v2 \reducesTCR{ R } v3)
+  Proof:
+    a is a term and b is a term and c is a term
+    if a \reducesTC{ R } b and a \reducesTC{ R } c then the thesis holds
+    Proof:
+      a \reducesTC{ R } b and a \reducesTC{ R } c
+      u is a term and u is a reduct of a in R and u \reducesTCR{ R } b
+      v is a term and v is a reduct of a in R and v \reducesTCR{ R } c
+      w is a term and u \reducesTCR{ R } w and v \reducesTCR{ R } w
+      d is a normal form of w in R
+      b \reducesTCR{ R } d
+      Proof:
+        x is a term and b \reducesTCR{ R } x and d \reducesTCR{ R } x
+      Qed.
+      c \reducesTCR{ R } d
+      Proof:
+        y is a term and c \reducesTCR{ R } y and d \reducesTCR{ R } y
+      Qed.
+    Qed.
+  Qed.
+Qed.
+

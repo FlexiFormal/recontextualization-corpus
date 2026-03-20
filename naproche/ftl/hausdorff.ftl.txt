@@ -1,0 +1,184 @@
+Definition (defempty):
+  for all v0, (v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, v1 is an element of v0)
+
+Definition (defsub):
+  for all v0, if v0 is a class then for all v1, (v1 is a subclass of v0) iff (v1 is a class and for all v2, if v2 is an element of v1 then v2 is an element of v0)
+
+Theorem (extensionality):
+  for all v0, for all v1, if v0 is a class and v1 is a class then (if v0 is a subclass of v1 and v1 is a subclass of v0 then v0 is equal to v1)
+Proof:
+Qed.
+
+Definition (subset):
+  for all v0, if v0 is a class then for all v1, (v1 is a subset of v0) iff (v1 is a set and v1 is a subclass of v0)
+
+Axiom (separation):
+  for all v0, if v0 is a set then for all v1, if v1 is a subclass of v0 then v1 is a set
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, v2 is an element of v0 and v2 is an element of v1)
+
+Definition:
+  for all v0, (v0 is a family) iff (v0 is a set and for all v1, if v1 is an element of v0 then v1 is a set)
+
+Definition:
+  for all v0, (v0 is a disjoint family) iff (v0 is a family and for all v1, for all v2, if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2)
+
+Axiom:
+  for all v0, for all v1, for all v2, for all v3, if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))
+
+Definition:
+  for all v0, for all v1, if v0 is a class and v1 is a class then for all v2, (v2 is equal to v0 \times v1) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, for some v5, v4 is an element of v0 and v5 is an element of v1 and v3 is equal to the ordered pair of v4 and v5))
+
+Axiom:
+  for all v0, for all v1, if v0 is a set and v1 is a set then v0 \times v1 is a set
+
+Theorem:
+  for all v0, for all v1, if v0 is an object and v1 is an object then for all v2, for all v3, if v2 is a class and v3 is a class then (if the ordered pair of v0 and v1 is an element of v2 \times v3 then (v0 is an element of v2 and v1 is an element of v3))
+Proof:
+Qed.
+
+Axiom:
+  for all v0, if v0 is a map then (if the domain of v0 is a set and for all v1, if v1 is an element of the domain of v0 then the value of v0 under v1 is an object then v0 is a function)
+
+Definition:
+  for all v0, if v0 is a map then for all v1, if v1 is a subclass of the domain of v0 then for all v2, (v2 is equal to v0 [ v1 ]) iff (v2 is a class and for all v3, v3 is an element of v2 iff (v3 is an object and for some v4, v4 is an element of v1 and v3 is equal to the value of v0 under v4))
+
+Definition:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 maps elements of v0 to elements of v1) iff (the domain of v2 is equal to v0 and v2 [ v0 ] is a subclass of v1))
+
+Axiom (replacement):
+  for all v0, if v0 is a map then for all v1, if v1 is a subset of the domain of v0 then v0 [ v1 ] is a set
+
+Definition:
+  for all v0, for all v1, for all v2, if v0 is a class and v1 is a class and v2 is a map then ((v2 : v0 \leftrightarrow v1) iff (v2 maps elements of v0 to elements of v1 and for some v3, v3 is a map and v3 maps elements of v1 to elements of v0 and for all v4, if v4 is an element of the domain of v2 then the value of v3 under the value of v2 under v4 is equal to v4 and for all v4, if v4 is an element of the domain of v3 then the value of v2 under the value of v3 under v4 is equal to v4))
+
+Signature:
+  for all v0, if v0 is an ordinal then v0 is a set
+
+Axiom:
+  for all v0, if v0 is an ordinal then for all v1, if v1 is an element of v0 then v1 is an ordinal
+
+Axiom (transitivity):
+  for all v0, for all v1, if v0 is an ordinal and v1 is a set then for all v2, if v2 is an element of v1 and v1 is an element of v0 then v2 is an element of v0
+
+Signature:
+  for all v0, for all v1, if v0 is an ordinal and v1 is an ordinal then (if v0 < v1 then truth holds)
+
+Axiom:
+  for all v0, for all v1, if v0 is an ordinal and v1 is an ordinal then (v0 < v1 or v1 < v0 or v1 is equal to v0)
+
+Axiom:
+  for all v0, for all v1, if v0 is an ordinal and v1 is an ordinal then (if v0 < v1 then v0 is an element of v1)
+
+Signature:
+  for all v0, if v0 is a cardinal then v0 is an ordinal
+
+Signature:
+  for all v0, if v0 is a cardinal then (if v0 is infinite then truth holds)
+
+Signature (cardinality):
+  for all v0, if v0 is a set then for all v1, if v1 is equal to | v0 | then v1 is a cardinal
+
+Axiom (existenceofsurjection):
+  for all v0, if v0 is a set then (if for some v1, v1 is an element of v0 then for all v1, if v1 is a set then ((| v0 | is equal to | v1 | or | v0 | < | v1 |) iff for some v2, v2 is a function and the domain of v2 is equal to v1 and v2 [ v1 ] is equal to v0))
+
+Axiom (hessenberg):
+  for all v0, if v0 is a cardinal and v0 is infinite then | v0 \times v0 | is equal to v0
+
+Axiom:
+  for all v0, if v0 is a cardinal and v0 is infinite then | v0 | is equal to v0
+
+Axiom:
+  for all v0, if v0 is a set then for all v1, if v1 is a subset of v0 then (| v1 | is equal to | v0 | or | v1 | < | v0 |)
+
+Signature:
+  for all v0, if v0 is a cardinal and v0 is infinite then for all v1, if v1 is equal to Succ( v0 ) then (v1 is a cardinal and v1 is infinite)
+
+Axiom:
+  for all v0, if v0 is a cardinal and v0 is infinite then v0 < Succ( v0 )
+
+Axiom:
+  for all v0, if v0 is a cardinal and v0 is infinite then for all v1, if v1 is an element of Succ( v0 ) then (| v1 | is equal to v0 or | v1 | < v0)
+
+Axiom:
+  for all v0, for all v1, if v0 is a cardinal and v1 is a cardinal then it is wrong that (v0 < v1 and v1 < v0)
+
+Axiom:
+  for all v0, if v0 is a cardinal and v0 is infinite then it is wrong that for some v1, v1 is a cardinal and v0 < v1 and v1 < Succ( v0 )
+
+Axiom:
+  the empty set is a cardinal and for all v0, if v0 is an ordinal and for some v1, v1 is an element of v0 then the empty set is an element of v0
+
+Definition:
+  for all v0, if v0 is a set then for all v1, (v1 is equal to the constant zero on v0) iff (v1 is a function and the domain of v1 is equal to v0 and for all v2, if v2 is an element of v0 then the value of v1 under v2 is equal to the empty set)
+
+Definition (cofinality):
+  for all v0, if v0 is a cardinal and v0 is infinite then for all v1, if v1 is a subset of v0 then ((v1 is cofinal in v0) iff for all v2, if v2 is an element of v0 then for some v3, v3 is an element of v1 and v2 < v3)
+
+Definition:
+  for all v0, if v0 is a cardinal and v0 is infinite then ((v0 is regular) iff for all v1, if v1 is a subset of v0 and v1 is cofinal in v0 then | v1 | is equal to v0)
+
+Theorem (hausdorff):
+  for all v0, if v0 is a cardinal and v0 is infinite then Succ( v0 ) is regular
+Proof:
+  it is wrong that the thesis holds
+  x is a subset of Succ( kappa ) and x is cofinal in Succ( kappa ) and it is wrong that | x | is equal to Succ( kappa )
+  | x | is equal to kappa or | x | < kappa
+  f is a function and the domain of f is equal to kappa and f [ kappa ] is equal to x
+  Proof:
+    (for some v0, v0 is an element of x) and | kappa | is equal to kappa
+  Qed.
+  g is a map and (the domain of g is equal to Succ( kappa )) and for all v0, if v0 is an object then (if v0 is an element of the domain of g then ((if for some v1, v1 is an element of v0 then for some v1, v1 is a function and the domain of v1 is equal to kappa and v1 [ kappa ] is equal to v0 and (the value of g under v0 is equal to v1)) and (if it is wrong that for some v1, v1 is an element of v0 then (the value of g under v0 is equal to the constant zero on kappa))))
+  for all v0, for all v1, if v0 is an element of kappa and v1 is an element of kappa then (the value of g under the value of f under v0 is a map and v1 is an element of the domain of the value of g under the value of f under v0)
+  h is a map and (the domain of h is equal to kappa \times kappa) and for all v0, if v0 is an object then for all v1, if v1 is an object then (if the ordered pair of v0 and v1 is an element of the domain of h then (the value of h under the ordered pair of v0 and v1 is equal to the value of the value of g under the value of f under v0 under v1))
+  the domain of h is equal to kappa \times kappa and h [ kappa \times kappa ] is equal to Succ( kappa )
+  Proof:
+    for all v0, if v0 is an element of Succ( kappa ) then v0 is an element of h [ kappa \times kappa ]
+    Proof:
+      n is an element of Succ( kappa )
+      xi is an element of kappa and n < the value of f under xi
+      zeta is an element of kappa and the value of the value of g under the value of f under xi under zeta is equal to n
+      Proof:
+        the value of g under the value of f under xi is a function and the domain of the value of g under the value of f under xi is equal to kappa and the value of g under the value of f under xi [ kappa ] is equal to the value of f under xi
+      Qed.
+      n is equal to the value of h under the ordered pair of xi and zeta
+      the thesis holds
+      Proof:
+        the ordered pair of xi and zeta is an element of kappa \times kappa
+      Qed.
+    Qed.
+    for all v0, if v0 is an element of h [ kappa \times kappa ] then v0 is an element of Succ( kappa )
+    Proof:
+      n is an element of h [ kappa \times kappa ]
+      a is an element of kappa and b is an element of kappa and n is equal to the value of h under the ordered pair of a and b
+      n is equal to the value of the value of g under the value of f under a under b
+      the value of f under a is an element of Succ( kappa )
+      for all v0, if v0 is an element of the value of f under a then v0 is an element of Succ( kappa )
+      if for some v0, v0 is an element of the value of f under a then the thesis holds
+      Proof:
+        the value of g under the value of f under a is a function and the domain of the value of g under the value of f under a is equal to kappa and the value of g under the value of f under a [ kappa ] is equal to the value of f under a
+        n is an element of the value of f under a and the value of f under a is an element of Succ( kappa )
+        n is an element of Succ( kappa )
+      Qed.
+      if it is wrong that for some v0, v0 is an element of the value of f under a then the thesis holds
+      Proof:
+        the value of g under the value of f under a is equal to the constant zero on kappa
+        n is equal to the empty set
+        n is an element of Succ( kappa )
+      Qed.
+    Qed.
+  Qed.
+  (Succ( kappa ) is equal to | kappa \times kappa | or Succ( kappa ) < | kappa \times kappa |) and | kappa \times kappa | is equal to kappa
+  falsity holds
+Qed.
+
