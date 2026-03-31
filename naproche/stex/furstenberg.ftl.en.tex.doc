@@ -39,20 +39,20 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
-  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Theorem:
   for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
+    for all v0, (if v0 is an element of \SETempty then it is wrong that (v0 is equal to v0))
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
+  if A is empty then (it is wrong that (for some v0, (v0 is an element of A)) and it is wrong that (for some v0, (v0 is an element of \SETempty)))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -65,7 +65,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
   for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
@@ -73,7 +73,7 @@ Definition:
   for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
   for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
@@ -110,10 +110,10 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
@@ -163,7 +163,7 @@ Axiom (injectivity_of_successor_function):
   for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (if v1 \NATplus \NATone is equal to v0 \NATplus \NATone then v1 is equal to v0)))
 
 Axiom:
-  it is wrong that for some v0, (v0 is a natural number and v0 \NATplus \NATone is equal to \NATzero)
+  it is wrong that (for some v0, (v0 is a natural number and v0 \NATplus \NATone is equal to \NATzero))
 
 Axiom (induction_I):
   for all v0, (if v0 is a class then (if \NATzero is an element of v0 and for all v1, (if v1 is a natural number then (if v1 is an element of v0 then v1 \NATplus \NATone is an element of v0)) then for all v1, (if v1 is a natural number then v1 is an element of v0)))
@@ -187,20 +187,20 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then it is wrong that v0 is equal to v0 \NATplus \NATone)
+  for all v0, (if v0 is a natural number then it is wrong that (v0 is equal to v0 \NATplus \NATone))
 Proof:
-  \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and it is wrong that v0 is equal to v0 \NATplus \NATone))
+  \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and it is wrong that (v0 is equal to v0 \NATplus \NATone)))
   \NATzero is an element of \Phi
   for all v0, (if v0 is an element of \Phi then v0 \NATplus \NATone is an element of \Phi)
   Proof:
     n' is an element of \Phi
-    it is wrong that n' is equal to n' \NATplus \NATone
+    it is wrong that (n' is equal to n' \NATplus \NATone)
     if n' \NATplus \NATone is equal to n' \NATplus \NATone \NATplus \NATone then n' is equal to n' \NATplus \NATone
-    it is wrong that n' \NATplus \NATone is equal to n' \NATplus \NATone \NATplus \NATone
+    it is wrong that (n' \NATplus \NATone is equal to n' \NATplus \NATone \NATplus \NATone)
     n' \NATplus \NATone is an element of \Phi
   Qed.
   for all v0, (if v0 is a natural number then v0 is an element of \Phi)
-  it is wrong that n is equal to n \NATplus \NATone
+  it is wrong that (n is equal to n \NATplus \NATone)
 Qed.
 
 Theorem:
@@ -295,9 +295,9 @@ Theorem:
   for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (if v1 \NATplus v0 is equal to \NATzero then (v1 is equal to \NATzero and v0 is equal to \NATzero))))
 Proof:
   n \NATplus m is equal to \NATzero
-  it is wrong that n is equal to \NATzero or it is wrong that m is equal to \NATzero
+  it is wrong that (n is equal to \NATzero) or it is wrong that (m is equal to \NATzero)
   k is an element of \Nat and (n is equal to k \NATplus \NATone or m is equal to k \NATplus \NATone)
-  for some v0, (v0 is a natural number and n \NATplus m is equal to v0 \NATplus k \NATplus \NATone and v0 \NATplus k \NATplus \NATone is equal to v0 \NATplus k \NATplus \NATone and it is wrong that v0 \NATplus k \NATplus \NATone is equal to \NATzero)
+  for some v0, (v0 is a natural number and n \NATplus m is equal to v0 \NATplus k \NATplus \NATone and v0 \NATplus k \NATplus \NATone is equal to v0 \NATplus k \NATplus \NATone and it is wrong that (v0 \NATplus k \NATplus \NATone is equal to \NATzero))
   falsity holds
 Qed.
 
@@ -419,7 +419,7 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and v1 \NATmul v0 is equal to \NATzero then (v1 is equal to \NATzero or v0 is equal to \NATzero)))
 Proof:
-  it is wrong that n is equal to \NATzero and it is wrong that m is equal to \NATzero
+  it is wrong that (n is equal to \NATzero) and it is wrong that (m is equal to \NATzero)
   m' is a natural number and n' is a natural number and (n is equal to n' \NATplus \NATone and m is equal to m' \NATplus \NATone)
   \NATzero is equal to n \NATmul m and n \NATmul m is equal to n' \NATplus \NATone \NATmul m' \NATplus \NATone and n' \NATplus \NATone \NATmul m' \NATplus \NATone is equal to n' \NATplus \NATone \NATmul m' \NATplus n' \NATplus \NATone and n' \NATplus \NATone \NATmul m' \NATplus n' \NATplus \NATone is equal to n' \NATplus \NATone \NATmul m' \NATplus n' \NATplus \NATone
   Proof:
@@ -430,13 +430,13 @@ Proof:
 Qed.
 
 Theorem (right_cancellability_of_multiplication):
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (if v2 \NATmul v0 is equal to v1 \NATmul v0 then v2 is equal to v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (if v2 \NATmul v0 is equal to v1 \NATmul v0 then v2 is equal to v1)))))
 Proof:
-  \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for all v1, (if v1 is an element of \Nat then (if v0 \NATmul k is equal to v1 \NATmul k and it is wrong that k is equal to \NATzero then v0 is equal to v1))))
+  \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for all v1, (if v1 is an element of \Nat then (if v0 \NATmul k is equal to v1 \NATmul k and it is wrong that (k is equal to \NATzero) then v0 is equal to v1))))
   \NATzero is an element of \Phi
   Proof:
     m' is an element of \Nat
-    \NATzero \NATmul k is equal to m' \NATmul k and it is wrong that k is equal to \NATzero
+    \NATzero \NATmul k is equal to m' \NATmul k and it is wrong that (k is equal to \NATzero)
     m' \NATmul k is equal to \NATzero
     m' is equal to \NATzero or k is equal to \NATzero
     m' is equal to \NATzero
@@ -444,17 +444,17 @@ Proof:
   for all v0, (if v0 is an element of \Phi then v0 \NATplus \NATone is an element of \Phi)
   Proof:
     n' is an element of \Phi
-    for all v0, (if v0 is an element of \Nat then (if n' \NATplus \NATone \NATmul k is equal to v0 \NATmul k and it is wrong that k is equal to \NATzero then n' \NATplus \NATone is equal to v0))
+    for all v0, (if v0 is an element of \Nat then (if n' \NATplus \NATone \NATmul k is equal to v0 \NATmul k and it is wrong that (k is equal to \NATzero) then n' \NATplus \NATone is equal to v0))
     Proof:
       m' is an element of \Nat
-      n' \NATplus \NATone \NATmul k is equal to m' \NATmul k and it is wrong that k is equal to \NATzero
+      n' \NATplus \NATone \NATmul k is equal to m' \NATmul k and it is wrong that (k is equal to \NATzero)
       if m' is equal to \NATzero then the thesis holds
       Proof:
         n' \NATplus \NATone \NATmul k is equal to \NATzero
         n' \NATplus \NATone is equal to \NATzero
         falsity holds
       Qed.
-      if it is wrong that m' is equal to \NATzero then the thesis holds
+      if it is wrong that (m' is equal to \NATzero) then the thesis holds
       Proof:
         l is a natural number and m' is equal to l \NATplus \NATone
         n' \NATplus \NATone \NATmul k is equal to l \NATplus \NATone \NATmul k
@@ -465,7 +465,7 @@ Proof:
         Qed.
         n' is equal to l
         Proof:
-          if n' \NATmul k is equal to l \NATmul k and it is wrong that k is equal to \NATzero then n' is equal to l
+          if n' \NATmul k is equal to l \NATmul k and it is wrong that (k is equal to \NATzero) then n' is equal to l
         Qed.
         n' \NATplus \NATone is equal to l \NATplus \NATone and l \NATplus \NATone is equal to m'
       Qed.
@@ -477,7 +477,7 @@ Proof:
 Qed.
 
 Theorem (left_cancellability_of_multiplication):
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (if v0 \NATmul v2 is equal to v0 \NATmul v1 then v2 is equal to v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (if v0 \NATmul v2 is equal to v0 \NATmul v1 then v2 is equal to v1)))))
 Proof:
   k \NATmul n is equal to k \NATmul m
   k \NATmul n is equal to n \NATmul k and k \NATmul m is equal to m \NATmul k
@@ -486,7 +486,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then ((v1 \NATless v0) iff for some v2, (v2 is a natural number and it is wrong that v2 is equal to \NATzero and v0 is equal to v1 \NATplus v2))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then ((v1 \NATless v0) iff for some v2, (v2 is a natural number and it is wrong that (v2 is equal to \NATzero) and v0 is equal to v1 \NATplus v2))))
 
 Definition:
   for all v0, (if v0 is a natural number then for all v1, ((v1 is equal to \Natlessthan{ v0 }) iff (v1 is a class and (if \Nat is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of \Nat and v2 is an object and v2 \NATless v0)))))
@@ -513,7 +513,7 @@ Proof:
   Proof:
     k is a natural number and m is equal to n \NATplus k
     if k is equal to \NATzero then n is equal to m
-    if it is wrong that k is equal to \NATzero then n \NATless m
+    if it is wrong that (k is equal to \NATzero) then n \NATless m
   Qed.
   if n \NATless m or n is equal to m then the thesis holds
   Proof:
@@ -530,14 +530,14 @@ Definition:
   for all v0, (if v0 is a natural number then for all v1, ((v1 is a successor of v0) iff (v1 is a natural number and v0 \NATless v1)))
 
 Theorem:
-  for all v0, (if v0 is a natural number then (v0 is positive iff it is wrong that v0 is equal to \NATzero))
+  for all v0, (if v0 is a natural number then (v0 is positive iff it is wrong that (v0 is equal to \NATzero)))
 Proof:
   if n is positive then the thesis holds
   Proof:
     k is a natural number and k is positive and n is equal to \NATzero \NATplus k and \NATzero \NATplus k is equal to k
-    it is wrong that n is equal to \NATzero
+    it is wrong that (n is equal to \NATzero)
   Qed.
-  if it is wrong that n is equal to \NATzero then the thesis holds
+  if it is wrong that (n is equal to \NATzero) then the thesis holds
   Proof:
     k is a natural number and n is equal to k \NATplus \NATone
     n is equal to \NATzero \NATplus k \NATplus \NATone
@@ -547,21 +547,21 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then it is wrong that v0 \NATless v0)
+  for all v0, (if v0 is a natural number then it is wrong that (v0 \NATless v0))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   k is a natural number and k is positive and n is equal to n \NATplus k
   \NATzero is equal to k
   falsity holds
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (if v1 \NATless v0 then it is wrong that v1 is equal to v0)))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (if v1 \NATless v0 then it is wrong that (v1 is equal to v0))))
 Proof:
   n \NATless m
   k is a natural number and k is positive and m is equal to n \NATplus k
   if n is equal to m then k is equal to \NATzero
-  it is wrong that n is equal to m
+  it is wrong that (n is equal to m)
 Qed.
 
 Theorem:
@@ -573,7 +573,7 @@ Proof:
   l \NATplus k is equal to \NATzero
   l is equal to \NATzero and \NATzero is equal to k
   Proof:
-    if it is wrong that l is equal to \NATzero or it is wrong that k is equal to \NATzero then for some v0, (v0 is a natural number and l \NATplus k is equal to v0 \NATplus \NATone)
+    if it is wrong that (l is equal to \NATzero) or it is wrong that (k is equal to \NATzero) then for some v0, (v0 is a natural number and l \NATplus k is equal to v0 \NATplus \NATone)
   Qed.
   m is equal to n
 Qed.
@@ -625,7 +625,7 @@ Proof:
     m is equal to n \NATplus \NATone
     n \NATplus \NATone \NATleq m
   Qed.
-  if it is wrong that k is equal to \NATone then the thesis holds
+  if it is wrong that (k is equal to \NATone) then the thesis holds
   Proof:
     l is a natural number and k is equal to l \NATplus \NATone
     m is equal to n \NATplus l \NATplus \NATone and n \NATplus l \NATplus \NATone is equal to n \NATplus l \NATplus \NATone and n \NATplus l \NATplus \NATone is equal to n \NATplus \NATone \NATplus l
@@ -648,7 +648,7 @@ Proof:
     Proof:
       k is a natural number and k is positive and n is equal to m' \NATplus k
       if k is equal to \NATone then the thesis holds
-      if it is wrong that k is equal to \NATone then the thesis holds
+      if it is wrong that (k is equal to \NATone) then the thesis holds
       Proof:
         l is a natural number and n is equal to m' \NATplus \NATone \NATplus l
         m' \NATplus \NATone \NATless n
@@ -663,9 +663,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (it is wrong that v1 \NATless v0 iff v0 \NATleq v1)))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (it is wrong that (v1 \NATless v0) iff v0 \NATleq v1)))
 Proof:
-  if it is wrong that n \NATless m then the thesis holds
+  if it is wrong that (n \NATless m) then the thesis holds
   Proof:
     n is equal to m or m \NATless n
     m \NATleq n
@@ -689,30 +689,30 @@ Proof:
   k \NATplus l is equal to \NATone
   l is equal to \NATzero
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     \NATzero \NATless k and \NATzero \NATless l
     if k is equal to \NATone and l is equal to \NATone then the thesis holds
     Proof:
-      k \NATplus l is equal to \NATtwo and it is wrong that \NATtwo is equal to \NATone
+      k \NATplus l is equal to \NATtwo and it is wrong that (\NATtwo is equal to \NATone)
       falsity holds
     Qed.
-    if k is equal to \NATone and it is wrong that l is equal to \NATone then the thesis holds
+    if k is equal to \NATone and it is wrong that (l is equal to \NATone) then the thesis holds
     Proof:
       \NATone \NATless l
       \NATone \NATplus l \NATless k \NATplus l and \NATone \NATless \NATone \NATplus l
       falsity holds
     Qed.
-    if it is wrong that k is equal to \NATone and l is equal to \NATone then the thesis holds
+    if it is wrong that (k is equal to \NATone) and l is equal to \NATone then the thesis holds
     Proof:
       \NATone \NATless k
       k \NATplus \NATone \NATless k \NATplus l and \NATone \NATless k \NATplus \NATone
       falsity holds
     Qed.
-    if it is wrong that k is equal to \NATone and it is wrong that l is equal to \NATone then the thesis holds
+    if it is wrong that (k is equal to \NATone) and it is wrong that (l is equal to \NATone) then the thesis holds
     Proof:
       a is a natural number and b is a natural number and (k is equal to a \NATplus \NATone and l is equal to b \NATplus \NATone)
       Proof:
-        it is wrong that k is equal to \NATzero and it is wrong that l is equal to \NATzero
+        it is wrong that (k is equal to \NATzero) and it is wrong that (l is equal to \NATzero)
       Qed.
       k is equal to a \NATplus \NATone and l is equal to b \NATplus \NATone
       \NATone \NATless k and \NATone \NATless l
@@ -737,9 +737,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then it is wrong that for some v1, (v1 is a natural number and v0 \NATless v1 and v1 \NATless v0 \NATplus \NATone))
+  for all v0, (if v0 is a natural number then it is wrong that (for some v1, (v1 is a natural number and v0 \NATless v1 and v1 \NATless v0 \NATplus \NATone)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   m is a natural number and n \NATless m and m \NATless n \NATplus \NATone
   n \NATless m and m \NATleq n \NATplus \NATone and (n \NATleq m and m \NATless n \NATplus \NATone)
   m is equal to n \NATplus \NATone and m is equal to n
@@ -751,7 +751,7 @@ Theorem:
   for all v0, (if v0 is a natural number then \NATone \NATleq v0 \NATplus \NATone)
 Proof:
   if n is equal to \NATzero then the thesis holds
-  if it is wrong that n is equal to \NATzero then the thesis holds
+  if it is wrong that (n is equal to \NATzero) then the thesis holds
   Proof:
     \NATzero \NATless n
     \NATzero \NATplus \NATone \NATless n \NATplus \NATone and \NATzero \NATplus \NATone is equal to \NATone
@@ -795,20 +795,20 @@ Proof:
 Qed.
 
 Theorem (wellfoundedness_of_ordering):
-  for all v0, (if v0 is a subclass of \Nat and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then v1 \NATleq v2)))
+  for all v0, (if v0 is a subclass of \Nat and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then v1 \NATleq v2)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   for all v0, (if v0 is an element of A then for some v1, (v1 is an element of A and v1 \NATless v0))
   Proof:
     n is an element of A
-    it is wrong that for some v0, (v0 is an element of A and v0 \NATless n)
+    it is wrong that (for some v0, (v0 is an element of A and v0 \NATless n))
     for all v0, (if v0 is an element of A then n \NATleq v0)
     falsity holds
   Qed.
   \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for all v1, (if v1 is an element of A then v0 \NATless v1)))
   \NATzero is an element of \Phi
   Proof:
-    it is wrong that \NATzero is an element of A
+    it is wrong that (\NATzero is an element of A)
     for all v0, (if v0 is an element of A then \NATzero \NATless v0)
     \NATzero is an element of \Phi
   Qed.
@@ -816,26 +816,26 @@ Proof:
   Proof:
     n is an element of \Phi
     for all v0, (if v0 is an element of A then n \NATless v0)
-    it is wrong that n \NATplus \NATone is an element of \Phi
-    m is an element of A and it is wrong that n \NATplus \NATone \NATless m
+    it is wrong that (n \NATplus \NATone is an element of \Phi)
+    m is an element of A and it is wrong that (n \NATplus \NATone \NATless m)
     n \NATless m and m \NATleq n \NATplus \NATone
     m is equal to n \NATplus \NATone
     falsity holds
   Qed.
   for all v0, (if v0 is a natural number then v0 is an element of \Phi)
   for all v0, (if v0 is a natural number then for all v1, (if v1 is an element of A then v0 \NATless v1))
-  it is wrong that for some v0, (v0 is an element of A)
+  it is wrong that (for some v0, (v0 is an element of A))
   falsity holds
 Qed.
 
 Theorem (induction_II):
   for all v0, (if v0 is a class then (if for all v1, (if v1 is an element of \Nat then (if for all v2, (if v2 is a predecessor of v1 then v2 is an element of v0) then v1 is an element of v0)) then for all v1, (if v1 is a natural number then v1 is an element of v0)))
 Proof:
-  it is wrong that the thesis holds
-  n is a natural number and it is wrong that n is an element of A
+  it is wrong that (the thesis holds)
+  n is a natural number and it is wrong that (n is an element of A)
   n is an element of \Nat \SETdiff A
   m is an element of \Nat \SETdiff A and for all v0, (if v0 is an element of \Nat \SETdiff A then m \NATleq v0)
-  for all v0, (if v0 is a predecessor of m then it is wrong that v0 is an element of \Nat \SETdiff A)
+  for all v0, (if v0 is a predecessor of m then it is wrong that (v0 is an element of \Nat \SETdiff A))
   for all v0, (if v0 is a predecessor of m then v0 is an element of A)
   m is an element of A
   falsity holds
@@ -873,7 +873,7 @@ Proof:
 Qed.
 
 Theorem (preservation_of_ordering_under_right_multiplication):
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (v2 \NATless v1 iff v2 \NATmul v0 \NATless v1 \NATmul v0)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (v2 \NATless v1 iff v2 \NATmul v0 \NATless v1 \NATmul v0)))))
 Proof:
   if n \NATmul k \NATless m \NATmul k then the thesis holds
   Proof:
@@ -906,7 +906,7 @@ Proof:
 Qed.
 
 Theorem (preservation_of_ordering_under_left_multiplication):
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (v2 \NATless v1 iff v0 \NATmul v2 \NATless v0 \NATmul v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (v2 \NATless v1 iff v0 \NATmul v2 \NATless v0 \NATmul v1)))))
 Proof:
   the thesis holds
 Qed.
@@ -924,9 +924,9 @@ Proof:
       k \NATless n' \NATplus \NATone and k \NATless m
       n' \NATplus \NATone \NATmul m is equal to n' \NATmul m \NATplus m
       if n' is equal to \NATzero then (n' \NATmul m \NATplus m is equal to \NATzero \NATplus m and \NATzero \NATplus m is equal to m and k \NATless m)
-      if it is wrong that n' is equal to \NATzero then (m \NATless n' \NATmul m \NATplus m and k \NATless m)
+      if it is wrong that (n' is equal to \NATzero) then (m \NATless n' \NATmul m \NATplus m and k \NATless m)
       Proof:
-        if it is wrong that n' is equal to \NATzero then \NATzero \NATless n' \NATmul m
+        if it is wrong that (n' is equal to \NATzero) then \NATzero \NATless n' \NATmul m
         Proof:
           \NATzero \NATless m
         Qed.
@@ -944,7 +944,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (if v0 \NATmul v2 \NATleq v0 \NATmul v1 then v2 \NATleq v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (if v0 \NATmul v2 \NATleq v0 \NATmul v1 then v2 \NATleq v1)))))
 Proof:
   if k \NATmul n is equal to k \NATmul m then n is equal to m
   if k \NATmul n \NATless k \NATmul m then n \NATless m
@@ -956,7 +956,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (if v2 \NATmul v0 \NATleq v1 \NATmul v0 then v2 \NATleq v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (if v2 \NATmul v0 \NATleq v1 \NATmul v0 then v2 \NATleq v1)))))
 Proof:
 Qed.
 
@@ -985,7 +985,7 @@ Definition:
   for all v0, (if v0 is a natural number then for all v1, ((v1 is a trivial divisor of v0) iff (v1 is a factor of v0 and (v1 is equal to \NATone or v1 is equal to v0))))
 
 Definition:
-  for all v0, (if v0 is a natural number then for all v1, ((v1 is a nontrivial divisor of v0) iff (v1 is a factor of v0 and it is wrong that v1 is equal to \NATone and it is wrong that v1 is equal to v0)))
+  for all v0, (if v0 is a natural number then for all v1, ((v1 is a nontrivial divisor of v0) iff (v1 is a factor of v0 and it is wrong that (v1 is equal to \NATone) and it is wrong that (v1 is equal to v0))))
 
 Definition:
   for all v0, (if v0 is a natural number then ((v0 is composite) iff (\NATone \NATless v0 and for some v1, (v1 is a nontrivial divisor of v0))))
@@ -1024,7 +1024,7 @@ Theorem:
 Proof:
   n \NATmid \NATone
   k is a natural number and n \NATmul k is equal to \NATone
-  it is wrong that n is equal to \NATone
+  it is wrong that (n is equal to \NATone)
   n \NATless \NATone or \NATone \NATless n
   if n \NATless \NATone then the thesis holds
   Proof:
@@ -1034,7 +1034,7 @@ Proof:
   Qed.
   if \NATone \NATless n then the thesis holds
   Proof:
-    it is wrong that k is equal to \NATzero
+    it is wrong that (k is equal to \NATzero)
     Proof:
       if k is equal to \NATzero then (\NATone is equal to n \NATmul k and n \NATmul k is equal to n \NATmul \NATzero and n \NATmul \NATzero is equal to \NATzero)
     Qed.
@@ -1070,7 +1070,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v1 is equal to \NATzero then (if v1 \NATmid v0 and v0 \NATmid v1 then v1 is equal to v0)))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v1 is equal to \NATzero) then (if v1 \NATmid v0 and v0 \NATmid v1 then v1 is equal to v0)))
 Proof:
   n \NATmid m and m \NATmid n
   k is a natural number and k' is a natural number and (n \NATmul k is equal to m and m \NATmul k' is equal to n)
@@ -1090,7 +1090,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that v0 is equal to \NATzero then (if v0 \NATmul v2 \NATmid v0 \NATmul v1 then v2 \NATmid v1)))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number then (if it is wrong that (v0 is equal to \NATzero) then (if v0 \NATmul v2 \NATmid v0 \NATmul v1 then v2 \NATmid v1)))))
 Proof:
   k \NATmul n \NATmid k \NATmul m
   l is a natural number and k \NATmul n \NATmul l is equal to k \NATmul m
@@ -1123,7 +1123,7 @@ Theorem (divisibility_of_summands):
 Proof:
   k \NATmid n and k \NATmid n \NATplus m
   if k is equal to \NATzero then the thesis holds
-  if it is wrong that k is equal to \NATzero then the thesis holds
+  if it is wrong that (k is equal to \NATzero) then the thesis holds
   Proof:
     l is a natural number and n is equal to k \NATmul l
     l' is a natural number and n \NATplus m is equal to k \NATmul l'
@@ -1146,7 +1146,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and (it is wrong that v1 is equal to \NATzero and it is wrong that v0 is equal to \NATzero) then (if v0 \NATmid v1 then v0 \NATleq v1)))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and (it is wrong that (v1 is equal to \NATzero) and it is wrong that (v0 is equal to \NATzero)) then (if v0 \NATmid v1 then v0 \NATleq v1)))
 Proof:
   m \NATmid n
   k is a natural number and m \NATmul k is equal to n
@@ -1159,23 +1159,23 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then for all v2, ((v2 is equal to v1 \NATdiv v0) iff (v2 is a natural number and for some v3, (v3 is a natural number and v3 \NATless v0 and v1 is equal to v0 \NATmul v2 \NATplus v3)))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then for all v2, ((v2 is equal to v1 \NATdiv v0) iff (v2 is a natural number and for some v3, (v3 is a natural number and v3 \NATless v0 and v1 is equal to v0 \NATmul v2 \NATplus v3)))))
 
 Definition:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then for all v2, ((v2 is equal to v1 \NATmod v0) iff (v2 is a natural number and v2 \NATless v0 and for some v3, (v3 is a natural number and v1 is equal to v0 \NATmul v3 \NATplus v2)))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then for all v2, ((v2 is equal to v1 \NATmod v0) iff (v2 is a natural number and v2 \NATless v0 and for some v3, (v3 is a natural number and v1 is equal to v0 \NATmul v3 \NATplus v2)))))
 
 Definition:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then ((\NATcong{ v2 }{ v1 }{ v0 }) iff v2 \NATmod v0 is equal to v1 \NATmod v0))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then ((\NATcong{ v2 }{ v1 }{ v0 }) iff v2 \NATmod v0 is equal to v1 \NATmod v0))))
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then \NATcong{ v1 }{ v1 }{ v0 }))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then \NATcong{ v1 }{ v1 }{ v0 }))
 Proof:
   n \NATmod k is equal to n \NATmod k
   \NATcong{ n }{ n }{ k }
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then (if \NATcong{ v2 }{ v1 }{ v0 } then \NATcong{ v1 }{ v2 }{ v0 }))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then (if \NATcong{ v2 }{ v1 }{ v0 } then \NATcong{ v1 }{ v2 }{ v0 }))))
 Proof:
   \NATcong{ n }{ m }{ k }
   n \NATmod k is equal to m \NATmod k
@@ -1184,7 +1184,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then (if \NATcong{ v2 }{ v1 }{ v0 } and \NATcong{ v1 }{ \NATone }{ v0 } then \NATcong{ v2 }{ \NATone }{ v0 }))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then (if \NATcong{ v2 }{ v1 }{ v0 } and \NATcong{ v1 }{ \NATone }{ v0 } then \NATcong{ v2 }{ \NATone }{ v0 }))))
 Proof:
   \NATcong{ n }{ m }{ k } and \NATcong{ m }{ \NATone }{ k }
   n \NATmod k is equal to m \NATmod k and m \NATmod k is equal to \NATone \NATmod k
@@ -1193,17 +1193,17 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then (if v1 \NATleq v2 then (\NATcong{ v2 }{ v1 }{ v0 } iff for some v3, (v3 is a natural number and v2 is equal to v0 \NATmul v3 \NATplus v1))))))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then (if v1 \NATleq v2 then (\NATcong{ v2 }{ v1 }{ v0 } iff for some v3, (v3 is a natural number and v2 is equal to v0 \NATmul v3 \NATplus v1))))))
 Proof:
   if \NATcong{ n }{ m }{ k } then the thesis holds
   Proof:
     n \NATmod k is equal to m \NATmod k
     r is a natural number and r \NATless k and n \NATmod k is equal to r and r is equal to m \NATmod k
-    l is a natural number and it is wrong that l is equal to \NATzero and k is equal to r \NATplus l
+    l is a natural number and it is wrong that (l is equal to \NATzero) and k is equal to r \NATplus l
     q is a natural number and q' is a natural number and (n is equal to q \NATmul k \NATplus r and m is equal to q' \NATmul k \NATplus r)
     q' \NATleq q
     Proof:
-      it is wrong that the thesis holds
+      it is wrong that (the thesis holds)
       q \NATless q'
       q \NATmul k \NATless q' \NATmul k
       q \NATmul k \NATplus r \NATless q' \NATmul k \NATplus r
@@ -1233,7 +1233,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v3 is a natural number and v2 is a natural number and v0 is a natural number and v1 is a natural number and (it is wrong that v0 is equal to \NATzero and it is wrong that v1 is equal to \NATzero) then (if \NATcong{ v3 }{ v2 }{ v0 \NATmul v1 } then \NATcong{ v3 }{ v2 }{ v0 })))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v3 is a natural number and v2 is a natural number and v0 is a natural number and v1 is a natural number and (it is wrong that (v0 is equal to \NATzero) and it is wrong that (v1 is equal to \NATzero)) then (if \NATcong{ v3 }{ v2 }{ v0 \NATmul v1 } then \NATcong{ v3 }{ v2 }{ v0 })))))
 Proof:
   \NATcong{ n }{ m }{ k \NATmul k' }
   if m \NATleq n then the thesis holds
@@ -1253,7 +1253,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v3 is a natural number and v2 is a natural number and v0 is a natural number and v1 is a natural number and (it is wrong that v0 is equal to \NATzero and it is wrong that v1 is equal to \NATzero) then (if \NATcong{ v3 }{ v2 }{ v0 \NATmul v1 } then \NATcong{ v3 }{ v2 }{ v1 })))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v3 is a natural number and v2 is a natural number and v0 is a natural number and v1 is a natural number and (it is wrong that (v0 is equal to \NATzero) and it is wrong that (v1 is equal to \NATzero)) then (if \NATcong{ v3 }{ v2 }{ v0 \NATmul v1 } then \NATcong{ v3 }{ v2 }{ v1 })))))
 Proof:
   \NATcong{ n }{ m }{ k \NATmul k' }
   \NATcong{ n }{ m }{ k' \NATmul k }
@@ -1261,7 +1261,7 @@ Proof:
 Qed.
 
 Theorem (congruency_of_sum):
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then \NATcong{ v1 \NATplus v0 }{ v1 }{ v0 }))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then \NATcong{ v1 \NATplus v0 }{ v1 }{ v0 }))
 Proof:
   r is equal to n \NATmod k and r' is equal to n \NATplus k \NATmod k
   q is an element of \Nat and n is equal to k \NATmul q \NATplus r and r \NATless k
@@ -1308,9 +1308,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and v0 \NATleq v1 then (if it is wrong that \NATzero is equal to v0 and v0 \NATless v1 then v1 \NATsub v0 \NATless v1)))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and v0 \NATleq v1 then (if it is wrong that (\NATzero is equal to v0) and v0 \NATless v1 then v1 \NATsub v0 \NATless v1)))
 Proof:
-  it is wrong that \NATzero is equal to m and m \NATless n
+  it is wrong that (\NATzero is equal to m) and m \NATless n
   n \NATleq n \NATsub m
   n \NATsub m \NATplus m is equal to n
   n \NATplus m is equal to n \NATsub m \NATplus m and n \NATsub m \NATplus m is equal to n and n is equal to n \NATplus \NATzero
@@ -1338,7 +1338,7 @@ Proof:
 Qed.
 
 Theorem (Euclid_Division_Existence):
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then for some v2, (for some v3, (v2 is a natural number and v3 is a natural number and (v1 is equal to v0 \NATmul v2 \NATplus v3 and v3 \NATless v0)))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then for some v2, (for some v3, (v2 is a natural number and v3 is a natural number and (v1 is equal to v0 \NATmul v2 \NATplus v3 and v3 \NATless v0)))))
 Proof:
   \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for some v1, (for some v2, (v1 is a natural number and v2 is a natural number and (v2 \NATless m and v0 is equal to m \NATmul v1 \NATplus v2)))))
   \NATzero is an element of \Phi
@@ -1372,7 +1372,7 @@ Proof:
 Qed.
 
 Theorem (Euclid_Division_Uniqueness):
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that v0 is equal to \NATzero then for all v2, (for all v3, (if v2 is a natural number and v3 is a natural number and (v1 is equal to v0 \NATmul v2 \NATplus v3 and v3 \NATless v0) then for all v4, (for all v5, (if v4 is a natural number and v5 is a natural number and (v1 is equal to v0 \NATmul v4 \NATplus v5 and v5 \NATless v0) then (v2 is equal to v4 and v3 is equal to v5)))))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and it is wrong that (v0 is equal to \NATzero) then for all v2, (for all v3, (if v2 is a natural number and v3 is a natural number and (v1 is equal to v0 \NATmul v2 \NATplus v3 and v3 \NATless v0) then for all v4, (for all v5, (if v4 is a natural number and v5 is a natural number and (v1 is equal to v0 \NATmul v4 \NATplus v5 and v5 \NATless v0) then (v2 is equal to v4 and v3 is equal to v5)))))))
 Proof:
   m \NATmul q \NATplus r is equal to m \NATmul q' \NATplus r'
   if q' \NATleq q and r' \NATleq r then the thesis holds
@@ -1440,7 +1440,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a natural number then ((v0 is prime) iff (\NATone \NATless v0 and it is wrong that for some v1, (v1 is a nontrivial divisor of v0))))
+  for all v0, (if v0 is a natural number then ((v0 is prime) iff (\NATone \NATless v0 and it is wrong that (for some v1, (v1 is a nontrivial divisor of v0)))))
 
 Definition:
   for all v0, ((v0 is equal to \Prime) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a natural number and v1 is prime and v1 is an object))))
@@ -1476,22 +1476,22 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then ((v1 and v0 are coprime) iff for all v2, (if v2 is a natural number and it is wrong that v2 is equal to \NATzero and v2 \NATmid v1 and v2 \NATmid v0 then v2 is equal to \NATone))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then ((v1 and v0 are coprime) iff for all v2, (if v2 is a natural number and it is wrong that (v2 is equal to \NATzero) and v2 \NATmid v1 and v2 \NATmid v0 then v2 is equal to \NATone))))
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (v1 and v0 are coprime iff it is wrong that for some v2, (v2 is a factor of v1 and v2 is a factor of v0 and v2 is prime))))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number then (v1 and v0 are coprime iff it is wrong that (for some v2, (v2 is a factor of v1 and v2 is a factor of v0 and v2 is prime)))))
 Proof:
   if n and m are coprime then the thesis holds
   Proof:
     p is a natural number and p is prime and (p \NATmid n and p \NATmid m)
-    it is wrong that p is equal to \NATzero and it is wrong that p is equal to \NATone
+    it is wrong that (p is equal to \NATzero) and it is wrong that (p is equal to \NATone)
     falsity holds
   Qed.
-  if it is wrong that for some v0, (v0 is a factor of n and v0 is a factor of m and v0 is prime) then the thesis holds
+  if it is wrong that (for some v0, (v0 is a factor of n and v0 is a factor of m and v0 is prime)) then the thesis holds
   Proof:
-    it is wrong that n and m are coprime
-    k is a natural number and it is wrong that k is equal to \NATzero and k \NATmid n and k \NATmid m
-    it is wrong that k is equal to \NATone
+    it is wrong that (n and m are coprime)
+    k is a natural number and it is wrong that (k is equal to \NATzero) and k \NATmid n and k \NATmid m
+    it is wrong that (k is equal to \NATone)
     p is a factor of k and p is prime
     p \NATmid k and k \NATmid n and k \NATmid m
     p \NATmid n and p \NATmid m
@@ -1500,11 +1500,11 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v1 is a natural number and v0 is a natural number and (v2 is a natural number and v2 is prime) then (if it is wrong that v2 \NATmid v1 then v2 and v1 are coprime))))
+  for all v0, (for all v1, (for all v2, (if v1 is a natural number and v0 is a natural number and (v2 is a natural number and v2 is prime) then (if it is wrong that (v2 \NATmid v1) then v2 and v1 are coprime))))
 Proof:
-  it is wrong that p \NATmid n
-  it is wrong that p and n are coprime
-  k is a natural number and it is wrong that k is equal to \NATzero and k \NATmid p and k \NATmid n
+  it is wrong that (p \NATmid n)
+  it is wrong that (p and n are coprime)
+  k is a natural number and it is wrong that (k is equal to \NATzero) and k \NATmid p and k \NATmid n
   k is equal to p
   p \NATmid n
   falsity holds
@@ -1515,9 +1515,9 @@ Theorem:
 Proof:
   p \NATmid n \NATmul m
   if p \NATmid n then the thesis holds
-  if it is wrong that p \NATmid n then the thesis holds
+  if it is wrong that (p \NATmid n) then the thesis holds
   Proof:
-    \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and (it is wrong that v0 is equal to \NATzero and p \NATmid v0 \NATmul m)))
+    \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and (it is wrong that (v0 is equal to \NATzero) and p \NATmid v0 \NATmul m)))
     p is an element of \Phi and n is an element of \Phi
     for some v0, (v0 is a natural number and v0 is an element of \Phi)
     a is an element of \Phi and for all v0, (if v0 is an element of \Phi then a \NATleq v0)
@@ -1526,7 +1526,7 @@ Proof:
       k is an element of \Phi
       q is a natural number and r is a natural number and (k is equal to a \NATmul q \NATplus r and r \NATless a)
       Proof:
-        it is wrong that a is equal to \NATzero
+        it is wrong that (a is equal to \NATzero)
       Qed.
       k \NATmul m is equal to q \NATmul a \NATplus r \NATmul m and q \NATmul a \NATplus r \NATmul m is equal to q \NATmul a \NATmul m \NATplus r \NATmul m
       p \NATmid k \NATmul m
@@ -1548,7 +1548,7 @@ Proof:
       Qed.
       r is equal to \NATzero
       Proof:
-        if it is wrong that r is equal to \NATzero then (r is an element of \Phi and r \NATless a)
+        if it is wrong that (r is equal to \NATzero) then (r is an element of \Phi and r \NATless a)
       Qed.
       k is equal to q \NATmul a
       a \NATmid k
@@ -1720,7 +1720,7 @@ Definition:
   for all v0, ((v0 is a system of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that v1 is empty))))
+  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that (v1 is empty)))))
 
 Definition:
   for all v0, (if v0 is a class then for all v1, ((v1 is a system of subsets of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is a subset of v0))))
@@ -1757,8 +1757,8 @@ Theorem:
   \SETunionover \SETempty is equal to \SETempty
 Proof:
   \SETunionover \SETempty is a class and for all v0, (v0 is an element of \SETunionover \SETempty iff (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
-  it is wrong that for some v0, (v0 is an element of \SETempty)
-  it is wrong that for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1))
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
+  it is wrong that (for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
   \SETunionover \SETempty is equal to \SETempty
 Qed.
 
@@ -1803,7 +1803,7 @@ Proof:
     a is an object
     for all v0, (if v0 is an element of \SETempty then a is an element of v0)
     Proof:
-      it is wrong that for some v0, (v0 is an element of \SETempty)
+      it is wrong that (for some v0, (v0 is an element of \SETempty))
     Qed.
     a is an element of \SETintersectover \SETempty
   Qed.
@@ -1843,20 +1843,20 @@ Axiom (Replacement_Axiom):
   for all v0, (for all v1, (if v0 is a map and v1 is a set then \FUNim{ v0 }{ v1 } is a set))
 
 Axiom (Foundation_Axiom):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
 
 Theorem (wellfoundedness_of_membership_relation):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that v2 is an element of v1)))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that (v2 is an element of v1))))
 Proof:
 Qed.
 
 Theorem (epsilon_induction):
   for all v0, (if v0 is a class then (if for all v1, (if v1 is a set then (if for all v2, (if v2 is an element of v1 and v2 is a set then v2 is an element of v0) then v1 is an element of v0)) then for all v1, (if v1 is a set then v1 is an element of v0)))
 Proof:
-  it is wrong that the thesis holds
-  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of \Phi))
-  it is wrong that M is empty
-  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that v0 is an element of x)
+  it is wrong that (the thesis holds)
+  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that (v0 is an element of \Phi)))
+  it is wrong that (M is empty)
+  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that (v0 is an element of x))
   x is a set and for all v0, (if v0 is an element of x and v0 is a set then v0 is an element of \Phi)
   x is an element of \Phi
   falsity holds
@@ -1896,17 +1896,17 @@ Theorem:
 Proof:
   if A \SETprod B is empty then the thesis holds
   Proof:
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     a is an element of A and b is an element of B
     the ordered pair of a and b is an element of A \SETprod B
     falsity holds
   Qed.
   if A is empty or B is empty then the thesis holds
   Proof:
-    it is wrong that A \SETprod B is empty
+    it is wrong that (A \SETprod B is empty)
     c is an element of A \SETprod B
     for some v0, (v0 is an element of A and for some v1, (v1 is an element of B and c is equal to the ordered pair of v0 and v1))
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     falsity holds
   Qed.
 Qed.
@@ -1932,7 +1932,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that v0 is empty and it is wrong that v1 is empty and it is wrong that v2 is empty and it is wrong that v3 is empty) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty) and it is wrong that (v2 is empty) and it is wrong that (v3 is empty)) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 Proof:
   A \SETprod B is equal to A' \SETprod B'
   A is a subclass of A' and B is a subclass of B'
@@ -2325,7 +2325,7 @@ Theorem:
   \SETempty is a set
 Proof:
   x is a set
-  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that v0 is equal to v0))
+  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that (v0 is equal to v0)))
   A is a set
   A is equal to \SETempty
   \SETempty is a set
@@ -2458,7 +2458,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then \SETintersectover v0 is a set)
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then \SETintersectover v0 is a set)
 Proof:
   x is an element of X
   \SETintersectover X is a subclass of x
@@ -2485,31 +2485,31 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0)))
+  it is wrong that (for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is a set and y is a set and (x is an element of y and y is an element of x)
   z is an element of \SETpair{ x }{ y } and \SETpair{ x }{ y } and z are disjoint
   Proof:
-    \SETpair{ x }{ y } is a system of sets and it is wrong that \SETpair{ x }{ y } is empty
+    \SETpair{ x }{ y } is a system of sets and it is wrong that (\SETpair{ x }{ y } is empty)
   Qed.
   z is equal to x or z is equal to y
   if z is equal to x then the thesis holds
   Proof:
     x and \SETpair{ x }{ y } are disjoint
-    it is wrong that y is an element of x
+    it is wrong that (y is an element of x)
     falsity holds
   Qed.
   if z is equal to y then the thesis holds
   Proof:
     y and \SETpair{ x }{ y } are disjoint
-    it is wrong that x is an element of y
+    it is wrong that (x is an element of y)
     falsity holds
   Qed.
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a set then it is wrong that v0 is an element of v0)
+  for all v0, (if v0 is a set then it is wrong that (v0 is an element of v0))
 Proof:
 Qed.
 
@@ -2570,7 +2570,7 @@ Proof:
   Proof:
     \NATsegment{ \NATone }{ n } is equal to \SETempty
     \NATsegment{ \NATone }{ m } is equal to \SETempty
-    it is wrong that for some v0, (v0 is an element of \Nat and \NATone \NATleq v0 and v0 \NATleq m)
+    it is wrong that (for some v0, (v0 is an element of \Nat and \NATone \NATleq v0 and v0 \NATleq m))
     m is equal to \NATzero
     n is equal to m
   Qed.
@@ -2578,7 +2578,7 @@ Proof:
   Proof:
     \NATsegment{ \NATone }{ m } is equal to \SETempty
     \NATsegment{ \NATone }{ n } is equal to \SETempty
-    it is wrong that for some v0, (v0 is an element of \Nat and \NATone \NATleq v0 and v0 \NATleq n)
+    it is wrong that (for some v0, (v0 is an element of \Nat and \NATone \NATleq v0 and v0 \NATleq n))
     n is equal to \NATzero
     n is equal to m
   Qed.
@@ -2588,20 +2588,20 @@ Proof:
     for all v0, (if v0 is an element of \Nat then (v0 \NATleq n iff v0 \NATleq m))
     n is equal to m
     Proof:
-      it is wrong that n is equal to m
+      it is wrong that (n is equal to m)
       m \NATless n or n \NATless m
       if m \NATless n then the thesis holds
       Proof:
         k is equal to m \NATplus \NATone
-        k \NATleq n and it is wrong that k \NATleq m
-        it is wrong that (k \NATleq n iff k \NATleq m)
+        k \NATleq n and it is wrong that (k \NATleq m)
+        it is wrong that ((k \NATleq n iff k \NATleq m))
         falsity holds
       Qed.
       if n \NATless m then the thesis holds
       Proof:
         k is equal to n \NATplus \NATone
-        k \NATleq m and it is wrong that k \NATleq m
-        it is wrong that (k \NATleq n iff k \NATleq m)
+        k \NATleq m and it is wrong that (k \NATleq m)
+        it is wrong that ((k \NATleq n iff k \NATleq m))
         falsity holds
       Qed.
     Qed.
@@ -2664,11 +2664,11 @@ Theorem:
 Proof:
   if X has \NATzero elements then the thesis holds
   Proof:
-    for all v0, (if v0 is an object then it is wrong that v0 is an element of X)
+    for all v0, (if v0 is an object then it is wrong that (v0 is an element of X))
   Qed.
   if X is equal to \SETempty then the thesis holds
   Proof:
-    for all v0, (if v0 is an object then it is wrong that v0 is an element of X)
+    for all v0, (if v0 is an object then it is wrong that (v0 is an element of X))
     X is equal to \NATsegment{ \NATone }{ \NATzero }
   Qed.
 Qed.
@@ -2691,18 +2691,18 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a class then (v0 has \NATtwo elements iff for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, (if v0 is a class then (v0 has \NATtwo elements iff for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 Proof:
   if X has \NATtwo elements then the thesis holds
   Proof:
     f is a bijection between \NATsegment{ \NATone }{ \NATtwo } and X
     \NATsegment{ \NATone }{ \NATtwo } is equal to \SETpair{ \NATone }{ \NATtwo }
     X is equal to \SETpair{ the value of f under \NATone }{ the value of f under \NATtwo }
-    it is wrong that the value of f under \NATone is equal to the value of f under \NATtwo
+    it is wrong that (the value of f under \NATone is equal to the value of f under \NATtwo)
   Qed.
-  if for some v0, (for some v1, (v0 is an object and v1 is an object and it is wrong that v0 is equal to v1 and X is equal to \SETpair{ v0 }{ v1 })) then the thesis holds
+  if for some v0, (for some v1, (v0 is an object and v1 is an object and it is wrong that (v0 is equal to v1) and X is equal to \SETpair{ v0 }{ v1 })) then the thesis holds
   Proof:
-    a is an object and b is an object and (it is wrong that a is equal to b and X is equal to \SETpair{ a }{ b })
+    a is an object and b is an object and (it is wrong that (a is equal to b) and X is equal to \SETpair{ a }{ b })
     f is a map and (the domain of f is equal to \SETpair{ a }{ b }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of f then ((if v0 is equal to a then (the value of f under v0 is equal to \NATone)) and (if v0 is equal to b then (the value of f under v0 is equal to \NATtwo)))))
     f is a bijection between \SETpair{ a }{ b } and \NATsegment{ \NATone }{ \NATtwo }
     Proof:
@@ -2712,7 +2712,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v0 is a class and v0 has v2 elements and (v1 is an object and it is wrong that v1 is an element of v0) then v0 \SETunion \SETsingleton{ v1 } has v2 \NATplus \NATone elements)))
+  for all v0, (for all v1, (for all v2, (if v2 is a natural number and v0 is a class and v0 has v2 elements and (v1 is an object and it is wrong that (v1 is an element of v0)) then v0 \SETunion \SETsingleton{ v1 } has v2 \NATplus \NATone elements)))
 Proof:
   f is a bijection between X and \NATsegment{ \NATone }{ n }
   g is a map and (the domain of g is equal to X \SETunion \SETsingleton{ a }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if v0 is an element of X then (the value of g under v0 is equal to the value of f under v0)) and (if v0 is equal to a then (the value of g under v0 is equal to n \NATplus \NATone)))))
@@ -2728,7 +2728,7 @@ Proof:
   g is injective
   Proof:
     x is an element of the domain of g and y is an element of the domain of g
-    it is wrong that x is equal to y
+    it is wrong that (x is equal to y)
     if x is an element of X and y is an element of X then the thesis holds
     if x is an element of X and y is equal to a then the thesis holds
     if x is equal to a and y is an element of X then the thesis holds
@@ -2753,7 +2753,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite))
+  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that (v0 is finite)))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (if v0 is infinite and v1 is equinumerous to v0 then v1 is infinite)))
@@ -2764,7 +2764,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a system of sets then ((v0 is closed under finite unions) iff for all v1, (if v1 is a subclass of v0 and v1 is finite and it is wrong that v1 is empty then \SETunionover v1 is an element of v0)))
+  for all v0, (if v0 is a system of sets then ((v0 is closed under finite unions) iff for all v1, (if v1 is a subclass of v0 and v1 is finite and it is wrong that (v1 is empty) then \SETunionover v1 is an element of v0)))
 
 Theorem:
   for all v0, (if v0 is a system of sets then (v0 is closed under finite unions iff for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then v1 \SETunion v2 is an element of v0))))
@@ -2772,23 +2772,23 @@ Proof:
   if X is closed under finite unions then the thesis holds
   Proof:
     U is an element of X and V is an element of X
-    \SETpair{ U }{ V } is a subclass of X and \SETpair{ U }{ V } is finite and it is wrong that \SETpair{ U }{ V } is empty
+    \SETpair{ U }{ V } is a subclass of X and \SETpair{ U }{ V } is finite and it is wrong that (\SETpair{ U }{ V } is empty)
     U \SETunion V is equal to \SETunionover \SETpair{ U }{ V } and \SETunionover \SETpair{ U }{ V } is an element of X
   Qed.
   if for all v0, (for all v1, (if v0 is an element of X and v1 is an element of X then v0 \SETunion v1 is an element of X)) then the thesis holds
   Proof:
-    \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for all v1, (if v1 is a subclass of X and it is wrong that v1 is empty and v1 has v0 elements then \SETunionover v1 is an element of X)))
+    \Phi is a class and (if \Nat is a set then \Phi is a set) and for all v0, (v0 is an element of \Phi iff (v0 is an element of \Nat and v0 is an object and for all v1, (if v1 is a subclass of X and it is wrong that (v1 is empty) and v1 has v0 elements then \SETunionover v1 is an element of X)))
     \NATzero is an element of \Phi
     for all v0, (if v0 is an element of \Phi then v0 \NATplus \NATone is an element of \Phi)
     Proof:
       n is an element of \Phi
-      for all v0, (if v0 is a subclass of X and it is wrong that v0 is empty and v0 has n elements then \SETunionover v0 is an element of X)
-      for all v0, (if v0 is a subclass of X and it is wrong that v0 is empty and v0 has n \NATplus \NATone elements then \SETunionover v0 is an element of X)
+      for all v0, (if v0 is a subclass of X and it is wrong that (v0 is empty) and v0 has n elements then \SETunionover v0 is an element of X)
+      for all v0, (if v0 is a subclass of X and it is wrong that (v0 is empty) and v0 has n \NATplus \NATone elements then \SETunionover v0 is an element of X)
       Proof:
         if n is equal to \NATzero then the thesis holds
-        if it is wrong that n is equal to \NATzero then the thesis holds
+        if it is wrong that (n is equal to \NATzero) then the thesis holds
         Proof:
-          U is a subclass of X and it is wrong that U is empty and U has n \NATplus \NATone elements
+          U is a subclass of X and it is wrong that (U is empty) and U has n \NATplus \NATone elements
           f is a bijection between \NATsegment{ \NATone }{ n \NATplus \NATone } and U
           \NATsegment{ \NATone }{ n \NATplus \NATone } is equal to \NATsegment{ \NATone }{ n } \SETunion \SETsingleton{ n \NATplus \NATone }
           V is equal to \FUNim{ f }{ \NATsegment{ \NATone }{ n } }
@@ -2800,9 +2800,9 @@ Proof:
             Proof:
               for some v0, (v0 is an element of \NATsegment{ \NATone }{ n } and x is equal to the value of f under v0)
               Proof:
-                it is wrong that the thesis holds
-                for all v0, (if v0 is an element of \NATsegment{ \NATone }{ n } then it is wrong that x is equal to the value of f under v0)
-                it is wrong that x is an element of \FUNim{ f }{ \NATsegment{ \NATone }{ n } } and \FUNim{ f }{ \NATsegment{ \NATone }{ n } } is equal to V
+                it is wrong that (the thesis holds)
+                for all v0, (if v0 is an element of \NATsegment{ \NATone }{ n } then it is wrong that (x is equal to the value of f under v0))
+                it is wrong that (x is an element of \FUNim{ f }{ \NATsegment{ \NATone }{ n } }) and \FUNim{ f }{ \NATsegment{ \NATone }{ n } } is equal to V
                 falsity holds
               Qed.
             Qed.
@@ -2811,7 +2811,7 @@ Proof:
               x is an element of \FUNim{ f }{ \NATsegment{ \NATone }{ n \NATplus \NATone } }
             Qed.
           Qed.
-          it is wrong that V is empty
+          it is wrong that (V is empty)
           Proof:
             the value of f under \NATone is an element of \FUNim{ f }{ \NATsegment{ \NATone }{ n } }
             Proof:
@@ -2830,9 +2830,9 @@ Proof:
               n \NATplus \NATone is an element of the domain of f and \NATsegment{ \NATone }{ n } is a subclass of the domain of f and \SETsingleton{ \NATone \NATplus n } is a subclass of the domain of f
             Qed.
           Qed.
-          for all v0, (for all v1, (if v0 is a system of sets and v1 is a system of sets and (it is wrong that v0 is empty and it is wrong that v1 is empty) then \SETunionover v0 \SETunion v1 is equal to \SETunionover v0 \SETunion \SETunionover v1))
+          for all v0, (for all v1, (if v0 is a system of sets and v1 is a system of sets and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty)) then \SETunionover v0 \SETunion v1 is equal to \SETunionover v0 \SETunion \SETunionover v1))
           Proof:
-            A is a system of sets and B is a system of sets and (it is wrong that A is empty and it is wrong that B is empty)
+            A is a system of sets and B is a system of sets and (it is wrong that (A is empty) and it is wrong that (B is empty))
             \SETunionover A \SETunion B is a subclass of \SETunionover A \SETunion \SETunionover B
             \SETunionover A \SETunion \SETunionover B is a subclass of \SETunionover A \SETunion B
           Qed.
@@ -2842,13 +2842,13 @@ Proof:
             the value of f under k is an element of U and the value of f under n \NATplus \NATone is an element of U
             the value of f under k is a set and the value of f under n \NATplus \NATone is a set
           Qed.
-          V is a system of sets and \SETsingleton{ the value of f under n \NATplus \NATone } is a system of sets and (it is wrong that V is empty and it is wrong that \SETsingleton{ the value of f under n \NATplus \NATone } is empty)
+          V is a system of sets and \SETsingleton{ the value of f under n \NATplus \NATone } is a system of sets and (it is wrong that (V is empty) and it is wrong that (\SETsingleton{ the value of f under n \NATplus \NATone } is empty))
           \SETunionover U is equal to \SETunionover V \SETunion \SETsingleton{ the value of f under n \NATplus \NATone } and \SETunionover V \SETunion \SETsingleton{ the value of f under n \NATplus \NATone } is equal to \SETunionover V \SETunion \SETunionover \SETsingleton{ the value of f under n \NATplus \NATone } and \SETunionover V \SETunion \SETunionover \SETsingleton{ the value of f under n \NATplus \NATone } is equal to \SETunionover V \SETunion the value of f under n \NATplus \NATone and \SETunionover V \SETunion the value of f under n \NATplus \NATone is an element of X
         Qed.
       Qed.
     Qed.
     for all v0, (if v0 is a natural number then v0 is an element of \Phi)
-    for all v0, (if v0 is a subclass of X and v0 is finite and it is wrong that v0 is empty then \SETunionover v0 is an element of X)
+    for all v0, (if v0 is a subclass of X and v0 is finite and it is wrong that (v0 is empty) then \SETunionover v0 is an element of X)
     X is closed under finite unions
   Qed.
 Qed.
@@ -2862,10 +2862,10 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and it is wrong that v1 is equal to \NATzero then for all v2, ((v2 is equal to \ArithSeq{ v0 }{ v1 }) iff (v2 is a class and (if \Nat is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of \Nat and v3 is an object and \NATcong{ v3 }{ v0 }{ v1 }))))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and it is wrong that (v1 is equal to \NATzero) then for all v2, ((v2 is equal to \ArithSeq{ v0 }{ v1 }) iff (v2 is a class and (if \Nat is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of \Nat and v3 is an object and \NATcong{ v3 }{ v0 }{ v1 }))))))
 
 Definition:
-  for all v0, (if v0 is a subset of \Nat then ((v0 is open) iff for all v1, (if v1 is an element of v0 then for some v2, (v2 is a natural number and it is wrong that v2 is equal to \NATzero and \ArithSeq{ v1 }{ v2 } is a subclass of v0))))
+  for all v0, (if v0 is a subset of \Nat then ((v0 is open) iff for all v1, (if v1 is an element of v0 then for some v2, (v2 is a natural number and it is wrong that (v2 is equal to \NATzero) and \ArithSeq{ v1 }{ v2 } is a subclass of v0))))
 
 Definition:
   for all v0, ((v0 is a system of open sets) iff (v0 is a system of sets and for all v1, (if v1 is an element of v0 then (v1 is a subset of \Nat and v1 is open))))
@@ -2887,9 +2887,9 @@ Theorem:
   for all v0, (for all v1, (if v0 is a subset of \Nat and v1 is a subset of \Nat and (v0 is open and v1 is open) then v0 \SETintersect v1 is open))
 Proof:
   n is an element of U \SETintersect V
-  q is a natural number and it is wrong that q is equal to \NATzero and \ArithSeq{ n }{ q } is a subclass of U
-  p is a natural number and it is wrong that p is equal to \NATzero and \ArithSeq{ n }{ p } is a subclass of V
-  it is wrong that p \NATmul q is equal to \NATzero
+  q is a natural number and it is wrong that (q is equal to \NATzero) and \ArithSeq{ n }{ q } is a subclass of U
+  p is a natural number and it is wrong that (p is equal to \NATzero) and \ArithSeq{ n }{ p } is a subclass of V
+  it is wrong that (p \NATmul q is equal to \NATzero)
   \ArithSeq{ n }{ p \NATmul q } is a subclass of U \SETintersect V
   Proof:
     m is an element of \ArithSeq{ n }{ p \NATmul q }
@@ -2906,7 +2906,7 @@ Theorem:
 Proof:
   n is an element of \SETunionover S
   M is a set and n is an element of M and M is an element of S
-  q is a natural number and it is wrong that q is equal to \NATzero and \ArithSeq{ n }{ q } is a subclass of M
+  q is a natural number and it is wrong that (q is equal to \NATzero) and \ArithSeq{ n }{ q } is a subclass of M
   \ArithSeq{ n }{ q } is a subclass of \SETunionover S
 Qed.
 
@@ -2946,13 +2946,13 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and it is wrong that v1 is equal to \NATzero then \ArithSeq{ v0 }{ v1 } is closed))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and it is wrong that (v1 is equal to \NATzero) then \ArithSeq{ v0 }{ v1 } is closed))
 Proof:
   m is an element of \compl{ \ArithSeq{ n }{ q } }
   \ArithSeq{ m }{ q } is a subclass of \compl{ \ArithSeq{ n }{ q } }
   Proof:
     k is an element of \ArithSeq{ m }{ q }
-    it is wrong that k is an element of \compl{ \ArithSeq{ n }{ q } }
+    it is wrong that (k is an element of \compl{ \ArithSeq{ n }{ q } })
     \NATcong{ k }{ m }{ q } and \NATcong{ n }{ k }{ q }
     \NATcong{ m }{ n }{ q }
     m is an element of \ArithSeq{ n }{ q }
@@ -3024,8 +3024,8 @@ Proof:
       r is a factor of n and r is prime
     Qed.
   Qed.
-  for all v0, (if v0 is an element of \Nat then (v0 is an element of \compl{ \SETunionover \PrimeSeq } iff it is wrong that for some v1, (v1 is a factor of v0 and v1 is prime)))
-  it is wrong that for some v0, (v0 is a factor of \NATone and v0 is prime) and for all v0, (if v0 is a natural number and it is wrong that for some v1, (v1 is a factor of v0 and v1 is prime) then v0 is equal to \NATone)
+  for all v0, (if v0 is an element of \Nat then (v0 is an element of \compl{ \SETunionover \PrimeSeq } iff it is wrong that (for some v1, (v1 is a factor of v0 and v1 is prime))))
+  it is wrong that (for some v0, (v0 is a factor of \NATone and v0 is prime)) and for all v0, (if v0 is a natural number and it is wrong that (for some v1, (v1 is a factor of v0 and v1 is prime)) then v0 is equal to \NATone)
   \compl{ \SETunionover \PrimeSeq } is equal to \SETsingleton{ \NATone }
   Proof:
     \compl{ \SETunionover \PrimeSeq } is a subclass of \SETsingleton{ \NATone } and \SETsingleton{ \NATone } is a subclass of \compl{ \SETunionover \PrimeSeq }
@@ -3034,13 +3034,13 @@ Proof:
   Proof:
     \PrimeSeq is finite
     \SETunionover \PrimeSeq is closed and \compl{ \SETunionover \PrimeSeq } is open
-    p is a natural number and it is wrong that p is equal to \NATzero and \ArithSeq{ \NATone }{ p } is a subclass of \compl{ \SETunionover \PrimeSeq }
+    p is a natural number and it is wrong that (p is equal to \NATzero) and \ArithSeq{ \NATone }{ p } is a subclass of \compl{ \SETunionover \PrimeSeq }
     \NATone \NATplus p is an element of \ArithSeq{ \NATone }{ p }
     Proof:
       \NATcong{ \NATone \NATplus p }{ \NATone }{ p }
     Qed.
-    it is wrong that \NATone \NATplus p is equal to \NATone
-    it is wrong that \NATone \NATplus p is an element of \compl{ \SETunionover \PrimeSeq }
+    it is wrong that (\NATone \NATplus p is equal to \NATone)
+    it is wrong that (\NATone \NATplus p is an element of \compl{ \SETunionover \PrimeSeq })
     falsity holds
   Qed.
 Qed.

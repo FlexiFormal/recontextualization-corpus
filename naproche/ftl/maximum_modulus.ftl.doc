@@ -1,5 +1,5 @@
 Definition (defempty):
-  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition (defsub):
   for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
@@ -22,16 +22,16 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
@@ -84,7 +84,7 @@ Signature:
   for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 < v1 then truth holds)))
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 < v1 then it is wrong that v1 < v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 < v1 then it is wrong that (v1 < v0))))
 
 Signature:
   for all v0, (for all v1, (if v0 is a real number and v0 is positive and v1 is a complex number then for all v2, (if v2 is equal to Ball( v0 , v1 ) then (v2 is a subset of CC and v1 is an element of v2))))
@@ -114,7 +114,7 @@ Definition:
   for all v0, (if v0 is a holomorphic function then for all v1, ((v1 is a local maximal point of v0) iff (v1 is an element of the domain of v0 and for some v2, (v2 is a real number and v2 is positive and (Ball( v2 , v1 ) is a subset of the domain of v0 and for all v3, (if v3 is an element of Ball( v2 , v1 ) then (| the value of v0 under v3 | is equal to | the value of v0 under v1 | or | the value of v0 under v3 | < | the value of v0 under v1 |)))))))
 
 Axiom (open_mapping_theorem):
-  for all v0, (for all v1, (if v0 is a real number and v0 is positive and v1 is a complex number then for all v2, (if v2 is a holomorphic function and Ball( v0 , v1 ) is a subset of the domain of v2 then (if it is wrong that v2 is constant on Ball( v0 , v1 ) then v2 [ Ball( v0 , v1 ) ] is open))))
+  for all v0, (for all v1, (if v0 is a real number and v0 is positive and v1 is a complex number then for all v2, (if v2 is a holomorphic function and Ball( v0 , v1 ) is a subset of the domain of v2 then (if it is wrong that (v2 is constant on Ball( v0 , v1 )) then v2 [ Ball( v0 , v1 ) ] is open))))
 
 Axiom (identity_theorem):
   for all v0, (if v0 is a holomorphic function and the domain of v0 is a region and the domain of v0 is simply connected then for all v1, (for all v2, (if v1 is a real number and v1 is positive and v2 is a complex number then (if Ball( v1 , v2 ) is a subset of the domain of v0 then (if v0 is constant on Ball( v1 , v2 ) then v0 is constant on the domain of v0)))))
@@ -126,7 +126,7 @@ Proof:
   eps is a real number and eps is positive and (Ball( eps , z ) is a subset of the domain of f and for all v0, (if v0 is an element of Ball( eps , z ) then (| the value of f under v0 | is equal to | the value of f under z | or | the value of f under v0 | < | the value of f under z |)))
   f is constant on Ball( eps , z )
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     f [ Ball( eps , z ) ] is open
     delta is a real number and delta is positive and Ball( delta , the value of f under z ) is a subset of f [ Ball( eps , z ) ]
     for some v0, (v0 is an element of Ball( eps , z ) and | the value of f under z | < | the value of f under v0 |)

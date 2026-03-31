@@ -39,20 +39,20 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
-  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Theorem:
   for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
+    for all v0, (if v0 is an element of \SETempty then it is wrong that (v0 is equal to v0))
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
+  if A is empty then (it is wrong that (for some v0, (v0 is an element of A)) and it is wrong that (for some v0, (v0 is an element of \SETempty)))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -65,7 +65,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
   for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
@@ -73,7 +73,7 @@ Definition:
   for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
   for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
@@ -110,10 +110,10 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))

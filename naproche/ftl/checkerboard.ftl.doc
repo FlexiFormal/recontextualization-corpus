@@ -25,19 +25,19 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Axiom (pairdefiningproperty):
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v2 and v3 is equal to the ordered pair of v0 and v1 then (v2 is equal to v0 and v3 is equal to v1))))))
@@ -73,7 +73,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a set then ((v0 is dedekind finite) iff for all v1, (if v1 is a set and v1 is a subclass of v0 and it is wrong that v1 is equal to v0 then it is wrong that v1 is equinumerous with v0)))
+  for all v0, (if v0 is a set then ((v0 is dedekind finite) iff for all v1, (if v1 is a set and v1 is a subclass of v0 and it is wrong that (v1 is equal to v0) then it is wrong that (v1 is equinumerous with v0))))
 
 Signature:
   for all v0, (if v0 is an integer then v0 is an object)
@@ -160,13 +160,13 @@ Axiom:
   the ordered pair of 7 and 7 is black
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a square and v1 is a square then (if v0 is adjacent to v1 then (v0 is black iff it is wrong that v1 is black))))
+  for all v0, (for all v1, (if v0 is a square and v1 is a square then (if v0 is adjacent to v1 then (v0 is black iff it is wrong that (v1 is black)))))
 
 Definition:
   for all v0, ((v0 is equal to Blck) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an element of the checkerboard and v1 is black and v1 is an object))))
 
 Definition:
-  for all v0, ((v0 is equal to Wht) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an element of the checkerboard and it is wrong that v1 is black and v1 is an object))))
+  for all v0, ((v0 is equal to Wht) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an element of the checkerboard and it is wrong that (v1 is black) and v1 is an object))))
 
 Theorem:
   Blck is a set
@@ -224,7 +224,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an element of the checkerboard then (v0 is black iff it is wrong that Swap v0 is black))
+  for all v0, (if v0 is an element of the checkerboard then (v0 is black iff it is wrong that (Swap v0 is black)))
 Proof:
 Qed.
 
@@ -233,7 +233,7 @@ Theorem:
 Proof:
   F is a map and (the domain of F is equal to Blck) and for all v0, (if v0 is an object then (if v0 is an element of the domain of F then (the value of F under v0 is equal to Swap v0)))
   G is a map and (the domain of G is equal to Wht) and for all v0, (if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to Swap v0)))
-  for all v0, (if v0 is an element of the domain of F then it is wrong that the value of F under v0 is black)
+  for all v0, (if v0 is an element of the domain of F then it is wrong that (the value of F under v0 is black))
   for all v0, (if v0 is an element of the domain of G then the value of G under v0 is black)
   F : Blck -> Wht and G : Wht -> Blck
   for all v0, (if v0 is an element of Blck then the value of G under the value of F under v0 is equal to v0)
@@ -263,16 +263,16 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a set and v0 is a subclass of the checkerboard then for all v1, (if v1 is a domino tiling of v0 then for all v2, (if v2 is an element of v0 and v2 is black then it is wrong that Sw( v1 , v0 , v2 ) is black)))
+  for all v0, (if v0 is a set and v0 is a subclass of the checkerboard then for all v1, (if v1 is a domino tiling of v0 then for all v2, (if v2 is an element of v0 and v2 is black then it is wrong that (Sw( v1 , v0 , v2 ) is black))))
 Proof:
   y is equal to Sw( T , A , x )
   Y is an element of T and Y is a class and for all v0, (v0 is an element of Y iff (v0 is an object and (v0 is equal to x or v0 is equal to y)))
   x is adjacent to y
-  it is wrong that y is black
+  it is wrong that (y is black)
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a set and v0 is a subclass of the checkerboard then for all v1, (if v1 is a domino tiling of v0 then for all v2, (if v2 is an element of v0 and it is wrong that v2 is black then Sw( v1 , v0 , v2 ) is black)))
+  for all v0, (if v0 is a set and v0 is a subclass of the checkerboard then for all v1, (if v1 is a domino tiling of v0 then for all v2, (if v2 is an element of v0 and it is wrong that (v2 is black) then Sw( v1 , v0 , v2 ) is black)))
 Proof:
   y is equal to Sw( T , A , x )
   Y is an element of T and Y is a class and for all v0, (v0 is an element of Y iff (v0 is an object and (v0 is equal to x or v0 is equal to y)))
@@ -298,15 +298,15 @@ Proof:
 Qed.
 
 Theorem:
-  the intersection of Mutil and Blck is a set and the intersection of Mutil and Blck is a subclass of Blck and it is wrong that the intersection of Mutil and Blck is equal to Blck
+  the intersection of Mutil and Blck is a set and the intersection of Mutil and Blck is a subclass of Blck and it is wrong that (the intersection of Mutil and Blck is equal to Blck)
 Proof:
   the ordered pair of 0 and 0 is an element of Blck
-  it is wrong that the ordered pair of 0 and 0 is an element of Mutil
-  it is wrong that the ordered pair of 0 and 0 is an element of the intersection of Mutil and Blck
+  it is wrong that (the ordered pair of 0 and 0 is an element of Mutil)
+  it is wrong that (the ordered pair of 0 and 0 is an element of the intersection of Mutil and Blck)
 Qed.
 
 Theorem:
-  it is wrong that for some v0, (v0 is a domino tiling of Mutil)
+  it is wrong that (for some v0, (v0 is a domino tiling of Mutil))
 Proof:
   T is a domino tiling of Mutil
   the intersection of Mutil and Blck is equinumerous with the intersection of Mutil and Wht

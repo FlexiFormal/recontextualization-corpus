@@ -44,7 +44,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, ((v0 is equal to \emptyset) iff (v0 is a class and it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, ((v0 is equal to \emptyset) iff (v0 is a class and it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
   for all v0, ((v0 is equal to {\calV}) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and v1 is an object))))
@@ -62,7 +62,7 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Theorem:
   for all v0, (for all v1, (for all v2, (if v0 is a class and v1 is a class and v2 is a class then the union of v0 and the intersection of v1 and v2 is equal to the intersection of the union of v0 and v1 and the union of v0 and v2)))
@@ -70,7 +70,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
@@ -139,7 +139,7 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is a surjection from v0 onto v1) iff (v2 is a map from v0 to v1 and v2 [ v0 ] is equal to v1))))
 
 Definition:
-  for all v0, (if v0 is a map then ((v0 is injective) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 and it is wrong that v1 is equal to v2 then it is wrong that the value of v0 under v1 is equal to the value of v0 under v2))))
+  for all v0, (if v0 is a map then ((v0 is injective) iff for all v1, (for all v2, (if v1 is an element of the domain of v0 and v2 is an element of the domain of v0 and it is wrong that (v1 is equal to v2) then it is wrong that (the value of v0 under v1 is equal to the value of v0 under v2)))))
 
 Theorem:
   Id is a surjection from {\calV} onto {\calV} and Id is injective
@@ -205,12 +205,12 @@ Proof:
 Qed.
 
 Theorem (russell):
-  for some v0, (v0 is a class and it is wrong that v0 is a set)
+  for some v0, (v0 is a class and it is wrong that (v0 is a set))
 Proof:
-  R is a class and for all v0, (v0 is an element of R iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of v0))
-  it is wrong that R is a set
+  R is a class and for all v0, (v0 is an element of R iff (v0 is an object and v0 is a set and it is wrong that (v0 is an element of v0)))
+  it is wrong that (R is a set)
   Proof:
-    if R is a set then (R is an element of R iff it is wrong that R is an element of R)
+    if R is a set then (R is an element of R iff it is wrong that (R is an element of R))
   Qed.
 Qed.
 
@@ -266,13 +266,13 @@ Proof:
 Qed.
 
 Theorem (cantor):
-  for all v0, (if v0 is a set then it is wrong that for some v1, (v1 is a surjection from v0 onto the powerset of v0))
+  for all v0, (if v0 is a set then it is wrong that (for some v1, (v1 is a surjection from v0 onto the powerset of v0)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   f is a surjection from M onto the powerset of M
-  N is a class and (if M is a set then N is a set) and for all v0, (v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that v0 is an element of the value of f under v0))
+  N is a class and (if M is a set then N is a set) and for all v0, (v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that (v0 is an element of the value of f under v0)))
   z is an element of M and the value of f under z is equal to N
-  z is an element of N iff (it is wrong that z is an element of the value of f under z and the value of f under z is equal to N)
+  z is an element of N iff (it is wrong that (z is an element of the value of f under z) and the value of f under z is equal to N)
   falsity holds
 Qed.
 
@@ -348,7 +348,7 @@ Proof:
     G is a map and (the domain of G is equal to the set difference of x and c) and for all v0, (if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to the value of \inv{ g } under v0)))
     F is a bijection between c and \range( F )
     G is a bijection between the set difference of x and c and \range( G )
-    H is a map and (the domain of H is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that v0 is an element of c then (the value of H under v0 is equal to the value of G under v0)))))
+    H is a map and (the domain of H is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that (v0 is an element of c) then (the value of H under v0 is equal to the value of G under v0)))))
     H is a map from x to y
     Proof:
       the domain of H is a set
@@ -358,7 +358,7 @@ Proof:
         v is a value of H
         u is an element of x and the value of H under u is equal to v
         if u is an element of c then (v is equal to the value of H under u and the value of H under u is equal to the value of F under u and the value of F under u is equal to the value of f under u and the value of f under u is an element of y)
-        if it is wrong that u is an element of c then (v is equal to the value of H under u and the value of H under u is equal to the value of G under u and the value of G under u is equal to the value of \inv{ g } under u and the value of \inv{ g } under u is an element of y)
+        if it is wrong that (u is an element of c) then (v is equal to the value of H under u and the value of H under u is equal to the value of G under u and the value of G under u is equal to the value of \inv{ g } under u and the value of \inv{ g } under u is an element of y)
       Qed.
     Qed.
     H is a surjection from x onto y
@@ -371,7 +371,7 @@ Proof:
           u is an element of c and the value of f under u is equal to v
           the value of F under u is equal to v
         Qed.
-        if it is wrong that v is an element of f [ c ] then the thesis holds
+        if it is wrong that (v is an element of f [ c ]) then the thesis holds
         Proof:
           v is an element of the set difference of y and f [ c ]
           the value of g under v is an element of g [ the set difference of y and f [ c ] ]
@@ -384,35 +384,35 @@ Proof:
     Qed.
     H is injective
     Proof:
-      for all v0, (for all v1, (if v0 is an element of x and v1 is an element of x then (if it is wrong that v0 is equal to v1 then it is wrong that the value of H under v0 is equal to the value of H under v1)))
+      for all v0, (for all v1, (if v0 is an element of x and v1 is an element of x then (if it is wrong that (v0 is equal to v1) then it is wrong that (the value of H under v0 is equal to the value of H under v1))))
       Proof:
         u is an element of x and v is an element of x
-        it is wrong that u is equal to v
+        it is wrong that (u is equal to v)
         if u is an element of c and v is an element of c then the thesis holds
         Proof:
           the value of H under u is equal to the value of F under u and the value of H under v is equal to the value of F under v
-          it is wrong that the value of F under u is equal to the value of F under v
-          it is wrong that the value of H under u is equal to the value of H under v
+          it is wrong that (the value of F under u is equal to the value of F under v)
+          it is wrong that (the value of H under u is equal to the value of H under v)
         Qed.
-        if it is wrong that u is an element of c and it is wrong that v is an element of c then the thesis holds
+        if it is wrong that (u is an element of c) and it is wrong that (v is an element of c) then the thesis holds
         Proof:
           the value of H under u is equal to the value of G under u and the value of H under v is equal to the value of G under v
-          it is wrong that the value of G under u is equal to the value of G under v
-          it is wrong that the value of H under u is equal to the value of H under v
+          it is wrong that (the value of G under u is equal to the value of G under v)
+          it is wrong that (the value of H under u is equal to the value of H under v)
         Qed.
-        if u is an element of c and it is wrong that v is an element of c then the thesis holds
+        if u is an element of c and it is wrong that (v is an element of c) then the thesis holds
         Proof:
           the value of H under u is equal to the value of F under u and the value of H under v is equal to the value of G under v
           v is an element of g [ the set difference of y and f [ c ] ]
           the value of G under v is an element of the set difference of y and F [ c ]
-          it is wrong that the value of G under v is equal to the value of F under u
+          it is wrong that (the value of G under v is equal to the value of F under u)
         Qed.
-        if it is wrong that u is an element of c and v is an element of c then the thesis holds
+        if it is wrong that (u is an element of c) and v is an element of c then the thesis holds
         Proof:
           the value of H under u is equal to the value of G under u and the value of H under v is equal to the value of F under v
           u is an element of g [ the set difference of y and f [ c ] ]
           the value of G under u is an element of the set difference of y and f [ c ]
-          it is wrong that the value of G under u is equal to the value of F under v
+          it is wrong that (the value of G under u is equal to the value of F under v)
         Qed.
       Qed.
     Qed.
@@ -455,10 +455,10 @@ Axiom:
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2)))
 
 Signature:
-  for all v0, (if v0 is equal to 1 then (v0 is a real number and it is wrong that v0 is equal to 0 and for all v1, (if v1 is a real number then v0 \cdot v1 is equal to v1)))
+  for all v0, (if v0 is equal to 1 then (v0 is a real number and it is wrong that (v0 is equal to 0) and for all v1, (if v1 is a real number then v0 \cdot v1 is equal to v1)))
 
 Signature:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2)))
@@ -490,23 +490,23 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
 Proof:
   y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to z
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then 1/ 1/ v0 is equal to v0))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then 1/ 1/ v0 is equal to v0))
 Proof:
 Qed.
 
@@ -516,7 +516,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then it is wrong that (v0 \cdot v1 is equal to 0))))
 Proof:
 Qed.
 
@@ -538,7 +538,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)))
 Proof:
 Qed.
 
@@ -549,7 +549,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (for all v3, (if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0)))))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (for all v3, (if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0)))))
 Proof:
   x + - y + y + - z is equal to x + - y + y + - z and x + - y + y + - z is equal to x + - z
 Qed.
@@ -608,7 +608,7 @@ Proof:
 Qed.
 
 Theorem:
-  if it is wrong that 6 is equal to 0 then 1 \cdot 1/ 2 + 1 \cdot 1/ 3 is equal to 5 \cdot 1/ 6
+  if it is wrong that (6 is equal to 0) then 1 \cdot 1/ 2 + 1 \cdot 1/ 3 is equal to 5 \cdot 1/ 6
 Proof:
   1 \cdot 1/ 2 + 1 \cdot 1/ 3 is equal to 3 \cdot 1/ 6 + 2 \cdot 1/ 6 and 3 \cdot 1/ 6 + 2 \cdot 1/ 6 is equal to 5 \cdot 1/ 6
 Qed.
@@ -635,34 +635,34 @@ Axiom (117ii):
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if 0 \leq v0 and v1 \leq v2 then v0 \cdot v1 \leq v0 \cdot v2))))
 
 Definition:
-  for all v0, (if v0 is a real number then ((v0 is positive) iff (0 \leq v0 and it is wrong that 0 is equal to v0)))
+  for all v0, (if v0 is a real number then ((v0 is positive) iff (0 \leq v0 and it is wrong that (0 is equal to v0))))
 
 Definition:
-  for all v0, (if v0 is a real number then ((v0 is negative) iff (v0 \leq 0 and it is wrong that v0 is equal to 0)))
+  for all v0, (if v0 is a real number then ((v0 is negative) iff (v0 \leq 0 and it is wrong that (v0 is equal to 0))))
 
 Definition:
   for all v0, (if v0 is a real number then ((v0 is nonnegative) iff 0 \leq v0))
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that (v1 \leq v0 and it is wrong that v1 is equal to v0))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that ((v1 \leq v0 and it is wrong that (v1 is equal to v0))))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then ((0 \leq v0 and it is wrong that 0 is equal to v0) iff (- v0 \leq 0 and it is wrong that - v0 is equal to 0)))
+  for all v0, (if v0 is a real number then ((0 \leq v0 and it is wrong that (0 is equal to v0)) iff (- v0 \leq 0 and it is wrong that (- v0 is equal to 0))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then (0 \leq v0 \cdot v0 and it is wrong that 0 is equal to v0 \cdot v0)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then (0 \leq v0 \cdot v0 and it is wrong that (0 is equal to v0 \cdot v0))))
 Proof:
-  it is wrong that x is equal to 0
+  it is wrong that (x is equal to 0)
   if 0 \leq x then the thesis holds
   if x \leq 0 then the thesis holds
 Qed.
 
 Theorem:
-  0 \leq 1 and it is wrong that 0 is equal to 1
+  0 \leq 1 and it is wrong that (0 is equal to 1)
 Proof:
 Qed.
 
@@ -674,33 +674,33 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that v0 is equal to 0 and (v1 \leq v2 and it is wrong that v1 is equal to v2) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that v0 \cdot v2 is equal to v0 \cdot v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that (v0 is equal to 0) and (v1 \leq v2 and it is wrong that (v1 is equal to v2)) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that (v0 \cdot v2 is equal to v0 \cdot v1))))))
 Proof:
-  x \leq 0 and it is wrong that x is equal to 0 and (y \leq z and it is wrong that y is equal to z)
-  0 \leq - x and it is wrong that 0 is equal to - x
-  - x \cdot y \leq - x \cdot z and it is wrong that - x \cdot y is equal to - x \cdot z
-  - x \cdot y \leq - x \cdot z and it is wrong that - x \cdot y is equal to - x \cdot z
+  x \leq 0 and it is wrong that (x is equal to 0) and (y \leq z and it is wrong that (y is equal to z))
+  0 \leq - x and it is wrong that (0 is equal to - x)
+  - x \cdot y \leq - x \cdot z and it is wrong that (- x \cdot y is equal to - x \cdot z)
+  - x \cdot y \leq - x \cdot z and it is wrong that (- x \cdot y is equal to - x \cdot z)
 Qed.
 
 Theorem:
-  - 1 \leq 0 and it is wrong that - 1 is equal to 0
-Proof:
-Qed.
-
-Theorem:
-  for all v0, (if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that v0 + - 1 is equal to v0))
+  - 1 \leq 0 and it is wrong that (- 1 is equal to 0)
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that v0 is equal to v1 and (v1 \leq v0 + 1 and it is wrong that v1 is equal to v0 + 1)) iff (0 \leq v1 + - v0 and it is wrong that 0 is equal to v1 + - v0 and (v1 + - v0 \leq 1 and it is wrong that v1 + - v0 is equal to 1)))))
+  for all v0, (if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that (v0 + - 1 is equal to v0)))
 Proof:
-  (x \leq y and it is wrong that x is equal to y) iff (0 is equal to x + - x and x + - x \leq y + - x and it is wrong that x + - x is equal to y + - x)
-  (y \leq x + 1 and it is wrong that y is equal to x + 1) iff (y + - x \leq x + 1 + - x and it is wrong that y + - x is equal to x + 1 + - x and x + 1 + - x is equal to 1)
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 then (0 \leq 1/ v0 and it is wrong that 0 is equal to 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that (v0 is equal to v1) and (v1 \leq v0 + 1 and it is wrong that (v1 is equal to v0 + 1))) iff (0 \leq v1 + - v0 and it is wrong that (0 is equal to v1 + - v0) and (v1 + - v0 \leq 1 and it is wrong that (v1 + - v0 is equal to 1))))))
+Proof:
+  (x \leq y and it is wrong that (x is equal to y)) iff (0 is equal to x + - x and x + - x \leq y + - x and it is wrong that (x + - x is equal to y + - x))
+  (y \leq x + 1 and it is wrong that (y is equal to x + 1)) iff (y + - x \leq x + 1 + - x and it is wrong that (y + - x is equal to x + 1 + - x) and x + 1 + - x is equal to 1)
+Qed.
+
+Theorem:
+  for all v0, (if v0 is a real number then (if 0 \leq v0 and it is wrong that (0 is equal to v0) then (0 \leq 1/ v0 and it is wrong that (0 is equal to 1/ v0))))
 Proof:
 Qed.
 
@@ -710,20 +710,20 @@ Proof:
 Qed.
 
 Theorem (syz):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 \leq v1 then v1 \leq v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 \leq v1) then v1 \leq v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 and v0 \leq v1 then 1/ v1 \leq 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that (0 is equal to v0) and v0 \leq v1 then 1/ v1 \leq 1/ v0)))
 Proof:
-  it is wrong that the thesis holds
-  it is wrong that 1/ y \leq 1/ x
+  it is wrong that (the thesis holds)
+  it is wrong that (1/ y \leq 1/ x)
   u is equal to 1/ y and v is equal to 1/ x
   1/ x \leq 1/ y
-  1/ x \leq 1/ y and it is wrong that 1/ x is equal to 1/ y
-  1 is equal to x \cdot 1/ x and x \cdot 1/ x is equal to 1/ x \cdot x and 1/ x \cdot x \leq 1/ x \cdot y and 1/ x \cdot y is equal to y \cdot 1/ x and (y \cdot 1/ x \leq y \cdot 1/ y and it is wrong that y \cdot 1/ x is equal to y \cdot 1/ y) and y \cdot 1/ y is equal to 1
-  1 \leq 1 and it is wrong that 1 is equal to 1
+  1/ x \leq 1/ y and it is wrong that (1/ x is equal to 1/ y)
+  1 is equal to x \cdot 1/ x and x \cdot 1/ x is equal to 1/ x \cdot x and 1/ x \cdot x \leq 1/ x \cdot y and 1/ x \cdot y is equal to y \cdot 1/ x and (y \cdot 1/ x \leq y \cdot 1/ y and it is wrong that (y \cdot 1/ x is equal to y \cdot 1/ y)) and y \cdot 1/ y is equal to 1
+  1 \leq 1 and it is wrong that (1 is equal to 1)
   falsity holds
 Qed.
 
@@ -740,10 +740,10 @@ Definition:
   for all v0, (if v0 is a subset of \mathbb{R} then ((v0 is bounded below) iff for some v1, (v1 is a lower bound of v0)))
 
 Definition:
-  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a supremum of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, (if v2 is a real number then (if v2 \leq v1 and it is wrong that v2 is equal to v1 then it is wrong that v2 is an upper bound of v0)))))
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a supremum of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, (if v2 is a real number then (if v2 \leq v1 and it is wrong that (v2 is equal to v1) then it is wrong that (v2 is an upper bound of v0))))))
 
 Definition:
-  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, ((v1 is an infimum of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, (if v2 is a real number then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then it is wrong that v2 is a lower bound of v0))))))
+  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, ((v1 is an infimum of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, (if v2 is a real number then (if v1 \leq v2 and it is wrong that (v1 is equal to v2) then it is wrong that (v2 is a lower bound of v0)))))))
 
 Axiom (existencesupremum):
   for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is nonempty and v0 is bounded above then for some v1, (v1 is a supremum of v0)))
@@ -797,7 +797,7 @@ Axiom:
   for all v0, (if v0 is a rational number then - v0 is a rational number)
 
 Axiom:
-  for all v0, (if v0 is a rational number then (if it is wrong that v0 is equal to 0 then 1/ v0 is a rational number))
+  for all v0, (if v0 is a rational number then (if it is wrong that (v0 is equal to 0) then 1/ v0 is a rational number))
 
 Axiom:
   for all v0, (if v0 is a real number then for some v1, (v1 is a subset of \mathbb{Q} and v1 is bounded above and v0 is a supremum of v1))
@@ -833,21 +833,21 @@ Axiom:
   for all v0, (if v0 is an integer then - v0 is an integer)
 
 Axiom:
-  it is wrong that for some v0, (v0 is an integer and 0 \leq v0 and it is wrong that 0 is equal to v0 and (v0 \leq 1 and it is wrong that v0 is equal to 1))
+  it is wrong that (for some v0, (v0 is an integer and 0 \leq v0 and it is wrong that (0 is equal to v0) and (v0 \leq 1 and it is wrong that (v0 is equal to 1))))
 
 Axiom:
-  for all v0, (if v0 is a rational number then for some v1, (for some v2, (v1 is an integer and v2 is an integer and (it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2))))
+  for all v0, (if v0 is a rational number then for some v1, (for some v2, (v1 is an integer and v2 is an integer and (it is wrong that (v2 is equal to 0) and v0 is equal to v1 \cdot 1/ v2))))
 
 Theorem:
-  \mathbb{Q} is a class and for all v0, (v0 is an element of \mathbb{Q} iff (v0 is an object and for some v1, (for some v2, (v1 is an element of \mathbb{Z} and v2 is an element of \mathbb{Z} and it is wrong that v2 is equal to 0 and v0 is equal to v1 \cdot 1/ v2))))
+  \mathbb{Q} is a class and for all v0, (v0 is an element of \mathbb{Q} iff (v0 is an object and for some v1, (for some v2, (v1 is an element of \mathbb{Z} and v2 is an element of \mathbb{Z} and it is wrong that (v2 is equal to 0) and v0 is equal to v1 \cdot 1/ v2))))
 Proof:
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v1 is an element of \mathbb{Q}))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that (v1 is equal to 0) then v0 \cdot 1/ v1 is an element of \mathbb{Q}))
 Qed.
 
 Theorem (archimedes1):
-  it is wrong that \mathbb{Z} is bounded above
+  it is wrong that (\mathbb{Z} is bounded above)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \mathbb{Z} is nonempty
   Proof:
     0 is an integer
@@ -866,9 +866,9 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that \mathbb{Z} is bounded below
+  it is wrong that (\mathbb{Z} is bounded below)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is a real number and x is a lower bound of \mathbb{Z}
   - x is an upper bound of \mathbb{Z}
   falsity holds
@@ -878,9 +878,9 @@ Proof:
 Qed.
 
 Theorem (archimedes2):
-  for all v0, (if v0 is a real number then for some v1, (v1 is an integer and v0 \leq v1 and it is wrong that v0 is equal to v1))
+  for all v0, (if v0 is a real number then for some v1, (v1 is an integer and v0 \leq v1 and it is wrong that (v0 is equal to v1)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is an upper bound of \mathbb{Z}
   falsity holds
   Proof:
@@ -905,13 +905,13 @@ Proof:
 Qed.
 
 Theorem:
-  \mathbb{N} is a subclass of \mathbb{Z} and it is wrong that \mathbb{N} is equal to \mathbb{Z} and (\mathbb{Z} is a subclass of \mathbb{Q} and it is wrong that \mathbb{Z} is equal to \mathbb{Q})
+  \mathbb{N} is a subclass of \mathbb{Z} and it is wrong that (\mathbb{N} is equal to \mathbb{Z}) and (\mathbb{Z} is a subclass of \mathbb{Q} and it is wrong that (\mathbb{Z} is equal to \mathbb{Q}))
 Proof:
-  it is wrong that - 1 is an element of \mathbb{N}
+  it is wrong that (- 1 is an element of \mathbb{N})
   - 1 is an element of \mathbb{Z}
-  it is wrong that 1 \cdot 1/ 2 is an element of \mathbb{Z}
+  it is wrong that (1 \cdot 1/ 2 is an element of \mathbb{Z})
   Proof:
-    0 \leq 1 \cdot 1/ 2 and it is wrong that 0 is equal to 1 \cdot 1/ 2 and (1 \cdot 1/ 2 \leq 1 and it is wrong that 1 \cdot 1/ 2 is equal to 1)
+    0 \leq 1 \cdot 1/ 2 and it is wrong that (0 is equal to 1 \cdot 1/ 2) and (1 \cdot 1/ 2 \leq 1 and it is wrong that (1 \cdot 1/ 2 is equal to 1))
   Qed.
   1 \cdot 1/ 2 is an element of \mathbb{Q}
 Qed.
@@ -952,7 +952,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 \cdot v1 is equal to v0 \cdot v2 or v1 \cdot v0 is equal to v2 \cdot v0 then v1 is equal to v2)))))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 \cdot v1 is equal to v0 \cdot v2 or v1 \cdot v0 is equal to v2 \cdot v0 then v1 is equal to v2)))))
 Proof:
 Qed.
 
@@ -960,7 +960,7 @@ Theorem:
   for all v0, (if v0 is a natural number then (v0 is equal to 0 or for some v1, (v1 is a natural number and v0 is equal to v1 + 1)))
 Proof:
   if n is equal to 0 then the thesis holds
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     m is equal to n + - 1
     m is a natural number and n is equal to m + 1
@@ -995,7 +995,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then v1 \leq v1 \cdot v0)))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a natural number then v1 \leq v1 \cdot v0)))
 Proof:
   1 \leq m
   n is equal to n \cdot 1 and n \cdot 1 \leq n \cdot m
@@ -1008,22 +1008,22 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v0 \leq v1 and it is wrong that v0 is equal to v1) then v0 + 1 \leq v1))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v0 \leq v1 and it is wrong that (v0 is equal to v1)) then v0 + 1 \leq v1))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   c is equal to a + 1
-  b \leq c and it is wrong that b is equal to c
-  a \leq b and it is wrong that a is equal to b and (b \leq a + 1 and it is wrong that b is equal to a + 1)
-  a + - a is equal to 0 and 0 \leq b + - a and it is wrong that 0 is equal to b + - a and (b + - a \leq a + 1 + - a and it is wrong that b + - a is equal to a + 1 + - a) and a + 1 + - a is equal to 1
-  b + - a is an integer and 0 \leq b + - a and it is wrong that 0 is equal to b + - a and (b + - a \leq 1 and it is wrong that b + - a is equal to 1)
+  b \leq c and it is wrong that (b is equal to c)
+  a \leq b and it is wrong that (a is equal to b) and (b \leq a + 1 and it is wrong that (b is equal to a + 1))
+  a + - a is equal to 0 and 0 \leq b + - a and it is wrong that (0 is equal to b + - a) and (b + - a \leq a + 1 + - a and it is wrong that (b + - a is equal to a + 1 + - a)) and a + 1 + - a is equal to 1
+  b + - a is an integer and 0 \leq b + - a and it is wrong that (0 is equal to b + - a) and (b + - a \leq 1 and it is wrong that (b + - a is equal to 1))
   falsity holds
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v1 \leq v0 and it is wrong that v1 is equal to v0) then v1 \leq v0 + - 1))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and (v1 \leq v0 and it is wrong that (v1 is equal to v0)) then v1 \leq v0 + - 1))
 Proof:
-  b \leq a and it is wrong that b is equal to a
-  - a \leq - b and it is wrong that - a is equal to - b
+  b \leq a and it is wrong that (b is equal to a)
+  - a \leq - b and it is wrong that (- a is equal to - b)
   - a + 1 \leq - b
   - - b \leq - - a + 1
   b \leq a + - 1
@@ -1035,8 +1035,8 @@ Proof:
   for all v0, (if v0 is an element of \mathbb{N} then v0 is an element of A)
   Proof:
     n is an element of \mathbb{N}
-    it is wrong that the thesis holds
-    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, (v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that v0 is an element of A))
+    it is wrong that (the thesis holds)
+    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, (v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that (v0 is an element of A)))
     F is nonempty and F is bounded below
     F is a subset of \mathbb{R}
     a is an infimum of F
@@ -1044,35 +1044,35 @@ Proof:
     Proof:
       x is an element of F
       x + - 1 is an element of \mathbb{Z}
-      if x + - 1 \leq 0 and it is wrong that x + - 1 is equal to 0 then the thesis holds
+      if x + - 1 \leq 0 and it is wrong that (x + - 1 is equal to 0) then the thesis holds
       Proof:
-        0 \leq x and it is wrong that 0 is equal to x and (x \leq 1 and it is wrong that x is equal to 1)
+        0 \leq x and it is wrong that (0 is equal to x) and (x \leq 1 and it is wrong that (x is equal to 1))
         falsity holds
       Qed.
       if x + - 1 is equal to 0 then the thesis holds
       Proof:
-        x is equal to 1 and it is wrong that 1 is an element of A
+        x is equal to 1 and it is wrong that (1 is an element of A)
         falsity holds
       Qed.
-      if 0 \leq x + - 1 and it is wrong that 0 is equal to x + - 1 then the thesis holds
+      if 0 \leq x + - 1 and it is wrong that (0 is equal to x + - 1) then the thesis holds
       Proof:
         x + - 1 is an element of \mathbb{N}
-        it is wrong that x + - 1 is an element of A
+        it is wrong that (x + - 1 is an element of A)
         Proof:
-          x + - 1 + 1 is equal to x and it is wrong that x is an element of A
+          x + - 1 + 1 is equal to x and it is wrong that (x is an element of A)
         Qed.
         x + - 1 is an element of F
         a \leq x + - 1
         a + 1 \leq x + - 1 + 1 and x + - 1 + 1 is equal to x
       Qed.
     Qed.
-    a \leq a + 1 and it is wrong that a is equal to a + 1
+    a \leq a + 1 and it is wrong that (a is equal to a + 1)
     falsity holds
   Qed.
 Qed.
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then v1 is inductively less than v0)))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that (v1 is equal to v0) then v1 is inductively less than v0)))
 
 Signature:
   for all v0, (if v0 is a natural number then (if P( v0 ) then truth holds))
@@ -1082,7 +1082,7 @@ Theorem:
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     m is a natural number and n is equal to m + 1
     m is inductively less than n and P( m )
@@ -1093,16 +1093,16 @@ Qed.
 Theorem:
   for all v0, (if v0 is a subset of \mathbb{N} and v0 is nonempty then for some v1, (v1 is an element of v0 and v1 is an infimum of v0))
 Proof:
-  it is wrong that the thesis holds
-  for all v0, (if v0 is an element of X then for some v1, (v1 is an element of X and it is wrong that v0 \leq v1))
-  for all v0, (if v0 is a natural number then (if for all v1, (if v1 is a natural number then (if v1 is inductively less than v0 then it is wrong that v1 is an element of X)) then it is wrong that v0 is an element of X))
+  it is wrong that (the thesis holds)
+  for all v0, (if v0 is an element of X then for some v1, (v1 is an element of X and it is wrong that (v0 \leq v1)))
+  for all v0, (if v0 is a natural number then (if for all v1, (if v1 is a natural number then (if v1 is inductively less than v0 then it is wrong that (v1 is an element of X))) then it is wrong that (v0 is an element of X)))
   Proof:
     n is a natural number
     n is an element of X
-    x is an element of X and it is wrong that n \leq x
-    x \leq n and it is wrong that x is equal to n
+    x is an element of X and it is wrong that (n \leq x)
+    x \leq n and it is wrong that (x is equal to n)
     x is inductively less than n
-    it is wrong that x is an element of X
+    it is wrong that (x is an element of X)
     falsity holds
   Qed.
   X is equal to \emptyset
@@ -1119,14 +1119,14 @@ Axiom (1):
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a natural number then \sumarith{ v0 }{ v1 }{ v2 + 1 } is equal to \sumarith{ v0 }{ v1 }{ v2 } + v0 + v1 \cdot v2 + 1)))
 
 Theorem:
-  for all v0, (if v0 is a real number and it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then v1 \cdot 1/ v0 \cdot v2 is equal to v1 \cdot v2 \cdot 1/ v0)))
+  for all v0, (if v0 is a real number and it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then v1 \cdot 1/ v0 \cdot v2 is equal to v1 \cdot v2 \cdot 1/ v0)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then for all v2, (if v2 is a natural number and it is wrong that v2 is equal to 0 then (if for all v3, (if v3 is a natural number and it is wrong that v3 is equal to 0 then (if v3 is inductively less than v2 then \sumarith{ v0 }{ v1 }{ v3 } is equal to v3 \cdot v0 + v3 + 1 \cdot v1 \cdot 1/ 2)) then \sumarith{ v0 }{ v1 }{ v2 } is equal to v2 \cdot v0 + v2 + 1 \cdot v1 \cdot 1/ 2))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then for all v2, (if v2 is a natural number and it is wrong that (v2 is equal to 0) then (if for all v3, (if v3 is a natural number and it is wrong that (v3 is equal to 0) then (if v3 is inductively less than v2 then \sumarith{ v0 }{ v1 }{ v3 } is equal to v3 \cdot v0 + v3 + 1 \cdot v1 \cdot 1/ 2)) then \sumarith{ v0 }{ v1 }{ v2 } is equal to v2 \cdot v0 + v2 + 1 \cdot v1 \cdot 1/ 2))))
 Proof:
-  n is a natural number and it is wrong that n is equal to 0
+  n is a natural number and it is wrong that (n is equal to 0)
   if n is equal to 1 then the thesis holds
   m is a natural number and m + 1 is equal to n
   m is inductively less than n
@@ -1170,7 +1170,7 @@ Proof:
   Proof:
     m ^{ 0 } is equal to 1 and 1 is an element of \mathbb{N}
   Qed.
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     k is a natural number and k is equal to n + - 1
     k is inductively less than n
@@ -1181,7 +1181,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then 1 \leq v0 ^{ v2 })) then 1 \leq v0 ^{ v1 })))
+  for all v0, (if v0 is a natural number and it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then 1 \leq v0 ^{ v2 })) then 1 \leq v0 ^{ v1 })))
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
@@ -1189,7 +1189,7 @@ Proof:
     m ^{ 0 } is equal to 1
     1 \leq 1
   Qed.
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     k is a natural number and k is equal to n + - 1
     k is inductively less than n
@@ -1220,12 +1220,12 @@ Axiom:
   for all v0, (for all v1, (if v1 is a real number and v0 is a natural number then \sumgeom{ v1 }{ v0 + 1 } is equal to \sumgeom{ v1 }{ v0 } + v1 ^{ v0 }))
 
 Theorem:
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 1 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then \sumgeom{ v0 }{ v2 } is equal to 1 + - v0 ^{ v2 } \cdot 1/ 1 + - v0)) then \sumgeom{ v0 }{ v1 } is equal to 1 + - v0 ^{ v1 } \cdot 1/ 1 + - v0))))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 1) then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then \sumgeom{ v0 }{ v2 } is equal to 1 + - v0 ^{ v2 } \cdot 1/ 1 + - v0)) then \sumgeom{ v0 }{ v1 } is equal to 1 + - v0 ^{ v1 } \cdot 1/ 1 + - v0))))
 Proof:
-  it is wrong that 1 + - x is equal to 0
+  it is wrong that (1 + - x is equal to 0)
   n is a natural number
   if n is equal to 0 then the thesis holds
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     m is a natural number and m + 1 is equal to n
     m is inductively less than m + 1 and \sumgeom{ x }{ m } is equal to 1 + - x ^{ m } \cdot 1/ 1 + - x
@@ -1247,7 +1247,7 @@ Qed.
 Theorem:
   for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and v2 is an integer then (if v0 divides v1 and v0 divides v1 + v2 then v0 divides v2))))
 Proof:
-  it is wrong that l is equal to 0
+  it is wrong that (l is equal to 0)
   p is an integer and q is an integer and (m is equal to l \cdot p and m + n is equal to l \cdot q)
   r is equal to q + - p
   l \cdot p + l \cdot r is equal to l \cdot q and l \cdot q is equal to m + n and m + n is equal to l \cdot p + n
@@ -1255,7 +1255,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and (it is wrong that v1 is equal to 0 and v1 divides v0) then v0 \cdot 1/ v1 is a natural number))
+  for all v0, (for all v1, (if v1 is a natural number and v0 is a natural number and (it is wrong that (v1 is equal to 0) and v1 divides v0) then v0 \cdot 1/ v1 is a natural number))
 Proof:
 Qed.
 
@@ -1267,12 +1267,12 @@ Proof:
     m is equal to 0
     0 is a natural number and n \cdot 0 is equal to m
   Qed.
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     l is an integer and n \cdot l is equal to m
-    it is wrong that l is a natural number
-    0 \leq n and it is wrong that 0 is equal to n and (l \leq 0 and it is wrong that l is equal to 0)
-    n \cdot l \leq 0 and it is wrong that n \cdot l is equal to 0
+    it is wrong that (l is a natural number)
+    0 \leq n and it is wrong that (0 is equal to n) and (l \leq 0 and it is wrong that (l is equal to 0))
+    n \cdot l \leq 0 and it is wrong that (n \cdot l is equal to 0)
   Qed.
 Qed.
 
@@ -1281,7 +1281,7 @@ Theorem:
 Proof:
   n divides m and m divides n
   if n is equal to 0 then m is equal to 0
-  it is wrong that n is equal to 0
+  it is wrong that (n is equal to 0)
   p is a natural number and q is a natural number and (n \cdot p is equal to m and m \cdot q is equal to n)
   n is equal to m \cdot q and m \cdot q is equal to n \cdot p \cdot q and n \cdot p \cdot q is equal to n \cdot p \cdot q and n \cdot p \cdot q is equal to p \cdot q \cdot n
   1 is equal to p \cdot q
@@ -1289,27 +1289,27 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is an integer and v1 divides v0 then v1 \leq v0))
+  for all v0, (if v0 is a natural number and it is wrong that (v0 is equal to 0) then for all v1, (if v1 is an integer and v1 divides v0 then v1 \leq v0))
 Proof:
-  it is wrong that the thesis holds
-  for some v0, (v0 is a natural number and 0 \leq v0 and it is wrong that 0 is equal to v0 and m is equal to v0 \cdot k)
+  it is wrong that (the thesis holds)
+  for some v0, (v0 is a natural number and 0 \leq v0 and it is wrong that (0 is equal to v0) and m is equal to v0 \cdot k)
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1 and (0 \leq v0 and it is wrong that 0 is equal to v0)) then it is wrong that (v1 is an integer and v1 divides v0)))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that (v0 is equal to v1) and (0 \leq v0 and it is wrong that (0 is equal to v0))) then it is wrong that ((v1 is an integer and v1 divides v0))))
 Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is an integer then ((v0 is prime) iff (v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 and for all v1, (if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))))
+  for all v0, (if v0 is an integer then ((v0 is prime) iff (v0 is a natural number and it is wrong that (v0 is equal to 0) and it is wrong that (v0 is equal to 1) and for all v1, (if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))))
 
 Theorem:
-  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 then (if for all v1, (if v1 is a natural number and it is wrong that v1 is equal to 0 and it is wrong that v1 is equal to 1 then (if v1 is inductively less than v0 then for some v2, (v2 is an integer and v2 divides v1 and v2 is prime))) then for some v1, (v1 is an integer and v1 divides v0 and v1 is prime)))
+  for all v0, (if v0 is a natural number and it is wrong that (v0 is equal to 0) and it is wrong that (v0 is equal to 1) then (if for all v1, (if v1 is a natural number and it is wrong that (v1 is equal to 0) and it is wrong that (v1 is equal to 1) then (if v1 is inductively less than v0 then for some v2, (v2 is an integer and v2 divides v1 and v2 is prime))) then for some v1, (v1 is an integer and v1 divides v0 and v1 is prime)))
 Proof:
-  m is a natural number and it is wrong that m is equal to 0 and it is wrong that m is equal to 1
+  m is a natural number and it is wrong that (m is equal to 0) and it is wrong that (m is equal to 1)
   if m is a natural number and m is prime then the thesis holds
-  n is a natural number and n divides m and it is wrong that n is equal to 1 and it is wrong that n is equal to m
-  n is a natural number and it is wrong that n is equal to 0 and it is wrong that n is equal to 1 and (n \leq m and it is wrong that n is equal to m)
+  n is a natural number and n divides m and it is wrong that (n is equal to 1) and it is wrong that (n is equal to m)
+  n is a natural number and it is wrong that (n is equal to 0) and it is wrong that (n is equal to 1) and (n \leq m and it is wrong that (n is equal to m))
   n is inductively less than m
   for some v0, (v0 is an integer and v0 divides n and v0 is prime)
 Qed.
@@ -1334,7 +1334,7 @@ Proof:
     z divides d
     z is equal to d
   Qed.
-  if it is wrong that z is a natural number then the thesis holds
+  if it is wrong that (z is a natural number) then the thesis holds
   Proof:
     - z is a natural number and - z is equal to the greatest common divisor of - z and 0
     - z is an integer and - z divides z and (- z is an integer and - z divides 0)
@@ -1366,17 +1366,17 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, (if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0 + - v1))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that (v1 is equal to v0)) then for all v2, (if v2 is an integer and v2 divides v0 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that (0 is equal to v2))) then (v2 is an integer and v2 divides v0 + - v1))))
 Proof:
   u is a natural number and v is a natural number and (m is equal to d \cdot u and n is equal to d \cdot v)
-  v \cdot d \leq u \cdot d and it is wrong that v \cdot d is equal to u \cdot d
-  v \cdot d \cdot 1/ d \leq u \cdot d \cdot 1/ d and it is wrong that v \cdot d \cdot 1/ d is equal to u \cdot d \cdot 1/ d and (v \cdot d \cdot 1/ d \leq u \cdot d \cdot 1/ d and it is wrong that v \cdot d \cdot 1/ d is equal to u \cdot d \cdot 1/ d)
-  v \leq u and it is wrong that v is equal to u
+  v \cdot d \leq u \cdot d and it is wrong that (v \cdot d is equal to u \cdot d)
+  v \cdot d \cdot 1/ d \leq u \cdot d \cdot 1/ d and it is wrong that (v \cdot d \cdot 1/ d is equal to u \cdot d \cdot 1/ d) and (v \cdot d \cdot 1/ d \leq u \cdot d \cdot 1/ d and it is wrong that (v \cdot d \cdot 1/ d is equal to u \cdot d \cdot 1/ d))
+  v \leq u and it is wrong that (v is equal to u)
   m + - n is equal to d \cdot u + - d \cdot v and d \cdot u + - d \cdot v is equal to d \cdot u + - v
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then for all v2, (if v2 is an integer and v2 divides v0 + - v1 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that 0 is equal to v2)) then (v2 is an integer and v2 divides v0))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that (v1 is equal to v0)) then for all v2, (if v2 is an integer and v2 divides v0 + - v1 and (v2 is an integer and v2 divides v1 and (0 \leq v2 and it is wrong that (0 is equal to v2))) then (v2 is an integer and v2 divides v0))))
 Proof:
   k is equal to m + - n
   k is a natural number
@@ -1385,14 +1385,14 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that v1 is equal to v0) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v0 + - v1 and v1))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v1 \leq v0 and it is wrong that (v1 is equal to v0)) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v0 + - v1 and v1))
 Proof:
   if n is equal to 0 then the thesis holds
-  if 0 \leq n and it is wrong that 0 is equal to n then the thesis holds
+  if 0 \leq n and it is wrong that (0 is equal to n) then the thesis holds
   Proof:
     l is equal to the greatest common divisor of m and n and k is equal to the greatest common divisor of m + - n and n
-    it is wrong that 0 divides n
-    0 \leq l and it is wrong that 0 is equal to l and (0 \leq k and it is wrong that 0 is equal to k)
+    it is wrong that (0 divides n)
+    0 \leq l and it is wrong that (0 is equal to l) and (0 \leq k and it is wrong that (0 is equal to k))
     SetInt timelimit 50    l is an integer and l divides m + - n
     k is an integer and k divides m
     SetInt timelimit 3    l is an integer and l divides k and (k is an integer and k divides l)
@@ -1401,7 +1401,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v1 + - v0 and v0))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and (v0 \leq v1 and it is wrong that (v0 is equal to v1)) then the greatest common divisor of v0 and v1 is equal to the greatest common divisor of v1 + - v0 and v0))
 Proof:
 Qed.
 
@@ -1415,10 +1415,10 @@ Axiom:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 is equal to 0 and v1 is a natural number then \gcd( v0 , v1 ) is equal to v1)))
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v1 \leq v0 and it is wrong that (v1 is equal to v0) then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))))
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 , v1 + - v0 ))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that (v0 is equal to v1) then \gcd( v0 , v1 ) is equal to \gcd( v0 , v1 + - v0 ))))
 
 Axiom:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 is equal to v1 then \gcd( v0 , v1 ) is equal to \gcd( v0 + - v1 , v1 ))))
@@ -1429,53 +1429,53 @@ Proof:
   m is a natural number and n is a natural number
   m + n is a natural number
   if m + n is equal to 0 then the thesis holds
-  if 0 \leq m + n and it is wrong that 0 is equal to m + n then the thesis holds
+  if 0 \leq m + n and it is wrong that (0 is equal to m + n) then the thesis holds
   Proof:
     if m is equal to 0 or n is equal to 0 then \gcd( m , n ) is equal to the greatest common divisor of m and n
-    it is wrong that m is equal to 0 and it is wrong that n is equal to 0
+    it is wrong that (m is equal to 0) and it is wrong that (n is equal to 0)
     SetInt timelimit 20    if m \leq n then (m + n + - m is inductively less than m + n and \gcd( m , n ) is equal to \gcd( m , n + - m ) and the greatest common divisor of m and n is equal to the greatest common divisor of m and n + - m and the greatest common divisor of m and n is equal to \gcd( m , n ))
-    SetInt timelimit 3    if n \leq m and it is wrong that n is equal to m then (m + - n + n is inductively less than m + n and \gcd( m , n ) is equal to \gcd( m + - n , n ) and the greatest common divisor of m and n is equal to the greatest common divisor of m + - n and n)
+    SetInt timelimit 3    if n \leq m and it is wrong that (n is equal to m) then (m + - n + n is inductively less than m + n and \gcd( m , n ) is equal to \gcd( m + - n , n ) and the greatest common divisor of m and n is equal to the greatest common divisor of m + - n and n)
   Qed.
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number and (v0 \leq v1 and it is wrong that v0 is equal to v1) then for some v2, (v2 is a real number and v0 \leq v2 and it is wrong that v0 is equal to v2 and (v2 \leq v1 and it is wrong that v2 is equal to v1))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number and (v0 \leq v1 and it is wrong that (v0 is equal to v1)) then for some v2, (v2 is a real number and v0 \leq v2 and it is wrong that (v0 is equal to v2) and (v2 \leq v1 and it is wrong that (v2 is equal to v1)))))
 Proof:
   s + t \cdot 1/ 2 is a real number
-  SetInt timelimit 30  s + s \leq s + t and it is wrong that s + s is equal to s + t
-  s + s \cdot 1/ 2 \leq s + t \cdot 1/ 2 and it is wrong that s + s \cdot 1/ 2 is equal to s + t \cdot 1/ 2
-  s is equal to 2 \cdot 1/ 2 \cdot s and 2 \cdot 1/ 2 \cdot s is equal to 2 \cdot s \cdot 1/ 2 and 2 \cdot s \cdot 1/ 2 is equal to s + s \cdot 1/ 2 and (s + s \cdot 1/ 2 \leq s + t \cdot 1/ 2 and it is wrong that s + s \cdot 1/ 2 is equal to s + t \cdot 1/ 2)
-  s + t \leq t + t and it is wrong that s + t is equal to t + t and (s + t \cdot 1/ 2 \leq t + t \cdot 1/ 2 and it is wrong that s + t \cdot 1/ 2 is equal to t + t \cdot 1/ 2)
-  s + t \cdot 1/ 2 \leq t + t \cdot 1/ 2 and it is wrong that s + t \cdot 1/ 2 is equal to t + t \cdot 1/ 2 and t + t \cdot 1/ 2 is equal to 2 \cdot t \cdot 1/ 2 and 2 \cdot t \cdot 1/ 2 is equal to 2 \cdot 1/ 2 \cdot t and 2 \cdot 1/ 2 \cdot t is equal to t
-  SetInt timelimit 3  s \leq s + t \cdot 1/ 2 and it is wrong that s is equal to s + t \cdot 1/ 2 and (s + t \cdot 1/ 2 \leq t and it is wrong that s + t \cdot 1/ 2 is equal to t)
+  SetInt timelimit 30  s + s \leq s + t and it is wrong that (s + s is equal to s + t)
+  s + s \cdot 1/ 2 \leq s + t \cdot 1/ 2 and it is wrong that (s + s \cdot 1/ 2 is equal to s + t \cdot 1/ 2)
+  s is equal to 2 \cdot 1/ 2 \cdot s and 2 \cdot 1/ 2 \cdot s is equal to 2 \cdot s \cdot 1/ 2 and 2 \cdot s \cdot 1/ 2 is equal to s + s \cdot 1/ 2 and (s + s \cdot 1/ 2 \leq s + t \cdot 1/ 2 and it is wrong that (s + s \cdot 1/ 2 is equal to s + t \cdot 1/ 2))
+  s + t \leq t + t and it is wrong that (s + t is equal to t + t) and (s + t \cdot 1/ 2 \leq t + t \cdot 1/ 2 and it is wrong that (s + t \cdot 1/ 2 is equal to t + t \cdot 1/ 2))
+  s + t \cdot 1/ 2 \leq t + t \cdot 1/ 2 and it is wrong that (s + t \cdot 1/ 2 is equal to t + t \cdot 1/ 2) and t + t \cdot 1/ 2 is equal to 2 \cdot t \cdot 1/ 2 and 2 \cdot t \cdot 1/ 2 is equal to 2 \cdot 1/ 2 \cdot t and 2 \cdot 1/ 2 \cdot t is equal to t
+  SetInt timelimit 3  s \leq s + t \cdot 1/ 2 and it is wrong that (s is equal to s + t \cdot 1/ 2) and (s + t \cdot 1/ 2 \leq t and it is wrong that (s + t \cdot 1/ 2 is equal to t))
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then for some v3, (v3 is a natural number and 0 \leq v2 + - v3 \cdot v0 and v2 + - v3 \cdot v0 \leq v0 and it is wrong that v2 + - v3 \cdot v0 is equal to v0))) then for some v2, (v2 is a natural number and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0))))
+  for all v0, (if v0 is a natural number and it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a natural number then (if for all v2, (if v2 is a natural number then (if v2 is inductively less than v1 then for some v3, (v3 is a natural number and 0 \leq v2 + - v3 \cdot v0 and v2 + - v3 \cdot v0 \leq v0 and it is wrong that (v2 + - v3 \cdot v0 is equal to v0)))) then for some v2, (v2 is a natural number and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that (v1 + - v2 \cdot v0 is equal to v0)))))
 Proof:
   m is a natural number
   if m is equal to 0 then the thesis holds
   Proof:
-    0 \leq 0 + - 0 \cdot a and 0 + - 0 \cdot a \leq a and it is wrong that 0 + - 0 \cdot a is equal to a
+    0 \leq 0 + - 0 \cdot a and 0 + - 0 \cdot a \leq a and it is wrong that (0 + - 0 \cdot a is equal to a)
   Qed.
-  if 0 \leq m and it is wrong that 0 is equal to m then the thesis holds
+  if 0 \leq m and it is wrong that (0 is equal to m) then the thesis holds
   Proof:
     \mu is equal to m + - 1
     \mu is a natural number and \mu is inductively less than m
-    k is a natural number and 0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that \mu + - k \cdot a is equal to a
-    \mu \leq m and it is wrong that \mu is equal to m and (0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that \mu + - k \cdot a is equal to a)
-    m + - k \cdot a is equal to a or (m + - k \cdot a \leq a and it is wrong that m + - k \cdot a is equal to a)
+    k is a natural number and 0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that (\mu + - k \cdot a is equal to a)
+    \mu \leq m and it is wrong that (\mu is equal to m) and (0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that (\mu + - k \cdot a is equal to a))
+    m + - k \cdot a is equal to a or (m + - k \cdot a \leq a and it is wrong that (m + - k \cdot a is equal to a))
     Proof:
-      it is wrong that the thesis holds
+      it is wrong that (the thesis holds)
       b is equal to m + - k \cdot a and c is equal to m + - 1 + - k \cdot a
-      m + - 1 + - k \cdot a \leq a and it is wrong that m + - 1 + - k \cdot a is equal to a
-      if it is wrong that b is equal to a and it is wrong that (b \leq a and it is wrong that b is equal to a) then (a \leq b and it is wrong that a is equal to b)
-      a \leq m + - k \cdot a and it is wrong that a is equal to m + - k \cdot a
-      a + - 1 \leq m + - k \cdot a + - 1 and it is wrong that a + - 1 is equal to m + - k \cdot a + - 1
-      a + - 1 \leq - 1 + m + - k \cdot a and it is wrong that a + - 1 is equal to - 1 + m + - k \cdot a
-      a + - 1 \leq - 1 + m + - k \cdot a and it is wrong that a + - 1 is equal to - 1 + m + - k \cdot a
-      a + - 1 \leq m + - 1 + - k \cdot a and it is wrong that a + - 1 is equal to m + - 1 + - k \cdot a
-      a + - 1 \leq c and it is wrong that a + - 1 is equal to c
+      m + - 1 + - k \cdot a \leq a and it is wrong that (m + - 1 + - k \cdot a is equal to a)
+      if it is wrong that (b is equal to a) and it is wrong that ((b \leq a and it is wrong that (b is equal to a))) then (a \leq b and it is wrong that (a is equal to b))
+      a \leq m + - k \cdot a and it is wrong that (a is equal to m + - k \cdot a)
+      a + - 1 \leq m + - k \cdot a + - 1 and it is wrong that (a + - 1 is equal to m + - k \cdot a + - 1)
+      a + - 1 \leq - 1 + m + - k \cdot a and it is wrong that (a + - 1 is equal to - 1 + m + - k \cdot a)
+      a + - 1 \leq - 1 + m + - k \cdot a and it is wrong that (a + - 1 is equal to - 1 + m + - k \cdot a)
+      a + - 1 \leq m + - 1 + - k \cdot a and it is wrong that (a + - 1 is equal to m + - 1 + - k \cdot a)
+      a + - 1 \leq c and it is wrong that (a + - 1 is equal to c)
       a \leq c
       falsity holds
     Qed.
@@ -1483,37 +1483,37 @@ Proof:
     Proof:
       k is a natural number
       0 is equal to a + - a and a + - a is equal to m + - k \cdot a + - a and m + - k \cdot a + - a is equal to m + - k \cdot a + - a and m + - k \cdot a + - a is equal to m + - k \cdot a + - 1 \cdot a and m + - k \cdot a + - 1 \cdot a is equal to m + - k \cdot a + - 1 \cdot a and m + - k \cdot a + - 1 \cdot a is equal to m + - k + - 1 \cdot a and m + - k + - 1 \cdot a is equal to m + - k + - 1 \cdot a and m + - k + - 1 \cdot a is equal to m + - - - k + - 1 \cdot a
-      0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that m + - - - k + - 1 \cdot a is equal to a
+      0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that (m + - - - k + - 1 \cdot a is equal to a)
       - - k + - 1 is a natural number
       Proof:
-        k is a natural number and - k + - 1 \leq 0 and it is wrong that - k + - 1 is equal to 0 and - k + - 1 is equal to - k + - 1
+        k is a natural number and - k + - 1 \leq 0 and it is wrong that (- k + - 1 is equal to 0) and - k + - 1 is equal to - k + - 1
       Qed.
-      for some v0, (v0 is a natural number and 0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that m + - - - k + - 1 \cdot a is equal to a)
+      for some v0, (v0 is a natural number and 0 \leq m + - - - k + - 1 \cdot a and m + - - - k + - 1 \cdot a \leq a and it is wrong that (m + - - - k + - 1 \cdot a is equal to a))
     Qed.
-    if m + - k \cdot a \leq a and it is wrong that m + - k \cdot a is equal to a then the thesis holds
+    if m + - k \cdot a \leq a and it is wrong that (m + - k \cdot a is equal to a) then the thesis holds
     Proof:
       \nu is equal to - k \cdot a
-      0 \leq \mu + \nu and \mu + \nu \leq m + \nu and it is wrong that \mu + \nu is equal to m + \nu
+      0 \leq \mu + \nu and \mu + \nu \leq m + \nu and it is wrong that (\mu + \nu is equal to m + \nu)
       0 \leq m + - k \cdot a
-      k is a natural number and 0 \leq m + - k \cdot a and m + - k \cdot a \leq a and it is wrong that m + - k \cdot a is equal to a
+      k is a natural number and 0 \leq m + - k \cdot a and m + - k \cdot a \leq a and it is wrong that (m + - k \cdot a is equal to a)
     Qed.
   Qed.
 Qed.
 
 Theorem (lemmabezout):
-  for all v0, (for all v1, (if v0 is a natural number and it is wrong that v0 is equal to 0 and v1 is an integer then for some v2, (v2 is an integer and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that v1 + - v2 \cdot v0 is equal to v0)))
+  for all v0, (for all v1, (if v0 is a natural number and it is wrong that (v0 is equal to 0) and v1 is an integer then for some v2, (v2 is an integer and 0 \leq v1 + - v2 \cdot v0 and v1 + - v2 \cdot v0 \leq v0 and it is wrong that (v1 + - v2 \cdot v0 is equal to v0))))
 Proof:
   if m is a natural number then the thesis holds
   Proof:
-    for some v0, (v0 is a natural number and 0 \leq m + - v0 \cdot a and m + - v0 \cdot a \leq a and it is wrong that m + - v0 \cdot a is equal to a)
+    for some v0, (v0 is a natural number and 0 \leq m + - v0 \cdot a and m + - v0 \cdot a \leq a and it is wrong that (m + - v0 \cdot a is equal to a))
   Qed.
-  if it is wrong that m is a natural number then the thesis holds
+  if it is wrong that (m is a natural number) then the thesis holds
   Proof:
     \mu is equal to - m
     \mu is a natural number
-    k is a natural number and 0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that \mu + - k \cdot a is equal to a
+    k is a natural number and 0 \leq \mu + - k \cdot a and \mu + - k \cdot a \leq a and it is wrong that (\mu + - k \cdot a is equal to a)
     \kappa is equal to - k
-    \kappa is an integer and 0 \leq m + - \kappa \cdot a and m + - \kappa \cdot a \leq a and it is wrong that m + - \kappa \cdot a is equal to a
+    \kappa is an integer and 0 \leq m + - \kappa \cdot a and m + - \kappa \cdot a \leq a and it is wrong that (m + - \kappa \cdot a is equal to a)
   Qed.
 Qed.
 
@@ -1535,14 +1535,14 @@ Proof:
     if \delta is equal to a then \delta is equal to a \cdot 1 + b \cdot 1
     if \delta is equal to - a then \delta is equal to a \cdot - 1 + b \cdot 1
   Qed.
-  if it is wrong that a is equal to 0 and it is wrong that b is equal to 0 then the thesis holds
+  if it is wrong that (a is equal to 0) and it is wrong that (b is equal to 0) then the thesis holds
   Proof:
-    it is wrong that 0 divides a
-    it is wrong that \delta is equal to 0
-    S is a class and for all v0, (v0 is an element of S iff (v0 is an object and for some v1, (for some v2, (v1 is an integer and v2 is an integer and (0 \leq a \cdot v1 + b \cdot v2 and it is wrong that 0 is equal to a \cdot v1 + b \cdot v2) and v0 is equal to a \cdot v1 + b \cdot v2))))
-    (0 \leq a and it is wrong that 0 is equal to a) or (0 \leq - a and it is wrong that 0 is equal to - a)
-    (0 \leq a \cdot 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot 1 + b \cdot 0) or (0 \leq a \cdot - 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot - 1 + b \cdot 0)
-    if 0 \leq a \cdot 1 + b \cdot 0 and it is wrong that 0 is equal to a \cdot 1 + b \cdot 0 then a \cdot 1 + b \cdot 0 is an element of S
+    it is wrong that (0 divides a)
+    it is wrong that (\delta is equal to 0)
+    S is a class and for all v0, (v0 is an element of S iff (v0 is an object and for some v1, (for some v2, (v1 is an integer and v2 is an integer and (0 \leq a \cdot v1 + b \cdot v2 and it is wrong that (0 is equal to a \cdot v1 + b \cdot v2)) and v0 is equal to a \cdot v1 + b \cdot v2))))
+    (0 \leq a and it is wrong that (0 is equal to a)) or (0 \leq - a and it is wrong that (0 is equal to - a))
+    (0 \leq a \cdot 1 + b \cdot 0 and it is wrong that (0 is equal to a \cdot 1 + b \cdot 0)) or (0 \leq a \cdot - 1 + b \cdot 0 and it is wrong that (0 is equal to a \cdot - 1 + b \cdot 0))
+    if 0 \leq a \cdot 1 + b \cdot 0 and it is wrong that (0 is equal to a \cdot 1 + b \cdot 0) then a \cdot 1 + b \cdot 0 is an element of S
     a \cdot 1 + b \cdot 0 is an element of S or a \cdot - 1 + b \cdot 0 is an element of S
     S is nonempty
     S is a subclass of \mathbb{N}
@@ -1553,7 +1553,7 @@ Proof:
         e is an integer and f is an integer and s is equal to a \cdot e + b \cdot f
         a \cdot e is an element of \mathbb{Z} and b \cdot f is an element of \mathbb{Z}
         s is an integer
-        0 \leq s and it is wrong that 0 is equal to s
+        0 \leq s and it is wrong that (0 is equal to s)
       Qed.
     Qed.
     for some v0, (v0 is an infimum of S)
@@ -1561,8 +1561,8 @@ Proof:
     e is an integer and f is an integer and d is equal to a \cdot e + b \cdot f
     d divides a
     Proof:
-      d is a natural number and it is wrong that d is equal to 0 and a is an integer
-      k is an integer and 0 \leq a + - k \cdot d and a + - k \cdot d \leq d and it is wrong that a + - k \cdot d is equal to d
+      d is a natural number and it is wrong that (d is equal to 0) and a is an integer
+      k is an integer and 0 \leq a + - k \cdot d and a + - k \cdot d \leq d and it is wrong that (a + - k \cdot d is equal to d)
       r is equal to a + - k \cdot d
       r is equal to a + - k \cdot d and a + - k \cdot d is equal to a + - k \cdot a \cdot e + b \cdot f and a + - k \cdot a \cdot e + b \cdot f is equal to a + - k \cdot a \cdot e + k \cdot b \cdot f and a + - k \cdot a \cdot e + k \cdot b \cdot f is equal to a + - k \cdot a \cdot e + - k \cdot b \cdot f
       \phi is equal to - k \cdot e and \psi is equal to - k \cdot f
@@ -1572,15 +1572,15 @@ Proof:
       SetInt timelimit 10      a + a \cdot \phi + b \cdot \psi is equal to a \cdot 1 + \phi + b \cdot \psi
       SetInt timelimit 3      1 + \phi is an integer and \psi is an integer
       r is an element of S or r is equal to 0
-      0 \leq r and r \leq d and it is wrong that r is equal to d and d is an infimum of S
+      0 \leq r and r \leq d and it is wrong that (r is equal to d) and d is an infimum of S
       r is equal to 0
       k \cdot d is equal to a
       d divides a
     Qed.
     d divides b
     Proof:
-      d is a natural number and it is wrong that d is equal to 0 and b is an integer
-      k is an integer and 0 \leq b + - k \cdot d and b + - k \cdot d \leq d and it is wrong that b + - k \cdot d is equal to d
+      d is a natural number and it is wrong that (d is equal to 0) and b is an integer
+      k is an integer and 0 \leq b + - k \cdot d and b + - k \cdot d \leq d and it is wrong that (b + - k \cdot d is equal to d)
       r is equal to b + - k \cdot d
       r is equal to b + - k \cdot d and b + - k \cdot d is equal to b + - k \cdot a \cdot e + b \cdot f and b + - k \cdot a \cdot e + b \cdot f is equal to b + - k \cdot a \cdot e + k \cdot b \cdot f and b + - k \cdot a \cdot e + k \cdot b \cdot f is equal to b + - k \cdot a \cdot e + - k \cdot b \cdot f
       \phi is equal to - k \cdot e and \psi is equal to - k \cdot f
@@ -1590,7 +1590,7 @@ Proof:
       SetInt timelimit 10      b + a \cdot \phi + b \cdot \psi is equal to a \cdot \phi + b + b \cdot \psi and a \cdot \phi + b + b \cdot \psi is equal to a \cdot \phi + b \cdot 1 + \psi
       SetInt timelimit 3      \phi is an integer and 1 + \psi is an integer
       r is an element of S or r is equal to 0
-      0 \leq r and r \leq d and it is wrong that r is equal to d and d is an infimum of S
+      0 \leq r and r \leq d and it is wrong that (r is equal to d) and d is an infimum of S
       r is equal to 0
       k \cdot d is equal to b
       d divides b
@@ -1614,56 +1614,56 @@ Theorem:
 Proof:
   the greatest common divisor of 0 and 0 is equal to 0
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     d is equal to the greatest common divisor of 0 and 0
-    0 is an integer and 0 divides 0 and it is wrong that (0 is an integer and 0 divides d)
+    0 is an integer and 0 divides 0 and it is wrong that ((0 is an integer and 0 divides d))
     falsity holds
   Qed.
   if the greatest common divisor of n and m is equal to 0 then (n is equal to 0 and m is equal to 0)
   Proof:
-    if it is wrong that n is equal to 0 then it is wrong that (0 is an integer and 0 divides n)
-    if it is wrong that m is equal to 0 then it is wrong that (0 is an integer and 0 divides m)
+    if it is wrong that (n is equal to 0) then it is wrong that ((0 is an integer and 0 divides n))
+    if it is wrong that (m is equal to 0) then it is wrong that ((0 is an integer and 0 divides m))
   Qed.
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that for some v2, (v2 is an integer and v2 divides v1 and v2 divides v0 and v2 is prime))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then ((v1 and v0 are coprime) iff it is wrong that (for some v2, (v2 is an integer and v2 divides v1 and v2 divides v0 and v2 is prime)))))
 
 Theorem:
   for all v0, (if v0 is a rational number then (if v0 is positive then for some v1, (for some v2, (v1 is a natural number and v2 is a natural number and (v1 and v2 are coprime and v1 \cdot v0 is equal to v2)))))
 Proof:
   q is positive
-  for some v0, (v0 is a natural number and for some v1, (v1 is a natural number and it is wrong that v1 is equal to 0 and q is equal to v0 \cdot 1/ v1))
+  for some v0, (v0 is a natural number and for some v1, (v1 is a natural number and it is wrong that (v1 is equal to 0) and q is equal to v0 \cdot 1/ v1))
   Proof:
-    a is an integer and b is an integer and it is wrong that b is equal to 0 and q is equal to a \cdot 1/ b
+    a is an integer and b is an integer and it is wrong that (b is equal to 0) and q is equal to a \cdot 1/ b
     if a is equal to 0 or (a is a natural number and b is a natural number) then the thesis holds
-    if (a \leq 0 and it is wrong that a is equal to 0 and (0 \leq b and it is wrong that 0 is equal to b)) or (0 \leq a and it is wrong that 0 is equal to a and (b \leq 0 and it is wrong that b is equal to 0)) then the thesis holds
+    if (a \leq 0 and it is wrong that (a is equal to 0) and (0 \leq b and it is wrong that (0 is equal to b))) or (0 \leq a and it is wrong that (0 is equal to a) and (b \leq 0 and it is wrong that (b is equal to 0))) then the thesis holds
     Proof:
-      a \cdot 1/ b \leq 0 and it is wrong that a \cdot 1/ b is equal to 0 and 0 \leq q
+      a \cdot 1/ b \leq 0 and it is wrong that (a \cdot 1/ b is equal to 0) and 0 \leq q
       falsity holds
     Qed.
-    if a \leq 0 and it is wrong that a is equal to 0 and (b \leq 0 and it is wrong that b is equal to 0) then the thesis holds
+    if a \leq 0 and it is wrong that (a is equal to 0) and (b \leq 0 and it is wrong that (b is equal to 0)) then the thesis holds
     Proof:
       - a is an element of \mathbb{N} and - b is an element of \mathbb{N} and q is equal to - a \cdot 1/ - b
     Qed.
   Qed.
-  a is a natural number and b is a natural number and it is wrong that b is equal to 0 and it is wrong that b is equal to 1 and q is equal to a \cdot 1/ b
+  a is a natural number and b is a natural number and it is wrong that (b is equal to 0) and it is wrong that (b is equal to 1) and q is equal to a \cdot 1/ b
   d is equal to the greatest common divisor of a and b
-  it is wrong that b is equal to 0 and it is wrong that b is equal to 1
-  it is wrong that 0 divides b and d is a natural number and it is wrong that d is equal to 0
+  it is wrong that (b is equal to 0) and it is wrong that (b is equal to 1)
+  it is wrong that (0 divides b) and d is a natural number and it is wrong that (d is equal to 0)
   n is equal to a \cdot 1/ d and m is equal to b \cdot 1/ d
   n is a natural number and m is a natural number
   n and m are coprime
   Proof:
-    it is wrong that the thesis holds
-    it is wrong that the greatest common divisor of n and m is equal to 1
+    it is wrong that (the thesis holds)
+    it is wrong that (the greatest common divisor of n and m is equal to 1)
     \delta is equal to the greatest common divisor of n and m
     p is equal to d \cdot \delta and \nu is equal to n \cdot 1/ \delta and \mu is equal to m \cdot 1/ \delta
     p is a natural number and \nu is a natural number and \mu is a natural number
     \nu \cdot p is equal to n \cdot 1/ \delta \cdot \delta \cdot d and n \cdot 1/ \delta \cdot \delta \cdot d is equal to n \cdot d and n \cdot d is equal to a \cdot 1/ d \cdot d and a \cdot 1/ d \cdot d is equal to a and (\mu \cdot p is equal to m \cdot 1/ \delta \cdot \delta \cdot d and m \cdot 1/ \delta \cdot \delta \cdot d is equal to m \cdot d and m \cdot d is equal to b \cdot 1/ d \cdot d and b \cdot 1/ d \cdot d is equal to b)
     p divides a and p divides b
-    it is wrong that \delta is equal to 1
-    it is wrong that p divides d and it is wrong that d is equal to the greatest common divisor of a and b
+    it is wrong that (\delta is equal to 1)
+    it is wrong that (p divides d) and it is wrong that (d is equal to the greatest common divisor of a and b)
     falsity holds
   Qed.
   q is equal to n \cdot 1/ m and m \cdot q is equal to n
@@ -1672,7 +1672,7 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number and v1 is prime then (if v1 divides v0 ^{ 2 } then v1 divides v0)))
 Proof:
-  p divides n ^{ 2 } and it is wrong that p divides n
+  p divides n ^{ 2 } and it is wrong that (p divides n)
   the greatest common divisor of p and n is equal to 1
   s is an integer and t is an integer and p \cdot s + n \cdot t is equal to 1
   n is equal to n \cdot 1 and n \cdot 1 is equal to n \cdot p \cdot s + n \cdot t and n \cdot p \cdot s + n \cdot t is equal to n \cdot p \cdot s + n \cdot n \cdot t
@@ -1684,9 +1684,9 @@ Proof:
 Qed.
 
 Theorem (pythagoras):
-  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a rational number and v1 is positive then it is wrong that v1 ^{ 2 } is equal to v0))
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a rational number and v1 is positive then it is wrong that (v1 ^{ 2 } is equal to v0)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   q is a rational number and q is positive and p is equal to q ^{ 2 }
   m is a natural number and n is a natural number and (m and n are coprime and m \cdot q is equal to n)
   m \cdot q \cdot m \cdot q is equal to n ^{ 2 }
@@ -1718,9 +1718,9 @@ Proof:
     x is an integer
     x \leq n or n + 1 \leq x
     Proof:
-      it is wrong that the thesis holds
-      n \leq x and it is wrong that n is equal to x and (x \leq n + 1 and it is wrong that x is equal to n + 1)
-      0 \leq x + - n and it is wrong that 0 is equal to x + - n and (x + - n \leq 1 and it is wrong that x + - n is equal to 1)
+      it is wrong that (the thesis holds)
+      n \leq x and it is wrong that (n is equal to x) and (x \leq n + 1 and it is wrong that (x is equal to n + 1))
+      0 \leq x + - n and it is wrong that (0 is equal to x + - n) and (x + - n \leq 1 and it is wrong that (x + - n is equal to 1))
     Qed.
     x is an element of \Seq{ m }{ n } or x is an element of \Seq{ n + 1 }{ k }
   Qed.
@@ -1736,10 +1736,10 @@ Theorem:
 Proof:
   x is an integer
   x \leq n + 1
-  it is wrong that x \leq n
-  it is wrong that x is equal to n + 1
-  n \leq x and it is wrong that n is equal to x and (x \leq n + 1 and it is wrong that x is equal to n + 1)
-  0 \leq x + - n and it is wrong that 0 is equal to x + - n and (x + - n \leq 1 and it is wrong that x + - n is equal to 1)
+  it is wrong that (x \leq n)
+  it is wrong that (x is equal to n + 1)
+  n \leq x and it is wrong that (n is equal to x) and (x \leq n + 1 and it is wrong that (x is equal to n + 1))
+  0 \leq x + - n and it is wrong that (0 is equal to x + - n) and (x + - n \leq 1 and it is wrong that (x + - n is equal to 1))
 Qed.
 
 Definition:
@@ -1769,14 +1769,14 @@ Proof:
     \Seq{ 1 }{ n } is equal to \emptyset
     \Seq{ 1 }{ m } is equal to \emptyset and 0 is equal to m and m \leq n
   Qed.
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     n' is a natural number and n is equal to n' + 1
     if m is equal to 0 then the thesis holds
     Proof:
       m \leq n
     Qed.
-    if it is wrong that m is equal to 0 then the thesis holds
+    if it is wrong that (m is equal to 0) then the thesis holds
     Proof:
       m' is a natural number and m is equal to m' + 1
       if f [ \Seq{ 1 }{ m' } ] is a subclass of \Seq{ 1 }{ n' } then the thesis holds
@@ -1791,35 +1791,35 @@ Proof:
         n' is inductively less than n
         SetInt timelimit 10        m' \leq n' and m \leq n
       Qed.
-      SetInt timelimit 3      if it is wrong that f [ \Seq{ 1 }{ m' } ] is a subclass of \Seq{ 1 }{ n' } then the thesis holds
+      SetInt timelimit 3      if it is wrong that (f [ \Seq{ 1 }{ m' } ] is a subclass of \Seq{ 1 }{ n' }) then the thesis holds
       Proof:
-        w is an element of f [ \Seq{ 1 }{ m' } ] and it is wrong that w is an element of \Seq{ 1 }{ n' }
+        w is an element of f [ \Seq{ 1 }{ m' } ] and it is wrong that (w is an element of \Seq{ 1 }{ n' })
         w is an element of f [ \Seq{ 1 }{ m' } ] and f [ \Seq{ 1 }{ m' } ] is a subclass of f [ \Seq{ 1 }{ m } ] and f [ \Seq{ 1 }{ m } ] is a subclass of \Seq{ 1 }{ n }
         w is an element of the set difference of \Seq{ 1 }{ n' + 1 } and \Seq{ 1 }{ n' }
         w is equal to n
         i is an element of \Seq{ 1 }{ m' } and the value of f under i is equal to w
-        h is a map and (the domain of h is equal to \Seq{ 1 }{ m' }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then ((if it is wrong that v0 is equal to i then (the value of h under v0 is equal to the value of f under v0)) and (if v0 is equal to i then (the value of h under v0 is equal to the value of f under m)))))
+        h is a map and (the domain of h is equal to \Seq{ 1 }{ m' }) and for all v0, (if v0 is an object then (if v0 is an element of the domain of h then ((if it is wrong that (v0 is equal to i) then (the value of h under v0 is equal to the value of f under v0)) and (if v0 is equal to i then (the value of h under v0 is equal to the value of f under m)))))
         h is a map
         the domain of h is equal to \Seq{ 1 }{ m' }
         h is injective
         Proof:
-          j is an element of \Seq{ 1 }{ m' } and k is an element of \Seq{ 1 }{ m' } and it is wrong that j is equal to k
-          it is wrong that the value of h under j is equal to the value of h under k
+          j is an element of \Seq{ 1 }{ m' } and k is an element of \Seq{ 1 }{ m' } and it is wrong that (j is equal to k)
+          it is wrong that (the value of h under j is equal to the value of h under k)
           Proof:
             if j is equal to i then the thesis holds
             Proof:
-              it is wrong that k is equal to i
-              it is wrong that k is equal to m
-              SetInt timelimit 10              the value of h under j is equal to the value of f under m and it is wrong that the value of f under m is equal to the value of f under k and the value of f under k is equal to the value of h under k
+              it is wrong that (k is equal to i)
+              it is wrong that (k is equal to m)
+              SetInt timelimit 10              the value of h under j is equal to the value of f under m and it is wrong that (the value of f under m is equal to the value of f under k) and the value of f under k is equal to the value of h under k
               SetInt timelimit 3            Qed.
             if k is equal to i then the thesis holds
             Proof:
-              it is wrong that j is equal to i
-              it is wrong that j is equal to m
-              SetInt timelimit 10              the value of h under j is equal to the value of f under j and it is wrong that the value of f under j is equal to the value of f under m and the value of f under m is equal to the value of h under k
+              it is wrong that (j is equal to i)
+              it is wrong that (j is equal to m)
+              SetInt timelimit 10              the value of h under j is equal to the value of f under j and it is wrong that (the value of f under j is equal to the value of f under m) and the value of f under m is equal to the value of h under k
               SetInt timelimit 3            Qed.
-            it is wrong that j is equal to i and it is wrong that k is equal to i
-            SetInt timelimit 10            the value of h under j is equal to the value of f under j and it is wrong that the value of f under j is equal to the value of f under k and the value of f under k is equal to the value of h under k
+            it is wrong that (j is equal to i) and it is wrong that (k is equal to i)
+            SetInt timelimit 10            the value of h under j is equal to the value of f under j and it is wrong that (the value of f under j is equal to the value of f under k) and the value of f under k is equal to the value of h under k
             SetInt timelimit 3          Qed.
         Qed.
         h [ \Seq{ 1 }{ m' } ] is a subclass of \Seq{ 1 }{ n' }
@@ -1833,13 +1833,13 @@ Proof:
           Proof:
             SetInt timelimit 10            if j is equal to i then the thesis holds
             Proof:
-              the value of h under j is equal to the value of f under m and it is wrong that the value of f under m is equal to the value of f under i and the value of f under i is equal to w and w is equal to n
+              the value of h under j is equal to the value of f under m and it is wrong that (the value of f under m is equal to the value of f under i) and the value of f under i is equal to w and w is equal to n
               Proof:
-                it is wrong that m is equal to i
+                it is wrong that (m is equal to i)
               Qed.
             Qed.
-            SetInt timelimit 3            it is wrong that j is equal to i
-            the value of h under j is equal to the value of f under j and it is wrong that the value of f under j is equal to the value of f under i and the value of f under i is equal to n
+            SetInt timelimit 3            it is wrong that (j is equal to i)
+            the value of h under j is equal to the value of f under j and it is wrong that (the value of f under j is equal to the value of f under i) and the value of f under i is equal to n
           Qed.
         Qed.
         h is a map from \Seq{ 1 }{ m' } to \Seq{ 1 }{ n' } and h is injective
@@ -1902,7 +1902,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite))
+  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that (v0 is finite)))
 
 Definition:
   for all v0, (if v0 is a class then ((v0 is denumerable) iff v0 and \mathbb{N} are equinumerous))
@@ -1937,7 +1937,7 @@ Proof:
     h is a bijection between the powerset of \emptyset and \Seq{ 1 }{ 1 }
     | the powerset of X | is equal to 1 and 2 ^{ 0 } is equal to 1
   Qed.
-  if it is wrong that n is equal to 0 then the thesis holds
+  if it is wrong that (n is equal to 0) then the thesis holds
   Proof:
     m is a natural number and m is equal to n + - 1
     m is inductively less than n
@@ -1946,7 +1946,7 @@ Proof:
     g is a bijection between X and \Seq{ 1 }{ n }
     \xi is an element of X and the value of g under \xi is equal to n
     M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is an element of the powerset of X and \xi is an element of v0))
-    N is a class and for all v0, (v0 is an element of N iff (v0 is an object and v0 is an element of the powerset of X and it is wrong that \xi is an element of v0))
+    N is a class and for all v0, (v0 is an element of N iff (v0 is an object and v0 is an element of the powerset of X and it is wrong that (\xi is an element of v0)))
     the union of M and N is equal to the powerset of X
     M is disjoint from N
     Y is equal to the set difference of X and \sset{ \xi }{ X }
@@ -1958,7 +1958,7 @@ Proof:
       f is injective
       f [ Y ] is a subclass of \Seq{ 1 }{ m }
       Proof:
-        f [ Y ] is a subclass of \Seq{ 1 }{ n } and for all v0, (if v0 is an element of Y then it is wrong that the value of f under v0 is equal to n)
+        f [ Y ] is a subclass of \Seq{ 1 }{ n } and for all v0, (if v0 is an element of Y then it is wrong that (the value of f under v0 is equal to n))
         f [ Y ] is a subclass of \Seq{ 1 }{ m }
       Qed.
       f is a surjection from Y onto \Seq{ 1 }{ m }
@@ -1969,7 +1969,7 @@ Proof:
           \Seq{ 1 }{ m } is a subclass of \Seq{ 1 }{ n }
           g is a surjection from X onto \Seq{ 1 }{ n }
           x is an element of X and the value of g under x is equal to y
-          it is wrong that y is equal to n and it is wrong that x is equal to \xi
+          it is wrong that (y is equal to n) and it is wrong that (x is equal to \xi)
           x is an element of Y and the value of f under x is equal to the value of g under x and the value of g under x is equal to y
         Qed.
       Qed.
@@ -1991,7 +1991,7 @@ Proof:
         Proof:
           x is an element of M and y is equal to the value of f under x
           y is equal to the set difference of x and \sset{ \xi }{ X }
-          y is a subclass of X and it is wrong that \xi is an element of y
+          y is a subclass of X and it is wrong that (\xi is an element of y)
           y is an element of N
         Qed.
         f is a surjection from M onto N
@@ -2008,13 +2008,13 @@ Proof:
       the powerset of Y is a subclass of N
       Proof:
         y is an element of the powerset of Y
-        y is a subclass of X and it is wrong that \xi is an element of y
+        y is a subclass of X and it is wrong that (\xi is an element of y)
         y is an element of N
       Qed.
       N is a subclass of the powerset of Y
       Proof:
         y is an element of N
-        it is wrong that \xi is an element of y
+        it is wrong that (\xi is an element of y)
         y is a subclass of Y
         y is an element of the powerset of Y
       Qed.
@@ -2042,7 +2042,7 @@ Signature:
   for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 and \FinSet{ v1 }{1}{ v0 } is a subclass of \mathbb{N} then for all v2, (if v2 is equal to \Prod{ v1 }{1}{ v0 } then v2 is a natural number)))
 
 Axiom (factorproperty):
-  for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 and for all v2, (if v2 is an element of the domain of v1 then (the value of v1 under v2 is a natural number and it is wrong that the value of v1 under v2 is equal to 0)) then (it is wrong that \Prod{ v1 }{1}{ v0 } is equal to 0 and for all v2, (if v2 is an element of the domain of v1 then the value of v1 under v2 divides \Prod{ v1 }{1}{ v0 }))))
+  for all v0, (if v0 is a natural number then for all v1, (if v1 is a sequence of length v0 and for all v2, (if v2 is an element of the domain of v1 then (the value of v1 under v2 is a natural number and it is wrong that (the value of v1 under v2 is equal to 0))) then (it is wrong that (\Prod{ v1 }{1}{ v0 } is equal to 0) and for all v2, (if v2 is an element of the domain of v1 then the value of v1 under v2 divides \Prod{ v1 }{1}{ v0 }))))
 
 Signature:
   for all v0, (if v0 is equal to \Primes then (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a natural number and v1 is prime and v1 is an object))))
@@ -2054,11 +2054,11 @@ Proof:
   r is a natural number and \Seq{ 1 }{ r } and \Primes are equinumerous
   p is a bijection between \Seq{ 1 }{ r } and \Primes
   p is a sequence of length r and \Primes is equal to \FinSet{ p }{1}{ r }
-  for all v0, (if v0 is an element of the domain of p then (the value of p under v0 is a natural number and it is wrong that the value of p under v0 is equal to 0))
+  for all v0, (if v0 is an element of the domain of p then (the value of p under v0 is a natural number and it is wrong that (the value of p under v0 is equal to 0)))
   n is equal to \Prod{ p }{1}{ r } + 1
-  SetInt timelimit 10  it is wrong that \Prod{ p }{1}{ r } is equal to 0 and it is wrong that n is equal to 0 and it is wrong that n is equal to 1
+  SetInt timelimit 10  it is wrong that (\Prod{ p }{1}{ r } is equal to 0) and it is wrong that (n is equal to 0) and it is wrong that (n is equal to 1)
   SetInt timelimit 3  q is an integer and q divides n and q is prime
-  it is wrong that q is an element of \FinSet{ p }{1}{ r }
+  it is wrong that (q is an element of \FinSet{ p }{1}{ r })
   Proof:
     i is a natural number and 1 \leq i and i \leq r and q is equal to the value of p under i
     q is an integer and q divides n
@@ -2110,12 +2110,12 @@ Proof:
 Qed.
 
 Theorem (existenceone):
-  1 is a real number and it is wrong that 1 is equal to 0 and for all v0, (if v0 is a real number then 1 \cdot v0 is equal to v0)
+  1 is a real number and it is wrong that (1 is equal to 0) and for all v0, (if v0 is a real number then 1 \cdot v0 is equal to v0)
 Proof:
 Qed.
 
 Theorem (multiplicativeinverse):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then (1/ v0 is a real number and v0 \cdot 1/ v0 is equal to 1)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then (1/ v0 is a real number and v0 \cdot 1/ v0 is equal to 1)))
 Proof:
 Qed.
 
@@ -2150,22 +2150,22 @@ Proof:
 Qed.
 
 Theorem (eqlemma5):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
 Proof:
 Qed.
 
 Theorem (eqlemma6):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
 Proof:
 Qed.
 
 Theorem (eqlemma7):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
 Proof:
 Qed.
 
 Theorem (eqlemma8):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then 1/ 1/ v0 is equal to v0))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then 1/ 1/ v0 is equal to v0))
 Proof:
 Qed.
 
@@ -2175,7 +2175,7 @@ Proof:
 Qed.
 
 Theorem (eqlemma10):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then it is wrong that (v0 \cdot v1 is equal to 0))))
 Proof:
 Qed.
 
@@ -2211,12 +2211,12 @@ Proof:
 Qed.
 
 Theorem (eqlemma17):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a real number then v1 is equal to v0 \cdot v1 \cdot 1/ v0)))
 Proof:
 Qed.
 
 Theorem (eqlemma18):
-  for all v0, (if v0 is a real number and it is wrong that v0 is equal to 0 then for all v1, (for all v2, (for all v3, (if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0))))
+  for all v0, (if v0 is a real number and it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (for all v3, (if v1 is a real number and v2 is a real number and v3 is a real number then v1 + - v2 \cdot 1/ v0 + v2 + - v3 \cdot 1/ v0 is equal to v1 + - v3 \cdot 1/ v0))))
 Proof:
 Qed.
 
@@ -2251,22 +2251,22 @@ Proof:
 Qed.
 
 Theorem (ineqlemma1):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that (v1 \leq v0 and it is wrong that v1 is equal to v0))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (v0 \leq v1 iff it is wrong that ((v1 \leq v0 and it is wrong that (v1 is equal to v0))))))
 Proof:
 Qed.
 
 Theorem (ineqlemma2):
-  for all v0, (if v0 is a real number then ((0 \leq v0 and it is wrong that 0 is equal to v0) iff (- v0 \leq 0 and it is wrong that - v0 is equal to 0)))
+  for all v0, (if v0 is a real number then ((0 \leq v0 and it is wrong that (0 is equal to v0)) iff (- v0 \leq 0 and it is wrong that (- v0 is equal to 0))))
 Proof:
 Qed.
 
 Theorem (ineqlemma3):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then (0 \leq v0 \cdot v0 and it is wrong that 0 is equal to v0 \cdot v0)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then (0 \leq v0 \cdot v0 and it is wrong that (0 is equal to v0 \cdot v0))))
 Proof:
 Qed.
 
 Theorem (ineqlemma4):
-  0 \leq 1 and it is wrong that 0 is equal to 1
+  0 \leq 1 and it is wrong that (0 is equal to 1)
 Proof:
 Qed.
 
@@ -2276,37 +2276,37 @@ Proof:
 Qed.
 
 Theorem (ineqlemma6):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that v0 is equal to 0 and (v1 \leq v2 and it is wrong that v1 is equal to v2) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that v0 \cdot v2 is equal to v0 \cdot v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq 0 and it is wrong that (v0 is equal to 0) and (v1 \leq v2 and it is wrong that (v1 is equal to v2)) then (v0 \cdot v2 \leq v0 \cdot v1 and it is wrong that (v0 \cdot v2 is equal to v0 \cdot v1))))))
 Proof:
 Qed.
 
 Theorem (ineqlemma7):
-  - 1 \leq 0 and it is wrong that - 1 is equal to 0
+  - 1 \leq 0 and it is wrong that (- 1 is equal to 0)
 Proof:
 Qed.
 
 Theorem (ineqlemma8):
-  for all v0, (if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that v0 + - 1 is equal to v0))
+  for all v0, (if v0 is a real number then (v0 + - 1 \leq v0 and it is wrong that (v0 + - 1 is equal to v0)))
 Proof:
 Qed.
 
 Theorem (ineqlemma9):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that v0 is equal to v1 and (v1 \leq v0 + 1 and it is wrong that v1 is equal to v0 + 1)) iff (0 \leq v1 + - v0 and it is wrong that 0 is equal to v1 + - v0 and (v1 + - v0 \leq 1 and it is wrong that v1 + - v0 is equal to 1)))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 \leq v1 and it is wrong that (v0 is equal to v1) and (v1 \leq v0 + 1 and it is wrong that (v1 is equal to v0 + 1))) iff (0 \leq v1 + - v0 and it is wrong that (0 is equal to v1 + - v0) and (v1 + - v0 \leq 1 and it is wrong that (v1 + - v0 is equal to 1))))))
 Proof:
 Qed.
 
 Theorem (ineqlemma10):
-  for all v0, (if v0 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 then (0 \leq 1/ v0 and it is wrong that 0 is equal to 1/ v0)))
+  for all v0, (if v0 is a real number then (if 0 \leq v0 and it is wrong that (0 is equal to v0) then (0 \leq 1/ v0 and it is wrong that (0 is equal to 1/ v0))))
 Proof:
 Qed.
 
 Theorem (ineqlemma11):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 \leq v1 then v1 \leq v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 \leq v1) then v1 \leq v0)))
 Proof:
 Qed.
 
 Theorem (ineqlemma12):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that 0 is equal to v0 and v0 \leq v1 then 1/ v1 \leq 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and it is wrong that (0 is equal to v0) and v0 \leq v1 then 1/ v1 \leq 1/ v0)))
 Proof:
 Qed.
 
@@ -2331,10 +2331,10 @@ Proof:
 Qed.
 
 Theorem (fractionlemma):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 \cdot v1 is equal to 0 then for all v2, (if v2 is a real number then (it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 and v2 \cdot 1/ v0 \cdot v1 is equal to v2 \cdot 1/ v0 \cdot 1/ v1)))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 \cdot v1 is equal to 0) then for all v2, (if v2 is a real number then (it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) and v2 \cdot 1/ v0 \cdot v1 is equal to v2 \cdot 1/ v0 \cdot 1/ v1)))))
 Proof:
   if y is equal to 0 or z is equal to 0 then y \cdot z is equal to 0
-  it is wrong that y is equal to 0 and it is wrong that z is equal to 0
+  it is wrong that (y is equal to 0) and it is wrong that (z is equal to 0)
   1/ y \cdot z is equal to 1/ y \cdot 1/ z
   Proof:
     y \cdot z \cdot 1/ y \cdot 1/ z is equal to 1
@@ -2342,17 +2342,17 @@ Proof:
 Qed.
 
 Theorem (fractionlemma2):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a real number then v0 \cdot v1 \cdot 1/ v0 is equal to v1)))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a real number then v0 \cdot v1 \cdot 1/ v0 is equal to v1)))
 Proof:
 Qed.
 
 Theorem (fraclemma1):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and 0 \leq v1 and it is wrong that 0 is equal to v1 then 0 \leq v0 \cdot 1/ v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and 0 \leq v1 and it is wrong that (0 is equal to v1) then 0 \leq v0 \cdot 1/ v1)))
 Proof:
 Qed.
 
 Theorem (fraclemma2):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and v1 \leq 0 and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v1 \leq 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if 0 \leq v0 and v1 \leq 0 and it is wrong that (v1 is equal to 0) then v0 \cdot 1/ v1 \leq 0)))
 Proof:
   0 \leq x \cdot 1/ - y
   Proof:
@@ -2362,7 +2362,7 @@ Proof:
 Qed.
 
 Theorem (fraclemma3):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq 0 and 0 \leq v1 and it is wrong that 0 is equal to v1 then v0 \cdot 1/ v1 \leq 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq 0 and 0 \leq v1 and it is wrong that (0 is equal to v1) then v0 \cdot 1/ v1 \leq 0)))
 Proof:
   0 \leq - x \cdot 1/ y
   Proof:
@@ -2372,7 +2372,7 @@ Proof:
 Qed.
 
 Theorem (fraclemma4):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq 0 and v1 \leq 0 and it is wrong that v1 is equal to 0 then 0 \leq v0 \cdot 1/ v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq 0 and v1 \leq 0 and it is wrong that (v1 is equal to 0) then 0 \leq v0 \cdot 1/ v1)))
 Proof:
   - x \cdot 1/ y \leq 0
   Proof:
@@ -2381,7 +2381,7 @@ Proof:
 Qed.
 
 Theorem (fraclemma5):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot 1/ v1 is equal to 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then it is wrong that (v0 \cdot 1/ v1 is equal to 0))))
 Proof:
 Qed.
 
@@ -2391,7 +2391,7 @@ Proof:
 Qed.
 
 Theorem (eqlemma20):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then (if v1 is equal to v2 \cdot v0 then v2 is equal to v1 \cdot 1/ v0)))))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then (if v1 is equal to v2 \cdot v0 then v2 is equal to v1 \cdot 1/ v0)))))
 Proof:
 Qed.
 
@@ -2401,7 +2401,7 @@ Proof:
 Qed.
 
 Theorem (eqlemma26):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v1 \cdot v1 \cdot 1/ v0 is equal to 1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then v0 \cdot 1/ v1 \cdot v1 \cdot 1/ v0 is equal to 1)))
 Proof:
 Qed.
 
@@ -2411,18 +2411,18 @@ Proof:
 Qed.
 
 Theorem (eqlemma28):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then - 1/ v0 is equal to 1/ - v0))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then - 1/ v0 is equal to 1/ - v0))
 Proof:
   - x \cdot - 1/ x is equal to 1
 Qed.
 
 Theorem (eqlemma29):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then v0 \cdot 1/ v0 \cdot v1 is equal to 1/ v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then v0 \cdot 1/ v0 \cdot v1 is equal to 1/ v1)))
 Proof:
 Qed.
 
 Theorem (eqlemma30):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then 1/ v0 \cdot 1/ v1 is equal to 1/ v0 \cdot v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then 1/ v0 \cdot 1/ v1 is equal to 1/ v0 \cdot v1)))
 Proof:
   x \cdot y \cdot 1/ x \cdot 1/ y is equal to 1
   Proof:
@@ -2432,11 +2432,11 @@ Proof:
 Qed.
 
 Theorem (eqlemma22):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then 1/ v0 \cdot 1/ v1 is equal to v1 \cdot 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then 1/ v0 \cdot 1/ v1 is equal to v1 \cdot 1/ v0)))
 Proof:
   1/ x \cdot 1/ y is equal to y \cdot 1/ x
   Proof:
-    x \cdot 1/ y is a real number and it is wrong that x \cdot 1/ y is equal to 0
+    x \cdot 1/ y is a real number and it is wrong that (x \cdot 1/ y is equal to 0)
   Qed.
 Qed.
 
@@ -2452,7 +2452,7 @@ Proof:
 Qed.
 
 Theorem (eqlemma24):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then 1/ v0 + 1/ v1 is equal to v0 + v1 \cdot 1/ v0 \cdot v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then 1/ v0 + 1/ v1 is equal to v0 + v1 \cdot 1/ v0 \cdot v1)))
 Proof:
   1/ x + 1/ y is equal to x + y \cdot 1/ x \cdot y
   Proof:
@@ -2462,7 +2462,7 @@ Proof:
 Qed.
 
 Theorem (eqlemma25):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then 1/ v0 + - 1/ v1 is equal to v1 + - v0 \cdot 1/ v0 \cdot v1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then 1/ v0 + - 1/ v1 is equal to v1 + - v0 \cdot 1/ v0 \cdot v1)))
 Proof:
   1/ x + - 1/ y is equal to x + - y \cdot 1/ x \cdot - y
   Proof:
@@ -2477,17 +2477,17 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (if v1 is a real number then (v1 + - v0 \leq v1 + v0 and it is wrong that v1 + - v0 is equal to v1 + v0))))
+  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (if v1 is a real number then (v1 + - v0 \leq v1 + v0 and it is wrong that (v1 + - v0 is equal to v1 + v0)))))
 Proof:
 Qed.
 
 Theorem (ineqlemma13):
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a real number and v1 is a real number and v2 is a real number and v3 is a real number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 and (v2 \leq v3 and it is wrong that v2 is equal to v3) then (v0 + v2 \leq v1 + v3 and it is wrong that v0 + v2 is equal to v1 + v3))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a real number and v1 is a real number and v2 is a real number and v3 is a real number then (if v0 \leq v1 and it is wrong that (v0 is equal to v1) and (v2 \leq v3 and it is wrong that (v2 is equal to v3)) then (v0 + v2 \leq v1 + v3 and it is wrong that (v0 + v2 is equal to v1 + v3)))))))
 Proof:
 Qed.
 
 Theorem (ineqlemma14):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then (v1 + v0 \leq v2 + v0 and it is wrong that v1 + v0 is equal to v2 + v0)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v1 \leq v2 and it is wrong that (v1 is equal to v2) then (v1 + v0 \leq v2 + v0 and it is wrong that (v1 + v0 is equal to v2 + v0))))))
 Proof:
 Qed.
 
@@ -2497,69 +2497,69 @@ Proof:
 Qed.
 
 Theorem (ineqlemma15):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + - v1 \leq v2 and it is wrong that v0 + - v1 is equal to v2) iff (v0 \leq v2 + v1 and it is wrong that v0 is equal to v2 + v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + - v1 \leq v2 and it is wrong that (v0 + - v1 is equal to v2)) iff (v0 \leq v2 + v1 and it is wrong that (v0 is equal to v2 + v1))))))
 Proof:
-  if x + - y \leq z and it is wrong that x + - y is equal to z then the thesis holds
+  if x + - y \leq z and it is wrong that (x + - y is equal to z) then the thesis holds
   Proof:
-    x is equal to x + - y + y and x + - y + y \leq z + y and it is wrong that x + - y + y is equal to z + y
+    x is equal to x + - y + y and x + - y + y \leq z + y and it is wrong that (x + - y + y is equal to z + y)
   Qed.
-  if x \leq z + y and it is wrong that x is equal to z + y then the thesis holds
+  if x \leq z + y and it is wrong that (x is equal to z + y) then the thesis holds
   Proof:
-    x + - y \leq z + y + - y and it is wrong that x + - y is equal to z + y + - y and z + y + - y is equal to z
+    x + - y \leq z + y + - y and it is wrong that (x + - y is equal to z + y + - y) and z + y + - y is equal to z
   Qed.
 Qed.
 
 Theorem (ineqlemma16):
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a real number and v1 is a real number and v2 is a real number and v3 is a real number and (v0 is nonnegative and v1 is nonnegative and v2 is nonnegative and v3 is nonnegative and (v0 \leq v1 and it is wrong that v0 is equal to v1 and (v2 \leq v3 and it is wrong that v2 is equal to v3))) then (v0 \cdot v2 \leq v1 \cdot v3 and it is wrong that v0 \cdot v2 is equal to v1 \cdot v3)))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a real number and v1 is a real number and v2 is a real number and v3 is a real number and (v0 is nonnegative and v1 is nonnegative and v2 is nonnegative and v3 is nonnegative and (v0 \leq v1 and it is wrong that (v0 is equal to v1) and (v2 \leq v3 and it is wrong that (v2 is equal to v3)))) then (v0 \cdot v2 \leq v1 \cdot v3 and it is wrong that (v0 \cdot v2 is equal to v1 \cdot v3))))))
 Proof:
   w \cdot y \leq w \cdot z and w \cdot z is equal to z \cdot w and z \cdot w \leq z \cdot x
-  it is wrong that w \cdot y is equal to x \cdot z
+  it is wrong that (w \cdot y is equal to x \cdot z)
 Qed.
 
 Theorem (ineqlemma17):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 is nonnegative and v1 is nonnegative and v2 is nonnegative then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then v0 \cdot v1 \leq v0 \cdot v2)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 is nonnegative and v1 is nonnegative and v2 is nonnegative then (if v1 \leq v2 and it is wrong that (v1 is equal to v2) then v0 \cdot v1 \leq v0 \cdot v2)))))
 Proof:
 Qed.
 
 Theorem (ineqlemma18):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + - v1 \leq v2 and it is wrong that v0 + - v1 is equal to v2) iff (v0 + - v2 \leq v1 and it is wrong that v0 + - v2 is equal to v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + - v1 \leq v2 and it is wrong that (v0 + - v1 is equal to v2)) iff (v0 + - v2 \leq v1 and it is wrong that (v0 + - v2 is equal to v1))))))
 Proof:
-  (x + - y \leq z and it is wrong that x + - y is equal to z) iff (x \leq z + y and it is wrong that x is equal to z + y)
-  (x \leq y + z and it is wrong that x is equal to y + z) iff (x + - z \leq y and it is wrong that x + - z is equal to y)
+  (x + - y \leq z and it is wrong that (x + - y is equal to z)) iff (x \leq z + y and it is wrong that (x is equal to z + y))
+  (x \leq y + z and it is wrong that (x is equal to y + z)) iff (x + - z \leq y and it is wrong that (x + - z is equal to y))
 Qed.
 
 Theorem (ineqlemmax1):
-  for all v0, (if v0 is a real number then (if v0 is positive then for some v1, (v1 is a real number and v1 is positive and v1 \leq v0 and it is wrong that v1 is equal to v0)))
+  for all v0, (if v0 is a real number then (if v0 is positive then for some v1, (v1 is a real number and v1 is positive and v1 \leq v0 and it is wrong that (v1 is equal to v0))))
 Proof:
 Qed.
 
 Theorem (ineqlemma19):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 is positive and v1 is positive then for some v2, (v2 is a real number and v2 is positive and v2 \leq v0 and it is wrong that v2 is equal to v0 and (v2 \leq v1 and it is wrong that v2 is equal to v1)))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 is positive and v1 is positive then for some v2, (v2 is a real number and v2 is positive and v2 \leq v0 and it is wrong that (v2 is equal to v0) and (v2 \leq v1 and it is wrong that (v2 is equal to v1))))))
 Proof:
   if x \leq y then the thesis holds
   Proof:
-    for some v0, (v0 is a real number and v0 is positive and v0 \leq x and it is wrong that v0 is equal to x)
+    for some v0, (v0 is a real number and v0 is positive and v0 \leq x and it is wrong that (v0 is equal to x))
   Qed.
-  if y \leq x and it is wrong that y is equal to x then the thesis holds
+  if y \leq x and it is wrong that (y is equal to x) then the thesis holds
   Proof:
-    for some v0, (v0 is a real number and v0 is positive and v0 \leq y and it is wrong that v0 is equal to y)
+    for some v0, (v0 is a real number and v0 is positive and v0 \leq y and it is wrong that (v0 is equal to y))
   Qed.
 Qed.
 
 Theorem (ineqlemma195):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 is positive and v1 is positive and v2 is positive then for some v3, (v3 is a real number and v3 is positive and v3 \leq v0 and it is wrong that v3 is equal to v0 and (v3 \leq v1 and it is wrong that v3 is equal to v1 and (v3 \leq v2 and it is wrong that v3 is equal to v2)))))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 is positive and v1 is positive and v2 is positive then for some v3, (v3 is a real number and v3 is positive and v3 \leq v0 and it is wrong that (v3 is equal to v0) and (v3 \leq v1 and it is wrong that (v3 is equal to v1) and (v3 \leq v2 and it is wrong that (v3 is equal to v2))))))))
 Proof:
-  v is a real number and v is positive and v \leq x and it is wrong that v is equal to x and (v \leq y and it is wrong that v is equal to y)
-  w is a real number and w is positive and w \leq v and it is wrong that w is equal to v and (w \leq z and it is wrong that w is equal to z)
-  w \leq x and it is wrong that w is equal to x and (w \leq y and it is wrong that w is equal to y) and (w \leq z and it is wrong that w is equal to z)
+  v is a real number and v is positive and v \leq x and it is wrong that (v is equal to x) and (v \leq y and it is wrong that (v is equal to y))
+  w is a real number and w is positive and w \leq v and it is wrong that (w is equal to v) and (w \leq z and it is wrong that (w is equal to z))
+  w \leq x and it is wrong that (w is equal to x) and (w \leq y and it is wrong that (w is equal to y)) and (w \leq z and it is wrong that (w is equal to z))
 Qed.
 
 Theorem (ineqlemma20):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then for some v2, (v2 is a real number and v0 \leq v2 and it is wrong that v0 is equal to v2 and (v2 \leq v1 and it is wrong that v2 is equal to v1)))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 \leq v1 and it is wrong that (v0 is equal to v1) then for some v2, (v2 is a real number and v0 \leq v2 and it is wrong that (v0 is equal to v2) and (v2 \leq v1 and it is wrong that (v2 is equal to v1))))))
 Proof:
   y + - x is a real number and y + - x is positive
-  z is a real number and z is positive and z \leq y + - x and it is wrong that z is equal to y + - x
-  x + z is a real number and x \leq x + z and it is wrong that x is equal to x + z and (x + z \leq y and it is wrong that x + z is equal to y)
+  z is a real number and z is positive and z \leq y + - x and it is wrong that (z is equal to y + - x)
+  x + z is a real number and x \leq x + z and it is wrong that (x is equal to x + z) and (x + z \leq y and it is wrong that (x + z is equal to y))
 Qed.
 
 Theorem (ineqlemma21):
@@ -2585,12 +2585,12 @@ Proof:
 Qed.
 
 Theorem (ineqlemma24):
-  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (if v1 is a real number then (v1 + - v0 \leq v1 and it is wrong that v1 + - v0 is equal to v1))))
+  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (if v1 is a real number then (v1 + - v0 \leq v1 and it is wrong that (v1 + - v0 is equal to v1)))))
 Proof:
 Qed.
 
 Theorem (ineqlemma25):
-  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then (if v1 \leq v2 and it is wrong that v1 is equal to v2 then (v1 \cdot v0 \leq v2 \cdot v0 and it is wrong that v1 \cdot v0 is equal to v2 \cdot v0))))))
+  for all v0, (if v0 is a real number then (if v0 is positive then for all v1, (for all v2, (if v1 is a real number and v2 is a real number then (if v1 \leq v2 and it is wrong that (v1 is equal to v2) then (v1 \cdot v0 \leq v2 \cdot v0 and it is wrong that (v1 \cdot v0 is equal to v2 \cdot v0)))))))
 Proof:
 Qed.
 
@@ -2605,26 +2605,26 @@ Proof:
 Qed.
 
 Theorem (ineqlemma28):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 \leq v1 + - v2 and it is wrong that v0 is equal to v1 + - v2) iff (v0 + v2 \leq v1 and it is wrong that v0 + v2 is equal to v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 \leq v1 + - v2 and it is wrong that (v0 is equal to v1 + - v2)) iff (v0 + v2 \leq v1 and it is wrong that (v0 + v2 is equal to v1))))))
 Proof:
-  if x \leq y + - z and it is wrong that x is equal to y + - z then the thesis holds
+  if x \leq y + - z and it is wrong that (x is equal to y + - z) then the thesis holds
   Proof:
-    x + z \leq y + - z + z and it is wrong that x + z is equal to y + - z + z and y + - z + z is equal to y
+    x + z \leq y + - z + z and it is wrong that (x + z is equal to y + - z + z) and y + - z + z is equal to y
   Qed.
-  if x + z \leq y and it is wrong that x + z is equal to y then the thesis holds
+  if x + z \leq y and it is wrong that (x + z is equal to y) then the thesis holds
   Proof:
     x is equal to x + z + - z
-    x + z + - z \leq y + - z and it is wrong that x + z + - z is equal to y + - z
+    x + z + - z \leq y + - z and it is wrong that (x + z + - z is equal to y + - z)
   Qed.
 Qed.
 
 Theorem (ineqlemma285):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + v2 \leq v1 and it is wrong that v0 + v2 is equal to v1) iff (v2 \leq v1 + - v0 and it is wrong that v2 is equal to v1 + - v0)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then ((v0 + v2 \leq v1 and it is wrong that (v0 + v2 is equal to v1)) iff (v2 \leq v1 + - v0 and it is wrong that (v2 is equal to v1 + - v0))))))
 Proof:
 Qed.
 
 Theorem (ineqlemma29):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq v1 and v1 \leq v2 and it is wrong that v1 is equal to v2 then (v0 \leq v2 and it is wrong that v0 is equal to v2)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 \leq v1 and v1 \leq v2 and it is wrong that (v1 is equal to v2) then (v0 \leq v2 and it is wrong that (v0 is equal to v2))))))
 Proof:
 Qed.
 
@@ -2661,23 +2661,23 @@ Proof:
 Qed.
 
 Theorem (lemmax01):
-  for all v0, (if v0 is a subset of \mathbb{R} and v0 is nonempty then for all v1, (if v1 is a supremum of v0 then for all v2, (if v2 is a real number and v2 is positive then for some v3, (v3 is an element of v0 and v1 + - v2 \leq v3 and it is wrong that v1 + - v2 is equal to v3))))
+  for all v0, (if v0 is a subset of \mathbb{R} and v0 is nonempty then for all v1, (if v1 is a supremum of v0 then for all v2, (if v2 is a real number and v2 is positive then for some v3, (v3 is an element of v0 and v1 + - v2 \leq v3 and it is wrong that (v1 + - v2 is equal to v3)))))
 Proof:
   K is equal to s + - \varepsilon
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   s + - \varepsilon is an upper bound of S
   Proof:
     for all v0, (if v0 is an element of S then v0 \leq K)
     Proof:
-      it is wrong that the thesis holds
-      x is an element of S and K \leq x and it is wrong that K is equal to x
-      if s \leq x and it is wrong that s is equal to x then the thesis holds
+      it is wrong that (the thesis holds)
+      x is an element of S and K \leq x and it is wrong that (K is equal to x)
+      if s \leq x and it is wrong that (s is equal to x) then the thesis holds
       Proof:
-        it is wrong that x is an element of S
+        it is wrong that (x is an element of S)
       Qed.
       if x \leq s then the thesis holds
       Proof:
-        for some v0, (v0 is an element of S and s + - \varepsilon \leq v0 and it is wrong that s + - \varepsilon is equal to v0)
+        for some v0, (v0 is an element of S and s + - \varepsilon \leq v0 and it is wrong that (s + - \varepsilon is equal to v0))
       Qed.
     Qed.
   Qed.

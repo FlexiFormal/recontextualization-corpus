@@ -4,7 +4,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, ((v0 is equal to \emptyset) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \emptyset) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Axiom (setexistence):
   \emptyset is a set
@@ -89,7 +89,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a set then ((v0 is nonempty) iff it is wrong that v0 is equal to \emptyset))
+  for all v0, (if v0 is a set then ((v0 is nonempty) iff it is wrong that (v0 is equal to \emptyset)))
 
 Theorem:
   for all v0, (if v0 is a set and v0 is nonempty and for all v1, (if v1 is an element of v0 then v1 is a set) then \bigcap v0 is a set)
@@ -117,13 +117,13 @@ Signature:
   for all v0, (if v0 is equal to 0 then v0 is a natural number)
 
 Signature:
-  for all v0, (if v0 is equal to 1 then (v0 is a natural number and it is wrong that v0 is equal to 0))
+  for all v0, (if v0 is equal to 1 then (v0 is a natural number and it is wrong that (v0 is equal to 0)))
 
 Signature:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then for all v2, (if v2 is equal to v0 + v1 then v2 is a natural number)))
 
 Axiom:
-  for all v0, (if v0 is a natural number then (if v0 is a natural number and it is wrong that v0 is equal to 0 then for some v1, (v1 is a natural number and v0 is equal to v1 + 1)))
+  for all v0, (if v0 is a natural number then (if v0 is a natural number and it is wrong that (v0 is equal to 0) then for some v1, (v1 is a natural number and v0 is equal to v1 + 1)))
 
 Signature:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then for all v2, (if v2 is equal to v0 * v1 then v2 is a natural number)))
@@ -156,7 +156,7 @@ Axiom:
   for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 + v1 is equal to v0 + v2 or v1 + v0 is equal to v2 + v0 then v1 is equal to v2))))
 
 Axiom:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 * v1 is equal to v0 * v2 or v1 * v0 is equal to v2 * v0 then v1 is equal to v2)))))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then for all v1, (for all v2, (if v1 is a natural number and v2 is a natural number then (if v0 * v1 is equal to v0 * v2 or v1 * v0 is equal to v2 * v0 then v1 is equal to v2)))))
 
 Axiom:
   for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 + v1 is equal to 0 then (v0 is equal to 0 and v1 is equal to 0))))
@@ -204,20 +204,20 @@ Proof:
 Qed.
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (v0 \leq v1 or (v1 \leq v0 and it is wrong that v1 is equal to v0))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (v0 \leq v1 or (v1 \leq v0 and it is wrong that (v1 is equal to v0)))))
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then for all v2, (if v2 is a natural number then (v2 + v0 \leq v2 + v1 and it is wrong that v2 + v0 is equal to v2 + v1 and (v0 + v2 \leq v1 + v2 and it is wrong that v0 + v2 is equal to v1 + v2))))))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that (v0 is equal to v1) then for all v2, (if v2 is a natural number then (v2 + v0 \leq v2 + v1 and it is wrong that (v2 + v0 is equal to v2 + v1) and (v0 + v2 \leq v1 + v2 and it is wrong that (v0 + v2 is equal to v1 + v2)))))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if it is wrong that v1 is equal to 0 and v0 \leq v2 and it is wrong that v0 is equal to v2 then (v1 * v0 \leq v1 * v2 and it is wrong that v1 * v0 is equal to v1 * v2 and (v0 * v1 \leq v2 * v1 and it is wrong that v0 * v1 is equal to v2 * v1))))))
+  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if it is wrong that (v1 is equal to 0) and v0 \leq v2 and it is wrong that (v0 is equal to v2) then (v1 * v0 \leq v1 * v2 and it is wrong that (v1 * v0 is equal to v1 * v2) and (v0 * v1 \leq v2 * v1 and it is wrong that (v0 * v1 is equal to v2 * v1)))))))
 Proof:
 Qed.
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that v0 is equal to v1 then v0 is inductively less than v1)))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 \leq v1 and it is wrong that (v0 is equal to v1) then v0 is inductively less than v1)))
 
 Theorem:
   for all v0, (if v0 is a natural number then (if for all v1, (if v1 is a natural number then (if v1 is inductively less than v0 then (v1 is equal to 0 or 1 \leq v1))) then (v0 is equal to 0 or 1 \leq v0)))
@@ -233,7 +233,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a natural number then v1 \leq v1 * v0)))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a natural number then v1 \leq v1 * v0)))
 Proof:
   1 \leq m
 Qed.
@@ -254,7 +254,7 @@ Proof:
 Qed.
 
 Theorem:
-  0 \leq 1 and it is wrong that 0 is equal to 1 and (1 \leq 2 and it is wrong that 1 is equal to 2) and (2 \leq 3 and it is wrong that 2 is equal to 3)
+  0 \leq 1 and it is wrong that (0 is equal to 1) and (1 \leq 2 and it is wrong that (1 is equal to 2)) and (2 \leq 3 and it is wrong that (2 is equal to 3))
 Proof:
 Qed.
 
@@ -269,14 +269,14 @@ Qed.
 Theorem:
   for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number then (if v0 divides v1 and v0 divides v1 + v2 then v0 divides v2))))
 Proof:
-  it is wrong that l is equal to 0
+  it is wrong that (l is equal to 0)
   q is a natural number and m is equal to l * q
   r is a natural number and m + n is equal to l * r
   q \leq r
   Proof:
-    it is wrong that the thesis holds
-    r \leq q and it is wrong that r is equal to q
-    m + n is equal to l * r and l * r \leq l * q and it is wrong that l * r is equal to l * q and l * q is equal to m
+    it is wrong that (the thesis holds)
+    r \leq q and it is wrong that (r is equal to q)
+    m + n is equal to l * r and l * r \leq l * q and it is wrong that (l * r is equal to l * q) and l * q is equal to m
     falsity holds
   Qed.
   s is equal to r - q
@@ -285,7 +285,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 divides v1 and it is wrong that v1 is equal to 0 then v0 \leq v1)))
+  for all v0, (for all v1, (if v0 is a natural number and v1 is a natural number then (if v0 divides v1 and it is wrong that (v1 is equal to 0) then v0 \leq v1)))
 Proof:
 Qed.
 
@@ -309,7 +309,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a natural number then ((v0 is prime) iff (it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 and for all v1, (if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))))
+  for all v0, (if v0 is a natural number then ((v0 is prime) iff (it is wrong that (v0 is equal to 0) and it is wrong that (v0 is equal to 1) and for all v1, (if v1 is a natural number and v1 divides v0 then (v1 is equal to 1 or v1 is equal to v0)))))
 
 Theorem:
   2 is prime
@@ -327,11 +327,11 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and it is wrong that v0 is equal to 0 and it is wrong that v0 is equal to 1 then (if for all v1, (if v1 is a natural number and it is wrong that v1 is equal to 0 and it is wrong that v1 is equal to 1 then (if v1 is inductively less than v0 then for some v2, (v2 is a natural number and v2 divides v1 and v2 is prime))) then for some v1, (v1 is a natural number and v1 divides v0 and v1 is prime)))
+  for all v0, (if v0 is a natural number and it is wrong that (v0 is equal to 0) and it is wrong that (v0 is equal to 1) then (if for all v1, (if v1 is a natural number and it is wrong that (v1 is equal to 0) and it is wrong that (v1 is equal to 1) then (if v1 is inductively less than v0 then for some v2, (v2 is a natural number and v2 divides v1 and v2 is prime))) then for some v1, (v1 is a natural number and v1 divides v0 and v1 is prime)))
 Proof:
-  n is a natural number and it is wrong that n is equal to 0 and it is wrong that n is equal to 1
-  it is wrong that n is prime
-  m is a natural number and m divides n and (it is wrong that m is equal to 1 and it is wrong that m is equal to n)
+  n is a natural number and it is wrong that (n is equal to 0) and it is wrong that (n is equal to 1)
+  it is wrong that (n is prime)
+  m is a natural number and m divides n and (it is wrong that (m is equal to 1) and it is wrong that (m is equal to n))
   m is inductively less than n
   for all v0, (if v0 is a natural number and v0 divides m and v0 is prime then (v0 is a natural number and v0 divides n and v0 is prime))
 Qed.
@@ -345,34 +345,34 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number and (it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 and it is wrong that v2 is equal to 0) then (if v2 divides v0 * v1 and v2 and v0 are coprime then (if for all v3, (for all v4, (for all v5, (if v3 is a natural number and v4 is a natural number and v5 is a natural number and (it is wrong that v3 is equal to 0 and it is wrong that v4 is equal to 0 and it is wrong that v5 is equal to 0) then (if v5 divides v3 * v4 and v5 and v3 are coprime then (if v3 * v4 is inductively less than v0 * v1 then v5 divides v4))))) then v2 divides v1)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a natural number and v1 is a natural number and v2 is a natural number and (it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) and it is wrong that (v2 is equal to 0)) then (if v2 divides v0 * v1 and v2 and v0 are coprime then (if for all v3, (for all v4, (for all v5, (if v3 is a natural number and v4 is a natural number and v5 is a natural number and (it is wrong that (v3 is equal to 0) and it is wrong that (v4 is equal to 0) and it is wrong that (v5 is equal to 0)) then (if v5 divides v3 * v4 and v5 and v3 are coprime then (if v3 * v4 is inductively less than v0 * v1 then v5 divides v4))))) then v2 divides v1)))))
 Proof:
-  n is a natural number and a is a natural number and b is a natural number and (it is wrong that n is equal to 0 and it is wrong that a is equal to 0 and it is wrong that b is equal to 0 and (n divides a * b and n and a are coprime))
+  n is a natural number and a is a natural number and b is a natural number and (it is wrong that (n is equal to 0) and it is wrong that (a is equal to 0) and it is wrong that (b is equal to 0) and (n divides a * b and n and a are coprime))
   q is a natural number and n * q is equal to a * b
   if n is equal to a then the thesis holds
   Proof:
     n is equal to 1 and n divides b
   Qed.
-  if n \leq a and it is wrong that n is equal to a then the thesis holds
+  if n \leq a and it is wrong that (n is equal to a) then the thesis holds
   Proof:
     b \leq q
     n * q - b is equal to n * q - n * b and n * q - n * b is equal to a * b - n * b and a * b - n * b is equal to a - n * b
     n divides a - n * b
     n and a - n are coprime
-    a - n * b \leq a * b and it is wrong that a - n * b is equal to a * b
+    a - n * b \leq a * b and it is wrong that (a - n * b is equal to a * b)
     a - n * b is inductively less than a * b
     n divides b
   Qed.
-  a \leq n and it is wrong that a is equal to n and q \leq b
+  a \leq n and it is wrong that (a is equal to n) and q \leq b
   n - a * q is equal to n * q - a * q and n * q - a * q is equal to a * b - a * q and a * b - a * q is equal to a * b - q
   n - a divides a * b - q
   n - a and a are coprime
-  a * b - q \leq a * b and it is wrong that a * b - q is equal to a * b
+  a * b - q \leq a * b and it is wrong that (a * b - q is equal to a * b)
   a * b - q is inductively less than a * b
   n - a divides b - q
   r is a natural number and b - q is equal to r * n - a
   n - a * q is equal to n * q - a * q and n * q - a * q is equal to a * b - a * q and a * b - a * q is equal to a * b - q and a * b - q is equal to a * r * n - a and a * r * n - a is equal to a * r * n - a
-  it is wrong that n - a is equal to 0 and q is equal to a * r
+  it is wrong that (n - a is equal to 0) and q is equal to a * r
   a * n * r is equal to n * a * r and n * a * r is equal to n * q and n * q is equal to a * b
   n * r is equal to b and n divides b
 Qed.
@@ -392,22 +392,22 @@ Axiom:
   for all v0, (if v0 is a natural number then \fac{ v0 + 1 } is equal to v0 + 1 * \fac{ v0 })
 
 Theorem:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then v0 divides \fac{ v0 }))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then v0 divides \fac{ v0 }))
 Proof:
   m is equal to n - 1
   \fac{ n } is equal to n * \fac{ m }
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a natural number then (if v1 \leq v0 and it is wrong that v1 is equal to v0 then (if for all v2, (if v2 is a natural number then (if v2 \leq v0 and it is wrong that v2 is equal to v0 then (if v2 is inductively less than v1 then it is wrong that v0 divides \fac{ v2 }))) then it is wrong that v0 divides \fac{ v1 }))))
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a natural number then (if v1 \leq v0 and it is wrong that (v1 is equal to v0) then (if for all v2, (if v2 is a natural number then (if v2 \leq v0 and it is wrong that (v2 is equal to v0) then (if v2 is inductively less than v1 then it is wrong that (v0 divides \fac{ v2 })))) then it is wrong that (v0 divides \fac{ v1 })))))
 Proof:
   k is a natural number
   if k is equal to 0 then the thesis holds
-  k \leq p and it is wrong that k is equal to p
+  k \leq p and it is wrong that (k is equal to p)
   l is equal to k - 1
-  it is wrong that p divides k
-  it is wrong that p divides \fac{ l }
-  it is wrong that p divides k * \fac{ l }
+  it is wrong that (p divides k)
+  it is wrong that (p divides \fac{ l })
+  it is wrong that (p divides k * \fac{ l })
 Qed.
 
 Signature:
@@ -464,13 +464,13 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a natural number then (if 0 \leq v1 and it is wrong that 0 is equal to v1 and (v1 \leq v0 and it is wrong that v1 is equal to v0) then v0 divides \cho{ v0 }{ v1 })))
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a natural number then (if 0 \leq v1 and it is wrong that (0 is equal to v1) and (v1 \leq v0 and it is wrong that (v1 is equal to v0)) then v0 divides \cho{ v0 }{ v1 })))
 Proof:
   \fac{ p } is equal to \cho{ p }{ k } * \fac{ k } * \fac{ p - k }
   p divides \fac{ p }
-  it is wrong that p divides \fac{ k }
-  it is wrong that p divides \fac{ p - k }
-  it is wrong that p divides \fac{ k } * \fac{ p - k }
+  it is wrong that (p divides \fac{ k })
+  it is wrong that (p divides \fac{ p - k })
+  it is wrong that (p divides \fac{ k } * \fac{ p - k })
   p divides \cho{ p }{ k }
 Qed.
 
@@ -591,7 +591,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that v0 is finite))
+  for all v0, (if v0 is a class then ((v0 is infinite) iff it is wrong that (v0 is finite)))
 
 Signature:
   for all v0, (if v0 is a group then v0 is a set)
@@ -680,7 +680,7 @@ Signature:
   for all v0, (if v0 is a ring then v0 is a group)
 
 Signature:
-  for all v0, (if v0 is a ring then for all v1, (if v1 is equal to 1^{ v0 } then (v1 is an element of v0 and it is wrong that v1 is equal to 0^{ v0 })))
+  for all v0, (if v0 is a ring then for all v1, (if v1 is equal to 1^{ v0 } then (v1 is an element of v0 and it is wrong that (v1 is equal to 0^{ v0 }))))
 
 Signature:
   for all v0, (if v0 is a ring then for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 then for all v3, (if v3 is equal to v1 \cdot^{ v0 } v2 then v3 is an element of v0))))
@@ -775,7 +775,7 @@ Axiom:
   for all v0, (for all v1, (if v0 is a ring and v1 is a natural number then for all v2, (if v2 is a subset of v0 and 1 \leq v1 then v2 ^{ v1 + 1 , v0 ,subset} is equal to v2 ^{ v1 , v0 ,subset} \ast^{ v0 } v2)))
 
 Theorem:
-  for all v0, (if v0 is a ring then for all v1, (if v1 is a subset of v0 then for all v2, (if v2 is a natural number and 1 \leq v2 and it is wrong that 1 is equal to v2 then (if for all v3, (if v3 is a natural number and 1 \leq v3 and it is wrong that 1 is equal to v3 then (if v3 is inductively less than v2 then v1 ^{ v3 , v0 ,subset} is a subgroup of v0)) then v1 ^{ v2 , v0 ,subset} is a subgroup of v0))))
+  for all v0, (if v0 is a ring then for all v1, (if v1 is a subset of v0 then for all v2, (if v2 is a natural number and 1 \leq v2 and it is wrong that (1 is equal to v2) then (if for all v3, (if v3 is a natural number and 1 \leq v3 and it is wrong that (1 is equal to v3) then (if v3 is inductively less than v2 then v1 ^{ v3 , v0 ,subset} is a subgroup of v0)) then v1 ^{ v2 , v0 ,subset} is a subgroup of v0))))
 Proof:
   n is a natural number
   if n \leq 1 then the thesis holds
@@ -875,7 +875,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a ring then for all v1, (for all v2, (if v1 is a subring of v0 and v2 is an element of v1 then (if it is wrong that v2 divides 1^{ v0 } in v1 within v0 then it is wrong that v2 divides 0^{ v0 } +^{ v0 } -^{ v0 } 1^{ v0 } in v1 within v0))))
+  for all v0, (if v0 is a ring then for all v1, (for all v2, (if v1 is a subring of v0 and v2 is an element of v1 then (if it is wrong that (v2 divides 1^{ v0 } in v1 within v0) then it is wrong that (v2 divides 0^{ v0 } +^{ v0 } -^{ v0 } 1^{ v0 } in v1 within v0)))))
 Proof:
 Qed.
 
@@ -941,25 +941,25 @@ Axiom:
   for all v0, (if v0 is a ring then for all v1, (if v1 is an element of v0 then for all v2, (if v2 is a natural number then v1 ^{ v2 + 1 , v0 } is equal to v1 ^{ v2 , v0 } \cdot^{ v0 } v1)))
 
 Theorem:
-  for all v0, (if v0 is a natural number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is a ring then 0^{ v1 } ^{ v0 , v1 } is equal to 0^{ v1 })))
+  for all v0, (if v0 is a natural number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is a ring then 0^{ v1 } ^{ v0 , v1 } is equal to 0^{ v1 })))
 Proof:
   m is a natural number and n is equal to m + 1
   0^{ R } ^{ m + 1 , R } is equal to 0^{ R } ^{ m , R } \cdot^{ R } 0^{ R } and 0^{ R } ^{ m , R } \cdot^{ R } 0^{ R } is equal to 0^{ R }
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a ring then for all v1, (if v1 is an element of v0 then for all v2, (if v2 is a natural number then (if for all v3, (if v3 is a natural number then (if v3 is inductively less than v2 then ((if v3 is even then -^{ v0 } v1 ^{ v3 , v0 } is equal to v1 ^{ v3 , v0 }) and (if it is wrong that v3 is even then -^{ v0 } v1 ^{ v3 , v0 } is equal to -^{ v0 } v1 ^{ v3 , v0 })))) then ((if v2 is even then -^{ v0 } v1 ^{ v2 , v0 } is equal to v1 ^{ v2 , v0 }) and (if it is wrong that v2 is even then -^{ v0 } v1 ^{ v2 , v0 } is equal to -^{ v0 } v1 ^{ v2 , v0 }))))))
+  for all v0, (if v0 is a ring then for all v1, (if v1 is an element of v0 then for all v2, (if v2 is a natural number then (if for all v3, (if v3 is a natural number then (if v3 is inductively less than v2 then ((if v3 is even then -^{ v0 } v1 ^{ v3 , v0 } is equal to v1 ^{ v3 , v0 }) and (if it is wrong that (v3 is even) then -^{ v0 } v1 ^{ v3 , v0 } is equal to -^{ v0 } v1 ^{ v3 , v0 })))) then ((if v2 is even then -^{ v0 } v1 ^{ v2 , v0 } is equal to v1 ^{ v2 , v0 }) and (if it is wrong that (v2 is even) then -^{ v0 } v1 ^{ v2 , v0 } is equal to -^{ v0 } v1 ^{ v2 , v0 }))))))
 Proof:
   n is a natural number
   if n is equal to 0 then the thesis holds
   m is equal to n - 1
   if n is even then the thesis holds
   Proof:
-    m is inductively less than n and it is wrong that m is even
+    m is inductively less than n and it is wrong that (m is even)
     -^{ R } x ^{ m , R } is equal to -^{ R } x ^{ m , R }
     -^{ R } x ^{ n , R } is equal to -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x is equal to -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x and -^{ R } x ^{ m , R } \cdot^{ R } -^{ R } x is equal to x ^{ m , R } \cdot^{ R } x and x ^{ m , R } \cdot^{ R } x is equal to x ^{ n , R }
   Qed.
-  if it is wrong that n is even then the thesis holds
+  if it is wrong that (n is even) then the thesis holds
   Proof:
     m is inductively less than n and m is even
     -^{ R } x ^{ m , R } is equal to x ^{ m , R }
@@ -1095,7 +1095,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a ring then for all v1, (if v1 is a subring of v0 then for all v2, (if v2 is a natural number and v2 is prime then for all v3, (if v3 is a natural number then (if 0 \leq v3 and it is wrong that 0 is equal to v3 and (v3 \leq v2 and it is wrong that v3 is equal to v2) then v2 ^{[ v0 ]} divides \cho{ v2 }{ v3 } ^{[ v0 ]} in v1 within v0)))))
+  for all v0, (if v0 is a ring then for all v1, (if v1 is a subring of v0 then for all v2, (if v2 is a natural number and v2 is prime then for all v3, (if v3 is a natural number then (if 0 \leq v3 and it is wrong that (0 is equal to v3) and (v3 \leq v2 and it is wrong that (v3 is equal to v2)) then v2 ^{[ v0 ]} divides \cho{ v2 }{ v3 } ^{[ v0 ]} in v1 within v0)))))
 Proof:
 Qed.
 
@@ -1165,9 +1165,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a ring then for all v2, (for all v3, (for all v4, (if v2 is a subring of v1 and v3 is an element of v2 and v4 is an element of v2 then for all v5, (if v5 is a natural number then (if v5 \leq v0 and it is wrong that v5 is equal to v0 then (if for all v6, (if v6 is a natural number then (if v6 \leq v0 and it is wrong that v6 is equal to v0 then (if v6 is inductively less than v5 then v0 ^{[ v1 ]} divides \binsum{ v6 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1))) then v0 ^{[ v1 ]} divides \binsum{ v5 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1))))))))
+  for all v0, (if v0 is a natural number and v0 is prime then for all v1, (if v1 is a ring then for all v2, (for all v3, (for all v4, (if v2 is a subring of v1 and v3 is an element of v2 and v4 is an element of v2 then for all v5, (if v5 is a natural number then (if v5 \leq v0 and it is wrong that (v5 is equal to v0) then (if for all v6, (if v6 is a natural number then (if v6 \leq v0 and it is wrong that (v6 is equal to v0) then (if v6 is inductively less than v5 then v0 ^{[ v1 ]} divides \binsum{ v6 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1))) then v0 ^{[ v1 ]} divides \binsum{ v5 }{ v0 }{ v3 }{ v4 }{ v1 } +^{ v1 } -^{ v1 } v3 ^{ v0 , v1 } in v2 within v1))))))))
 Proof:
-  m is a natural number and m \leq p and it is wrong that m is equal to p
+  m is a natural number and m \leq p and it is wrong that (m is equal to p)
   if m is equal to 0 then the thesis holds
   m' is equal to m - 1
   p ^{[ R ]} divides \binsum{ m' }{ p }{ x }{ y }{ R } +^{ R } -^{ R } x ^{ p , R } in S within R
@@ -1226,7 +1226,7 @@ Proof:
     x +^{ R } -^{ R } y ^{ 2 , R } is an element of S and x ^{ 2 , R } +^{ R } y ^{ 2 , R } is an element of S and x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } is an element of S
     2 ^{[ R ]} divides x +^{ R } -^{ R } y ^{ 2 , R } +^{ R } -^{ R } x ^{ 2 , R } +^{ R } -^{ R } y ^{ 2 , R } in S within R
   Qed.
-  it is wrong that p is even
+  it is wrong that (p is even)
   p ^{[ R ]} divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in S within R
   p ^{[ R ]} divides x +^{ R } -^{ R } y ^{ p , R } +^{ R } -^{ R } x ^{ p , R } +^{ R } -^{ R } y ^{ p , R } in S within R
 Qed.
@@ -1297,7 +1297,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a topological space then ((v0 is hausdorff) iff for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then for some v3, (for some v4, (v3 is a set and v4 is a set and (v3 is a neighborhood of v1 in v0 and v4 is a neighborhood of v2 in v0 and v3 \cap v4 is equal to \emptyset)))))))
+  for all v0, (if v0 is a topological space then ((v0 is hausdorff) iff for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then for some v3, (for some v4, (v3 is a set and v4 is a set and (v3 is a neighborhood of v1 in v0 and v4 is a neighborhood of v2 in v0 and v3 \cap v4 is equal to \emptyset)))))))
 
 Definition:
   for all v0, (if v0 is a topological space then for all v1, ((v1 is a filter basis on v0) iff (v1 is a set and v1 is nonempty and (for all v2, (if v2 is an element of v1 then (v2 is a subset of v0 and v2 is nonempty))) and for all v2, (for all v3, (if v2 is an element of v1 and v3 is an element of v1 then for some v4, (v4 is an element of v1 and v4 is a subset of v2 \cap v3))))))
@@ -1676,7 +1676,7 @@ Definition (380):
   for all v0, (if v0 is a topological ring then ((v0 is uniform) iff v0 ^o is a bounded subset of v0))
 
 Definition (l30):
-  for all v0, (if v0 is a topological ring then for all v1, (if v1 is an element of v0 then ((v1 is topologically nilpotent in v0) iff for all v2, (if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, (v3 is a natural number and for all v4, (if v4 is a natural number and v3 \leq v4 and it is wrong that v3 is equal to v4 then v1 ^{ v4 , v0 } is an element of v2))))))
+  for all v0, (if v0 is a topological ring then for all v1, (if v1 is an element of v0 then ((v1 is topologically nilpotent in v0) iff for all v2, (if v2 is a neighborhood of 0^{ v0 } in v0 then for some v3, (v3 is a natural number and for all v4, (if v4 is a natural number and v3 \leq v4 and it is wrong that (v3 is equal to v4) then v1 ^{ v4 , v0 } is an element of v2))))))
 
 Theorem:
   for all v0, (if v0 is a topological ring then 0^{ v0 } is topologically nilpotent in v0)
@@ -1684,7 +1684,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a topological ring then (if v0 is hausdorff then it is wrong that 1^{ v0 } is topologically nilpotent in v0))
+  for all v0, (if v0 is a topological ring then (if v0 is hausdorff then it is wrong that (1^{ v0 } is topologically nilpotent in v0)))
 Proof:
   A is a set and B is a set and (A is a neighborhood of 0^{ R } in R and B is a neighborhood of 1^{ R } in R and A \cap B is equal to \emptyset)
 Qed.
@@ -1698,7 +1698,7 @@ Proof:
   U is a neighborhood of 0^{ R } \cdot^{ R } 0^{ R } in R
   R is multiplicatively continuous at h and h' and U is a neighborhood of h \cdot^{ R } h' in R
   SetBytes prover "vampire"  SetInt timelimit 30  V is a subset of R and V' is a subset of R and (V is a neighborhood of 0^{ R } in R and V' is a neighborhood of 0^{ R } in R and for all v0, (if v0 is an element of V then for all v1, (if v1 is an element of V' then v0 \cdot^{ R } v1 is an element of U)))
-  SetInt timelimit 3  SetBytes prover "eprover"  N is a natural number and for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then r ^{ v0 , R } is an element of V)
+  SetInt timelimit 3  SetBytes prover "eprover"  N is a natural number and for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that (N is equal to v0) then r ^{ v0 , R } is an element of V)
   X is a class and for all v0, (v0 is an element of X iff (v0 is an object and for some v1, (v1 is an element of \mathbb{N} and 1 \leq v1 and v1 \leq N and v0 is equal to r ^{ v1 , R })))
   X is finite
   Proof:
@@ -1720,18 +1720,18 @@ Theorem:
 Proof:
   U is a neighborhood of 0^{ R } in R
   SetInt timelimit 10  V is a neighborhood of 0^{ R } in R and for all v0, (for all v1, (if v1 is an element of V and v0 is a natural number then v1 \cdot^{ R } b ^{ v0 , R } is an element of U))
-  SetInt timelimit 15  N is a natural number and for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then a ^{ v0 , R } is an element of V)
-  SetInt timelimit 3  for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that N is equal to v0 then a \cdot^{ R } b ^{ v0 , R } is an element of U)
+  SetInt timelimit 15  N is a natural number and for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that (N is equal to v0) then a ^{ v0 , R } is an element of V)
+  SetInt timelimit 3  for all v0, (if v0 is a natural number and N \leq v0 and it is wrong that (N is equal to v0) then a \cdot^{ R } b ^{ v0 , R } is an element of U)
   Proof:
-    n is a natural number and N \leq n and it is wrong that N is equal to n
+    n is a natural number and N \leq n and it is wrong that (N is equal to n)
     a \cdot^{ R } b ^{ n , R } is equal to a ^{ n , R } \cdot^{ R } b ^{ n , R } and a ^{ n , R } \cdot^{ R } b ^{ n , R } is an element of U
   Qed.
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a topological ring then (if v0 is hausdorff then for all v1, (if v1 is an element of v0 and v1 is topologically nilpotent in v0 then it is wrong that v1 divides 1^{ v0 } in v0 ^o within v0)))
+  for all v0, (if v0 is a topological ring then (if v0 is hausdorff then for all v1, (if v1 is an element of v0 and v1 is topologically nilpotent in v0 then it is wrong that (v1 divides 1^{ v0 } in v0 ^o within v0))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   b is an element of R ^o and a \cdot^{ R } b is equal to 1^{ R }
   a \cdot^{ R } b is topologically nilpotent in R
   falsity holds
@@ -1748,7 +1748,7 @@ Proof:
   B is an element of \Powers{ U }{ R } and B is a subset of V
   B is a neighborhood of 0^{ R } in R
   n is an element of \mathbb{N} and 1 \leq n and B is equal to U ^{ n , R ,subset}
-  if 1 \leq n and it is wrong that 1 is equal to n then the thesis holds
+  if 1 \leq n and it is wrong that (1 is equal to n) then the thesis holds
   Proof:
     B is a subgroup of R and B is open in R
   Qed.
@@ -1835,9 +1835,9 @@ Definition:
   for all v0, (if v0 is a huber ring then for all v1, (for all v2, (if v1 is a subset of v0 and v2 is a subset of v0 then for all v3, (for all v4, (if v3 is an element of v1 and v4 is an element of v2 then ((\Phi^{ v0 }: v1 / v3 \cong v2 / v4) iff ((for all v5, (for all v6, (if v5 is an element of v1 and v6 is an element of v1 then (if v4 divides \Phi^{ v0 }( v5 ) +^{ v0 } -^{ v0 } \Phi^{ v0 }( v6 ) in v2 within v0 then v3 divides v5 +^{ v0 } -^{ v0 } v6 in v1 within v0)))) and for all v5, (if v5 is an element of v2 then for some v6, (v6 is an element of v1 and v4 divides v5 +^{ v0 } -^{ v0 } \Phi^{ v0 }( v6 ) in v2 within v0)))))))))
 
 Theorem:
-  for all v0, (if v0 is a tate ring then for all v1, (if v0 is complete and v1 is a pseudouniformizer of v0 then (it is wrong that v1 divides 1^{ v0 } in v0 ^o within v0 and it is wrong that v1 ^{ p , v0 } divides 1^{ v0 } in v0 ^o within v0)))
+  for all v0, (if v0 is a tate ring then for all v1, (if v0 is complete and v1 is a pseudouniformizer of v0 then (it is wrong that (v1 divides 1^{ v0 } in v0 ^o within v0) and it is wrong that (v1 ^{ p , v0 } divides 1^{ v0 } in v0 ^o within v0))))
 Proof:
-  it is wrong that \varpi divides 1^{ R } in R ^o within R
+  it is wrong that (\varpi divides 1^{ R } in R ^o within R)
   \varpi ^{ p , R } divides 1^{ R } in R ^o within R
   b is an element of R ^o and \varpi ^{ p , R } \cdot^{ R } b is equal to 1^{ R }
   q is equal to p - 1

@@ -26,7 +26,7 @@ Definition:
   for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then ((\OFS{ v5 }{ v6 }{ v7 }{ v1 }{ v2 }{ v3 }{ v4 }{ v0 }) iff (\Betw{ v5 }{ v6 }{ v7 } and \Betw{ v2 }{ v3 }{ v4 } and (\Cong{ v5 }{ v6 }{ v2 }{ v3 } and \Cong{ v6 }{ v7 }{ v3 }{ v4 } and \Cong{ v5 }{ v1 }{ v2 }{ v0 } and \Cong{ v6 }{ v1 }{ v3 }{ v0 })))))))))))
 
 Axiom (fivesegmentaxiom):
-  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then (if \OFS{ v0 }{ v2 }{ v4 }{ v6 }{ v1 }{ v3 }{ v5 }{ v7 } and it is wrong that v0 is equal to v2 then \Cong{ v4 }{ v6 }{ v5 }{ v7 })))))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then (if \OFS{ v0 }{ v2 }{ v4 }{ v6 }{ v1 }{ v3 }{ v5 }{ v7 } and it is wrong that (v0 is equal to v2) then \Cong{ v4 }{ v6 }{ v5 }{ v7 })))))))))
 
 Axiom (identityofbetweenness):
   for all v0, (for all v1, (if v0 is a point and v1 is a point then (if \Betw{ v0 }{ v1 }{ v0 } then v0 is equal to v1)))
@@ -35,13 +35,13 @@ Axiom (innerpasch):
   for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v2 }{ v0 }{ v4 } and \Betw{ v3 }{ v1 }{ v4 } then for some v5, (v5 is a point and \Betw{ v0 }{ v5 }{ v3 } and \Betw{ v1 }{ v5 }{ v2 })))))))
 
 Axiom (lowerdimension):
-  for some v0, (for some v1, (for some v2, (v0 is a point and v1 is a point and v2 is a point and it is wrong that v0 is collinear with v1 and v2)))
+  for some v0, (for some v1, (for some v2, (v0 is a point and v1 is a point and v2 is a point and it is wrong that (v0 is collinear with v1 and v2))))
 
 Axiom (upperdimension):
-  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point then (if \Cong{ v2 }{ v0 }{ v2 }{ v1 } and \Cong{ v3 }{ v0 }{ v3 }{ v1 } and \Cong{ v4 }{ v0 }{ v4 }{ v1 } and it is wrong that v0 is equal to v1 then v2 is collinear with v3 and v4))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point then (if \Cong{ v2 }{ v0 }{ v2 }{ v1 } and \Cong{ v3 }{ v0 }{ v3 }{ v1 } and \Cong{ v4 }{ v0 }{ v4 }{ v1 } and it is wrong that (v0 is equal to v1) then v2 is collinear with v3 and v4))))))
 
 Axiom (euclid):
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v1 is equal to v0 then for all v2, (for all v3, (for all v4, (if v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v1 }{ v0 }{ v2 } and \Betw{ v3 }{ v0 }{ v4 } then for some v5, (for some v6, (v5 is a point and v6 is a point and (\Betw{ v1 }{ v3 }{ v5 } and \Betw{ v1 }{ v4 }{ v6 } and \Betw{ v5 }{ v2 }{ v6 }))))))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v1 is equal to v0) then for all v2, (for all v3, (for all v4, (if v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v1 }{ v0 }{ v2 } and \Betw{ v3 }{ v0 }{ v4 } then for some v5, (for some v6, (v5 is a point and v6 is a point and (\Betw{ v1 }{ v3 }{ v5 } and \Betw{ v1 }{ v4 }{ v6 } and \Betw{ v5 }{ v2 }{ v6 }))))))))))
 
 Axiom (circlecontinuity):
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if \Betw{ v3 }{ v0 }{ v1 } and \Betw{ v3 }{ v1 }{ v2 } then for all v4, (for all v5, (if v4 is a point and v5 is a point then (if \Cong{ v3 }{ v4 }{ v3 }{ v0 } and \Cong{ v3 }{ v5 }{ v3 }{ v2 } then for some v6, (v6 is a point and \Cong{ v3 }{ v6 }{ v3 }{ v1 } and \Betw{ v4 }{ v6 }{ v5 })))))))))
@@ -81,11 +81,11 @@ Theorem (concatenationofsegments):
 Proof:
   \OFS{ x }{ y }{ z }{ x }{ r }{ v }{ w }{ r }
   if x is equal to y then r is equal to v
-  if it is wrong that x is equal to y then \Cong{ x }{ z }{ r }{ w }
+  if it is wrong that (x is equal to y) then \Cong{ x }{ z }{ r }{ w }
 Qed.
 
 Theorem (uniquenessofsegmentconstruction):
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (for all v3, (for all v4, (if v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Cong{ v1 }{ v2 }{ v3 }{ v4 } then for all v5, (if v5 is a point then (if \Betw{ v0 }{ v1 }{ v5 } and \Cong{ v1 }{ v5 }{ v3 }{ v4 } then v2 is equal to v5)))))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (for all v3, (for all v4, (if v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Cong{ v1 }{ v2 }{ v3 }{ v4 } then for all v5, (if v5 is a point then (if \Betw{ v0 }{ v1 }{ v5 } and \Cong{ v1 }{ v5 }{ v3 }{ v4 } then v2 is equal to v5)))))))))
 Proof:
   \Cong{ a }{ c }{ a }{ c' }
   \Cong{ b }{ c }{ b }{ c' }
@@ -122,7 +122,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if \Betw{ v1 }{ v2 }{ v3 } and \Betw{ v2 }{ v3 }{ v0 } and it is wrong that v2 is equal to v3 then \Betw{ v1 }{ v3 }{ v0 })))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if \Betw{ v1 }{ v2 }{ v3 } and \Betw{ v2 }{ v3 }{ v0 } and it is wrong that (v2 is equal to v3) then \Betw{ v1 }{ v3 }{ v0 })))))
 Proof:
   v is a point and \Betw{ x }{ z }{ v } and \Cong{ z }{ v }{ z }{ r }
   \Betw{ y }{ z }{ v } and \Cong{ z }{ v }{ z }{ r }
@@ -133,7 +133,7 @@ Theorem (s35b):
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if \Betw{ v1 }{ v2 }{ v0 } and \Betw{ v2 }{ v3 }{ v0 } then \Betw{ v1 }{ v3 }{ v0 })))))
 Proof:
   if y is equal to z then \Betw{ x }{ z }{ v }
-  it is wrong that y is equal to z
+  it is wrong that (y is equal to z)
   \Betw{ x }{ y }{ z }
 Qed.
 
@@ -152,17 +152,17 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v3 }{ v0 }{ v1 } and \Betw{ v0 }{ v1 }{ v2 } then \Betw{ v3 }{ v0 }{ v2 }))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v3 }{ v0 }{ v1 } and \Betw{ v0 }{ v1 }{ v2 } then \Betw{ v3 }{ v0 }{ v2 }))))))
 Proof:
 Qed.
 
 Theorem:
-  for some v0, (for some v1, (v0 is a point and v1 is a point and it is wrong that v0 is equal to v1))
+  for some v0, (for some v1, (v0 is a point and v1 is a point and it is wrong that (v0 is equal to v1)))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then for some v2, (v2 is a point and \Betw{ v0 }{ v1 }{ v2 } and it is wrong that v1 is equal to v2)))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then for some v2, (v2 is a point and \Betw{ v0 }{ v1 }{ v2 } and it is wrong that (v1 is equal to v2))))
 Proof:
 Qed.
 
@@ -180,9 +180,9 @@ Definition:
 Theorem:
   for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then (if \IFS{ v5 }{ v6 }{ v7 }{ v2 }{ v3 }{ v4 }{ v0 }{ v1 } then \Cong{ v6 }{ v2 }{ v4 }{ v1 })))))))))
 Proof:
-  if it is wrong that x is equal to z then the thesis holds
+  if it is wrong that (x is equal to z) then the thesis holds
   Proof:
-    g is a point and h is a point and (it is wrong that g is equal to z and \Betw{ x }{ z }{ g } and \Betw{ v }{ p }{ h } and \Cong{ p }{ h }{ z }{ g })
+    g is a point and h is a point and (it is wrong that (g is equal to z) and \Betw{ x }{ z }{ g } and \Betw{ v }{ p }{ h } and \Cong{ p }{ h }{ z }{ g })
     \OFS{ x }{ z }{ g }{ r }{ v }{ p }{ h }{ q }
     \Cong{ g }{ r }{ h }{ q }
     \OFS{ g }{ z }{ y }{ r }{ h }{ p }{ w }{ q }
@@ -202,7 +202,7 @@ Definition:
 Theorem:
   for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point then (if \Betw{ v2 }{ v3 }{ v4 } and \Cong{ v2 }{ v4 }{ v0 }{ v1 } then for some v5, (v5 is a point and \Betw{ v0 }{ v5 }{ v1 } and \SenaryCong{ v2 }{ v3 }{ v4 }{ v0 }{ v5 }{ v1 })))))))
 Proof:
-  u is a point and \Betw{ w }{ r }{ u } and it is wrong that r is equal to u
+  u is a point and \Betw{ w }{ r }{ u } and it is wrong that (r is equal to u)
   v is a point and \Betw{ u }{ r }{ v } and \Cong{ r }{ v }{ x }{ y }
   g is a point and \Betw{ u }{ v }{ g } and \Cong{ v }{ g }{ y }{ z }
   \Cong{ x }{ z }{ r }{ w }
@@ -269,7 +269,7 @@ Definition:
   for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then ((\FS{ v5 }{ v6 }{ v7 }{ v2 }{ v3 }{ v4 }{ v0 }{ v1 }) iff (v5 is collinear with v6 and v7 and \SenaryCong{ v5 }{ v6 }{ v7 }{ v3 }{ v4 }{ v0 } and \Cong{ v5 }{ v2 }{ v3 }{ v1 } and \Cong{ v6 }{ v2 }{ v4 }{ v1 }))))))))))
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then (if \FS{ v5 }{ v6 }{ v7 }{ v2 }{ v3 }{ v4 }{ v0 }{ v1 } and it is wrong that v5 is equal to v6 then \Cong{ v7 }{ v2 }{ v0 }{ v1 })))))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (for all v6, (for all v7, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point and v6 is a point and v7 is a point then (if \FS{ v5 }{ v6 }{ v7 }{ v2 }{ v3 }{ v4 }{ v0 }{ v1 } and it is wrong that (v5 is equal to v6) then \Cong{ v7 }{ v2 }{ v0 }{ v1 })))))))))
 Proof:
   if \Betw{ x }{ y }{ z } then the thesis holds
   Proof:
@@ -290,13 +290,13 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (if v2 is a point then (if v0 is collinear with v1 and v2 then for all v3, (for all v4, (if v3 is a point and v4 is a point then (if \Cong{ v0 }{ v3 }{ v0 }{ v4 } and \Cong{ v1 }{ v3 }{ v1 }{ v4 } then \Cong{ v2 }{ v3 }{ v2 }{ v4 }))))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (if v2 is a point then (if v0 is collinear with v1 and v2 then for all v3, (for all v4, (if v3 is a point and v4 is a point then (if \Cong{ v0 }{ v3 }{ v0 }{ v4 } and \Cong{ v1 }{ v3 }{ v1 }{ v4 } then \Cong{ v2 }{ v3 }{ v2 }{ v4 }))))))))
 Proof:
   \FS{ x }{ y }{ z }{ p }{ x }{ y }{ z }{ q }
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (if v2 is a point then (if v0 is collinear with v1 and v2 then for all v3, (if v3 is a point then (if \Cong{ v0 }{ v2 }{ v0 }{ v3 } and \Cong{ v1 }{ v2 }{ v1 }{ v3 } then v3 is equal to v2)))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (if v2 is a point then (if v0 is collinear with v1 and v2 then for all v3, (if v3 is a point then (if \Cong{ v0 }{ v2 }{ v0 }{ v3 } and \Cong{ v1 }{ v2 }{ v1 }{ v3 } then v3 is equal to v2)))))))
 Proof:
 Qed.
 
@@ -306,7 +306,7 @@ Proof:
   x is equal to y
   x is equal to z and x is equal to p
   z is equal to p
-  it is wrong that x is equal to y
+  it is wrong that (x is equal to y)
 Qed.
 
 Definition:
@@ -326,19 +326,19 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that v1 is equal to v2 and \Betw{ v1 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v0 } then for some v4, (for some v5, (v4 is a point and v5 is a point and (\Betw{ v1 }{ v0 }{ v4 } and \Cong{ v0 }{ v4 }{ v3 }{ v0 } and \Betw{ v1 }{ v3 }{ v5 } and \Cong{ v3 }{ v5 }{ v3 }{ v0 }))))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that (v1 is equal to v2) and \Betw{ v1 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v0 } then for some v4, (for some v5, (v4 is a point and v5 is a point and (\Betw{ v1 }{ v0 }{ v4 } and \Cong{ v0 }{ v4 }{ v3 }{ v0 } and \Betw{ v1 }{ v3 }{ v5 } and \Cong{ v3 }{ v5 }{ v3 }{ v0 }))))))))
 Proof:
   a is a point and \Betw{ x }{ r }{ a } and \Cong{ r }{ a }{ z }{ r }
   b is a point and \Betw{ x }{ z }{ b } and \Cong{ z }{ b }{ z }{ r }
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point then (if it is wrong that v3 is equal to v4 and \Betw{ v3 }{ v4 }{ v5 } and \Betw{ v3 }{ v4 }{ v2 } and \Betw{ v3 }{ v2 }{ v0 } and \Cong{ v2 }{ v0 }{ v5 }{ v2 } and \Betw{ v3 }{ v5 }{ v1 } and \Cong{ v5 }{ v1 }{ v5 }{ v2 } then for some v6, (for some v7, (v6 is a point and v7 is a point and (\Betw{ v5 }{ v1 }{ v7 } and \Betw{ v2 }{ v0 }{ v6 }))))))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (for all v4, (for all v5, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point and v4 is a point and v5 is a point then (if it is wrong that (v3 is equal to v4) and \Betw{ v3 }{ v4 }{ v5 } and \Betw{ v3 }{ v4 }{ v2 } and \Betw{ v3 }{ v2 }{ v0 } and \Cong{ v2 }{ v0 }{ v5 }{ v2 } and \Betw{ v3 }{ v5 }{ v1 } and \Cong{ v5 }{ v1 }{ v5 }{ v2 } then for some v6, (for some v7, (v6 is a point and v7 is a point and (\Betw{ v5 }{ v1 }{ v7 } and \Betw{ v2 }{ v0 }{ v6 }))))))))))
 Proof:
 Qed.
 
 Theorem (outerpasch):
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Betw{ v0 }{ v1 }{ v3 } then (\Betw{ v0 }{ v2 }{ v3 } or \Betw{ v0 }{ v3 }{ v2 })))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Betw{ v0 }{ v1 }{ v3 } then (\Betw{ v0 }{ v2 }{ v3 } or \Betw{ v0 }{ v3 }{ v2 })))))))
 Proof:
   c' is a point and \Betw{ a }{ d }{ c' } and \Cong{ d }{ c' }{ c }{ d }
   d' is a point and \Betw{ a }{ c }{ d' } and \Cong{ c }{ d' }{ c }{ d }
@@ -359,9 +359,9 @@ Proof:
     SetInt timelimit 65    e is a point and \Betw{ c }{ e }{ c' } and \Betw{ d }{ e }{ d' }
     \IFS{ d }{ e }{ d' }{ c }{ d }{ e }{ d' }{ c' } and \IFS{ c }{ e }{ c' }{ d }{ c }{ e }{ c' }{ d' }
     \Cong{ e }{ c }{ e }{ c' } and \Cong{ e }{ d }{ e }{ d' }
-    if it is wrong that c is equal to c' then the thesis holds
+    if it is wrong that (c is equal to c') then the thesis holds
     Proof:
-      it is wrong that c is equal to d'
+      it is wrong that (c is equal to d')
       p is a point and \Betw{ c' }{ c }{ p } and \Cong{ c }{ p }{ c }{ d' }
       r is a point and \Betw{ d' }{ c }{ r } and \Cong{ c }{ r }{ c }{ e }
       q is a point and \Betw{ p }{ r }{ q } and \Cong{ r }{ q }{ r }{ p }
@@ -373,14 +373,14 @@ Proof:
       \Cong{ c }{ q }{ c }{ d }
       \Cong{ c }{ p }{ c }{ q }
       \Cong{ r }{ p }{ r }{ q }
-      it is wrong that r is equal to c
+      it is wrong that (r is equal to c)
       r is collinear with c and d'
       \Cong{ d' }{ p }{ d' }{ q }
-      it is wrong that c is equal to d'
+      it is wrong that (c is equal to d')
       c is collinear with d' and b
       c is collinear with d' and b'
       \Cong{ b }{ p }{ b }{ q } and \Cong{ b' }{ p }{ b' }{ q }
-      it is wrong that b is equal to b'
+      it is wrong that (b is equal to b')
       b is collinear with c' and b'
       \Cong{ c' }{ p }{ c' }{ q }
       c' is collinear with c and p
@@ -393,7 +393,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Betw{ v0 }{ v1 }{ v3 } then (\Betw{ v1 }{ v2 }{ v3 } or \Betw{ v1 }{ v3 }{ v2 })))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (for all v3, (if v2 is a point and v3 is a point then (if \Betw{ v0 }{ v1 }{ v2 } and \Betw{ v0 }{ v1 }{ v3 } then (\Betw{ v1 }{ v2 }{ v3 } or \Betw{ v1 }{ v3 }{ v2 })))))))
 Proof:
 Qed.
 
@@ -403,7 +403,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then for all v2, (for all v3, (if v2 is a point and v3 is a point then for some v4, (v4 is a point and (\Betw{ v0 }{ v1 }{ v4 } or \Betw{ v0 }{ v4 }{ v1 }) and \Cong{ v0 }{ v4 }{ v2 }{ v3 }))))))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then for all v2, (for all v3, (if v2 is a point and v3 is a point then for some v4, (v4 is a point and (\Betw{ v0 }{ v1 }{ v4 } or \Betw{ v0 }{ v4 }{ v1 }) and \Cong{ v0 }{ v4 }{ v2 }{ v3 }))))))
 Proof:
   b' is a point and \Betw{ b }{ a }{ b' } and \Cong{ a }{ b' }{ a }{ b }
   x is a point and \Betw{ b' }{ a }{ x } and \Cong{ a }{ x }{ c }{ d }
@@ -462,7 +462,7 @@ Qed.
 Theorem (connexityofcomparison):
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (\Leq{ v0 }{ v1 }{ v2 }{ v3 } or \Leq{ v2 }{ v3 }{ v0 }{ v1 })))))
 Proof:
-  if it is wrong that a is equal to b then the thesis holds
+  if it is wrong that (a is equal to b) then the thesis holds
   Proof:
     x is a point and (\Betw{ b }{ a }{ x } or \Betw{ b }{ x }{ a }) and \Cong{ b }{ x }{ c }{ d }
   Qed.
@@ -490,39 +490,39 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then ((\Less{ v0 }{ v1 }{ v2 }{ v3 }) iff (\Leq{ v0 }{ v1 }{ v2 }{ v3 } and it is wrong that \Cong{ v0 }{ v1 }{ v2 }{ v3 }))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then ((\Less{ v0 }{ v1 }{ v2 }{ v3 }) iff (\Leq{ v0 }{ v1 }{ v2 }{ v3 } and it is wrong that (\Cong{ v0 }{ v1 }{ v2 }{ v3 })))))))
 
 Definition:
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then ((\Greater{ v0 }{ v1 }{ v2 }{ v3 }) iff \Less{ v2 }{ v3 }{ v0 }{ v1 })))))
 
 Definition:
-  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then ((v0 and v1 lie on opposite sides of v2) iff (it is wrong that v0 is equal to v1 and it is wrong that v0 is equal to v2 and it is wrong that v1 is equal to v2 and \Betw{ v0 }{ v2 }{ v1 })))))
+  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then ((v0 and v1 lie on opposite sides of v2) iff (it is wrong that (v0 is equal to v1) and it is wrong that (v0 is equal to v2) and it is wrong that (v1 is equal to v2) and \Betw{ v0 }{ v2 }{ v1 })))))
 
 Definition:
-  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then ((v0 and v1 are equivalent with respect to v2) iff (it is wrong that v0 is equal to v2 and it is wrong that v1 is equal to v2 and (\Betw{ v2 }{ v0 }{ v1 } or \Betw{ v2 }{ v1 }{ v0 }))))))
+  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then ((v0 and v1 are equivalent with respect to v2) iff (it is wrong that (v0 is equal to v2) and it is wrong that (v1 is equal to v2) and (\Betw{ v2 }{ v0 }{ v1 } or \Betw{ v2 }{ v1 }{ v0 }))))))
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that v0 is equal to v3 and it is wrong that v1 is equal to v3 and it is wrong that v2 is equal to v3 then (if \Betw{ v0 }{ v3 }{ v2 } then (\Betw{ v1 }{ v3 }{ v2 } iff v0 and v1 are equivalent with respect to v3)))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that (v0 is equal to v3) and it is wrong that (v1 is equal to v3) and it is wrong that (v2 is equal to v3) then (if \Betw{ v0 }{ v3 }{ v2 } then (\Betw{ v1 }{ v3 }{ v2 } iff v0 and v1 are equivalent with respect to v3)))))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (if v0 and v1 are equivalent with respect to v2 then (it is wrong that v0 is equal to v2 and it is wrong that v1 is equal to v2 and for some v3, (v3 is a point and it is wrong that v3 is equal to v2 and \Betw{ v0 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v3 }))))))
+  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (if v0 and v1 are equivalent with respect to v2 then (it is wrong that (v0 is equal to v2) and it is wrong that (v1 is equal to v2) and for some v3, (v3 is a point and it is wrong that (v3 is equal to v2) and \Betw{ v0 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v3 }))))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (if it is wrong that v0 is equal to v2 and it is wrong that v1 is equal to v2 then (if for some v3, (v3 is a point and it is wrong that v3 is equal to v2 and \Betw{ v0 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v3 }) then v0 and v1 are equivalent with respect to v2)))))
+  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (if it is wrong that (v0 is equal to v2) and it is wrong that (v1 is equal to v2) then (if for some v3, (v3 is a point and it is wrong that (v3 is equal to v2) and \Betw{ v0 }{ v2 }{ v3 } and \Betw{ v1 }{ v2 }{ v3 }) then v0 and v1 are equivalent with respect to v2)))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (v0 and v1 are equivalent with respect to v2 iff (v0 is collinear with v2 and v1 and it is wrong that \Betw{ v0 }{ v2 }{ v1 })))))
+  for all v0, (for all v1, (for all v2, (if v0 is a point and v1 is a point and v2 is a point then (v0 and v1 are equivalent with respect to v2 iff (v0 is collinear with v2 and v1 and it is wrong that (\Betw{ v0 }{ v2 }{ v1 }))))))
 Proof:
 Qed.
 
 Theorem (reflexivityofrelativeequivalence):
-  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that v0 is equal to v1 then v0 and v0 are equivalent with respect to v1)))
+  for all v0, (for all v1, (if v0 is a point and v1 is a point then (if it is wrong that (v0 is equal to v1) then v0 and v0 are equivalent with respect to v1)))
 Proof:
 Qed.
 
@@ -538,12 +538,12 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that v3 is equal to v0 and it is wrong that v1 is equal to v2 then for some v4, (v4 is a point and v4 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v4 }{ v1 }{ v2 }))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that (v3 is equal to v0) and it is wrong that (v1 is equal to v2) then for some v4, (v4 is a point and v4 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v4 }{ v1 }{ v2 }))))))
 Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that v3 is equal to v0 and it is wrong that v1 is equal to v2 then for all v4, (if v4 is a point and v4 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v4 }{ v1 }{ v2 } then for all v5, (if v5 is a point and v5 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v5 }{ v1 }{ v2 } then v5 is equal to v4)))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a point and v1 is a point and v2 is a point and v3 is a point then (if it is wrong that (v3 is equal to v0) and it is wrong that (v1 is equal to v2) then for all v4, (if v4 is a point and v4 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v4 }{ v1 }{ v2 } then for all v5, (if v5 is a point and v5 and v3 are equivalent with respect to v0 and \Cong{ v0 }{ v5 }{ v1 }{ v2 } then v5 is equal to v4)))))))
 Proof:
 Qed.
 

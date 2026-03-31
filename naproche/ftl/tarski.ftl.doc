@@ -7,7 +7,7 @@ Axiom:
   for all v0, (if v0 is a class then for all v1, (if v1 is an element of v0 then v1 is an object))
 
 Definition (defempty):
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition (defsub):
   for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))

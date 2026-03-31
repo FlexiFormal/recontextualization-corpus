@@ -1,5 +1,5 @@
 Definition (defempty):
-  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition (defsub):
   for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
@@ -22,16 +22,16 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
@@ -117,10 +117,10 @@ Proof:
 Qed.
 
 Axiom (nontriv):
-  it is wrong that 0 is equal to 1
+  it is wrong that (0 is equal to 1)
 
 Axiom (zerodiv):
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 * v1 is equal to 0)))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then it is wrong that (v0 * v1 is equal to 0))))
 
 Theorem:
   for all v0, (if v0 is an integer then - - v0 is an integer)
@@ -128,18 +128,18 @@ Proof:
 Qed.
 
 Definition (divisor):
-  for all v0, (if v0 is an integer then for all v1, ((v1 is a divisor of v0) iff (v1 is an integer and it is wrong that v1 is equal to 0 and for some v2, (v2 is an integer and v1 * v2 is equal to v0))))
+  for all v0, (if v0 is an integer then for all v1, ((v1 is a divisor of v0) iff (v1 is an integer and it is wrong that (v1 is equal to 0) and for some v2, (v2 is an integer and v1 * v2 is equal to v0))))
 
 Definition (equmod):
-  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then ((v0 = v1 (mod v2 )) iff v2 is a divisor of v0 + - v1))))
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that (v2 is equal to 0)) then ((v0 = v1 (mod v2 )) iff v2 is a divisor of v0 + - v1))))
 
 Theorem (equmodref):
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then v0 = v0 (mod v1 )))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that (v1 is equal to 0) then v0 = v0 (mod v1 )))
 Proof:
 Qed.
 
 Theorem (equmodsym):
-  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) then (if v0 = v1 (mod v2 ) then v1 = v0 (mod v2 )))))
+  for all v0, (for all v1, (for all v2, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that (v2 is equal to 0)) then (if v0 = v1 (mod v2 ) then v1 = v0 (mod v2 )))))
 Proof:
   a = b (mod q )
   n is an integer and q * n is equal to a + - b
@@ -151,7 +151,7 @@ Proof:
 Qed.
 
 Theorem (equmodtrn):
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and v2 is an integer and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 (mod v3 ) and v1 = v2 (mod v3 ) then v0 = v2 (mod v3 ))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and v2 is an integer and (v3 is an integer and it is wrong that (v3 is equal to 0)) then (if v0 = v1 (mod v3 ) and v1 = v2 (mod v3 ) then v0 = v2 (mod v3 ))))))
 Proof:
   a = b (mod q ) and b = c (mod q )
   n is an integer and q * n is equal to a + - b
@@ -160,7 +160,7 @@ Proof:
 Qed.
 
 Theorem (equmodmul):
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that v2 is equal to 0) and (v3 is an integer and it is wrong that v3 is equal to 0) then (if v0 = v1 (mod v2 * v3 ) then (v0 = v1 (mod v2 ) and v0 = v1 (mod v3 )))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an integer and v1 is an integer and (v2 is an integer and it is wrong that (v2 is equal to 0)) and (v3 is an integer and it is wrong that (v3 is equal to 0)) then (if v0 = v1 (mod v2 * v3 ) then (v0 = v1 (mod v2 ) and v0 = v1 (mod v3 )))))))
 Proof:
   a = b (mod p * q )
   m is an integer and p * q * m is equal to a + - b
@@ -171,7 +171,7 @@ Signature (prime):
   for all v0, (if v0 is an integer then (if v0 is prime then truth holds))
 
 Axiom (primedivisor):
-  for all v0, (if v0 is an integer then ((for some v1, (v1 is a divisor of v0 and v1 is prime)) iff (it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1)))
+  for all v0, (if v0 is an integer then ((for some v1, (v1 is a divisor of v0 and v1 is prime)) iff (it is wrong that (v0 is equal to 1) and it is wrong that (v0 is equal to - 1))))
 
 Signature (finset):
   for all v0, (if v0 is a class then (if v0 is finite then truth holds))
@@ -194,7 +194,7 @@ Proof:
 Qed.
 
 Definition (complement):
-  for all v0, (if v0 is a subclass of INT then for all v1, ((v1 is equal to ~ v0) iff (v1 is a class and (if INT is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of INT and v2 is an object and it is wrong that v2 is an element of v0)))))
+  for all v0, (if v0 is a subclass of INT then for all v1, ((v1 is equal to ~ v0) iff (v1 is a class and (if INT is a set then v1 is a set) and for all v2, (v2 is an element of v1 iff (v2 is an element of INT and v2 is an object and it is wrong that (v2 is an element of v0))))))
 
 Theorem:
   for all v0, (if v0 is a subclass of INT then ~ v0 is a subset of INT)
@@ -202,15 +202,15 @@ Proof:
 Qed.
 
 Definition (arseq):
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then for all v2, ((v2 is equal to ArSeq( v0 , v1 )) iff (v2 is a class and (if INT is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of INT and v3 is an object and v3 = v0 (mod v1 )))))))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that (v1 is equal to 0) then for all v2, ((v2 is equal to ArSeq( v0 , v1 )) iff (v2 is a class and (if INT is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of INT and v3 is an object and v3 = v0 (mod v1 )))))))
 
 Theorem:
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then ArSeq( v0 , v1 ) is a set))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that (v1 is equal to 0) then ArSeq( v0 , v1 ) is a set))
 Proof:
 Qed.
 
 Definition (open):
-  for all v0, (if v0 is a subclass of INT then ((v0 is open) iff (v0 is equal to INT or for all v1, (if v1 is an element of v0 then for some v2, (v2 is an integer and it is wrong that v2 is equal to 0 and ArSeq( v1 , v2 ) is a subclass of v0)))))
+  for all v0, (if v0 is a subclass of INT then ((v0 is open) iff (v0 is equal to INT or for all v1, (if v1 is an element of v0 then for some v2, (v2 is an integer and it is wrong that (v2 is equal to 0) and ArSeq( v1 , v2 ) is a subclass of v0)))))
 
 Definition (closed):
   for all v0, (if v0 is a subclass of INT then ((v0 is closed) iff ~ v0 is open))
@@ -223,7 +223,7 @@ Theorem (unionopen):
 Proof:
   x is an element of \bigcup S
   M is a set and M is an element of S and x is an element of M
-  q is an integer and it is wrong that q is equal to 0 and ArSeq( x , q ) is a subclass of M
+  q is an integer and it is wrong that (q is equal to 0) and ArSeq( x , q ) is a subclass of M
   ArSeq( x , q ) is a subclass of \bigcup S
 Qed.
 
@@ -233,11 +233,11 @@ Proof:
   the intersection of A and B is a subset of INT
   x is an element of the intersection of A and B
   x is an integer
-  q is an integer and it is wrong that q is equal to 0 and ArSeq( x , q ) is a subclass of A
-  p is an integer and it is wrong that p is equal to 0 and ArSeq( x , p ) is a subclass of B
-  p * q is an integer and it is wrong that p * q is equal to 0 and ArSeq( x , p * q ) is a subclass of the intersection of A and B
+  q is an integer and it is wrong that (q is equal to 0) and ArSeq( x , q ) is a subclass of A
+  p is an integer and it is wrong that (p is equal to 0) and ArSeq( x , p ) is a subclass of B
+  p * q is an integer and it is wrong that (p * q is equal to 0) and ArSeq( x , p * q ) is a subclass of the intersection of A and B
   Proof:
-    p * q is an integer and it is wrong that p * q is equal to 0
+    p * q is an integer and it is wrong that (p * q is equal to 0)
     a is an element of ArSeq( x , p * q )
     a is an element of ArSeq( x , p ) and a is an element of ArSeq( x , q )
     Proof:
@@ -260,14 +260,14 @@ Axiom (unionsclosed):
   for all v0, (if v0 is a family of integer sets and v0 is finite and for all v1, (if v1 is an element of v0 then (v1 is a subset of INT and v1 is closed)) then \bigcup v0 is closed)
 
 Theorem (arseqclosed):
-  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that v1 is equal to 0 then (ArSeq( v0 , v1 ) is a subset of INT and ArSeq( v0 , v1 ) is closed)))
+  for all v0, (for all v1, (if v0 is an integer and v1 is an integer and it is wrong that (v1 is equal to 0) then (ArSeq( v0 , v1 ) is a subset of INT and ArSeq( v0 , v1 ) is closed)))
 Proof:
   ArSeq( a , q ) is a subset of INT
   b is an element of ~ ArSeq( a , q )
   ArSeq( b , q ) is a subclass of ~ ArSeq( a , q )
   Proof:
     c is an element of ArSeq( b , q )
-    it is wrong that c is an element of ~ ArSeq( a , q )
+    it is wrong that (c is an element of ~ ArSeq( a , q ))
     c = b (mod q ) and a = c (mod q )
     b = a (mod q )
     b is an element of ArSeq( a , q )
@@ -276,7 +276,7 @@ Proof:
 Qed.
 
 Theorem (fuerstenberg):
-  for all v0, (if v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and for some v2, (v2 is an integer and it is wrong that v2 is equal to 0 and v2 is prime and v1 is equal to ArSeq( 0 , v2 )))) then it is wrong that v0 is finite)
+  for all v0, (if v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and for some v2, (v2 is an integer and it is wrong that (v2 is equal to 0) and v2 is prime and v1 is equal to ArSeq( 0 , v2 )))) then it is wrong that (v0 is finite))
 Proof:
   S is a family of integer sets
   ~ \bigcup S is a class and for all v0, (v0 is an element of ~ \bigcup S iff (v0 is an object and (v0 is equal to 1 or v0 is equal to - 1)))
@@ -295,23 +295,23 @@ Proof:
       if n is an element of \bigcup S then for some v0, (v0 is a divisor of n and v0 is prime)
       Proof:
         n is an element of \bigcup S
-        r is an integer and it is wrong that r is equal to 0 and r is prime and n is an element of ArSeq( 0 , r )
+        r is an integer and it is wrong that (r is equal to 0) and r is prime and n is an element of ArSeq( 0 , r )
         r is a divisor of n and r is prime
       Qed.
     Qed.
   Qed.
   S is finite
   \bigcup S is closed and ~ \bigcup S is open
-  p is an integer and it is wrong that p is equal to 0 and ArSeq( 1 , p ) is a subclass of ~ \bigcup S
-  for some v0, (v0 is an element of ArSeq( 1 , p ) and it is wrong that v0 is equal to 1 and it is wrong that v0 is equal to - 1)
+  p is an integer and it is wrong that (p is equal to 0) and ArSeq( 1 , p ) is a subclass of ~ \bigcup S
+  for some v0, (v0 is an element of ArSeq( 1 , p ) and it is wrong that (v0 is equal to 1) and it is wrong that (v0 is equal to - 1))
   Proof:
     1 + p is an integer and 1 + - p is an integer
     1 + p is an element of ArSeq( 1 , p ) and 1 + - p is an element of ArSeq( 1 , p )
     Proof:
       1 + p = 1 (mod p ) and 1 + - p = 1 (mod p )
     Qed.
-    it is wrong that 1 + p is equal to 1 and it is wrong that 1 + - p is equal to 1
-    it is wrong that 1 + p is equal to - 1 or it is wrong that 1 + - p is equal to - 1
+    it is wrong that (1 + p is equal to 1) and it is wrong that (1 + - p is equal to 1)
+    it is wrong that (1 + p is equal to - 1) or it is wrong that (1 + - p is equal to - 1)
   Qed.
   falsity holds
 Qed.

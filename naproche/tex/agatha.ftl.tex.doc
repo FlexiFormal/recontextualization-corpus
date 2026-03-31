@@ -41,25 +41,25 @@ Axiom:
   AuntAgatha lives in DreadsburyMansion and the butler lives in DreadsburyMansion and Charles lives in DreadsburyMansion and for all v0, (if v0 is a person and v0 lives in DreadsburyMansion then (v0 is equal to AuntAgatha or v0 is equal to the butler or v0 is equal to Charles))
 
 Axiom:
-  for all v0, (if v0 is a killer then ((for all v1, (if v1 is a victim of v0 then v0 hates v1)) and for all v1, (if v1 is a victim of v0 then it is wrong that v0 is richer than v1)))
+  for all v0, (if v0 is a killer then ((for all v1, (if v1 is a victim of v0 then v0 hates v1)) and for all v1, (if v1 is a victim of v0 then it is wrong that (v0 is richer than v1))))
 
 Axiom:
-  for all v0, (if v0 is a person and AuntAgatha hates v0 then it is wrong that Charles hates v0)
+  for all v0, (if v0 is a person and AuntAgatha hates v0 then it is wrong that (Charles hates v0))
 
 Axiom:
-  for all v0, (if v0 is a person and it is wrong that v0 is equal to the butler then AuntAgatha hates v0)
+  for all v0, (if v0 is a person and it is wrong that (v0 is equal to the butler) then AuntAgatha hates v0)
 
 Axiom:
-  for all v0, (if v0 is a person and it is wrong that v0 is richer than AuntAgatha then the butler hates v0)
+  for all v0, (if v0 is a person and it is wrong that (v0 is richer than AuntAgatha) then the butler hates v0)
 
 Axiom:
   for all v0, (if v0 is a person and AuntAgatha hates v0 then the butler hates v0)
 
 Axiom:
-  for all v0, (if v0 is a person then it is wrong that for all v1, (if v1 is a person then v0 hates v1))
+  for all v0, (if v0 is a person then it is wrong that (for all v1, (if v1 is a person then v0 hates v1)))
 
 Axiom:
-  it is wrong that AuntAgatha is equal to the butler
+  it is wrong that (AuntAgatha is equal to the butler)
 
 Theorem:
   AuntAgatha killed AuntAgatha

@@ -38,9 +38,9 @@ Proof:
     P is drinking and for all v0, (if v0 is a person and v0 is inside the pub then v0 is drinking)
     if P is drinking then for all v0, (if v0 is a person and v0 is inside the pub then v0 is drinking)
   Qed.
-  if for some v0, (v0 is a person and v0 is inside the pub and it is wrong that v0 is drinking) then the thesis holds
+  if for some v0, (v0 is a person and v0 is inside the pub and it is wrong that (v0 is drinking)) then the thesis holds
   Proof:
-    P is a person and P is inside the pub and it is wrong that P is drinking
+    P is a person and P is inside the pub and it is wrong that (P is drinking)
     if P is drinking then for all v0, (if v0 is a person and v0 is inside the pub then v0 is drinking)
   Qed.
 Qed.

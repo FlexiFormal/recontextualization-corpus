@@ -25,19 +25,19 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the intersection of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Axiom (pairdefiningproperty):
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v2 and v3 is equal to the ordered pair of v0 and v1 then (v2 is equal to v0 and v3 is equal to v1))))))
@@ -73,5 +73,5 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a set then ((v0 is dedekind finite) iff for all v1, (if v1 is a set and v1 is a subclass of v0 and it is wrong that v1 is equal to v0 then it is wrong that v1 is equinumerous with v0)))
+  for all v0, (if v0 is a set then ((v0 is dedekind finite) iff for all v1, (if v1 is a set and v1 is a subclass of v0 and it is wrong that (v1 is equal to v0) then it is wrong that (v1 is equinumerous with v0))))
 

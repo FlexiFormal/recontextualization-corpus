@@ -24,13 +24,13 @@ Signature:
   for all v0, (if v0 is a system of propositions then for all v1, (if v1 is equal to the logical product of v0 then (v1 is a proposition and (v1 is true iff for all v2, (if v2 is an element of v0 then v2 is true)))))
 
 Theorem (Russell_Myhill_Paradox):
-  it is wrong that for all v0, (for all v1, (if v0 is a system of propositions and v1 is a system of propositions then (if the logical product of v0 is equal to the logical product of v1 then v0 is equal to v1)))
+  it is wrong that (for all v0, (for all v1, (if v0 is a system of propositions and v1 is a system of propositions then (if the logical product of v0 is equal to the logical product of v1 then v0 is equal to v1))))
 Proof:
-  it is wrong that the thesis holds
-  Q is a class and for all v0, (v0 is an element of Q iff (v0 is an object and for some v1, (v1 is a system of propositions and v0 is equal to the logical product of v1 and it is wrong that v0 is an element of v1)))
+  it is wrong that (the thesis holds)
+  Q is a class and for all v0, (v0 is an element of Q iff (v0 is an object and for some v1, (v1 is a system of propositions and v0 is equal to the logical product of v1 and it is wrong that (v0 is an element of v1))))
   q is equal to the logical product of Q
   for all v0, (if v0 is a system of propositions and the logical product of v0 is equal to q then v0 is equal to Q)
-  q is an element of Q iff it is wrong that q is an element of Q
+  q is an element of Q iff it is wrong that (q is an element of Q)
   falsity holds
 Qed.
 

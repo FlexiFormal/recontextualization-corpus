@@ -1,5 +1,5 @@
 Definition:
-  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
   for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
@@ -22,16 +22,16 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
@@ -75,15 +75,15 @@ Axiom:
   for all v0, (if v0 is a set then the powerset of v0 is a set)
 
 Theorem (cantor):
-  for all v0, (if v0 is a set then for all v1, (if v1 is a function of v0 then it is wrong that v1 surjects onto the powerset of v0))
+  for all v0, (if v0 is a set then for all v1, (if v1 is a function of v0 then it is wrong that (v1 surjects onto the powerset of v0)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   f is a function of M and f surjects onto the powerset of M
   for all v0, (if v0 is an element of M then the value of f under v0 is a set)
-  N is a class and (if M is a set then N is a set) and for all v0, (v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that v0 is an element of the value of f under v0))
+  N is a class and (if M is a set then N is a set) and for all v0, (v0 is an element of N iff (v0 is an element of M and v0 is an object and it is wrong that (v0 is an element of the value of f under v0)))
   N is a subset of M
   z is an element of M and the value of f under z is equal to N
-  z is an element of N iff (it is wrong that z is an element of the value of f under z and the value of f under z is equal to N)
+  z is an element of N iff (it is wrong that (z is an element of the value of f under z) and the value of f under z is equal to N)
   falsity holds
 Qed.
 

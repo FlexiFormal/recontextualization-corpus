@@ -74,10 +74,10 @@ Axiom:
   for all v0, (if v0 is a possible world then \top is true at v0)
 
 Axiom:
-  for all v0, (if v0 is a possible world then it is wrong that \bot is true at v0)
+  for all v0, (if v0 is a possible world then it is wrong that (\bot is true at v0))
 
 Axiom:
-  for all v0, (for all v1, (if v0 is a proposition and v1 is a possible world then (\neg v0 is true at v1 iff it is wrong that v0 is true at v1)))
+  for all v0, (for all v1, (if v0 is a proposition and v1 is a possible world then (\neg v0 is true at v1 iff it is wrong that (v0 is true at v1))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (if v0 is a proposition and v1 is a proposition and v2 is a possible world then (v0 \wedge v1 is true at v2 iff (v0 is true at v2 and v1 is true at v2)))))
@@ -104,7 +104,7 @@ Axiom:
   for all v0, (for all v1, (if v0 is a predicate and v1 is a possible world then (\exists v0 is true at v1 iff for some v2, (v2 is an element of the domain of v0 and the value of v0 under v2 is true at v1))))
 
 Axiom:
-  for all v0, (for all v1, (for all v2, (if v0 is a property and v1 is a possible world and v2 is an individual then (the value of \sim v0 under v2 is true at v1 iff it is wrong that the value of v0 under v2 is true at v1))))
+  for all v0, (for all v1, (for all v2, (if v0 is a property and v1 is a possible world and v2 is an individual then (the value of \sim v0 under v2 is true at v1 iff it is wrong that (the value of v0 under v2 is true at v1)))))
 
 Axiom:
   for all v0, (for all v1, (if v0 is a property and v1 is a possible world then (\forallex v0 is true at v1 iff for all v2, (if v2 is an individual and v2 exists at v1 then the value of v0 under v2 is true at v1))))
@@ -240,13 +240,13 @@ Definition:
   for all v0, ((v0 is equal to \falsity) iff (v0 is a property and for all v1, (if v1 is an individual then the value of v0 under v1 is equal to \bot)))
 
 Theorem:
-  for all v0, (if v0 is a possible world then it is wrong that the value of P under \falsity is true at v0)
+  for all v0, (if v0 is a possible world then it is wrong that (the value of P under \falsity is true at v0))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \falsity \supset_N \sim \falsity is true at w
   the value of P under \sim \falsity is true at w
   the value of P under \falsity \wedge the value of P under \sim \falsity is true at w
-  it is wrong that the value of P under \falsity \xor the value of P under \sim \falsity is true at w
+  it is wrong that (the value of P under \falsity \xor the value of P under \sim \falsity is true at w)
   falsity holds
 Qed.
 
@@ -265,7 +265,7 @@ Proof:
   the value of P under G is true at w
   \diamond \existsex G is true at w
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     \box \forallex \sim G is true at w
     \box \forallex N is true at w
     G \supset_N \falsity is true at w

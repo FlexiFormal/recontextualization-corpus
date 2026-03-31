@@ -39,20 +39,20 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
-  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Theorem:
   for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
+    for all v0, (if v0 is an element of \SETempty then it is wrong that (v0 is equal to v0))
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
+  if A is empty then (it is wrong that (for some v0, (v0 is an element of A)) and it is wrong that (for some v0, (v0 is an element of \SETempty)))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -65,7 +65,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
   for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
@@ -73,7 +73,7 @@ Definition:
   for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
   for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
@@ -110,10 +110,10 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
@@ -268,11 +268,11 @@ Proof:
   A \SETdiff B \SETintersect C is a subclass of A \SETdiff B \SETunion A \SETdiff C
   Proof:
     x is an element of A \SETdiff B \SETintersect C
-    x is an element of A and it is wrong that x is an element of B \SETintersect C
-    it is wrong that (x is an element of B and x is an element of C)
-    it is wrong that x is an element of B or it is wrong that x is an element of C
-    x is an element of A and (it is wrong that x is an element of B or it is wrong that x is an element of C)
-    (x is an element of A and it is wrong that x is an element of B) or (x is an element of A and it is wrong that x is an element of C)
+    x is an element of A and it is wrong that (x is an element of B \SETintersect C)
+    it is wrong that ((x is an element of B and x is an element of C))
+    it is wrong that (x is an element of B) or it is wrong that (x is an element of C)
+    x is an element of A and (it is wrong that (x is an element of B) or it is wrong that (x is an element of C))
+    (x is an element of A and it is wrong that (x is an element of B)) or (x is an element of A and it is wrong that (x is an element of C))
     x is an element of A \SETdiff B or x is an element of A \SETdiff C
     x is an element of A \SETdiff B \SETunion A \SETdiff C
   Qed.
@@ -280,10 +280,10 @@ Proof:
   Proof:
     x is an element of A \SETdiff B \SETunion A \SETdiff C
     x is an element of A \SETdiff B or x is an element of A \SETdiff C
-    (x is an element of A and it is wrong that x is an element of B) or (x is an element of A and it is wrong that x is an element of C)
-    x is an element of A and (it is wrong that x is an element of B or it is wrong that x is an element of C)
-    x is an element of A and it is wrong that (x is an element of B and x is an element of C)
-    x is an element of A and it is wrong that x is an element of B \SETintersect C
+    (x is an element of A and it is wrong that (x is an element of B)) or (x is an element of A and it is wrong that (x is an element of C))
+    x is an element of A and (it is wrong that (x is an element of B) or it is wrong that (x is an element of C))
+    x is an element of A and it is wrong that ((x is an element of B and x is an element of C))
+    x is an element of A and it is wrong that (x is an element of B \SETintersect C)
     x is an element of A \SETdiff B \SETintersect C
   Qed.
 Qed.
@@ -294,11 +294,11 @@ Proof:
   A \SETdiff B \SETunion C is a subclass of A \SETdiff B \SETintersect A \SETdiff C
   Proof:
     x is an element of A \SETdiff B \SETunion C
-    x is an element of A and it is wrong that x is an element of B \SETunion C
-    it is wrong that (x is an element of B or x is an element of C)
-    it is wrong that x is an element of B and it is wrong that x is an element of C
-    x is an element of A and it is wrong that x is an element of B and it is wrong that x is an element of C
-    x is an element of A and it is wrong that x is an element of B and (x is an element of A and it is wrong that x is an element of C)
+    x is an element of A and it is wrong that (x is an element of B \SETunion C)
+    it is wrong that ((x is an element of B or x is an element of C))
+    it is wrong that (x is an element of B) and it is wrong that (x is an element of C)
+    x is an element of A and it is wrong that (x is an element of B) and it is wrong that (x is an element of C)
+    x is an element of A and it is wrong that (x is an element of B) and (x is an element of A and it is wrong that (x is an element of C))
     x is an element of A \SETdiff B and x is an element of A \SETdiff C
     x is an element of A \SETdiff B \SETintersect A \SETdiff C
   Qed.
@@ -306,10 +306,10 @@ Proof:
   Proof:
     x is an element of A \SETdiff B \SETintersect A \SETdiff C
     x is an element of A \SETdiff B and x is an element of A \SETdiff C
-    x is an element of A and it is wrong that x is an element of B and (x is an element of A and it is wrong that x is an element of C)
-    x is an element of A and it is wrong that x is an element of B and it is wrong that x is an element of C
-    x is an element of A and it is wrong that (x is an element of B or x is an element of C)
-    x is an element of A and it is wrong that x is an element of B \SETunion C
+    x is an element of A and it is wrong that (x is an element of B) and (x is an element of A and it is wrong that (x is an element of C))
+    x is an element of A and it is wrong that (x is an element of B) and it is wrong that (x is an element of C)
+    x is an element of A and it is wrong that ((x is an element of B or x is an element of C))
+    x is an element of A and it is wrong that (x is an element of B \SETunion C)
     x is an element of A \SETdiff B \SETunion C
   Qed.
 Qed.
@@ -388,9 +388,9 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then v0 \SETdiff v0 is equal to \SETempty)
 Proof:
-  it is wrong that for some v0, (v0 is an element of A \SETdiff A)
+  it is wrong that (for some v0, (v0 is an element of A \SETdiff A))
   Proof:
-    A \SETdiff A is a class and for all v0, (v0 is an element of A \SETdiff A iff (v0 is an object and v0 is an element of A and it is wrong that v0 is an element of A))
+    A \SETdiff A is a class and for all v0, (v0 is an element of A \SETdiff A iff (v0 is an object and v0 is an element of A and it is wrong that (v0 is an element of A)))
   Qed.
   the thesis holds
 Qed.
@@ -398,8 +398,8 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then v0 \SETdiff \SETempty is equal to v0)
 Proof:
-  A \SETdiff \SETempty is a class and for all v0, (v0 is an element of A \SETdiff \SETempty iff (v0 is an object and v0 is an element of A and it is wrong that v0 is an element of \SETempty))
-  for all v0, (if v0 is an object then it is wrong that v0 is an element of \SETempty)
+  A \SETdiff \SETempty is a class and for all v0, (v0 is an element of A \SETdiff \SETempty iff (v0 is an object and v0 is an element of A and it is wrong that (v0 is an element of \SETempty)))
+  for all v0, (if v0 is an object then it is wrong that (v0 is an element of \SETempty))
   A \SETdiff \SETempty is a class and for all v0, (v0 is an element of A \SETdiff \SETempty iff (v0 is an object and v0 is an element of A))
   the thesis holds
 Qed.
@@ -410,8 +410,8 @@ Proof:
   A \SETdiff A \SETdiff B is a subclass of A \SETintersect B
   Proof:
     x is an element of A \SETdiff A \SETdiff B
-    x is an element of A and it is wrong that x is an element of A \SETdiff B
-    it is wrong that x is an element of A or x is an element of B
+    x is an element of A and it is wrong that (x is an element of A \SETdiff B)
+    it is wrong that (x is an element of A) or x is an element of B
     x is an element of B
     x is an element of A \SETintersect B
   Qed.
@@ -419,8 +419,8 @@ Proof:
   Proof:
     x is an element of A \SETintersect B
     x is an element of A and x is an element of B
-    it is wrong that x is an element of A or x is an element of B
-    it is wrong that x is an element of A \SETdiff B
+    it is wrong that (x is an element of A) or x is an element of B
+    it is wrong that (x is an element of A \SETdiff B)
     x is an element of A \SETdiff A \SETdiff B
   Qed.
 Qed.
@@ -445,16 +445,16 @@ Proof:
     x is an element of A \SETintersect B \SETdiff C
     x is an element of A and x is an element of B \SETdiff C
     x is an element of A and x is an element of B
-    x is an element of A \SETintersect B and it is wrong that x is an element of C
-    it is wrong that x is an element of A \SETintersect C
+    x is an element of A \SETintersect B and it is wrong that (x is an element of C)
+    it is wrong that (x is an element of A \SETintersect C)
     x is an element of A \SETintersect B \SETdiff A \SETintersect C
   Qed.
   A \SETintersect B \SETdiff A \SETintersect C is a subclass of A \SETintersect B \SETdiff C
   Proof:
     x is an element of A \SETintersect B \SETdiff A \SETintersect C
     x is an element of A and x is an element of B
-    it is wrong that x is an element of A \SETintersect C
-    it is wrong that x is an element of C
+    it is wrong that (x is an element of A \SETintersect C)
+    it is wrong that (x is an element of C)
     x is an element of B \SETdiff C
     x is an element of A \SETintersect B \SETdiff C
   Qed.
@@ -469,22 +469,22 @@ Proof:
   A \SETsymdiff B is a subclass of A \SETdiff B \SETunion B \SETdiff A
   Proof:
     u is an element of A \SETsymdiff B
-    u is an element of A \SETunion B and it is wrong that u is an element of A \SETintersect B
-    (u is an element of A or u is an element of B) and it is wrong that (u is an element of A and u is an element of B)
-    (u is an element of A or u is an element of B) and (it is wrong that u is an element of A or it is wrong that u is an element of B)
-    if u is an element of A then it is wrong that u is an element of B
-    if u is an element of B then it is wrong that u is an element of A
-    (u is an element of A and it is wrong that u is an element of B) or (u is an element of B and it is wrong that u is an element of A)
+    u is an element of A \SETunion B and it is wrong that (u is an element of A \SETintersect B)
+    (u is an element of A or u is an element of B) and it is wrong that ((u is an element of A and u is an element of B))
+    (u is an element of A or u is an element of B) and (it is wrong that (u is an element of A) or it is wrong that (u is an element of B))
+    if u is an element of A then it is wrong that (u is an element of B)
+    if u is an element of B then it is wrong that (u is an element of A)
+    (u is an element of A and it is wrong that (u is an element of B)) or (u is an element of B and it is wrong that (u is an element of A))
     u is an element of A \SETdiff B or u is an element of B \SETdiff A
     u is an element of A \SETdiff B \SETunion B \SETdiff A
   Qed.
   A \SETdiff B \SETunion B \SETdiff A is a subclass of A \SETsymdiff B
   Proof:
     u is an element of A \SETdiff B \SETunion B \SETdiff A
-    (u is an element of A and it is wrong that u is an element of B) or (u is an element of B and it is wrong that u is an element of A)
-    if u is an element of A and it is wrong that u is an element of B then (u is an element of A \SETunion B and it is wrong that u is an element of A \SETintersect B)
-    if u is an element of B and it is wrong that u is an element of A then (u is an element of A \SETunion B and it is wrong that u is an element of A \SETintersect B)
-    u is an element of A \SETunion B and it is wrong that u is an element of A \SETintersect B
+    (u is an element of A and it is wrong that (u is an element of B)) or (u is an element of B and it is wrong that (u is an element of A))
+    if u is an element of A and it is wrong that (u is an element of B) then (u is an element of A \SETunion B and it is wrong that (u is an element of A \SETintersect B))
+    if u is an element of B and it is wrong that (u is an element of A) then (u is an element of A \SETunion B and it is wrong that (u is an element of A \SETintersect B))
+    u is an element of A \SETunion B and it is wrong that (u is an element of A \SETintersect B)
     u is an element of A \SETunion B \SETdiff A \SETintersect B and A \SETunion B \SETdiff A \SETintersect B is equal to A \SETsymdiff B
   Qed.
 Qed.
@@ -507,10 +507,10 @@ Proof:
     x is an element of X
     if x is an element of A \SETdiff B \SETunion B \SETdiff A \SETdiff C then the thesis holds
     Proof:
-      it is wrong that x is an element of C
+      it is wrong that (x is an element of C)
       if x is an element of A \SETdiff B then the thesis holds
       Proof:
-        it is wrong that x is an element of B \SETdiff C and it is wrong that x is an element of C \SETdiff B
+        it is wrong that (x is an element of B \SETdiff C) and it is wrong that (x is an element of C \SETdiff B)
         x is an element of A
         x is an element of A \SETdiff B \SETdiff C \SETunion C \SETdiff B
         x is an element of Y
@@ -519,7 +519,7 @@ Proof:
       Proof:
         x is an element of B \SETdiff C
         x is an element of B \SETdiff C \SETunion C \SETdiff B
-        it is wrong that x is an element of A
+        it is wrong that (x is an element of A)
         x is an element of B \SETdiff C \SETunion C \SETdiff B \SETdiff A
         x is an element of Y
       Qed.
@@ -527,20 +527,20 @@ Proof:
     if x is an element of C \SETdiff A \SETdiff B \SETunion B \SETdiff A then the thesis holds
     Proof:
       x is an element of C
-      it is wrong that x is an element of A \SETdiff B and it is wrong that x is an element of B \SETdiff A
-      it is wrong that (x is an element of A \SETdiff B or x is an element of B \SETdiff A)
-      it is wrong that ((x is an element of A and it is wrong that x is an element of B) or (x is an element of B and it is wrong that x is an element of A))
-      (it is wrong that x is an element of A or x is an element of B) and (it is wrong that x is an element of B or x is an element of A)
+      it is wrong that (x is an element of A \SETdiff B) and it is wrong that (x is an element of B \SETdiff A)
+      it is wrong that ((x is an element of A \SETdiff B or x is an element of B \SETdiff A))
+      it is wrong that (((x is an element of A and it is wrong that (x is an element of B)) or (x is an element of B and it is wrong that (x is an element of A))))
+      (it is wrong that (x is an element of A) or x is an element of B) and (it is wrong that (x is an element of B) or x is an element of A)
       if x is an element of A then the thesis holds
       Proof:
         x is an element of B
-        it is wrong that x is an element of B \SETdiff C \SETunion C \SETdiff B
+        it is wrong that (x is an element of B \SETdiff C \SETunion C \SETdiff B)
         x is an element of A \SETdiff B \SETdiff C \SETunion C \SETdiff B
         x is an element of Y
       Qed.
-      if it is wrong that x is an element of A then the thesis holds
+      if it is wrong that (x is an element of A) then the thesis holds
       Proof:
-        it is wrong that x is an element of B
+        it is wrong that (x is an element of B)
         x is an element of C \SETdiff B
         x is an element of B \SETdiff C \SETunion C \SETdiff B
         x is an element of B \SETdiff C \SETunion C \SETdiff B \SETdiff A
@@ -554,21 +554,21 @@ Proof:
     if y is an element of A \SETdiff B \SETdiff C \SETunion C \SETdiff B then the thesis holds
     Proof:
       y is an element of A
-      it is wrong that y is an element of B \SETdiff C and it is wrong that y is an element of C \SETdiff B
-      it is wrong that (y is an element of B \SETdiff C or y is an element of C \SETdiff B)
-      it is wrong that ((y is an element of B and it is wrong that y is an element of C) or (y is an element of C and it is wrong that y is an element of B))
-      (it is wrong that y is an element of B or y is an element of C) and (it is wrong that y is an element of C or y is an element of B)
+      it is wrong that (y is an element of B \SETdiff C) and it is wrong that (y is an element of C \SETdiff B)
+      it is wrong that ((y is an element of B \SETdiff C or y is an element of C \SETdiff B))
+      it is wrong that (((y is an element of B and it is wrong that (y is an element of C)) or (y is an element of C and it is wrong that (y is an element of B))))
+      (it is wrong that (y is an element of B) or y is an element of C) and (it is wrong that (y is an element of C) or y is an element of B)
       if y is an element of B then the thesis holds
       Proof:
         y is an element of C
-        it is wrong that y is an element of A \SETdiff B and it is wrong that y is an element of B \SETdiff A
-        it is wrong that y is an element of A \SETdiff B \SETunion B \SETdiff A
+        it is wrong that (y is an element of A \SETdiff B) and it is wrong that (y is an element of B \SETdiff A)
+        it is wrong that (y is an element of A \SETdiff B \SETunion B \SETdiff A)
         y is an element of C \SETdiff A \SETdiff B \SETunion B \SETdiff A
         y is an element of X
       Qed.
-      if it is wrong that y is an element of B then the thesis holds
+      if it is wrong that (y is an element of B) then the thesis holds
       Proof:
-        it is wrong that y is an element of C
+        it is wrong that (y is an element of C)
         y is an element of A \SETdiff B
         y is an element of A \SETdiff B \SETunion B \SETdiff A
         y is an element of A \SETdiff B \SETunion B \SETdiff A \SETdiff C
@@ -577,7 +577,7 @@ Proof:
     Qed.
     if y is an element of B \SETdiff C \SETunion C \SETdiff B \SETdiff A then the thesis holds
     Proof:
-      it is wrong that y is an element of A
+      it is wrong that (y is an element of A)
       if y is an element of B \SETdiff C then the thesis holds
       Proof:
         y is an element of B \SETdiff A
@@ -588,8 +588,8 @@ Proof:
       if y is an element of C \SETdiff B then the thesis holds
       Proof:
         y is an element of C
-        it is wrong that y is an element of A \SETdiff B and it is wrong that y is an element of B \SETdiff A
-        it is wrong that y is an element of A \SETdiff B \SETunion B \SETdiff A
+        it is wrong that (y is an element of A \SETdiff B) and it is wrong that (y is an element of B \SETdiff A)
+        it is wrong that (y is an element of A \SETdiff B \SETunion B \SETdiff A)
         y is an element of C \SETdiff A \SETdiff B \SETunion B \SETdiff A
         y is an element of X
       Qed.
@@ -617,13 +617,13 @@ Proof:
   if A \SETsymdiff B is equal to B \SETdiff A then the thesis holds
   Proof:
     a is an element of A
-    it is wrong that a is an element of B \SETdiff A
-    it is wrong that a is an element of A \SETsymdiff B
-    it is wrong that a is an element of A \SETunion B or a is an element of A \SETintersect B
+    it is wrong that (a is an element of B \SETdiff A)
+    it is wrong that (a is an element of A \SETsymdiff B)
+    it is wrong that (a is an element of A \SETunion B) or a is an element of A \SETintersect B
     Proof:
       A \SETsymdiff B is equal to A \SETunion B \SETdiff A \SETintersect B
     Qed.
-    if it is wrong that a is an element of A \SETunion B then falsity holds
+    if it is wrong that (a is an element of A \SETunion B) then falsity holds
     a is an element of A \SETintersect B
     the thesis holds
   Qed.
@@ -639,22 +639,22 @@ Proof:
       b is an element of B
       if b is an element of A then the thesis holds
       Proof:
-        it is wrong that b is an element of A \SETsymdiff B
-        it is wrong that b is an element of A \SETsymdiff C
+        it is wrong that (b is an element of A \SETsymdiff B)
+        it is wrong that (b is an element of A \SETsymdiff C)
         b is an element of A \SETintersect C
         Proof:
           A \SETsymdiff C is equal to A \SETunion C \SETdiff A \SETintersect C
         Qed.
         b is an element of C
       Qed.
-      if it is wrong that b is an element of A then the thesis holds
+      if it is wrong that (b is an element of A) then the thesis holds
       Proof:
         b is an element of A \SETsymdiff B
         Proof:
-          b is an element of A \SETunion B and it is wrong that b is an element of A \SETintersect B
+          b is an element of A \SETunion B and it is wrong that (b is an element of A \SETintersect B)
         Qed.
         b is an element of A \SETsymdiff C
-        b is an element of A \SETunion C and it is wrong that b is an element of A \SETintersect C
+        b is an element of A \SETunion C and it is wrong that (b is an element of A \SETintersect C)
         b is an element of A or b is an element of C
         the thesis holds
       Qed.
@@ -664,22 +664,22 @@ Proof:
       c is an element of C
       if c is an element of A then the thesis holds
       Proof:
-        it is wrong that c is an element of A \SETsymdiff C
-        it is wrong that c is an element of A \SETsymdiff B
+        it is wrong that (c is an element of A \SETsymdiff C)
+        it is wrong that (c is an element of A \SETsymdiff B)
         c is an element of A \SETintersect B
         Proof:
-          it is wrong that c is an element of A \SETunion B or c is an element of A \SETintersect B
+          it is wrong that (c is an element of A \SETunion B) or c is an element of A \SETintersect B
         Qed.
         c is an element of B
       Qed.
-      if it is wrong that c is an element of A then the thesis holds
+      if it is wrong that (c is an element of A) then the thesis holds
       Proof:
         c is an element of A \SETsymdiff C
         Proof:
-          c is an element of A \SETunion C and it is wrong that c is an element of A \SETintersect C
+          c is an element of A \SETunion C and it is wrong that (c is an element of A \SETintersect C)
         Qed.
         c is an element of A \SETsymdiff B
-        c is an element of A \SETunion B and it is wrong that c is an element of A \SETintersect B
+        c is an element of A \SETunion B and it is wrong that (c is an element of A \SETintersect B)
         c is an element of A or c is an element of B
         the thesis holds
       Qed.

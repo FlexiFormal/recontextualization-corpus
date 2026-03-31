@@ -1,5 +1,5 @@
 Definition:
-  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, ((v0 is equal to the empty set) iff (v0 is a set and it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
   for all v0, (if v0 is a class then for all v1, ((v1 is a subclass of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is an element of v0))))
@@ -22,16 +22,16 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the union of v0 and v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is an element of v0 or v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to the set difference of v0 and v1) iff (v2 is a class and (if v0 is a set then v2 is a set) and for all v3, (v3 is an element of v2 iff (v3 is an element of v0 and v3 is an object and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 is disjoint from v1) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Definition:
   for all v0, ((v0 is a family) iff (v0 is a set and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that v1 is equal to v2 then v1 is disjoint from v2))))
+  for all v0, ((v0 is a disjoint family) iff (v0 is a family and for all v1, (for all v2, (if v1 is an element of v0 and v2 is an element of v0 and it is wrong that (v1 is equal to v2) then v1 is disjoint from v2))))
 
 Axiom:
   for all v0, (for all v1, (for all v2, (for all v3, (if v0 is an object and v1 is an object and v2 is an object and v3 is an object then (if the ordered pair of v0 and v1 is equal to the ordered pair of v2 and v3 then (v0 is equal to v2 and v1 is equal to v3))))))
@@ -87,13 +87,13 @@ Signature (1_5):
   for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if v0 < v1 then truth holds)))
 
 Axiom (1_5_i):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 < v1 and it is wrong that v0 is equal to v1 and it is wrong that v1 < v0) or (it is wrong that v0 < v1 and v0 is equal to v1 and it is wrong that v1 < v0) or (it is wrong that v0 < v1 and it is wrong that v0 is equal to v1 and v1 < v0))))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 < v1 and it is wrong that (v0 is equal to v1) and it is wrong that (v1 < v0)) or (it is wrong that (v0 < v1) and v0 is equal to v1 and it is wrong that (v1 < v0)) or (it is wrong that (v0 < v1) and it is wrong that (v0 is equal to v1) and v1 < v0))))
 
 Axiom (1_5_ii):
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if v0 < v1 and v1 < v2 then v0 < v2))))
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 < v1 or v0 is equal to v1) iff it is wrong that v1 < v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then ((v0 < v1 or v0 is equal to v1) iff it is wrong that (v1 < v0))))
 Proof:
 Qed.
 
@@ -116,10 +116,10 @@ Axiom (1_12_m3):
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 \cdot v2 is equal to v0 \cdot v1 \cdot v2)))
 
 Signature (1_12_m4):
-  for all v0, (if v0 is equal to 1 then (v0 is a real number and it is wrong that v0 is equal to 0 and for all v1, (if v1 is a real number then v0 \cdot v1 is equal to v1)))
+  for all v0, (if v0 is equal to 1 then (v0 is a real number and it is wrong that (v0 is equal to 0) and for all v1, (if v1 is a real number then v0 \cdot v1 is equal to v1)))
 
 Signature (1_12_m5):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then for all v1, (if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then for all v1, (if v1 is equal to 1/ v0 then (v1 is a real number and v0 \cdot v1 is equal to 1))))
 
 Axiom (1_12_d):
   for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then v0 \cdot v1 + v2 is equal to v0 \cdot v1 + v0 \cdot v2)))
@@ -152,24 +152,24 @@ Proof:
 Qed.
 
 Theorem (1_15_a):
-  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
+  for all v0, (for all v1, (for all v2, (if v0 is a real number and v1 is a real number and v2 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 \cdot v2 then v1 is equal to v2))))
 Proof:
-  it is wrong that x is equal to 0 and x \cdot y is equal to x \cdot z
+  it is wrong that (x is equal to 0) and x \cdot y is equal to x \cdot z
   y is equal to 1 \cdot y and 1 \cdot y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot y and 1/ x \cdot x \cdot y is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to 1/ x \cdot x \cdot z and 1/ x \cdot x \cdot z is equal to 1 \cdot z and 1 \cdot z is equal to z
 Qed.
 
 Theorem (1_15_b):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to v0 then v1 is equal to 1)))
 Proof:
 Qed.
 
 Theorem (1_15_c):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and v0 \cdot v1 is equal to 1 then v1 is equal to 1/ v0)))
 Proof:
 Qed.
 
 Theorem (1_15_d):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then 1/ 1/ v0 is equal to v0))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then 1/ 1/ v0 is equal to v0))
 Proof:
 Qed.
 
@@ -179,7 +179,7 @@ Proof:
 Qed.
 
 Theorem (1_16_b):
-  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that v0 is equal to 0 and it is wrong that v1 is equal to 0 then it is wrong that v0 \cdot v1 is equal to 0)))
+  for all v0, (for all v1, (if v0 is a real number and v1 is a real number then (if it is wrong that (v0 is equal to 0) and it is wrong that (v1 is equal to 0) then it is wrong that (v0 \cdot v1 is equal to 0))))
 Proof:
 Qed.
 
@@ -234,9 +234,9 @@ Proof:
 Qed.
 
 Theorem (1_18_d):
-  for all v0, (if v0 is a real number then (if it is wrong that v0 is equal to 0 then 0 < v0 \cdot v0))
+  for all v0, (if v0 is a real number then (if it is wrong that (v0 is equal to 0) then 0 < v0 \cdot v0))
 Proof:
-  it is wrong that x is equal to 0
+  it is wrong that (x is equal to 0)
   if 0 < x then the thesis holds
   Proof:
     the thesis holds
@@ -306,7 +306,7 @@ Proof:
     1 is equal to x \cdot 1/ x and x \cdot 1/ x < y \cdot 1/ y and y \cdot 1/ y is equal to 1
     falsity holds
   Qed.
-  it is wrong that (1/ x < 1/ y or 1/ x is equal to 1/ y) and 1/ y < 1/ x
+  it is wrong that ((1/ x < 1/ y or 1/ x is equal to 1/ y)) and 1/ y < 1/ x
 Qed.
 
 Definition (1_7):
@@ -322,10 +322,10 @@ Definition (1_7c):
   for all v0, (if v0 is a subset of \mathbb{R} then ((v0 is bounded below) iff for some v1, (v1 is a lower bound of v0)))
 
 Definition (1_8):
-  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a least upper bound of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, (if v2 is a real number then (if v2 < v1 then it is wrong that v2 is an upper bound of v0)))))
+  for all v0, (if v0 is a subset of \mathbb{R} then for all v1, ((v1 is a least upper bound of v0) iff (v1 is a real number and v1 is an upper bound of v0 and for all v2, (if v2 is a real number then (if v2 < v1 then it is wrong that (v2 is an upper bound of v0))))))
 
 Definition (1_8a):
-  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, ((v1 is a greatest lower bound of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, (if v2 is a real number then (if v1 < v2 then it is wrong that v2 is a lower bound of v0))))))
+  for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is bounded below then for all v1, ((v1 is a greatest lower bound of v0) iff (v1 is a real number and v1 is a lower bound of v0 and for all v2, (if v2 is a real number then (if v1 < v2 then it is wrong that (v2 is a lower bound of v0)))))))
 
 Axiom (1_19):
   for all v0, (if v0 is a subset of \mathbb{R} then (if v0 is nonempty and v0 is bounded above then for some v1, (v1 is a least upper bound of v0)))
@@ -378,7 +378,7 @@ Axiom:
   for all v0, (for all v1, (if v0 is a rational number and v1 is a rational number then (v0 + v1 is a rational number and v0 \cdot v1 is a rational number and 0 is a rational number and - v0 is a rational number and 1 is a rational number)))
 
 Axiom:
-  for all v0, (if v0 is a rational number then (if it is wrong that v0 is equal to 0 then 1/ v0 is a rational number))
+  for all v0, (if v0 is a rational number then (if it is wrong that (v0 is equal to 0) then 1/ v0 is a rational number))
 
 Axiom:
   for all v0, (if v0 is a real number then for some v1, (v1 is a subset of \mathbb{Q} and v1 is bounded above and v0 is a least upper bound of v1))
@@ -403,15 +403,15 @@ Axiom:
   for all v0, (for all v1, (if v0 is an integer and v1 is an integer then (v0 + v1 is an integer and v0 \cdot v1 is an integer and 0 is an integer and - v0 is an integer and 1 is an integer)))
 
 Axiom:
-  it is wrong that for some v0, (v0 is an integer and 0 < v0 and v0 < 1)
+  it is wrong that (for some v0, (v0 is an integer and 0 < v0 and v0 < 1))
 
 Axiom:
-  for all v0, (if v0 is a rational number then for some v1, (v1 is an integer and for some v2, (v2 is an integer and it is wrong that v1 is equal to 0 and v0 is equal to v2 \cdot 1/ v1)))
+  for all v0, (if v0 is a rational number then for some v1, (v1 is an integer and for some v2, (v2 is an integer and it is wrong that (v1 is equal to 0) and v0 is equal to v2 \cdot 1/ v1)))
 
 Theorem (archimedes_1):
-  it is wrong that \mathbb{Z} is bounded above
+  it is wrong that (\mathbb{Z} is bounded above)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \mathbb{Z} is nonempty
   Proof:
     0 is an integer
@@ -427,9 +427,9 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that \mathbb{Z} is bounded below
+  it is wrong that (\mathbb{Z} is bounded below)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \mathbb{Z} is bounded below
   m is a real number and m is a lower bound of \mathbb{Z}
   - m is an upper bound of \mathbb{Z}
@@ -439,7 +439,7 @@ Qed.
 Theorem (archimedes_2):
   for all v0, (if v0 is a real number then for some v1, (v1 is an integer and v0 < v1))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is an upper bound of \mathbb{Z}
   falsity holds
 Qed.
@@ -463,8 +463,8 @@ Proof:
   for all v0, (if v0 is an element of \mathbb{N} then v0 is an element of A)
   Proof:
     n is an element of \mathbb{N}
-    it is wrong that the thesis holds
-    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, (v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that v0 is an element of A))
+    it is wrong that (the thesis holds)
+    F is a class and (if \mathbb{N} is a set then F is a set) and for all v0, (v0 is an element of F iff (v0 is an element of \mathbb{N} and v0 is an object and it is wrong that (v0 is an element of A)))
     F is nonempty
     F is bounded below
     a is a greatest lower bound of F
@@ -479,15 +479,15 @@ Proof:
       Qed.
       if x + - 1 is equal to 0 then the thesis holds
       Proof:
-        x is equal to 1 and it is wrong that 1 is an element of A
+        x is equal to 1 and it is wrong that (1 is an element of A)
         falsity holds
       Qed.
       if 0 < x + - 1 then the thesis holds
       Proof:
         x + - 1 is an element of \mathbb{N}
-        it is wrong that x + - 1 is an element of A
+        it is wrong that (x + - 1 is an element of A)
         Proof:
-          x + - 1 + 1 is equal to x and it is wrong that x is an element of A
+          x + - 1 + 1 is equal to x and it is wrong that (x is an element of A)
         Qed.
         x + - 1 is an element of F
         a < x + - 1 or a is equal to x + - 1
@@ -502,7 +502,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a real number then for some v1, (v1 is an integer and (v1 + - 1 < v0 or v1 + - 1 is equal to v0) and v0 < v1))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   for all v0, (if v0 is an integer and v0 is positive and (v0 + - 1 < x or v0 + - 1 is equal to x) then (v0 < x or v0 is equal to x))
   n is an integer and n < x
   A is a class and (if \mathbb{N} is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of \mathbb{N} and v0 is an object and (n + v0 + - 1 < x or n + v0 + - 1 is equal to x)))

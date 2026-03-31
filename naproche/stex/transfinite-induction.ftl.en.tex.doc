@@ -39,20 +39,20 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
-  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Theorem:
   for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
+    for all v0, (if v0 is an element of \SETempty then it is wrong that (v0 is equal to v0))
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
+  if A is empty then (it is wrong that (for some v0, (v0 is an element of A)) and it is wrong that (for some v0, (v0 is an element of \SETempty)))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -65,7 +65,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
   for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
@@ -73,7 +73,7 @@ Definition:
   for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
   for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
@@ -110,10 +110,10 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
@@ -149,7 +149,7 @@ Definition:
   for all v0, ((v0 is a system of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that v1 is empty))))
+  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that (v1 is empty)))))
 
 Definition:
   for all v0, (if v0 is a class then for all v1, ((v1 is a system of subsets of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is a subset of v0))))
@@ -186,8 +186,8 @@ Theorem:
   \SETunionover \SETempty is equal to \SETempty
 Proof:
   \SETunionover \SETempty is a class and for all v0, (v0 is an element of \SETunionover \SETempty iff (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
-  it is wrong that for some v0, (v0 is an element of \SETempty)
-  it is wrong that for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1))
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
+  it is wrong that (for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
   \SETunionover \SETempty is equal to \SETempty
 Qed.
 
@@ -232,7 +232,7 @@ Proof:
     a is an object
     for all v0, (if v0 is an element of \SETempty then a is an element of v0)
     Proof:
-      it is wrong that for some v0, (v0 is an element of \SETempty)
+      it is wrong that (for some v0, (v0 is an element of \SETempty))
     Qed.
     a is an element of \SETintersectover \SETempty
   Qed.
@@ -386,20 +386,20 @@ Axiom (Replacement_Axiom):
   for all v0, (for all v1, (if v0 is a map and v1 is a set then \FUNim{ v0 }{ v1 } is a set))
 
 Axiom (Foundation_Axiom):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
 
 Theorem (wellfoundedness_of_membership_relation):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that v2 is an element of v1)))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that (v2 is an element of v1))))
 Proof:
 Qed.
 
 Theorem (epsilon_induction):
   for all v0, (if v0 is a class then (if for all v1, (if v1 is a set then (if for all v2, (if v2 is an element of v1 and v2 is a set then v2 is an element of v0) then v1 is an element of v0)) then for all v1, (if v1 is a set then v1 is an element of v0)))
 Proof:
-  it is wrong that the thesis holds
-  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of \Phi))
-  it is wrong that M is empty
-  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that v0 is an element of x)
+  it is wrong that (the thesis holds)
+  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that (v0 is an element of \Phi)))
+  it is wrong that (M is empty)
+  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that (v0 is an element of x))
   x is a set and for all v0, (if v0 is an element of x and v0 is a set then v0 is an element of \Phi)
   x is an element of \Phi
   falsity holds
@@ -439,17 +439,17 @@ Theorem:
 Proof:
   if A \SETprod B is empty then the thesis holds
   Proof:
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     a is an element of A and b is an element of B
     the ordered pair of a and b is an element of A \SETprod B
     falsity holds
   Qed.
   if A is empty or B is empty then the thesis holds
   Proof:
-    it is wrong that A \SETprod B is empty
+    it is wrong that (A \SETprod B is empty)
     c is an element of A \SETprod B
     for some v0, (v0 is an element of A and for some v1, (v1 is an element of B and c is equal to the ordered pair of v0 and v1))
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     falsity holds
   Qed.
 Qed.
@@ -475,7 +475,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that v0 is empty and it is wrong that v1 is empty and it is wrong that v2 is empty and it is wrong that v3 is empty) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty) and it is wrong that (v2 is empty) and it is wrong that (v3 is empty)) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 Proof:
   A \SETprod B is equal to A' \SETprod B'
   A is a subclass of A' and B is a subclass of B'
@@ -868,7 +868,7 @@ Theorem:
   \SETempty is a set
 Proof:
   x is a set
-  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that v0 is equal to v0))
+  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that (v0 is equal to v0)))
   A is a set
   A is equal to \SETempty
   \SETempty is a set
@@ -1001,7 +1001,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then \SETintersectover v0 is a set)
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then \SETintersectover v0 is a set)
 Proof:
   x is an element of X
   \SETintersectover X is a subclass of x
@@ -1028,31 +1028,31 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0)))
+  it is wrong that (for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is a set and y is a set and (x is an element of y and y is an element of x)
   z is an element of \SETpair{ x }{ y } and \SETpair{ x }{ y } and z are disjoint
   Proof:
-    \SETpair{ x }{ y } is a system of sets and it is wrong that \SETpair{ x }{ y } is empty
+    \SETpair{ x }{ y } is a system of sets and it is wrong that (\SETpair{ x }{ y } is empty)
   Qed.
   z is equal to x or z is equal to y
   if z is equal to x then the thesis holds
   Proof:
     x and \SETpair{ x }{ y } are disjoint
-    it is wrong that y is an element of x
+    it is wrong that (y is an element of x)
     falsity holds
   Qed.
   if z is equal to y then the thesis holds
   Proof:
     y and \SETpair{ x }{ y } are disjoint
-    it is wrong that x is an element of y
+    it is wrong that (x is an element of y)
     falsity holds
   Qed.
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a set then it is wrong that v0 is an element of v0)
+  for all v0, (if v0 is a set then it is wrong that (v0 is an element of v0))
 Proof:
 Qed.
 
@@ -1327,7 +1327,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, ((v0 is a limit ordinal) iff (v0 is an ordinal number and it is wrong that v0 is a successor ordinal and it is wrong that v0 is equal to \SETempty))
+  for all v0, ((v0 is a limit ordinal) iff (v0 is an ordinal number and it is wrong that (v0 is a successor ordinal) and it is wrong that (v0 is equal to \SETempty)))
 
 Definition:
   for all v0, (for all v1, (if v0 is an ordinal number and v1 is an ordinal number then ((v0 \ORDless v1) iff v0 is an element of v1)))
@@ -1348,7 +1348,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that v0 \ORDless v0)
+  for all v0, (if v0 is an ordinal number then it is wrong that (v0 \ORDless v0))
 Proof:
   \alpha \ORDless \alpha
   \alpha is an element of \alpha
@@ -1367,19 +1367,19 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v0 is an ordinal number and v1 is an ordinal number then (v0 \ORDless v1 or v0 is equal to v1 or v1 \ORDless v0)))
 Proof:
-  it is wrong that the thesis holds
-  A is a class and (if \Ord is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of \Ord and v0 is an object and for some v1, (v1 is an ordinal number and it is wrong that v0 \ORDless v1 and it is wrong that v0 is equal to v1 and it is wrong that v1 \ORDless v0)))
-  it is wrong that A is empty
-  \alpha' is an element of A and for all v0, (if v0 is an element of A then it is wrong that v0 \ORDless \alpha')
-  B is a class and (if \Ord is a set then B is a set) and for all v0, (v0 is an element of B iff (v0 is an element of \Ord and v0 is an object and (it is wrong that \alpha' \ORDless v0 and it is wrong that \alpha' is equal to v0 and it is wrong that v0 \ORDless \alpha')))
-  it is wrong that B is empty
-  \beta' is an element of B and for all v0, (if v0 is an element of B then it is wrong that v0 \ORDless \beta')
+  it is wrong that (the thesis holds)
+  A is a class and (if \Ord is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of \Ord and v0 is an object and for some v1, (v1 is an ordinal number and it is wrong that (v0 \ORDless v1) and it is wrong that (v0 is equal to v1) and it is wrong that (v1 \ORDless v0))))
+  it is wrong that (A is empty)
+  \alpha' is an element of A and for all v0, (if v0 is an element of A then it is wrong that (v0 \ORDless \alpha'))
+  B is a class and (if \Ord is a set then B is a set) and for all v0, (v0 is an element of B iff (v0 is an element of \Ord and v0 is an object and (it is wrong that (\alpha' \ORDless v0) and it is wrong that (\alpha' is equal to v0) and it is wrong that (v0 \ORDless \alpha'))))
+  it is wrong that (B is empty)
+  \beta' is an element of B and for all v0, (if v0 is an element of B then it is wrong that (v0 \ORDless \beta'))
   \alpha' is a subclass of \beta'
   Proof:
     a is an element of \alpha'
     a \ORDless \beta' or a is equal to \beta' or \beta' \ORDless a
     Proof:
-      if it is wrong that a \ORDless \beta' and it is wrong that a is equal to \beta' and it is wrong that \beta' \ORDless a then a is an element of A
+      if it is wrong that (a \ORDless \beta') and it is wrong that (a is equal to \beta') and it is wrong that (\beta' \ORDless a) then a is an element of A
     Qed.
     if a is equal to \beta' then \beta' \ORDless \alpha'
     if \beta' \ORDless a then \beta' \ORDless \alpha'
@@ -1404,7 +1404,7 @@ Theorem:
 Proof:
   \alpha is a subclass of \beta
   if \alpha is equal to \beta then the thesis holds
-  if it is wrong that \alpha is equal to \beta then the thesis holds
+  if it is wrong that (\alpha is equal to \beta) then the thesis holds
   Proof:
     \alpha \ORDless \beta or \beta \ORDless \alpha
     \beta \ORDless \alpha
@@ -1430,9 +1430,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 )))
+  for all v0, (if v0 is an ordinal number then it is wrong that (for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 ))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \beta is an ordinal number and \alpha \ORDless \beta and \beta \ORDless \ORDsucc( \alpha )
   \beta \ORDless \alpha or \beta is equal to \alpha
   \alpha \ORDless \alpha
@@ -1440,9 +1440,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 )))
+  for all v0, (if v0 is an ordinal number then it is wrong that (for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 ))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \beta is an ordinal number and \alpha \ORDless \beta and \beta \ORDless \ORDsucc( \alpha )
   \alpha is an element of \beta and \beta is an element of \alpha \SETunion \SETsingleton{ \alpha }
   \beta is an element of \alpha or \beta is equal to \alpha
@@ -1453,7 +1453,7 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v1 is a limit ordinal and v0 is an element of v1 then \ORDsucc( v0 ) is an element of v1))
 Proof:
-  if it is wrong that \ORDsucc( \alpha ) is an element of \lambda then (\alpha \ORDless \lambda and \lambda \ORDless \ORDsucc( \alpha ))
+  if it is wrong that (\ORDsucc( \alpha ) is an element of \lambda) then (\alpha \ORDless \lambda and \lambda \ORDless \ORDsucc( \alpha ))
 Qed.
 
 Theorem (transfinite_induction_I):
@@ -1464,7 +1464,7 @@ Proof:
   Proof:
     x is a set
     for all v0, (if v0 is an element of x and v0 is a set then v0 is an element of B)
-    if it is wrong that x is an element of \Ord then the thesis holds
+    if it is wrong that (x is an element of \Ord) then the thesis holds
     if x is an element of \Ord then the thesis holds
     Proof:
       for all v0, (if v0 is an ordinal number and v0 \ORDless x then v0 is an element of \Phi)

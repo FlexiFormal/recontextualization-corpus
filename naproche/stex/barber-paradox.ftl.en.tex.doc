@@ -21,10 +21,10 @@ Signature:
   for all v0, (for all v1, (if v0 is a being and v1 is a being then (if v0 shaves v1 then truth holds)))
 
 Signature:
-  for all v0, (if v0 is equal to the barber then (v0 is a person and for all v1, (if v1 is a person then (v0 shaves v1 iff it is wrong that v1 shaves v1))))
+  for all v0, (if v0 is equal to the barber then (v0 is a person and for all v1, (if v1 is a person then (v0 shaves v1 iff it is wrong that (v1 shaves v1)))))
 
 Theorem:
-  the barber shaves the barber iff it is wrong that the barber shaves the barber
+  the barber shaves the barber iff it is wrong that (the barber shaves the barber)
 Proof:
 Qed.
 

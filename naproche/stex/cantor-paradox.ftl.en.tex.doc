@@ -39,20 +39,20 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that for some v1, (v1 is an element of v0)))
+  for all v0, (if v0 is a class then ((v0 is empty) iff it is wrong that (for some v1, (v1 is an element of v0))))
 
 Definition:
-  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that v1 is equal to v1))))
+  for all v0, ((v0 is equal to \SETempty) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is an object and it is wrong that (v1 is equal to v1)))))
 
 Theorem:
   for all v0, (if v0 is a class then (v0 is empty iff v0 is equal to \SETempty))
 Proof:
   \SETempty is empty
   Proof:
-    for all v0, (if v0 is an element of \SETempty then it is wrong that v0 is equal to v0)
+    for all v0, (if v0 is an element of \SETempty then it is wrong that (v0 is equal to v0))
   Qed.
   if A is equal to \SETempty then A is empty
-  if A is empty then (it is wrong that for some v0, (v0 is an element of A) and it is wrong that for some v0, (v0 is an element of \SETempty))
+  if A is empty then (it is wrong that (for some v0, (v0 is an element of A)) and it is wrong that (for some v0, (v0 is an element of \SETempty)))
   if A is empty then (A is a subclass of \SETempty and \SETempty is a subclass of A)
   if A is empty then A is equal to \SETempty
 Qed.
@@ -65,7 +65,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a class then \SETempty is a subclass of v0)
 Proof:
-  it is wrong that for some v0, (v0 is an element of \SETempty)
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
   for all v0, (if v0 is an element of \SETempty then v0 is an element of A)
 Qed.
 
@@ -73,7 +73,7 @@ Definition:
   for all v0, (for all v1, (if v0 is an object and v1 is an object then for all v2, ((v2 is equal to \SETpair{ v0 }{ v1 }) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and (v3 is equal to v0 or v3 is equal to v1)))))))
 
 Definition:
-  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that v1 is equal to v2 and v0 is equal to \SETpair{ v1 }{ v2 }))))
+  for all v0, ((v0 is an unordered pair) iff (v0 is a class and for some v1, (for some v2, (v1 is an object and v2 is an object and it is wrong that (v1 is equal to v2) and v0 is equal to \SETpair{ v1 }{ v2 }))))
 
 Definition:
   for all v0, (if v0 is an object then for all v1, ((v1 is equal to \SETsingleton{ v0 }) iff (v1 is a class and for all v2, (v2 is an element of v1 iff (v2 is an object and v2 is equal to v0)))))
@@ -110,10 +110,10 @@ Definition:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETintersect v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and v3 is an element of v1))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that v3 is an element of v1))))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then for all v2, ((v2 is equal to v0 \SETdiff v1) iff (v2 is a class and for all v3, (v3 is an element of v2 iff (v3 is an object and v3 is an element of v0 and it is wrong that (v3 is an element of v1)))))))
 
 Definition:
-  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that for some v2, (v2 is an element of v0 and v2 is an element of v1))))
+  for all v0, (for all v1, (if v0 is a class and v1 is a class then ((v0 and v1 are disjoint) iff it is wrong that (for some v2, (v2 is an element of v0 and v2 is an element of v1)))))
 
 Theorem:
   for all v0, (for all v1, (if v0 is a class and v1 is a class then (v0 and v1 are disjoint iff v0 \SETintersect v1 is empty)))
@@ -121,7 +121,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, ((v0 is a proper class) iff (v0 is a class and it is wrong that v0 is a set))
+  for all v0, ((v0 is a proper class) iff (v0 is a class and it is wrong that (v0 is a set)))
 
 Axiom (Set_Existence_Axiom):
   for some v0, (v0 is a set)
@@ -152,7 +152,7 @@ Definition:
   for all v0, ((v0 is a system of sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then v1 is a set)))
 
 Definition:
-  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that v1 is empty))))
+  for all v0, ((v0 is a system of nonempty sets) iff (v0 is a class and for all v1, (if v1 is an element of v0 then (v1 is a set and it is wrong that (v1 is empty)))))
 
 Definition:
   for all v0, (if v0 is a class then for all v1, ((v1 is a system of subsets of v0) iff (v1 is a class and for all v2, (if v2 is an element of v1 then v2 is a subset of v0))))
@@ -189,8 +189,8 @@ Theorem:
   \SETunionover \SETempty is equal to \SETempty
 Proof:
   \SETunionover \SETempty is a class and for all v0, (v0 is an element of \SETunionover \SETempty iff (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
-  it is wrong that for some v0, (v0 is an element of \SETempty)
-  it is wrong that for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1))
+  it is wrong that (for some v0, (v0 is an element of \SETempty))
+  it is wrong that (for some v0, (v0 is an object and for some v1, (v1 is an element of \SETempty and v0 is an element of v1)))
   \SETunionover \SETempty is equal to \SETempty
 Qed.
 
@@ -235,7 +235,7 @@ Proof:
     a is an object
     for all v0, (if v0 is an element of \SETempty then a is an element of v0)
     Proof:
-      it is wrong that for some v0, (v0 is an element of \SETempty)
+      it is wrong that (for some v0, (v0 is an element of \SETempty))
     Qed.
     a is an element of \SETintersectover \SETempty
   Qed.
@@ -389,20 +389,20 @@ Axiom (Replacement_Axiom):
   for all v0, (for all v1, (if v0 is a map and v1 is a set then \FUNim{ v0 }{ v1 } is a set))
 
 Axiom (Foundation_Axiom):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and v0 and v1 are disjoint))
 
 Theorem (wellfoundedness_of_membership_relation):
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that v2 is an element of v1)))
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then for some v1, (v1 is an element of v0 and for all v2, (if v2 is an element of v0 then it is wrong that (v2 is an element of v1))))
 Proof:
 Qed.
 
 Theorem (epsilon_induction):
   for all v0, (if v0 is a class then (if for all v1, (if v1 is a set then (if for all v2, (if v2 is an element of v1 and v2 is a set then v2 is an element of v0) then v1 is an element of v0)) then for all v1, (if v1 is a set then v1 is an element of v0)))
 Proof:
-  it is wrong that the thesis holds
-  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that v0 is an element of \Phi))
-  it is wrong that M is empty
-  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that v0 is an element of x)
+  it is wrong that (the thesis holds)
+  M is a class and for all v0, (v0 is an element of M iff (v0 is an object and v0 is a set and it is wrong that (v0 is an element of \Phi)))
+  it is wrong that (M is empty)
+  x is an element of M and for all v0, (if v0 is an element of M then it is wrong that (v0 is an element of x))
   x is a set and for all v0, (if v0 is an element of x and v0 is a set then v0 is an element of \Phi)
   x is an element of \Phi
   falsity holds
@@ -442,17 +442,17 @@ Theorem:
 Proof:
   if A \SETprod B is empty then the thesis holds
   Proof:
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     a is an element of A and b is an element of B
     the ordered pair of a and b is an element of A \SETprod B
     falsity holds
   Qed.
   if A is empty or B is empty then the thesis holds
   Proof:
-    it is wrong that A \SETprod B is empty
+    it is wrong that (A \SETprod B is empty)
     c is an element of A \SETprod B
     for some v0, (v0 is an element of A and for some v1, (v1 is an element of B and c is equal to the ordered pair of v0 and v1))
-    it is wrong that A is empty and it is wrong that B is empty
+    it is wrong that (A is empty) and it is wrong that (B is empty)
     falsity holds
   Qed.
 Qed.
@@ -478,7 +478,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that v0 is empty and it is wrong that v1 is empty and it is wrong that v2 is empty and it is wrong that v3 is empty) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
+  for all v0, (for all v1, (for all v2, (for all v3, (if v0 is a class and v1 is a class and v2 is a class and v3 is a class and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty) and it is wrong that (v2 is empty) and it is wrong that (v3 is empty)) then (if v0 \SETprod v2 is equal to v1 \SETprod v3 then (v0 is equal to v1 and v2 is equal to v3))))))
 Proof:
   A \SETprod B is equal to A' \SETprod B'
   A is a subclass of A' and B is a subclass of B'
@@ -871,7 +871,7 @@ Theorem:
   \SETempty is a set
 Proof:
   x is a set
-  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that v0 is equal to v0))
+  A is a class and (if x is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of x and v0 is an object and it is wrong that (v0 is equal to v0)))
   A is a set
   A is equal to \SETempty
   \SETempty is a set
@@ -1004,7 +1004,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a system of sets and it is wrong that v0 is empty then \SETintersectover v0 is a set)
+  for all v0, (if v0 is a system of sets and it is wrong that (v0 is empty) then \SETintersectover v0 is a set)
 Proof:
   x is an element of X
   \SETintersectover X is a subclass of x
@@ -1031,31 +1031,31 @@ Proof:
 Qed.
 
 Theorem:
-  it is wrong that for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0)))
+  it is wrong that (for some v0, (for some v1, (v0 is a set and v1 is a set and (v0 is an element of v1 and v1 is an element of v0))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is a set and y is a set and (x is an element of y and y is an element of x)
   z is an element of \SETpair{ x }{ y } and \SETpair{ x }{ y } and z are disjoint
   Proof:
-    \SETpair{ x }{ y } is a system of sets and it is wrong that \SETpair{ x }{ y } is empty
+    \SETpair{ x }{ y } is a system of sets and it is wrong that (\SETpair{ x }{ y } is empty)
   Qed.
   z is equal to x or z is equal to y
   if z is equal to x then the thesis holds
   Proof:
     x and \SETpair{ x }{ y } are disjoint
-    it is wrong that y is an element of x
+    it is wrong that (y is an element of x)
     falsity holds
   Qed.
   if z is equal to y then the thesis holds
   Proof:
     y and \SETpair{ x }{ y } are disjoint
-    it is wrong that x is an element of y
+    it is wrong that (x is an element of y)
     falsity holds
   Qed.
 Qed.
 
 Theorem:
-  for all v0, (if v0 is a set then it is wrong that v0 is an element of v0)
+  for all v0, (if v0 is a set then it is wrong that (v0 is an element of v0))
 Proof:
 Qed.
 
@@ -1322,23 +1322,23 @@ Qed.
 Theorem (transfinite_induction_III):
   for all v0, (if v0 is a subclass of \ORDomega then (if \SETempty is an element of v0 and for all v1, (if v1 is an element of v0 then \ORDsucc( v1 ) is an element of v0) then v0 is equal to \ORDomega))
 Proof:
-  it is wrong that \Phi is equal to \ORDomega
-  n is an element of \ORDomega and it is wrong that n is an element of \Phi
+  it is wrong that (\Phi is equal to \ORDomega)
+  n is an element of \ORDomega and it is wrong that (n is an element of \Phi)
   \Phi' is equal to \Phi \SETdiff \SETsingleton{ n }
   \SETempty is an element of \Phi'
   Proof:
-    \SETempty is an element of \Phi and it is wrong that \SETempty is equal to n
+    \SETempty is an element of \Phi and it is wrong that (\SETempty is equal to n)
   Qed.
   for all v0, (if v0 is an element of \Phi' then \ORDsucc( v0 ) is an element of \Phi')
   Proof:
     x is an element of \Phi'
     \ORDsucc( x ) is an element of \Phi
-    it is wrong that \ORDsucc( x ) is equal to n
+    it is wrong that (\ORDsucc( x ) is equal to n)
     Proof:
       \ORDsucc( x ) is equal to n
-      it is wrong that x is an element of \Phi
+      it is wrong that (x is an element of \Phi)
       Proof:
-        it is wrong that n is an element of \Phi and (if x is an element of \Phi then (n is equal to \ORDsucc( x ) and \ORDsucc( x ) is an element of \Phi))
+        it is wrong that (n is an element of \Phi) and (if x is an element of \Phi then (n is equal to \ORDsucc( x ) and \ORDsucc( x ) is an element of \Phi))
       Qed.
       falsity holds
     Qed.
@@ -1368,18 +1368,18 @@ Qed.
 Theorem:
   for all v0, (if v0 is an element of \ORDomega then (v0 is equal to \SETempty or for some v1, (v1 is an element of \ORDomega and v0 is equal to \ORDsucc( v1 ))))
 Proof:
-  it is wrong that the thesis holds
-  k is an element of \ORDomega and it is wrong that k is equal to \SETempty and it is wrong that for some v0, (v0 is an element of \ORDomega and k is equal to \ORDsucc( v0 ))
+  it is wrong that (the thesis holds)
+  k is an element of \ORDomega and it is wrong that (k is equal to \SETempty) and it is wrong that (for some v0, (v0 is an element of \ORDomega and k is equal to \ORDsucc( v0 )))
   \omega' is a class and \omega' is equal to \ORDomega \SETdiff \SETsingleton{ k }
   \omega' is a set
   \SETempty is an element of \omega'
   Proof:
-    it is wrong that k is equal to \SETempty
+    it is wrong that (k is equal to \SETempty)
   Qed.
   for all v0, (if v0 is an element of \omega' then \ORDsucc( v0 ) is an element of \omega')
   Proof:
     m is an element of \omega'
-    it is wrong that \ORDsucc( m ) is equal to k
+    it is wrong that (\ORDsucc( m ) is equal to k)
     \ORDsucc( m ) is an element of \omega'
   Qed.
   for all v0, (if v0 is an element of \ORDomega then v0 is an element of \omega')
@@ -1416,7 +1416,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, ((v0 is a limit ordinal) iff (v0 is an ordinal number and it is wrong that v0 is a successor ordinal and it is wrong that v0 is equal to \SETempty))
+  for all v0, ((v0 is a limit ordinal) iff (v0 is an ordinal number and it is wrong that (v0 is a successor ordinal) and it is wrong that (v0 is equal to \SETempty)))
 
 Theorem:
   \ORDomega is a limit ordinal
@@ -1440,8 +1440,8 @@ Proof:
   \ORDomega is an ordinal number
   \ORDomega is a limit ordinal
   Proof:
-    it is wrong that the thesis holds
-    it is wrong that \ORDomega is equal to \SETempty
+    it is wrong that (the thesis holds)
+    it is wrong that (\ORDomega is equal to \SETempty)
     \ORDomega is a successor ordinal
     \alpha is an ordinal number and \ORDsucc( \alpha ) is equal to \ORDomega
     \alpha is an element of \ORDomega
@@ -1469,7 +1469,7 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that v0 \ORDless v0)
+  for all v0, (if v0 is an ordinal number then it is wrong that (v0 \ORDless v0))
 Proof:
   \alpha \ORDless \alpha
   \alpha is an element of \alpha
@@ -1488,19 +1488,19 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v0 is an ordinal number and v1 is an ordinal number then (v0 \ORDless v1 or v0 is equal to v1 or v1 \ORDless v0)))
 Proof:
-  it is wrong that the thesis holds
-  A is a class and (if \Ord is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of \Ord and v0 is an object and for some v1, (v1 is an ordinal number and it is wrong that v0 \ORDless v1 and it is wrong that v0 is equal to v1 and it is wrong that v1 \ORDless v0)))
-  it is wrong that A is empty
-  \alpha' is an element of A and for all v0, (if v0 is an element of A then it is wrong that v0 \ORDless \alpha')
-  B is a class and (if \Ord is a set then B is a set) and for all v0, (v0 is an element of B iff (v0 is an element of \Ord and v0 is an object and (it is wrong that \alpha' \ORDless v0 and it is wrong that \alpha' is equal to v0 and it is wrong that v0 \ORDless \alpha')))
-  it is wrong that B is empty
-  \beta' is an element of B and for all v0, (if v0 is an element of B then it is wrong that v0 \ORDless \beta')
+  it is wrong that (the thesis holds)
+  A is a class and (if \Ord is a set then A is a set) and for all v0, (v0 is an element of A iff (v0 is an element of \Ord and v0 is an object and for some v1, (v1 is an ordinal number and it is wrong that (v0 \ORDless v1) and it is wrong that (v0 is equal to v1) and it is wrong that (v1 \ORDless v0))))
+  it is wrong that (A is empty)
+  \alpha' is an element of A and for all v0, (if v0 is an element of A then it is wrong that (v0 \ORDless \alpha'))
+  B is a class and (if \Ord is a set then B is a set) and for all v0, (v0 is an element of B iff (v0 is an element of \Ord and v0 is an object and (it is wrong that (\alpha' \ORDless v0) and it is wrong that (\alpha' is equal to v0) and it is wrong that (v0 \ORDless \alpha'))))
+  it is wrong that (B is empty)
+  \beta' is an element of B and for all v0, (if v0 is an element of B then it is wrong that (v0 \ORDless \beta'))
   \alpha' is a subclass of \beta'
   Proof:
     a is an element of \alpha'
     a \ORDless \beta' or a is equal to \beta' or \beta' \ORDless a
     Proof:
-      if it is wrong that a \ORDless \beta' and it is wrong that a is equal to \beta' and it is wrong that \beta' \ORDless a then a is an element of A
+      if it is wrong that (a \ORDless \beta') and it is wrong that (a is equal to \beta') and it is wrong that (\beta' \ORDless a) then a is an element of A
     Qed.
     if a is equal to \beta' then \beta' \ORDless \alpha'
     if \beta' \ORDless a then \beta' \ORDless \alpha'
@@ -1525,7 +1525,7 @@ Theorem:
 Proof:
   \alpha is a subclass of \beta
   if \alpha is equal to \beta then the thesis holds
-  if it is wrong that \alpha is equal to \beta then the thesis holds
+  if it is wrong that (\alpha is equal to \beta) then the thesis holds
   Proof:
     \alpha \ORDless \beta or \beta \ORDless \alpha
     \beta \ORDless \alpha
@@ -1551,9 +1551,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 )))
+  for all v0, (if v0 is an ordinal number then it is wrong that (for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 ))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \beta is an ordinal number and \alpha \ORDless \beta and \beta \ORDless \ORDsucc( \alpha )
   \beta \ORDless \alpha or \beta is equal to \alpha
   \alpha \ORDless \alpha
@@ -1561,9 +1561,9 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (if v0 is an ordinal number then it is wrong that for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 )))
+  for all v0, (if v0 is an ordinal number then it is wrong that (for some v1, (v1 is an ordinal number and v0 \ORDless v1 and v1 \ORDless \ORDsucc( v0 ))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \beta is an ordinal number and \alpha \ORDless \beta and \beta \ORDless \ORDsucc( \alpha )
   \alpha is an element of \beta and \beta is an element of \alpha \SETunion \SETsingleton{ \alpha }
   \beta is an element of \alpha or \beta is equal to \alpha
@@ -1574,7 +1574,7 @@ Qed.
 Theorem:
   for all v0, (for all v1, (if v1 is a limit ordinal and v0 is an element of v1 then \ORDsucc( v0 ) is an element of v1))
 Proof:
-  if it is wrong that \ORDsucc( \alpha ) is an element of \lambda then (\alpha \ORDless \lambda and \lambda \ORDless \ORDsucc( \alpha ))
+  if it is wrong that (\ORDsucc( \alpha ) is an element of \lambda) then (\alpha \ORDless \lambda and \lambda \ORDless \ORDsucc( \alpha ))
 Qed.
 
 Definition:
@@ -1661,10 +1661,10 @@ Proof:
     \SETcard{ \ORDsucc( n' ) } \ORDleq \ORDsucc( n' )
     \ORDsucc( n' ) \ORDleq \SETcard{ \ORDsucc( n' ) }
     Proof:
-      it is wrong that the thesis holds
+      it is wrong that (the thesis holds)
       \SETcard{ \ORDsucc( n' ) } \ORDless \ORDsucc( n' )
       f is a bijection between \SETcard{ \ORDsucc( n' ) } and \ORDsucc( n' )
-      it is wrong that \SETcard{ \ORDsucc( n' ) } is equal to \SETempty
+      it is wrong that (\SETcard{ \ORDsucc( n' ) } is equal to \SETempty)
       m is an element of \ORDomega and \SETcard{ \ORDsucc( n' ) } is equal to \ORDsucc( m )
       Proof:
         \SETcard{ \ORDsucc( n' ) } is an element of \ORDsucc( \ORDsucc( n' ) ) and \ORDsucc( \ORDsucc( n' ) ) is an element of \ORDomega
@@ -1672,7 +1672,7 @@ Proof:
       the value of \FUNinv{ f } under n' \ORDleq m
       the value of \FUNinv{ f } under n' \ORDless m
       Proof:
-        it is wrong that the thesis holds
+        it is wrong that (the thesis holds)
         the value of \FUNinv{ f } under n' is equal to m
         f \FUNrest m is a bijection between m and \FUNim{ f }{ m }
         Proof:
@@ -1686,7 +1686,7 @@ Proof:
         \ORDsucc( n' ) is equal to \SETcard{ \ORDsucc( n' ) } and \SETcard{ \ORDsucc( n' ) } \ORDless \ORDsucc( n' )
         falsity holds
       Qed.
-      g is a map and (the domain of g is equal to m) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if it is wrong that v0 is equal to the value of \FUNinv{ f } under n' then (the value of g under v0 is equal to the value of f under v0)) and (if v0 is equal to the value of \FUNinv{ f } under n' then (the value of g under v0 is equal to the value of f under m)))))
+      g is a map and (the domain of g is equal to m) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if it is wrong that (v0 is equal to the value of \FUNinv{ f } under n') then (the value of g under v0 is equal to the value of f under v0)) and (if v0 is equal to the value of \FUNinv{ f } under n' then (the value of g under v0 is equal to the value of f under m)))))
       g is a map from m to n'
       Proof:
         for all v0, (if v0 is an element of m then the value of g under v0 is an element of n')
@@ -1696,18 +1696,18 @@ Proof:
           Proof:
             the value of f under i is an element of \ORDsucc( n' ) and the value of f under m is an element of \ORDsucc( n' ) and (the value of g under i is equal to the value of f under i or the value of g under i is equal to the value of f under m)
           Qed.
-          if it is wrong that the value of g under i is equal to n' then the value of g under i is an element of n'
-          if it is wrong that i is equal to the value of \FUNinv{ f } under n' then the thesis holds
+          if it is wrong that (the value of g under i is equal to n') then the value of g under i is an element of n'
+          if it is wrong that (i is equal to the value of \FUNinv{ f } under n') then the thesis holds
           Proof:
             the value of g under i is equal to the value of f under i and the value of f under i is an element of \ORDsucc( n' )
             if the value of g under i is equal to n' then (the value of f under i is equal to n' and n' is equal to the value of f under the value of \FUNinv{ f } under n')
             if the value of g under i is equal to n' then i is equal to the value of \FUNinv{ f } under n'
-            it is wrong that the value of g under i is equal to n'
+            it is wrong that (the value of g under i is equal to n')
             the value of g under i is an element of n'
           Qed.
           if i is equal to the value of \FUNinv{ f } under n' then the thesis holds
           Proof:
-            the value of g under i is equal to the value of f under m and it is wrong that the value of f under m is equal to the value of f under the value of \FUNinv{ f } under n' and the value of f under the value of \FUNinv{ f } under n' is equal to n'
+            the value of g under i is equal to the value of f under m and it is wrong that (the value of f under m is equal to the value of f under the value of \FUNinv{ f } under n') and the value of f under the value of \FUNinv{ f } under n' is equal to n'
             the value of g under i is an element of n'
           Qed.
         Qed.
@@ -1717,12 +1717,12 @@ Proof:
         for all v0, (if v0 is an element of n' then for some v1, (v1 is an element of m and v0 is equal to the value of g under v1))
         Proof:
           k is an element of n'
-          it is wrong that the value of \FUNinv{ f } under k is equal to the value of \FUNinv{ f } under n'
+          it is wrong that (the value of \FUNinv{ f } under k is equal to the value of \FUNinv{ f } under n')
           if the value of \FUNinv{ f } under k is equal to m then the thesis holds
           Proof:
             k is equal to the value of f under the value of \FUNinv{ f } under k and the value of f under the value of \FUNinv{ f } under k is equal to the value of f under m and the value of f under m is equal to the value of g under the value of \FUNinv{ f } under n'
           Qed.
-          if it is wrong that the value of \FUNinv{ f } under k is equal to m then the thesis holds
+          if it is wrong that (the value of \FUNinv{ f } under k is equal to m) then the thesis holds
           Proof:
             the value of \FUNinv{ f } under k is an element of m
             Proof:
@@ -1734,28 +1734,28 @@ Proof:
       Qed.
       g is injective
       Proof:
-        for all v0, (for all v1, (if v0 is an element of m and v1 is an element of m then (if it is wrong that v0 is equal to v1 then it is wrong that the value of g under v0 is equal to the value of g under v1)))
+        for all v0, (for all v1, (if v0 is an element of m and v1 is an element of m then (if it is wrong that (v0 is equal to v1) then it is wrong that (the value of g under v0 is equal to the value of g under v1))))
         Proof:
           i is an element of m and j is an element of m
-          it is wrong that i is equal to j
-          if it is wrong that i is equal to the value of \FUNinv{ f } under n' and it is wrong that j is equal to the value of \FUNinv{ f } under n' then the thesis holds
+          it is wrong that (i is equal to j)
+          if it is wrong that (i is equal to the value of \FUNinv{ f } under n') and it is wrong that (j is equal to the value of \FUNinv{ f } under n') then the thesis holds
           Proof:
-            the value of g under i is equal to the value of f under i and it is wrong that the value of f under i is equal to the value of f under j and the value of f under j is equal to the value of g under j
+            the value of g under i is equal to the value of f under i and it is wrong that (the value of f under i is equal to the value of f under j) and the value of f under j is equal to the value of g under j
           Qed.
           if i is equal to the value of \FUNinv{ f } under n' then the thesis holds
           Proof:
-            it is wrong that j is equal to the value of \FUNinv{ f } under n'
-            the value of g under i is equal to the value of g under the value of \FUNinv{ f } under n' and the value of g under the value of \FUNinv{ f } under n' is equal to the value of f under m and it is wrong that the value of f under m is equal to the value of f under j and the value of f under j is equal to the value of g under j
+            it is wrong that (j is equal to the value of \FUNinv{ f } under n')
+            the value of g under i is equal to the value of g under the value of \FUNinv{ f } under n' and the value of g under the value of \FUNinv{ f } under n' is equal to the value of f under m and it is wrong that (the value of f under m is equal to the value of f under j) and the value of f under j is equal to the value of g under j
             Proof:
-              it is wrong that m is equal to j
+              it is wrong that (m is equal to j)
             Qed.
           Qed.
           if j is equal to the value of \FUNinv{ f } under n' then the thesis holds
           Proof:
-            it is wrong that i is equal to the value of \FUNinv{ f } under n'
-            the value of g under i is equal to the value of f under i and it is wrong that the value of f under i is equal to the value of f under m and the value of f under m is equal to the value of g under the value of \FUNinv{ f } under n' and the value of g under the value of \FUNinv{ f } under n' is equal to the value of g under j
+            it is wrong that (i is equal to the value of \FUNinv{ f } under n')
+            the value of g under i is equal to the value of f under i and it is wrong that (the value of f under i is equal to the value of f under m) and the value of f under m is equal to the value of g under the value of \FUNinv{ f } under n' and the value of g under the value of \FUNinv{ f } under n' is equal to the value of g under j
             Proof:
-              it is wrong that i is equal to m
+              it is wrong that (i is equal to m)
             Qed.
           Qed.
         Qed.
@@ -1776,9 +1776,9 @@ Theorem:
   \SETcard{ \ORDomega } is equal to \ORDomega
 Proof:
   \SETcard{ \ORDomega } \ORDleq \ORDomega
-  it is wrong that \SETcard{ \ORDomega } \ORDless \ORDomega
+  it is wrong that (\SETcard{ \ORDomega } \ORDless \ORDomega)
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     \SETcard{ \ORDomega } is an element of \ORDomega
     n is equal to \SETcard{ \ORDomega } and f is a bijection between n and \ORDomega
     g is a map and (the domain of g is equal to \ORDsucc( n )) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if v0 \ORDless n then (the value of g under v0 is equal to \ORDsucc( the value of f under v0 ))) and (if v0 is equal to n then (the value of g under v0 is equal to \SETempty)))))
@@ -1793,25 +1793,25 @@ Proof:
     Qed.
     g is injective
     Proof:
-      for all v0, (for all v1, (if v0 is an element of \ORDsucc( n ) and v1 is an element of \ORDsucc( n ) then (if it is wrong that v0 is equal to v1 then it is wrong that the value of g under v0 is equal to the value of g under v1)))
+      for all v0, (for all v1, (if v0 is an element of \ORDsucc( n ) and v1 is an element of \ORDsucc( n ) then (if it is wrong that (v0 is equal to v1) then it is wrong that (the value of g under v0 is equal to the value of g under v1))))
       Proof:
         k is an element of \ORDsucc( n ) and k' is an element of \ORDsucc( n )
-        it is wrong that k is equal to k'
+        it is wrong that (k is equal to k')
         if k \ORDless n and k' \ORDless n then the thesis holds
         Proof:
-          it is wrong that the value of f under k is equal to the value of f under k'
-          it is wrong that \ORDsucc( the value of f under k ) is equal to \ORDsucc( the value of f under k' )
-          it is wrong that the value of g under k is equal to the value of g under k'
+          it is wrong that (the value of f under k is equal to the value of f under k')
+          it is wrong that (\ORDsucc( the value of f under k ) is equal to \ORDsucc( the value of f under k' ))
+          it is wrong that (the value of g under k is equal to the value of g under k')
         Qed.
         if k \ORDless n and k' is equal to n then the thesis holds
         Proof:
-          it is wrong that \ORDsucc( the value of f under k ) is equal to \SETempty
-          it is wrong that the value of g under k is equal to the value of g under k'
+          it is wrong that (\ORDsucc( the value of f under k ) is equal to \SETempty)
+          it is wrong that (the value of g under k is equal to the value of g under k')
         Qed.
         if k is equal to n and k' \ORDless n then the thesis holds
         Proof:
-          it is wrong that \ORDsucc( the value of f under k' ) is equal to \SETempty
-          it is wrong that the value of g under k is equal to the value of g under k'
+          it is wrong that (\ORDsucc( the value of f under k' ) is equal to \SETempty)
+          it is wrong that (the value of g under k is equal to the value of g under k')
         Qed.
       Qed.
     Qed.
@@ -1825,7 +1825,7 @@ Proof:
         Proof:
           m is equal to the value of g under n
         Qed.
-        if it is wrong that m is equal to \SETempty then the thesis holds
+        if it is wrong that (m is equal to \SETempty) then the thesis holds
         Proof:
           m' is an element of \ORDomega and m is equal to \ORDsucc( m' )
           m is equal to \ORDsucc( m' ) and \ORDsucc( m' ) is equal to \ORDsucc( the value of f under the value of \FUNinv{ f } under m' ) and \ORDsucc( the value of f under the value of \FUNinv{ f } under m' ) is equal to the value of g under the value of \FUNinv{ f } under m'
@@ -1850,7 +1850,7 @@ Definition:
   for all v0, (if v0 is a set then ((v0 is finite) iff \SETcard{ v0 } \ORDless \ORDomega))
 
 Definition:
-  for all v0, (if v0 is a set then ((v0 is infinite) iff it is wrong that v0 is finite))
+  for all v0, (if v0 is a set then ((v0 is infinite) iff it is wrong that (v0 is finite)))
 
 Theorem:
   for all v0, (if v0 is a set then (v0 is finite iff for some v1, (v1 is an element of \ORDomega and \SETcard{ v0 } is equal to v1)))
@@ -1860,7 +1860,7 @@ Qed.
 Theorem:
   for all v0, (if v0 is a set then (v0 is infinite iff \ORDomega \ORDleq \SETcard{ v0 }))
 Proof:
-  \ORDomega \ORDleq \SETcard{ x } iff it is wrong that \SETcard{ x } \ORDless \ORDomega
+  \ORDomega \ORDleq \SETcard{ x } iff it is wrong that (\SETcard{ x } \ORDless \ORDomega)
 Qed.
 
 Theorem:
@@ -1945,7 +1945,7 @@ Proof:
     G is a map and (the domain of G is equal to x \SETdiff c) and for all v0, (if v0 is an object then (if v0 is an element of the domain of G then (the value of G under v0 is equal to the value of \FUNinv{ g } under v0)))
     F is a bijection between c and \FUNrange( F )
     G is a bijection between x \SETdiff c and \FUNrange( G )
-    H is a map and (the domain of H is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that v0 is an element of c then (the value of H under v0 is equal to the value of G under v0)))))
+    H is a map and (the domain of H is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of H then ((if v0 is an element of c then (the value of H under v0 is equal to the value of F under v0)) and (if it is wrong that (v0 is an element of c) then (the value of H under v0 is equal to the value of G under v0)))))
     H is a map to y
     Proof:
       the domain of H is a set and for all v0, (if v0 is a value of H then v0 is an object)
@@ -1955,7 +1955,7 @@ Proof:
         v is a value of H
         u is an element of x and the value of H under u is equal to v
         if u is an element of c then (v is equal to the value of H under u and the value of H under u is equal to the value of F under u and the value of F under u is equal to the value of f under u and the value of f under u is an element of y)
-        if it is wrong that u is an element of c then (v is equal to the value of H under u and the value of H under u is equal to the value of G under u and the value of G under u is equal to the value of \FUNinv{ g } under u and the value of \FUNinv{ g } under u is an element of y)
+        if it is wrong that (u is an element of c) then (v is equal to the value of H under u and the value of H under u is equal to the value of G under u and the value of G under u is equal to the value of \FUNinv{ g } under u and the value of \FUNinv{ g } under u is an element of y)
       Qed.
     Qed.
     H is surjective onto y
@@ -1968,7 +1968,7 @@ Proof:
           u is an element of c and the value of f under u is equal to v
           the value of F under u is equal to v
         Qed.
-        if it is wrong that v is an element of \FUNim{ f }{ c } then the thesis holds
+        if it is wrong that (v is an element of \FUNim{ f }{ c }) then the thesis holds
         Proof:
           v is an element of y \SETdiff \FUNim{ f }{ c }
           the value of g under v is an element of \FUNim{ g }{ y \SETdiff \FUNim{ f }{ c } }
@@ -1981,23 +1981,23 @@ Proof:
     Qed.
     H is injective
     Proof:
-      for all v0, (for all v1, (if v0 is an element of x and v1 is an element of x then (if it is wrong that v0 is equal to v1 then it is wrong that the value of H under v0 is equal to the value of H under v1)))
+      for all v0, (for all v1, (if v0 is an element of x and v1 is an element of x then (if it is wrong that (v0 is equal to v1) then it is wrong that (the value of H under v0 is equal to the value of H under v1))))
       Proof:
         u is an element of x and v is an element of x
-        it is wrong that u is equal to v
+        it is wrong that (u is equal to v)
         if u is an element of c and v is an element of c then the thesis holds
         Proof:
           the value of H under u is equal to the value of F under u and the value of H under v is equal to the value of F under v
-          it is wrong that the value of F under u is equal to the value of F under v
-          it is wrong that the value of H under u is equal to the value of H under v
+          it is wrong that (the value of F under u is equal to the value of F under v)
+          it is wrong that (the value of H under u is equal to the value of H under v)
         Qed.
-        if it is wrong that u is an element of c and it is wrong that v is an element of c then the thesis holds
+        if it is wrong that (u is an element of c) and it is wrong that (v is an element of c) then the thesis holds
         Proof:
           the value of H under u is equal to the value of G under u and the value of H under v is equal to the value of G under v
-          it is wrong that the value of G under u is equal to the value of G under v
-          it is wrong that the value of H under u is equal to the value of H under v
+          it is wrong that (the value of G under u is equal to the value of G under v)
+          it is wrong that (the value of H under u is equal to the value of H under v)
         Qed.
-        if u is an element of c and it is wrong that v is an element of c then the thesis holds
+        if u is an element of c and it is wrong that (v is an element of c) then the thesis holds
         Proof:
           the value of H under u is equal to the value of F under u and the value of H under v is equal to the value of G under v
           v is an element of \FUNim{ g }{ y \SETdiff \FUNim{ F }{ c } }
@@ -2005,9 +2005,9 @@ Proof:
           Proof:
             for some v0, (v0 is an element of y \SETdiff \FUNim{ F }{ c } and v is equal to the value of g under v0)
           Qed.
-          it is wrong that the value of G under v is equal to the value of F under u
+          it is wrong that (the value of G under v is equal to the value of F under u)
         Qed.
-        if it is wrong that u is an element of c and v is an element of c then the thesis holds
+        if it is wrong that (u is an element of c) and v is an element of c then the thesis holds
         Proof:
           the value of H under u is equal to the value of G under u and the value of H under v is equal to the value of F under v
           u is an element of \FUNim{ g }{ y \SETdiff \FUNim{ F }{ c } }
@@ -2015,7 +2015,7 @@ Proof:
           Proof:
             for some v0, (v0 is an element of y \SETdiff \FUNim{ F }{ c } and u is equal to the value of g under v0)
           Qed.
-          it is wrong that the value of G under u is equal to the value of F under v
+          it is wrong that (the value of G under u is equal to the value of F under v)
         Qed.
       Qed.
     Qed.
@@ -2087,16 +2087,16 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a set and v1 is a set and \SETcard{ v1 } \ORDless \SETcard{ v0 } then it is wrong that v0 \SETdiff v1 is empty))
+  for all v0, (for all v1, (if v0 is a set and v1 is a set and \SETcard{ v1 } \ORDless \SETcard{ v0 } then it is wrong that (v0 \SETdiff v1 is empty)))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   x is a subclass of y
   \SETcard{ x } \ORDleq \SETcard{ y }
   falsity holds
 Qed.
 
 Theorem (existence_condition_for_surjections):
-  for all v0, (for all v1, (if v0 is a set and v1 is a set and (it is wrong that v0 is empty and it is wrong that v1 is empty) then ((for some v2, (v2 is a surjective map from v0 to v1)) iff \SETcard{ v1 } \ORDleq \SETcard{ v0 })))
+  for all v0, (for all v1, (if v0 is a set and v1 is a set and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty)) then ((for some v2, (v2 is a surjective map from v0 to v1)) iff \SETcard{ v1 } \ORDleq \SETcard{ v0 })))
 Proof:
   if for some v0, (v0 is a surjective map from x to y) then the thesis holds
   Proof:
@@ -2120,7 +2120,7 @@ Proof:
     f is a map from y to x and f is injective
     \FUNinv{ f } is a bijection between \FUNrange( f ) and y
     z is an element of y
-    g is a map and (the domain of g is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if v0 is an element of \FUNrange( f ) then (the value of g under v0 is equal to the value of \FUNinv{ f } under v0)) and (if it is wrong that v0 is an element of \FUNrange( f ) then (the value of g under v0 is equal to z)))))
+    g is a map and (the domain of g is equal to x) and for all v0, (if v0 is an object then (if v0 is an element of the domain of g then ((if v0 is an element of \FUNrange( f ) then (the value of g under v0 is equal to the value of \FUNinv{ f } under v0)) and (if it is wrong that (v0 is an element of \FUNrange( f )) then (the value of g under v0 is equal to z)))))
     g is a surjective map from x to y
     Proof:
       for all v0, (if v0 is an element of y then v0 is a value of g)
@@ -2134,21 +2134,21 @@ Proof:
 Qed.
 
 Theorem:
-  for all v0, (for all v1, (if v0 is a set and v1 is a set and (it is wrong that v0 is empty and it is wrong that v1 is empty) then (\SETcard{ v0 } \ORDless \SETcard{ v1 } iff ((for some v2, (v2 is a map from v0 to v1 and v2 is injective)) and it is wrong that for some v2, (v2 is a surjective map from v0 to v1)))))
+  for all v0, (for all v1, (if v0 is a set and v1 is a set and (it is wrong that (v0 is empty) and it is wrong that (v1 is empty)) then (\SETcard{ v0 } \ORDless \SETcard{ v1 } iff ((for some v2, (v2 is a map from v0 to v1 and v2 is injective)) and it is wrong that (for some v2, (v2 is a surjective map from v0 to v1))))))
 Proof:
-  ((for some v0, (v0 is a map from x to y and v0 is injective)) and it is wrong that for some v0, (v0 is a surjective map from x to y)) iff (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that \SETcard{ y } \ORDleq \SETcard{ x })
-  (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that \SETcard{ y } \ORDleq \SETcard{ x }) iff (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that \SETcard{ x } is equal to \SETcard{ y })
-  (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that \SETcard{ x } is equal to \SETcard{ y }) iff \SETcard{ x } \ORDless \SETcard{ y }
+  ((for some v0, (v0 is a map from x to y and v0 is injective)) and it is wrong that (for some v0, (v0 is a surjective map from x to y))) iff (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that (\SETcard{ y } \ORDleq \SETcard{ x }))
+  (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that (\SETcard{ y } \ORDleq \SETcard{ x })) iff (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that (\SETcard{ x } is equal to \SETcard{ y }))
+  (\SETcard{ x } \ORDleq \SETcard{ y } and it is wrong that (\SETcard{ x } is equal to \SETcard{ y })) iff \SETcard{ x } \ORDless \SETcard{ y }
 Qed.
 
 Theorem (cardinality_of_image):
   for all v0, (for all v1, (for all v2, (for all v3, (if v2 is a set and v3 is a set and v1 is a map from v2 to v3 and v0 is a subclass of v2 then \SETcard{ \FUNim{ v1 }{ v0 } } \ORDleq \SETcard{ v0 }))))
 Proof:
   if a is empty then the thesis holds
-  if it is wrong that a is empty then the thesis holds
+  if it is wrong that (a is empty) then the thesis holds
   Proof:
     f \FUNrest a is a surjective map from a to \FUNim{ f }{ a }
-    it is wrong that \FUNim{ f }{ a } is empty
+    it is wrong that (\FUNim{ f }{ a } is empty)
     \SETcard{ \FUNim{ f }{ a } } \ORDleq \SETcard{ a }
     Proof:
       a is a set and \FUNim{ f }{ a } is a set
@@ -2157,14 +2157,14 @@ Proof:
 Qed.
 
 Theorem (Cantor_I):
-  for all v0, (if v0 is a set then it is wrong that for some v1, (v1 is a surjective map from v0 to \SETpow( v0 )))
+  for all v0, (if v0 is a set then it is wrong that (for some v1, (v1 is a surjective map from v0 to \SETpow( v0 ))))
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   f is a surjective map from x to \SETpow( x )
-  C is a class and (if x is a set then C is a set) and for all v0, (v0 is an element of C iff (v0 is an element of x and v0 is an object and it is wrong that v0 is an element of the value of f under v0))
+  C is a class and (if x is a set then C is a set) and for all v0, (v0 is an element of C iff (v0 is an element of x and v0 is an object and it is wrong that (v0 is an element of the value of f under v0)))
   C is an element of \SETpow( x )
   u is an element of x and the value of f under u is equal to C
-  u is an element of C iff (u is an element of the value of f under u iff it is wrong that u is an element of C)
+  u is an element of C iff (u is an element of the value of f under u iff it is wrong that (u is an element of C))
   falsity holds
 Qed.
 
@@ -2172,13 +2172,13 @@ Theorem (Cantor_II):
   for all v0, (if v0 is a set then \SETcard{ v0 } \ORDless \SETcard{ \SETpow( v0 ) })
 Proof:
   if x is empty then the thesis holds
-  if it is wrong that x is empty then the thesis holds
+  if it is wrong that (x is empty) then the thesis holds
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     \SETcard{ \SETpow( x ) } \ORDleq \SETcard{ x }
     for some v0, (v0 is a surjective map from x to \SETpow( x ))
     Proof:
-      \SETpow( x ) is a set and it is wrong that \SETpow( x ) is empty
+      \SETpow( x ) is a set and it is wrong that (\SETpow( x ) is empty)
     Qed.
     falsity holds
   Qed.
@@ -2235,13 +2235,13 @@ Proof:
   Qed.
   f is injective
   Proof:
-    for all v0, (for all v1, (if v0 is an element of \ORDsucc( \alpha ) and v1 is an element of \ORDsucc( \alpha ) then (if it is wrong that v0 is equal to v1 then it is wrong that the value of f under v0 is equal to the value of f under v1)))
+    for all v0, (for all v1, (if v0 is an element of \ORDsucc( \alpha ) and v1 is an element of \ORDsucc( \alpha ) then (if it is wrong that (v0 is equal to v1) then it is wrong that (the value of f under v0 is equal to the value of f under v1))))
     Proof:
       \beta is an element of \ORDsucc( \alpha ) and \gamma is an element of \ORDsucc( \alpha )
-      it is wrong that \beta is equal to \gamma
+      it is wrong that (\beta is equal to \gamma)
       if \beta \ORDless \ORDomega then the thesis holds
       Proof:
-        if \gamma is equal to \alpha then (the value of f under \beta is equal to \ORDsucc( \beta ) and it is wrong that \ORDsucc( \beta ) is equal to \SETempty and \SETempty is equal to the value of f under \gamma)
+        if \gamma is equal to \alpha then (the value of f under \beta is equal to \ORDsucc( \beta ) and it is wrong that (\ORDsucc( \beta ) is equal to \SETempty) and \SETempty is equal to the value of f under \gamma)
         if \ORDomega \ORDleq \gamma and \gamma \ORDless \alpha then (the value of f under \beta is equal to \ORDsucc( \beta ) and \ORDsucc( \beta ) \ORDless \ORDomega and \ORDomega \ORDleq \gamma and \gamma is equal to the value of f under \gamma)
       Qed.
       if \ORDomega \ORDleq \beta and \beta \ORDless \alpha then the thesis holds
@@ -2251,7 +2251,7 @@ Proof:
       Qed.
       if \beta is equal to \alpha then the thesis holds
       Proof:
-        if \gamma \ORDless \ORDomega then (the value of f under \beta is equal to \SETempty and it is wrong that \SETempty is equal to \ORDsucc( \gamma ) and \ORDsucc( \gamma ) is equal to the value of f under \gamma)
+        if \gamma \ORDless \ORDomega then (the value of f under \beta is equal to \SETempty and it is wrong that (\SETempty is equal to \ORDsucc( \gamma )) and \ORDsucc( \gamma ) is equal to the value of f under \gamma)
         if \ORDomega \ORDleq \gamma and \gamma \ORDless \alpha then (the value of f under \beta is equal to \SETempty and \SETempty \ORDless \ORDomega and \ORDomega \ORDleq \gamma and \gamma is equal to the value of f under \gamma)
       Qed.
     Qed.
@@ -2265,8 +2265,8 @@ Theorem:
   for all v0, (if v0 is a cardinal number and v0 is infinite then v0 is a limit ordinal)
 Proof:
   \kappa is a cardinal number and \kappa is infinite
-  it is wrong that \kappa is a limit ordinal
-  it is wrong that \kappa is equal to \SETempty
+  it is wrong that (\kappa is a limit ordinal)
+  it is wrong that (\kappa is equal to \SETempty)
   \kappa is a successor ordinal
   Proof:
     \kappa is an ordinal number
@@ -2279,9 +2279,9 @@ Proof:
 Qed.
 
 Theorem (Burali_Forti_Paradox):
-  it is wrong that \Ord is a set
+  it is wrong that (\Ord is a set)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \Ord is transitive and for all v0, (if v0 is an element of \Ord then v0 is transitive)
   \Ord is an ordinal number
   \Ord is an element of \Ord
@@ -2296,7 +2296,7 @@ Proof:
   \SETcard{ \alpha } \ORDless \kappa
   \alpha \ORDless \kappa
   Proof:
-    it is wrong that the thesis holds
+    it is wrong that (the thesis holds)
     \SETcard{ \SETpow( \alpha ) } is equal to \kappa and \kappa \ORDleq \alpha
     \kappa is equal to \SETcard{ \SETpow( \alpha ) } and \SETcard{ \SETpow( \alpha ) } is equal to \SETcard{ \SETcard{ \SETpow( \alpha ) } } and \SETcard{ \SETcard{ \SETpow( \alpha ) } } \ORDleq \SETcard{ \alpha }
     falsity holds
@@ -2304,7 +2304,7 @@ Proof:
 Qed.
 
 Definition:
-  for all v0, (if v0 is a cardinal number then for all v1, ((v1 is equal to \CARDsucc{ v0 }) iff (v1 is a cardinal number and v0 \ORDless v1 and it is wrong that for some v2, (v2 is a cardinal number and v0 \ORDless v2 and v2 \ORDless v1))))
+  for all v0, (if v0 is a cardinal number then for all v1, ((v1 is equal to \CARDsucc{ v0 }) iff (v1 is a cardinal number and v0 \ORDless v1 and it is wrong that (for some v2, (v2 is a cardinal number and v0 \ORDless v2 and v2 \ORDless v1)))))
 
 Definition:
   for all v0, ((v0 is a successor cardinal) iff (v0 is a cardinal number and for some v1, (v1 is a cardinal number and v0 is equal to \CARDsucc{ v1 })))
@@ -2318,7 +2318,7 @@ Definition:
   for all v0, ((v0 is equal to \Set) iff (v0 is a class and for all v1, (v1 is an element of v0 iff (v1 is a set and v1 is an object))))
 
 Theorem (Cantor_Paradox_I):
-  it is wrong that \Card is a set
+  it is wrong that (\Card is a set)
 Proof:
   \Card is a set
   \SETunionover \Card is a set
@@ -2336,9 +2336,9 @@ Proof:
 Qed.
 
 Theorem (Cantor_Paradox_II):
-  it is wrong that \Set is a set
+  it is wrong that (\Set is a set)
 Proof:
-  it is wrong that the thesis holds
+  it is wrong that (the thesis holds)
   \SETpow( \Set ) is a subset of \Set
   \SETcard{ \SETpow( \Set ) } \ORDleq \SETcard{ \Set }
   falsity holds

@@ -34,7 +34,7 @@ Definition (termin):
   for all v0, (if v0 is a rewriting system then ((v0 is terminating) iff for all v1, (for all v2, (if v1 is a term and v2 is a term then (if v1 - v0 +> v2 then v2 is inductively less than v1)))))
 
 Definition (nfrdef):
-  for all v0, (for all v1, (if v0 is a rewriting system and v1 is a term then for all v2, ((v2 is a normal form of v1 in v0) iff (v2 is a term and v1 - v0 *> v2 and it is wrong that for some v3, (v3 is a reduct of v2 in v0)))))
+  for all v0, (for all v1, (if v0 is a rewriting system and v1 is a term then for all v2, ((v2 is a normal form of v1 in v0) iff (v2 is a term and v1 - v0 *> v2 and it is wrong that (for some v3, (v3 is a reduct of v2 in v0))))))
 
 Theorem (termnf):
   for all v0, (if v0 is a rewriting system and v0 is terminating then for all v1, (if v1 is a term then (if for all v2, (if v2 is a term then (if v2 is inductively less than v1 then for some v3, (v3 is a normal form of v2 in v0))) then for some v2, (v2 is a normal form of v1 in v0))))
