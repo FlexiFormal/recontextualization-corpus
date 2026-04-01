@@ -1,0 +1,7 @@
+smglom/automata/source/mod/auto-reachable.en.tex
+smglom/automata/source/mod/auto-accepted.en.tex
+smglom/automata/source/mod/auto-computation.en.tex
+smglom/automata/source/mod/auto-recognize.en.tex
+smglom/automata/source/mod/language-of-auto.en.tex
+smglom/automata/source/thm/fsa-accepted-words.en.tex
+smglom/theocs/source/mod/extended-transition-model.en.tex

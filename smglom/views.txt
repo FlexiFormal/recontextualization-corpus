@@ -1,0 +1,6 @@
+smglom/automata/source/view/auto-to-fsa.en.tex
+smglom/automata/source/view/auto-to-pda.en.tex
+smglom/automata/source/view/auto-to-tm_1.en.tex
+smglom/automata/source/view/auto-to-tm_2.en.tex
+smglom/automata/source/view/pda-to-fsa.en.tex
+smglom/automata/source/view/transition-system-to-fsa.en.tex

@@ -1,0 +1,4 @@
+smglom/algebra/source/mod/free-monoid.en.tex
+smglom/algebra/source/mod/relation-monoid.en.tex
+smglom/theocs/source/mod/transition-monoid.en.tex
+smglom/automata/source/mod/nerode-automaton.en.tex
