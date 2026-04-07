@@ -16,7 +16,7 @@ process() {
   while read file; do
     echo "Processing $(realpath "${mathhub_dir}/${file}")"
     "${rustex_exe}" -i "${mathhub_dir}/${file}" -o "${2}/$(basename ${file} .tex).html" > /dev/null
-    sed -i '/ \?data-rustex-sourceref="[^"]*"/d' "${2}/$(basename ${file} .tex).html"
+    sed -i 's/ \?data-rustex-sourceref="[^"]*"//g' "${2}/$(basename ${file} .tex).html"
   done < "${1}"
 }
 
