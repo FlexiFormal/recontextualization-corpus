@@ -1,3 +1,0 @@
-Axiom:
-  for all v0, if v0 is a map then (v0 is a function iff the domain of v0 is a set)
-
