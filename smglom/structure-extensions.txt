@@ -1,1 +1,5 @@
 smglom/automata/source/mod/dauto.en.tex
+smglom/automata/source/pushout/mod/dfsa.en.tex
+smglom/automata/source/pushout/mod/dpda.en.tex
+smglom/automata/source/pushout/mod/dtm_1.en.tex
+smglom/automata/source/pushout/mod/dtm_2.en.tex
