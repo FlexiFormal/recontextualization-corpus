@@ -13,7 +13,7 @@ stex_dir="${out_dir}/stex"
 
 process () {
   cd ${math_dir}
-  for file in $(find . -name ${1} -type f); do
+  for file in $(find . -name "*.${1}" -type f); do
     echo "Processing $(realpath "${file}")"
     # Generate document:
     "${naproche_exe}" --mode=translate --format=informal "${file}" > "${file}.doc"
@@ -29,7 +29,7 @@ process () {
 mkdir -p "${ftl_dir}"
 mkdir -p "${tex_dir}"
 mkdir -p "${stex_dir}"
-process '*.ftl' "${ftl_dir}"
-process '*.ftl.tex' "${tex_dir}"
-process '*.ftl.en.tex' "${stex_dir}"
+process "ftl" "${ftl_dir}"
+process "ftl.tex" "${tex_dir}"
+process "ftl.en.tex" "${stex_dir}"
 
