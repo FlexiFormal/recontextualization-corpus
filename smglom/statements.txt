@@ -5,3 +5,4 @@ smglom/automata/source/mod/auto-recognize.en.tex
 smglom/automata/source/mod/language-of-auto.en.tex
 smglom/automata/source/thm/fsa-accepted-words.en.tex
 smglom/theocs/source/mod/extended-transition-model.en.tex
+Papers/25-CICM-AST/source/mod/quiver-path.en.tex

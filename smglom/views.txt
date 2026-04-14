@@ -4,3 +4,4 @@ smglom/automata/source/view/auto-to-tm_1.en.tex
 smglom/automata/source/view/auto-to-tm_2.en.tex
 smglom/automata/source/view/pda-to-fsa.en.tex
 smglom/automata/source/view/transition-system-to-fsa.en.tex
+Papers/25-CICM-AST/source/view/elquiver-to-nts.en.tex

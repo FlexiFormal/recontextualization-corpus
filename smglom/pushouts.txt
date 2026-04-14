@@ -37,3 +37,4 @@ smglom/automata/source/pushout/mod/tm_2-computation.en.tex                  auto
 smglom/automata/source/pushout/mod/tm_2-reachable.en.tex                    auto-to-tm_2/auto-reachable.en.html
 smglom/automata/source/pushout/mod/tm_2-recognize.en.tex                    auto-to-tm_2/auto-recognize.en.html
 smglom/automata/source/pushout/thm/dfsa-accepted-words.en.tex               dfsa/fsa-accepted-words.en.html
+Papers/25-CICM-AST/source/pushout/nts-path.en.tex                           elquiver/elquiver-to-nts/quiver-path.en.html
