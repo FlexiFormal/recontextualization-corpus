@@ -3,6 +3,8 @@
 rustex_exe="${1}"
 mathhub_dir="${2}"
 
+definition_list="smglom/definitions.txt"
+definition_dir="smglom/definitions"
 view_list="smglom/views.txt"
 view_dir="smglom/views"
 structop_list="smglom/structure-returning-operations.txt"
@@ -35,11 +37,15 @@ process_pushouts() {
   done < "${pushout_list}"
 }
 
+mkdir -p "${definition_dir}"
 mkdir -p "${view_dir}"
 mkdir -p "${structop_dir}"
 mkdir -p "${structext_dir}"
 mkdir -p "${statement_dir}"
 mkdir -p "${pushouts_dir}"
+echo "# Definition"
+process "${definition_list}" "${definition_dir}"
+echo ""
 echo "# Views"
 process "${view_list}" "${view_dir}"
 echo ""
